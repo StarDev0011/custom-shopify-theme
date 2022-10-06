@@ -1,0 +1,104 @@
+{%- liquid
+  assign blocks_count = section.blocks.size
+  assign subheading = section.settings.subheading
+  assign heading = section.settings.title
+  assign bg_color = section.settings.bg_color
+  assign animations_enabled = settings.animations_enabled
+  assign animation_anchor = '#Locations--' | append: section.id
+  assign animation_delay = 250
+-%}
+
+{%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+  {%- style -%}
+    #Locations--{{ section.id }} {
+      background-color: {{ bg_color }};
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+<div id="Locations--{{ section.id }}" class="locations">
+  <div class="wrapper locations__wrapper">
+
+    <div class="locations__info">
+      {%- if subheading != blank -%}
+        <p class="locations__info-subheading subheading-text"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ subheading }}</p>
+        {%- assign animation_delay = animation_delay | plus: 250 -%}
+      {% endif %}
+
+      {%- if heading != blank -%}
+        <h2 class="locations__info-heading"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ heading }}</h2>
+        {%- assign animation_delay = animation_delay | plus: 250 -%}
+      {% endif %}
+
+      <div class="locations__stores" data-slider-info{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+        {%- if section.blocks.size > 0 -%}
+          {%- for block in section.blocks -%}
+            <div class="location__store" {{ block.shopify_attributes }} data-slide-item>
+
+              {%- if block.settings.title != blank -%}
+                <h3 class="location__address h4">{{ block.settings.title }}</h3>
+              {%- endif -%}
+
+              {%- if block.settings.working_time != blank -%}
+                {{- block.settings.working_time -}}
+              {%- endif -%}
+
+            </div>
+          {%- endfor -%}
+        {%- else -%}
+          {%- for i in (1..3) -%}
+            <div class="location__store">
+              <h3 class="location__address h4">{{ 'homepage.onboarding.locations.address' | t }}</h3>
+
+              {{ 'homepage.onboarding.locations.working_hours_html' | t }}
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="locations__gallery"
+        data-count="{{ blocks_count }}"
+        data-slider-gallery
+        {% if animations_enabled %} data-aos="fade" data-aos-anchor="{{ animation_anchor }}"{% endif %}>
+        {%- for block in section.blocks -%}
+          <div class="location__image" data-slide-item>
+            {%- if block.settings.image -%}
+              <div class="location__image-bg lazyload"
+                data-bgset="{% render 'bgset', image: block.settings.image %}"
+                data-sizes="auto"
+                data-parent-fit="cover"
+              ></div>
+              <noscript>
+                <div class="location__image-bg" style="background-image: url( {{ block.settings.image | img_url: '1024x' }} );">
+                </div>
+              </noscript>
+            {%- else -%}
+              <div class="location__image-bg">
+                <div class="svg-placeholder placeholder-svg--overlayed">
+                  {{- 'image' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+                </div>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- else -%}
+      <div class="locations__gallery"
+        data-count="3"
+        data-slider-gallery
+        {% if animations_enabled %} data-aos="fade" data-aos-anchor="{{ animation_anchor }}"{% endif %}>
+        {%- for i in (1..3) -%}
+          <div class="location__image">
+            <div class="location__image-bg">
+              <div class="svg-placeholder placeholder-svg--overlayed">
+                {{- 'image' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>

@@ -1,0 +1,752 @@
+{%- liquid
+  assign wrapper = section.settings.wrapper
+  assign heading_size = section.settings.heading_size
+  assign image_aspect_ratio = section.settings.image_aspect_ratio
+  assign bg_color = section.settings.bg_color
+  assign button_style = section.settings.button_style
+  assign animations_enabled = settings.animations_enabled
+  assign animation_anchor = '#ProductsList--' | append: section.id
+  assign animation_delay = 0
+
+  assign wrapper_class = 'wrapper'
+  if wrapper == 'full'
+    assign wrapper_class = 'wrapper wrapper--full'
+  endif
+-%}
+
+{%- style -%}
+  {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+    #ProductsList--{{ section.id }} { background-color: {{ bg_color }}; }
+  {%- endif -%}
+  #ProductsList--{{ section.id }} { --aspect-ratio: {{ image_aspect_ratio }}; }
+  #ProductsList--{{ section.id }} .products-list__nav__button { --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ heading_size }} * 0.01); }
+{%- endstyle -%}
+
+<section
+  id="ProductsList--{{ section.id }}"
+  class="products-list-section"
+  data-section-id="{{ section.id }}"
+  data-section-type="products-list"
+  data-autoplay-video="true">
+
+  <div class="{{ wrapper_class }}" data-overflow-container>
+    <div class="products-list__container" data-overflow-frame>
+      {%- unless section.settings.title == blank -%}
+        <h2 class="products-list__heading subheading-text"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ section.settings.title }}</h2>
+        {%- assign animation_delay = animation_delay | plus: 150 -%}
+      {%- endunless -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="products-list__nav__wrapper">
+          <div class="products-list__nav" data-tabs-nav>
+            {%- for block in section.blocks -%}
+              {%- liquid
+                case block.type
+                  when 'collection'
+                    assign collection_handle = block.settings.collection
+                    assign collection = collections[collection_handle]
+
+                    if collection != empty
+                      assign heading = collection.title | strip_html
+                    else
+                      assign heading = 'homepage.onboarding.collection_title' | t
+                    endif
+                  when 'product'
+                    assign product_handle = block.settings.product
+                    assign product = all_products[product_handle]
+
+                    if product != empty
+                      assign heading = product.title | strip_html | escape
+                    else
+                      assign heading = 'homepage.onboarding.product_title' | t
+                    endif
+                endcase
+
+                if block.settings.title != blank
+                  assign heading = block.settings.title | strip_html
+                endif
+              -%}
+
+              <button
+                type="button"
+                class="products-list__nav__button{% if forloop.first %} products-list__nav__button--active{% endif %} h2"
+                href="#ProductsListItem--{{ section.id }}-{{ forloop.index }}"
+                data-tab-button
+                {{ block.shopify_attributes }}
+                {% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}
+              >
+                <span>{{ heading }}</span>
+              </button>
+              {%- assign animation_delay = animation_delay | plus: 50 -%}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        {%- for block in section.blocks -%}
+          {%- liquid 
+            assign image_1 = block.settings.image_1
+            assign image_2 = block.settings.image_2
+            assign show_second_image = block.settings.show_second_image
+
+            if block.type == 'product' and show_second_image and image_2 == blank
+              assign product_handle = block.settings.product
+              assign product = all_products[product_handle]
+              if product != empty
+                assign image_2 = product.media[1].preview_image
+
+                if image_2 == blank
+                  assign show_second_image = false
+                endif
+              endif
+            endif
+          -%}
+
+          {%- capture image_1 -%}
+            {%- if image_1 != blank -%}
+              <div class="products-list__item__image-bg lazyload"
+                data-bgset="{% render 'bgset', image: image_1 %}"
+                data-sizes="auto"
+                data-parent-fit="cover">
+              </div>
+              <noscript>
+                <div class="products-list__item__image-bg" style="background-image: url({{ image_1 | img_url: '760x' }});"></div>
+              </noscript>
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- capture image_2 -%}
+            {%- if image_2 != blank -%}
+              <div class="products-list__item__image-bg lazyload"
+                data-bgset="{% render 'bgset', image: image_2 %}"
+                data-sizes="auto"
+                data-parent-fit="cover">
+              </div>
+              <noscript>
+                <div class="products-list__item__image-bg" style="background-image: url({{ image_2 | img_url: '340x' }});"></div>
+              </noscript>
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- capture onboarding_item -%}
+            {%- liquid
+              assign product_title = 'homepage.onboarding.product_title' | t
+              assign button_text = block.settings.button_text
+              if block.type == 'product'
+                assign button_text = block.settings.button_text
+                if block.settings.title == empty
+                  assign product_title = ''
+                endif
+              endif
+              assign product_price = 9900 | money
+              assign product_description = 'homepage.onboarding.single_product_description' | t
+              assign product_url = '#!'
+            -%}
+
+            <div class="products-list__item__images{% if show_second_image %} products-list__item__images--overlap{% endif %}" data-overflow-content>
+              <div class="products-list__item__image products-list__item__image--main"
+                {% if animations_enabled %}
+                  {% if show_second_image %}
+                    data-aos="fade-right"
+                  {% else %}
+                    data-aos="fade-up"
+                  {% endif %}
+                  data-aos-anchor="{{ animation_anchor }}"
+                {% endif %}>
+                <div class="products-list__item__image__frame">
+                  {%- if image_1 != blank -%}
+                    {{- image_1 -}}
+                  {%- else -%}
+                    <div class="products-list__item__image-bg products-list__item__image-bg--placeholder placeholder-svg--overlayed">
+                      {%- capture current -%}{%- cycle 1, 2, 3, 4 -%}{%- endcapture -%}
+                      {{- 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+
+              {%- if show_second_image -%}
+                <div class="products-list__item__image products-list__item__image--small">
+                  <div class="products-list__item__image__frame"
+                    {% if animations_enabled %}
+                      data-aos="fade-left"
+                      data-aos-anchor="{{ animation_anchor }}"
+                      data-aos-delay="150"
+                    {% endif %}>
+                    {%- if image_2 != blank -%}
+                      {{- image_2 -}}
+                    {%- else -%}
+                      <div class="products-list__item__image-bg products-list__item__image-bg--placeholder placeholder-svg--overlayed">
+                        {%- capture current -%}{%- cycle 1, 2, 3, 4 -%}{%- endcapture -%}
+                        {{- 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+             {%- endif -%}
+            </div>
+
+            <div class="products-list__item__contents" data-overflow-content>
+              <div class="products-list__item__content">
+                {%- assign animation_delay_content = animation_delay -%}
+                {%- if settings.show_rating -%}
+                  <div class="products-list__item__rating"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                    {%- render 'rating', show_rating_count: false, onboarding: true -%}
+                  </div>
+                  {%- assign animation_delay_content = animation_delay_content | plus: 150 -%}
+                {%- endif -%}
+
+                <p class="products-list__item__title h4"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                  <a href="{{ product_url }}" title="{{ product_title }}" arial-label="{{ product_title }}">
+                    {%- if product_title != empty -%}
+                      <span class="products-list__item__title-text">{{ product_title }}</span>
+                    {%- endif -%}
+                    {{- product_price -}}
+                  </a>
+                  {%- assign animation_delay_content = animation_delay_content | plus: 150 -%}
+                </p>
+
+                <p class="products-list__item__description"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                  {{ product_description }}
+                  {%- assign animation_delay_content = animation_delay_content | plus: 150 -%}
+                </p>
+
+                <div class="products-list__item__buttons"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                  <a class="btn btn--{{ button_style }}" href="{{ product_url }}">{{ button_text }}</a>
+                </div>
+              </div>
+            </div>
+          {%- endcapture -%}
+
+          {%- case block.type -%}
+            {%- when 'collection' -%}
+              {%- liquid
+                assign collection_handle = block.settings.collection
+                assign collection = collections[collection_handle]
+                assign button_text = block.settings.button_text
+                assign button_link = '#'
+              -%}
+
+              <div class="products-list__item{% if forloop.first %} products-list__item--active{% endif %}" id="ProductsListItem--{{ section.id }}-{{ forloop.index }}" data-tab-item>
+              {%- if collection != empty and collection.all_products_count > 0 -%}
+                {%- assign button_link = collection.url -%}
+
+                <div class="products-list__item__images"
+                  {% if collection.all_products_count > 1 %}
+                    data-slider-images
+                  {% endif %}
+                  {% if animations_enabled %}
+                    data-aos="fade-up"
+                    data-aos-anchor="{{ animation_anchor }}"
+                  {% endif %}>
+                  {%- for product in collection.products limit: 5 -%}
+                    {%- liquid
+                      assign product_title = product.title | strip_html | escape
+                      assign product_url = product.url
+                      assign product_image = product.featured_media.preview_image
+                    -%}
+                    <div class="products-list__item__image" data-product-single-media-wrapper>
+                      <div class="products-list__item__image__frame">
+                        <a
+                          href="{{ product_url }}"
+                          class="products-list__item__image-bg {% if product_image != blank %}lazyload{% else %}placeholder-svg--overlayed{% endif %}"
+                          title="{{ product_title }}"
+                          aria-label="{{ product_title }}"
+                          data-product-single-media-image
+                          data-overflow-content
+                          {% if product_image %}
+                            data-bgset="{% render 'bgset', image: product_image %}"
+                            data-sizes="auto"
+                            data-parent-fit="contain"
+                            data-aspectratio="{{ image_aspect_ratio }}"
+                          {% endif %}
+                          style="padding-top: {{ image_aspect_ratio | times: 100 | round: 1 }}%;">
+                          {%- if product_image == blank -%}
+                            {%- assign image_url_pattern = product.featured_image | img_url: '1024x' | replace: '_1024x.', '_{width}x.' -%}
+                            {%- assign image_widths = "[180, 360, 540, 720, 960, 1024, 1280]" -%}
+                            <img
+                              class="no-image-placeholder lazyload"
+                              src="{{ 'blank.gif' | asset_img_url: '1x1' }}"
+                              data-src="{{ image_url_pattern }}"
+                              data-widths= "{{ image_widths }}"
+                              data-aspectratio="{{ image_aspect_ratio | times: 100 | round: 1 }}"
+                              data-sizes="auto"
+                              width="1024"
+                              height="1024"
+                              alt="{{ product.title | strip_html | escape }}">
+                            <noscript>
+                              <img
+                                class="no-image-placeholder"
+                                src="{{ product.featured_image | img_url: '1024x' }}"
+                                width="1024"
+                                height="1024"
+                                alt="{{ product.title | strip_html | escape }}">
+                            </noscript>
+                          {%- endif -%}
+                        </a>
+
+                        {%- if product_image -%}
+                          <noscript>
+                            <a href="{{ product_url }}" title="{{ product_title }}" arial-label="{{ product_title }}" class="products-list__item__image-bg" style="background-image: url( {{ product_image | img_url: '1200x' }} ); padding-top: {{ image_aspect_ratio | times: 100 | round: 1 }}%;"></a>
+                          </noscript>
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                </div>
+
+                <div class="products-list__item__contents"{% if collection.all_products_count > 1 %} data-slider-contents{% endif %}>
+                  {%- for product in collection.products limit: 5 -%}
+                    {%- liquid
+                      assign product_title = product.title | strip_html | escape
+                      assign first_variant = product.selected_or_first_available_variant
+                      if first_variant.price == 0
+                        assign product_price = 'products.product.free' | t
+                      else
+                        assign product_price = first_variant.price | money
+                      endif
+                      assign product_description = product.description | strip_html | truncate: 180
+                      assign animation_delay_content = animation_delay
+                    -%}
+                    <div class="products-list__item__content" data-product-content-wrapper>
+                      {%- if collection.products != empty or block.settings.collection == empty or product.id -%}
+                        {%- if settings.show_rating -%}
+                          <div class="products-list__item__rating"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                          {%- liquid
+                            unless product == blank
+                              render 'rating', show_rating_count: false, reviews: product.metafields.reviews
+                            else
+                              render 'rating', show_rating_count: false, onboarding: true
+                            endunless
+                            assign animation_delay_content = animation_delay_content | plus: 150
+                          -%}
+                          </div>
+                        {%- endif -%}
+                      {%- endif -%}
+
+                      <p class="products-list__item__title h4"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                        <a href="{{ product.url }}" title="{{ product_title }}" arial-label="{{ product_title }}" data-product-link>
+                          {%- if product_title != empty -%}
+                            <span class="products-list__item__title-text">{{ product_title }}</span>
+                          {%- endif -%}
+                          {{- product_price -}}
+                        </a>
+                        {%- assign animation_delay_content = animation_delay_content | plus: 150 -%}
+                      </p>
+
+                      {%- if product_description != blank -%}
+                        <p class="products-list__item__description"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>{{ product_description }}</p>
+                        {%- assign animation_delay_content = animation_delay_content | plus: 150 -%}
+                      {%- endif -%}
+
+                      <div class="products-list__item__buttons"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                        <a class="btn btn--{{ button_style }}" href="{{ button_link }}" data-product-link>{{ button_text }}</a>
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                </div>
+              {%- else -%}
+                {{ onboarding_item }}
+              {%- endif -%}
+              </div>
+            {%- when 'product' -%}
+              {%- liquid
+                assign product_handle = block.settings.product
+                assign product = all_products[product_handle]
+                assign button_text = block.settings.button_text
+                assign button_link = '#!'
+                assign animation_delay_content = animation_delay
+                assign enable_video_looping = true
+              -%}
+
+              <div class="products-list__item{% if forloop.first %} products-list__item--active{% endif %}" id="ProductsListItem--{{ section.id }}-{{ forloop.index }}" data-tab-item>
+                {%- if product != empty -%}
+                  {%- liquid
+                    assign product_title = product.title | strip_html | escape
+                    assign first_variant = product.selected_or_first_available_variant
+                    if first_variant.price == 0
+                      assign product_price = 'products.product.free' | t
+                    else
+                      assign product_price = first_variant.price | money
+                    endif
+                    if block.settings.product_description != blank
+                      assign product_description = block.settings.product_description 
+                    else
+                      assign product_description = product.description | strip_html | truncate: 180
+                    endif
+                    assign product_url = product.url
+                    assign product_media = product.featured_media
+                    assign button_link = product.url
+                    assign first_3d_model = false
+                    if product_media.media_type == 'model'
+                      assign first_3d_model = true
+                    endif
+                  -%}
+                  <div class="products-list__item__images{% if show_second_image %} products-list__item__images--overlap{% endif %}" data-product-single-media-group>
+                    {%- if image_1 != blank -%}
+                      <a href="{{ product_url }}" aria-label="{{ product_title }}"
+                        class="products-list__item__image products-list__item__image--main"
+                        {% if animations_enabled %}
+                          data-aos="fade-up"
+                          data-aos-anchor="{{ animation_anchor }}"
+                        {% endif %}
+                        data-overflow-content>
+                        <div class="products-list__item__image__frame">
+                          {{- image_1 -}}
+                        </div>
+                      </a>
+                    {%- else -%}
+                      {%- if product_media.media_type == 'image' -%}
+                        <a href="{{ product_url }}" aria-label="{{ product_title }}"
+                          class="products-list__item__image products-list__item__image--main"
+                          {% if animations_enabled %}
+                            {% if show_second_image %}
+                              data-aos="fade-right"
+                            {% else %}
+                              data-aos="fade-up"
+                            {% endif %}
+                            data-aos-anchor="{{ animation_anchor }}"
+                          {% endif %}
+                          data-overflow-content>
+                          <div class="products-list__item__image__frame">
+                            {%- render 'media', media: product_media, featured_media: product_media, unique: section.id -%}
+                          </div>
+                        </a>
+                      {%- else -%}
+                        <div class="products-list__item__image products-list__item__image--main"
+                          {% if animations_enabled %}
+                            {% if show_second_image %}
+                              data-aos="fade-right"
+                            {% else %}
+                              data-aos="fade-up"
+                            {% endif %}
+                            data-aos-anchor="{{ animation_anchor }}"
+                          {% endif %}
+                          data-overflow-content>
+                          <div class="products-list__item__image__frame">
+                            {%- render 'media', media: product_media, featured_media: product_media, unique: section.id, enable_video_looping: enable_video_looping, hide_controls: true -%}
+                          </div>
+                        </div>
+
+                        {%- if first_3d_model -%}
+                          <button
+                            aria-label="{{ 'products.product.view_in_space_label' | t }}"
+                            class="btn btn--ar product-single__view-in-space"
+                            data-shopify-xr
+                            data-shopify-model3d-id="{{ product_media.id }}"
+                            data-shopify-title="{{ product_title }}"
+                            data-shopify-xr-hidden>
+                  
+                            {%- render 'icon-media-model' -%}
+                            <span class='product-single__view-in-space-text'>{{ 'products.product.view_in_space' | t }}</span>
+                          </button>
+                        {%- endif -%}
+                      {%- endif -%}
+                    {%- endif -%}
+
+                    {%- if image_2 != blank and show_second_image -%}
+                      <a href="{{ product_url }}" aria-label="{{ product_title }}"
+                        class="products-list__item__image products-list__item__image--small"
+                        data-overflow-content>
+                        <div class="products-list__item__image__frame"
+                          {% if animations_enabled %}
+                            data-aos="fade-left"
+                            data-aos-anchor="{{ animation_anchor }}"
+                            data-aos-delay="150"
+                          {% endif %}>
+                          {{- image_2 -}}
+                        </div>
+                      </a>
+                    {%- endif -%}
+                  </div>
+
+                  <div class="products-list__item__contents">
+                    <div class="products-list__item__content">
+                      {%- if settings.show_rating and product.id -%}
+                        <div class="products-list__item__rating"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                        {%- unless product == blank -%}
+                          {%- render 'rating', show_rating_count: false, reviews: product.metafields.reviews -%}
+                        {%- else -%}
+                          {%- render 'rating', show_rating_count: false, onboarding: true -%}
+                        {%- endunless -%}
+                        </div>
+                        {%- assign animation_delay_content = animation_delay_content | plus: 150 -%}
+                      {%- endif -%}
+
+                      <p class="products-list__item__title h4"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                        <a href="{{ product_url }}" title="{{ product_title }}" arial-label="{{ product_price }}">
+                          {%- if product_title != empty and block.settings.title != empty -%}
+                            <span class="products-list__item__title-text">{{ product_title }}</span>
+                          {%- endif -%}
+                          {{- product_price -}}
+                        </a>
+                        {%- assign animation_delay_content = animation_delay_content | plus: 150 -%}
+                      </p>
+
+                      {%- if product_description != blank -%}
+                        <p class="products-list__item__description"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>{{ product_description }}</p>
+                        {%- assign animation_delay_content = animation_delay_content | plus: 150 -%}
+                      {%- endif -%}
+
+                      <div class="products-list__item__buttons"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                        <a class="btn btn--{{ button_style }}" href="{{ button_link }}">{{ button_text }}</a>
+                      </div>
+                    </div>
+                  </div>
+                {%- else -%}
+                  {{- onboarding_item -}}
+                {%- endif -%}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      {%- else -%}
+        <div class="products-list__nav__wrapper">
+          <div class="products-list__nav" data-tabs-nav>
+            {%- for i in (1..3) -%}
+              {%- assign heading = 'homepage.onboarding.collection_title' | t -%}
+
+              <button
+                type="button"
+                class="products-list__nav__button{% if forloop.first %} products-list__nav__button--active{% endif %} h2"
+                href="#ProductsListItem--{{ section.id }}-{{ forloop.index }}"
+                data-tab-button
+                {{ block.shopify_attributes }}
+                {% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}
+              >
+                <span>{{ heading }}</span>
+              </button>
+              {%- assign animation_delay = animation_delay | plus: 150 -%}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        {%- for i in (1..3) -%}
+          <div class="products-list__item{% if forloop.first %} products-list__item--active{% endif %}" id="ProductsListItem--{{ section.id }}-{{ forloop.index }}" data-tab-item>
+            {%- liquid
+              assign button_text = 'collections.general.view_collection' | t
+              assign product_title = 'homepage.onboarding.product_title' | t
+              assign product_price = 9900 | money
+              assign product_description = 'homepage.onboarding.single_product_description' | t
+              assign product_url = '#!'
+              assign animation_delay_content = animation_delay
+            -%}
+
+            <div class="products-list__item__images{% if show_second_image %} products-list__item__images--overlap{% endif %}"
+              data-overflow-content
+              {% if animations_enabled %}
+                data-aos="fade-up"
+                data-aos-anchor="{{ animation_anchor }}"
+              {% endif %}>
+              <div class="products-list__item__image">
+                <div class="products-list__item__image-bg products-list__item__image-bg--placeholder placeholder-svg--overlayed">
+                  {%- capture current -%}{%- cycle 1, 2, 3, 4 -%}{%- endcapture -%}
+                  {{- 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+                </div>
+              </div>
+            </div>
+
+            <div class="products-list__item__contents">
+              <div class="products-list__item__content">
+                {%- if settings.show_rating -%}
+                  <div class="products-list__item__rating"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                    {%- render 'rating', show_rating_count: false, onboarding: true -%}
+                  </div>
+                  {%- assign animation_delay_content = animation_delay_content | plus: 150 -%}
+                {%- endif -%}
+
+                <p class="products-list__item__title h4"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                  <a href="{{ product_url }}" title="{{ product_title }}" arial-label="{{ product_title }}">
+                    {%- if product_title != empty -%}
+                      <span class="products-list__item__title-text">{{ product_title }}</span>
+                    {%- endif -%}
+                    {{- product_price -}}
+                  </a>
+                  {%- assign animation_delay_content = animation_delay_content | plus: 150 -%}
+                </p>
+
+                <p class="products-list__item__description"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                  {{ product_description }}
+                  {%- assign animation_delay_content = animation_delay_content | plus: 150 -%}
+                </p>
+
+                <div class="products-list__item__buttons"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay_content }}"{% endif %}>
+                  <a class="btn btn--{{ button_style }}" href="{{ product_url }}">{{ button_text }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Products list",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+        "type": "select",
+        "id": "wrapper",
+        "label": "Width",
+        "default": "normal",
+        "options": [
+          { "value": "normal", "label": "Normal" },
+          { "value": "full", "label": "Wide" }
+        ]
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 100,
+      "max": 200,
+      "step": 10,
+      "unit": "%",
+      "default": 120
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Style",
+      "default": "primary btn--small",
+      "options": [
+        { "label": "Text", "value": "text" },
+        { "label": "Small button", "value": "primary btn--small" },
+        { "label": "Large button", "value": "primary" },
+        { "label": "Small outline button", "value": "secondary btn--small" },
+        { "label": "Large outline button", "value": "secondary" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_aspect_ratio",
+      "label": "Image aspect ratio",
+      "info": "Wide to tall",
+      "min": 0.5,
+      "max": 1.5,
+      "step": 0.1,
+      "unit": ":1",
+      "default": 1.0
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Collection",
+      "type": "collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection",
+          "info": "Shows 5 products"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "info": "Overrides collection title"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "View Collection"
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "type": "product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Overrides product title"
+        },
+        {
+          "type": "textarea",
+          "id": "product_description",
+          "label": "Description",
+          "info": "Overrides product description"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "View Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_second_image",
+          "label": "Show second variant image",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Custom image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Custom image 2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products list",
+      "category": "Collection",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

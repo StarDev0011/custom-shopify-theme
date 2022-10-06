@@ -1,0 +1,219 @@
+{%- liquid
+  assign bg_color = section.settings.bg_color
+  assign blog = blogs[section.settings.blog]
+  assign blog_link = blog.url | default: '#'
+  assign heading = section.settings.heading
+  assign image_aspect_ratio = section.settings.image_aspect_ratio
+  assign rows = section.settings.rows | plus: 0
+  assign columns = section.settings.columns | plus: 0
+  assign articles_count = columns | times: rows
+
+  if blog != blank and articles_count > blog.articles.size
+    assign articles_count = blog.articles.size
+  endif
+
+  assign wrapper_class = 'wrapper'
+  if section.settings.wrapper == 'full'
+    assign wrapper_class = 'wrapper wrapper--full'
+  endif
+
+  assign animations_enabled = settings.animations_enabled
+  assign animation_anchor = '#FeaturedBlog--' | append: section.id
+-%}
+
+{%- style -%}
+  #FeaturedBlog--{{ section.id }} {
+    --image-height: {{ image_aspect_ratio | times: 100 }}%;
+
+    {%- if articles_count >= columns -%}
+      --grid: repeat({{ columns }}, minmax(0, 1fr));
+    {%- else -%}
+      --grid: repeat({{ articles_count }}, calc(100% / {{ columns }}));
+    {%- endif -%}
+  }
+
+  {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+    #FeaturedBlog--{{ section.id }} {
+      --bg: {{ bg_color }}
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+<div id="FeaturedBlog--{{ section.id }}"
+  class="featured-blog {% if section.settings.remove_margin_bottom %}remove-margin-bottom{% endif %}"
+  data-section-id="{{ section.id }}"
+  data-section-type="featured-blog">
+  <div class="{{ wrapper_class }}">
+
+    {%- if heading != '' -%}
+      <h2 class="section__heading">{{ heading }}</h2>
+
+      {%- if settings.show_spacer_lines -%}
+        <hr>
+      {%- endif -%}
+    {%- endif -%}
+
+    <div class="featured-blog__container">
+      <div class="grid carousel--mobile">
+        {%- if section.settings.blog != blank -%}
+          {%- for article in blog.articles limit: articles_count -%}
+            {%- assign animation_delay = 250 | times: forloop.index -%}
+            {%- render 'blog-post', blog: blog, article: article, index: forloop.index, animation_anchor: animation_anchor, animation_delay: animation_delay, onboarding: false -%}
+          {%- endfor -%}
+        {%- else -%}
+          {%- for i in (1..articles_count) -%}
+            {%- assign animation_delay = 250 | times: forloop.index -%}
+            {%- render 'blog-post', blog: blog, article: article, index: forloop.index, animation_anchor: animation_anchor, animation_delay: animation_delay, onboarding: true -%}
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- if section.settings.cta != '' -%}
+      <div class="featured-blog__button"
+        {% if animations_enabled %}
+          data-aos="fade-up"
+          data-aos-anchor="{{ animation_anchor }}"
+          data-aos-delay="{{ animation_delay | plus: 250 }}"
+        {% endif %}>
+        <a href="{{ blog_link }}" class="btn btn--{{ section.settings.button_style }}">
+          {{- section.settings.cta -}}
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Blog posts",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "blog",
+        "id": "blog",
+        "label": "Blog"
+      },
+      {
+        "type": "text",
+        "id": "cta",
+        "label": "Button label",
+        "default": "View all posts",
+        "info": "Links to blog"
+      },
+      {
+        "type": "select",
+        "id": "button_style",
+        "label": "Style",
+        "default": "primary",
+        "options": [
+          { "label": "Text", "value": "text" },
+          { "label": "Small button", "value": "primary btn--small" },
+          { "label": "Large button", "value": "primary" },
+          { "label": "Small outline button", "value": "secondary btn--small" },
+          { "label": "Large outline button", "value": "secondary" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "tags",
+        "label": "Show tags",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "author",
+        "label": "Show author",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "date",
+        "label": "Show date",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_comments",
+        "label": "Show comment count",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "image_aspect_ratio",
+        "label": "Image aspect ratio",
+        "info": "Wide to tall",
+        "min": 0.5,
+        "max": 1.5,
+        "step": 0.1,
+        "unit": ":1",
+        "default": 0.7
+      },
+      {
+        "type": "range",
+        "id": "rows",
+        "label": "Number of rows",
+        "default": 1,
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "type": "range",
+        "id": "columns",
+        "label": "Articles per row",
+        "default": 4,
+        "min": 2,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "select",
+        "id": "wrapper",
+        "label": "Width",
+        "default": "normal",
+        "options": [
+          { "value": "normal", "label": "Normal" },
+          { "value": "full", "label": "Wide" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Style"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background"
+      },
+      {
+        "type": "checkbox",
+        "id": "remove_margin_bottom",
+        "label": "Remove margin bottom",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "name": "Blog posts",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

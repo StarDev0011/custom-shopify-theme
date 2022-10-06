@@ -1,0 +1,184 @@
+<style>
+.byob-modal-mask {
+  position: fixed;
+  z-index: 2147483647;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  transition: opacity 0.3s ease;
+}
+.byob-modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+.byob-modal-container {
+  width: 500px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  color: #444444;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+.byob-modal-header h3 {
+  margin-top: 0;
+  color: #3a3838;
+}
+.byob-modal-body {
+  margin: 20px 0;
+}
+.modal-default-button {
+  display: inline;
+  margin-top: 1rem;
+  margin: auto;
+  {%- if section.settings.button_color != '' -%}background-color: {{ section.settings.button_color }};{%- endif -%}
+  {%- if section.settings.button_text_color != '' -%}color: {{ section.settings.button_text_color }};{%- endif %}
+}
+.modal-enter {
+  opacity: 0;
+}
+.modal-leave-active {
+  opacity: 0;
+}
+.modal-enter .byob-modal-container,
+.modal-leave-active .byob-modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+#btn-create-another {
+  margin-right: 10px;
+}
+@media screen and (max-width: 600px) {
+.byob-modal-container { width: 90%; }
+}
+</style>
+
+<script type="text/x-template" id="modal-template">
+  <teleport to="body">
+    <transition name="modal">
+      <div class="byob-modal-mask">
+        <div class="byob-modal-wrapper" @click.self="$emit('close')">
+          <div class="byob-modal-container">
+            <div class="byob-modal-header">
+              <slot name="header">
+              </slot>
+            </div>
+
+            <div class="byob-modal-body">
+              <slot name="body">
+                default body
+              </slot>
+            </div>
+
+            <div class="byob-modal-footer">
+              <slot name="footer">
+                <button v-if="show_create_another_button" id="btn-create-another" class="modal-default-button" type="button" onclick="location.reload()">
+                  [[ $t('message.createAnother') ]]
+                </button>
+
+                <button v-if="show_view_cart_button" class="modal-default-button" type="button" @click="redirectUsers">
+                  [[ direct_checkout? $t('message.checkout') : $t('message.viewCart') ]]
+                </button>
+              </slot>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+  </teleport>
+</script>
+
+<script>
+  const direct_checkout = {{ section.settings.direct_checkout | json }};
+  const show_view_cart_button = {{ section.settings.show_view_cart_button | json }};
+  const show_create_another_button = {{ section.settings.show_create_another_button | json }};
+  const hide_sku_on_cart = {{ section.settings.hide_sku_on_cart | json }};
+  const show_quantity_in_line_items = {{ section.settings.show_quantity_in_line_items | json }};  
+  const cart_url = "{{ routes.cart_url }}";  // locale-aware cart url
+  var byob_modal = {
+    template: "#modal-template",
+    compilerOptions: {
+      delimiters: ['[[', ']]'],
+    },
+    data() {
+      return {
+        direct_checkout: direct_checkout,
+        show_view_cart_button: show_view_cart_button,
+        show_create_another_button: show_create_another_button
+      }
+    },
+    methods: {
+      redirectUsers() {
+        window.location.href = 'https://' + window.location.hostname + (this.direct_checkout? cart_url + '/checkout' : cart_url)
+      }
+    }
+  }
+  var vm;
+  if (typeof vueApp === 'undefined')  // For a store, the vueApp is not initialized yet. This is a hack to load it after 1s
+  	setTimeout(function() {vueApp.component("modal", byob_modal); vm = vueApp.mount('#byobApp');}, 1000);
+  else {
+    vueApp.component("modal", byob_modal);
+    vm = vueApp.mount('#byobApp');
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "BYOB Confirm Pop-up",
+    "settings": [
+		{
+         "type": "paragraph",
+         "content": "⚠️ Do not disable or delete this section. This section is the pop-up after adding bundle to cart"
+    	},
+		{
+        "type": "color",
+        "id": "button_color",
+        "label": "Button color"
+        },
+		{
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button text color"
+        },
+		{
+        "type": "checkbox",
+        "id": "show_view_cart_button",
+        "label": "Show 'View Cart' button",
+		"default": true
+        },
+		{
+        "type": "checkbox",
+        "id": "show_create_another_button",
+        "label": "Show 'Create Another Bundle' button"
+        },
+        {
+          "type": "header",
+          "content": "Cart Display"
+        },
+		{
+        "type": "checkbox",
+        "id": "direct_checkout",
+        "label": "Direct Checkout",
+        "info": "Skip the cart page. Redirect to the checkout page"
+        },
+		{
+        "type": "checkbox",
+        "id": "hide_sku_on_cart",
+        "label": "Hide SKUs on cart page",
+        "info": "Hide the sku on each line item property"
+        },
+		{
+        "type": "checkbox",
+        "id": "show_quantity_in_line_items",
+        "label": "Show quantity in line item properties",
+		"default": false
+        }
+	]
+  }
+{% endschema %}

@@ -1,0 +1,332 @@
+<!-- /sections/look.liquid -->
+
+{%- liquid
+  assign section_height = section.settings.section_height
+  assign heading = section.settings.title
+  assign text = section.settings.text
+  assign button_text = section.settings.button_text
+  assign button_link = section.settings.button_link | default: '#'
+  assign button_style = section.settings.button_style
+  assign text_color = section.settings.text_color
+  assign bg_color = section.settings.bg_color
+
+  if section.blocks.size == 0 and heading == blank and text == blank
+    assign columns = 2
+  else
+    assign columns = section.blocks.size | plus: 1
+  endif
+
+  assign animations_enabled = settings.animations_enabled
+  assign animation_anchor = '#Look--' | append: section.id
+  assign animation_delay = 250
+-%}
+
+{%- style -%}
+  {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+    .look[data-section-id="{{ section.id }}"] {
+      --bg: {{ bg_color }};
+      background: var(--bg);
+    }
+  {%- endif -%}
+  {%- if text_color != 'rgba(0,0,0,0)' and text_color != '' -%}
+    .look[data-section-id="{{ section.id }}"] { --text: {{ text_color }}; }
+    .look[data-section-id="{{ section.id }}"] .rich-text__heading { color: var(--text); }
+  {%- endif -%}
+{%- endstyle -%}
+
+<section id="Look--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="look" class="look look--{{ columns }} {{ section_height }}">
+  {%- if section.blocks.size > 0 or heading != blank or text != blank -%}
+    {%- if section.blocks.size > 0 -%}
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign image_desktop = block.settings.image_desktop
+          assign image_mobile = block.settings.image_mobile
+          assign product = all_products[block.settings.product]
+          assign position_x = block.settings.position_x
+          assign position_y = block.settings.position_y
+
+          if product.price == 0
+            assign product_price = 'products.product.free' | t
+          else
+            assign product_price = product.price | money
+          endif
+        -%}
+
+        <div class="look__column look__column--image"
+          {% if animations_enabled %} data-aos="fade" data-aos-anchor="{{ animation_anchor }}"{% endif %}
+          {{ block.shopify_attributes }}>
+          {%- unless image_desktop == blank -%}
+            <div class="look__image{% unless image_mobile == blank %} look__image--desktop{% endunless %} lazyload"
+              data-bgset="{% render 'bgset', image: image_desktop %}"
+              data-parent-fit="cover"
+              data-sizes="auto">
+            </div>
+            <noscript>
+              <div class="look__image look__image--desktop no-js-image" style="background-image: url({{ image_desktop | img_url: '2048x' }});"></div>
+            </noscript>
+          {%- else -%}
+            <div class="look__image{% unless image_mobile == blank %} look__image--desktop{% endunless %} look__image--placeholder placeholder-svg--overlayed">
+              {{- 'image' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+            </div>
+
+            {%- if product == empty -%}
+              <a href="#" class="pointer" data-top="{{ position_y }}" data-left="{{ position_x }}" style="top: {{ position_y }}%; left: {{ position_x }}%;" data-pointer>
+                <div class="pointer__inner">
+                  <div class="pointer__line"></div>
+                  <div class="pointer__info">
+                    <p class="pointer__info__text">{{ 'homepage.onboarding.product_title' | t }}</p>
+                    <p class="pointer__info__price">{{ 10000 | money }}</p>
+                  </div>
+
+                  <div class="pointer__image">
+                    <div class="pointer__image__bg placeholder-svg">
+                      {{- 'product-1' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            {%- endif -%}
+          {%- endunless -%}
+
+          {%- unless image_mobile == blank -%}
+            <div class="look__image look__image--mobile lazyload"
+              data-bgset="{% render 'bgset', image: image_mobile %}"
+              data-parent-fit="cover"
+              data-sizes="auto">
+            </div>
+            <noscript>
+              <div class="look__image look__image--mobile no-js-image" style="background-image: url({{ image_mobile | img_url: '2048x' }});"></div>
+            </noscript>
+          {%- endunless -%}
+
+          {%- if product != empty -%}
+            {%- assign image = product.featured_media.preview_image -%}
+
+            <a href="{{ product.url }}" class="pointer" data-top="{{ position_y }}" data-left="{{ position_x }}" style="top: {{ position_y }}%; left: {{ position_x }}%;" data-pointer>
+              <div class="pointer__inner">
+                <div class="pointer__line"></div>
+                <div class="pointer__info">
+                  <p class="pointer__info__text">{{ product.title | strip_html | escape | truncatewords: 3 }}</p>
+                  <p class="pointer__info__price">{{ product_price }}</p>
+                </div>
+                {%- unless image == blank -%}
+                  <div class="pointer__image">
+                    <div class="pointer__image__bg lazyload"
+                      data-bgset="{% render 'bgset', image: image %}"
+                      data-sizes="auto"
+                      data-parent-fit="cover">
+                    </div>
+                    <noscript>
+                      <div class="pointer__image__bg" style="background-image: url({{ image | img_url: '100x100' }});"></div>
+                    </noscript>
+                  </div>
+                {%- endunless -%}
+              </div>
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+
+    <div class="look__column look__column--text text-left">
+      <div class="look__text">
+        {%- if heading != blank -%}
+          <h3 class="rich-text__heading"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ heading }}</h3>
+          {%- assign animation_delay = animation_delay | plus: 250 -%}
+
+          {%- if settings.show_spacer_lines -%}
+            <hr{% if animations_enabled %} data-aos="fade-up" data-aos-delay="{{ animation_delay }}" data-aos-anchor="{{ animation_anchor }}"{% endif %}>
+            {%- assign animation_delay = animation_delay | plus: 250 -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if text != blank -%}
+          <div class="rich-text__text"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+            {{- text -}}
+          </div>
+          {%- assign animation_delay = animation_delay | plus: 250 -%}
+        {%- endif -%}
+
+        {%- if button_text != blank -%}
+          <div class="rich-text__buttons main-buttons"{% if animations_enabled %} data-aos="fade" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+            <div class="main-buttons__item">
+              <a class="btn btn--{{ button_style }}" href="{{ button_link }}">{{ button_text }}</a>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- else -%}
+    <div class="look__column look__column--image"
+      {% if animations_enabled %} data-aos="fade" data-aos-anchor="{{ animation_anchor }}"{% endif %}>
+      <div class="look__image{% unless image_mobile == blank %} look__image--desktop{% endunless %} look__image--placeholder placeholder-svg--overlayed">
+        {{- 'image' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+      </div>
+
+      <a href="#" class="pointer" data-top="50" data-left="50" style="top: 50%; left: 50%;">
+        <div class="pointer">
+          <div class="pointer__line"></div>
+          <div class="pointer__info">
+            <p class="pointer__info__text">{{ 'homepage.onboarding.product_title' | t }}</p>
+            <p class="pointer__info__price">{{ 10000 | money }}</p>
+          </div>
+
+          <div class="pointer__image">
+            <div class="pointer__image__bg placeholder-svg">
+              {{- 'product-1' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="look__column look__column--text text-left">
+      <div class="look__text">
+        <h3 class="rich-text__heading"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ 'homepage.onboarding.shop_the_look.heading' | t }}</h3>
+        {%- assign animation_delay = animation_delay | plus: 250 -%}
+        <div class="rich-text__text"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ 'homepage.onboarding.shop_the_look.text' | t }}</div>
+        {%- assign animation_delay = animation_delay | plus: 250 -%}
+        <div class="rich-text__buttons main-buttons"{% if animations_enabled %} data-aos="fade" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+          <div class="main-buttons__item">
+            <a class="btn btn--primary" href="#">{{ 'homepage.onboarding.shop_the_look.button_text' | t }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Shop the look",
+  "class": "section-look",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Section height",
+      "default": "six-fifty-height",
+      "options": [
+        { "value": "full-height", "label": "Full screen" },
+        { "value": "seven-fifty-height", "label": "750px" },
+        { "value": "six-fifty-height", "label": "650px" },
+        { "value": "five-fifty-height ", "label": "550px" },
+        { "value": "four-fifty-height", "label": "450px" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Our Story"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Style",
+      "default": "primary",
+      "options": [
+        { "label": "Text", "value": "text" },
+        { "label": "Small button", "value": "primary btn--small" },
+        { "label": "Large button", "value": "primary" },
+        { "label": "Small outline button", "value": "secondary btn--small" },
+        { "label": "Large outline button", "value": "secondary" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_desktop",
+          "label": "Image (desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image (mobile)"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "header",
+          "content": "Dot position"
+        },
+        {
+          "type":    "range",
+          "id":      "position_x",
+          "min":     10,
+          "max":     90,
+          "step":    1,
+          "label":   "Horizontal",
+          "unit":    "%",
+          "default": 50
+        },
+        {
+          "type":    "range",
+          "id":      "position_y",
+          "min":     10,
+          "max":     90,
+          "step":    1,
+          "label":   "Vertical",
+          "unit":    "%",
+          "default": 50
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop the look",
+      "category": "Image",
+      "blocks": [
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

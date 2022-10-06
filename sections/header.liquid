@@ -1,0 +1,764 @@
+{%- liquid
+  assign header_position = 'relative'
+  if section.settings.sticky_header
+    assign header_position = 'fixed'
+  endif
+
+  assign header_transparent = section.settings.header_transparent
+  assign dgd_header_text_color = section.settings.dgd_header_text_color
+  assign nav_alignment = section.settings.menu_alignment
+  assign cart_animation = settings.enable_cart_animation
+  assign header_bg_color = section.settings.header_color
+  assign header_scrolled_bg_color = section.settings.scrolled_header_color
+  assign header_text_color = section.settings.header_text_color
+  assign header_mobile_text_color = section.settings.header_mobile_text_color
+  assign header_scrolled_text_color = section.settings.scrolled_header_text_color
+  assign submenu_bg_color = section.settings.submenu_bg_color
+  assign submenu_text_color = section.settings.submenu_text_color
+  
+
+  assign logo_width = section.settings.logo_max_width
+  assign logo_height = 0
+  assign logo = section.settings.logo
+  assign logo_not_home = section.settings.logo_not_home
+
+  if logo
+    assign logo_aspect_ratio = logo.aspect_ratio
+    assign logo_height = logo_width | divided_by: logo_aspect_ratio
+    assign logo_height_scrolled = logo_height
+  endif
+
+  if logo_not_home
+    assign logo_height_scrolled = logo_width | divided_by: logo_not_home.aspect_ratio
+    assign logo_aspect_ratio = logo_not_home.aspect_ratio
+
+    unless logo
+      assign logo_height = logo_width | divided_by: logo_aspect_ratio
+    endunless
+  endif
+
+  if logo_height_scrolled > 40
+    assign logo_height_scrolled = 40
+  endif
+
+  assign header_height = 60
+  if logo_height > 30
+    assign header_height = logo_height | plus: 30
+  endif
+
+  render 'nav-drawer'
+
+  if settings.cart_type == 'drawer' and template.name != 'cart'
+    render 'cart-drawer' cart: cart
+  endif
+  assign meganav_logo_color = false
+  if section.settings.meganav_logo_color == 'light'
+    assign meganav_logo_color = true
+  endif
+  assign mobile_logo_color = false
+  if section.settings.mobile_logo_color == "light"
+    assign mobile_logo_color = true
+  endif
+-%}
+
+{%- comment -%} Prevent CLS on Collection & List Collections pages {%- endcomment -%}
+{%- style -%}
+  :root {
+    --header-height: {{ header_height }}px;
+    --header-color: {{ header_bg_color }};
+    --header-text-color: {{ dgd_header_text_color }};
+    --header-transparent-text-color: {{ header_text_color }};
+    --header-mobile-transparent-text-color: {{ header_mobile_text_color }};
+    --override-header-bg: {{ section.settings.override_mega_menu_background_color }};
+    --override-header-text-color: {{ section.settings.override_mega_menu_text_color }};
+    --meganav-logo-color: {% if meganav_logo_color %} invert(1) {% else %} none {% endif %};
+    --mobile-logo-color: {% if mobile_logo_color %} invert(1) {% else %} none {% endif %};
+    --logo-width: {{ section.settings.logo_max_width }}px;
+  }
+
+  {%- if header_transparent -%}
+    #PageContainer { --header-height: 0px; }
+  {%- else -%}
+    .main-content > .transparent-header:first-child { --header-height: 0px; }
+  {%- endif -%}
+
+  {%- if template.name == 'collection' or template.name == 'list-collections' or header_transparent == false -%}
+    #PageContainer { padding-top: {{ header_height }}px; }
+  {%- endif -%}
+{%- endstyle -%}
+
+<header class="site-header site-header--{{ header_position }} site-header--nav-{{ nav_alignment }}{% if header_transparent %} site-header--transparent{% endif %} site-header--loading {% if section.settings.override_mega_menu_styles %}meganav--override{% endif %}" role="banner"
+  data-site-header
+  data-section-id="{{ section.id }}"
+  data-height="{{ header_height }}"
+  data-section-type="header"
+  data-transparent="{{ header_transparent }}"
+  {% if header_transparent %}data-text-color="{{ header_text_color }}"{% endif %}
+  data-position="{{ header_position }}"
+  data-nav-alignment="{{ nav_alignment }}"
+  data-header-height>
+  <div class="wrapper" data-wrapper>
+    {%- if logo or logo_not_home -%}
+      {%- style -%}
+        @media screen and (min-width: 768px) {
+          .logo__image-link { height: {{ logo_height | round | append: 'px' }}; }
+
+          .parent .header__dropdown {
+            --bg: {{ submenu_bg_color }};
+          }
+          .parent .header__dropdown a {
+            --text: {{ submenu_text_color }};
+          }
+        }
+        .logo__image-link, .drawer__logo-image { 
+          width: {{ logo_width | append: 'px' }}; 
+        }
+        .has-scrolled .logo__image-link { 
+          width: {{ logo_height_scrolled | times: logo_aspect_ratio | round | append: 'px' }}; 
+          height: {{ logo_height_scrolled | round | append: 'px' }};
+        }
+        {% if section.settings.mobile_logo_max_width %}
+          @media screen and (max-width: 768px) {
+            .logo__image-link, .drawer__logo-image { 
+              width: {{ section.settings.mobile_logo_max_width  }}px !important; 
+            }
+          }
+        {% endif %}
+      {%- endstyle -%}
+    {%- endif -%}
+
+{%- capture logo_not_home -%}
+  {%- assign image = section.settings.logo_not_home -%}
+  {%- if image != blank -%}
+    <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}" class="logo__image-link logo__image-link--other{% unless section.settings.logo %} logo__image-link--single{% endunless %}">
+      {%- assign image_url_pattern = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+      {%- assign image_widths = "[50,60,70,80,90,100,110,120,130,140,150,160,170,180,200,220,240,260,280,300,320,340,360,380,400,420,440,460,480,500]" -%}
+      {%- assign logo_padding_top = 1 | divided_by: image.aspect_ratio | times: 100 | round: 1 -%}
+
+      <img
+        class="lazyload logo__image {% if section.settings.mobile_logo  != blank %}has-mobile-logo{% endif %}"
+        src="{{ 'blank.gif' | asset_img_url: '1x1' }}"
+        data-src="{{ image_url_pattern }}"
+        data-widths= "{{ image_widths }}"
+        data-aspectratio="{{ image.aspect_ratio }}"
+        data-sizes="auto"
+        loading="lazy"
+        width="{{ logo_width }}"
+        height="{{ logo_width | divided_by: image.aspect_ratio }}"
+        alt="{{ image.alt | escape }}">
+      <noscript>
+        <img src="{{ image | img_url: '1024x' }}" class="logo__image" alt="{{ image.alt | escape }}">
+      </noscript>
+      <span class="logo__image-push {% if section.settings.mobile_logo  != blank %}has-mobile-logo{% endif %}" style="padding-top: {{ logo_padding_top }}%"></span>
+      {% if section.settings.mobile_logo  != blank %}
+        {%- assign mobile_image = section.settings.mobile_logo -%}
+        {%- assign mobile_image_url_pattern = mobile_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        {%- assign mobile_logo_width = section.settings.mobile_logo_max_width -%}
+        {%- assign mobile_image_widths = "[50,60,70,80,90,100,110,120,130,140,150,160,170,180,200,220,240,260,280,300,320,340,360,380,400,420,440,460,480,500]" -%}
+        {%- assign mobile_logo_padding_top = 1 | divided_by: mobile_image.aspect_ratio | times: 100 | round: 1 -%}
+        <img
+          class="lazyload logo__image logo__image-mobile"
+          src="{{ 'blank.gif' | asset_img_url: '1x1' }}"
+          data-src="{{ mobile_image_url_pattern }}"
+          data-widths= "{{ mobile_image_widths }}"
+          data-aspectratio="{{ mobile_image.aspect_ratio }}"
+          data-sizes="auto"
+          loading="lazy"
+          width="{{ mobile_logo_width }}"
+          height="{{ mobile_logo_width | divided_by: mobile_image.aspect_ratio }}"
+          alt="{{ mobile_image.alt | escape }}">
+        <noscript>
+          <img src="{{ mobile_image | img_url: '1024x' }}" class="logo__image logo__image-mobile" alt="{{ image.alt | escape }}">
+        </noscript>
+        <span class="logo__image-push-mobile" style="padding-top: {{ mobile_logo_padding_top }}%"></span>
+      {% endif %}
+    </a>
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture logo_home -%}
+  {%- assign image = section.settings.logo -%}
+  {%- if image != blank -%}
+    <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}" class="logo__image-link logo__image-link--home{% unless section.settings.logo_not_home %} logo__image-link--single{% endunless %}">
+      {%- assign image_url_pattern = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+      {%- assign image_widths = "[50, 100, 150, 200, 250, 300, 350, 400, 500, 700, 800]" -%}
+      {%- assign logo_padding_top = 1 | divided_by: image.aspect_ratio | times: 100 | round: 1 -%}
+
+      <img
+        class="lazyload logo__image"
+        src="{{ 'blank.gif' | asset_img_url: '1x1' }}"
+        data-src="{{ image_url_pattern }}"
+        data-widths= "{{ image_widths }}"
+        data-aspectratio="{{ image.aspect_ratio }}"
+        data-sizes="auto"
+        loading="lazy"
+        width="{{ logo_width }}"
+        height="{{ logo_width | divided_by: image.aspect_ratio }}"
+        alt="{{ image.alt | escape }}">
+      <noscript>
+        <img src="{{ image | img_url: '1024x' }}" class="logo__image" alt="{{ image.alt | escape }}">
+      </noscript>
+      <span class="logo__image-push" style="padding-top: {{ logo_padding_top }}%"></span>
+    </a>
+  {%- endif -%}
+{%- endcapture -%}
+
+<h1 class="logo" data-logo>
+  {%- if logo_not_home != blank or logo_home != blank -%}
+    {{- logo_not_home -}}
+    {{- logo_home -}}
+  {%- else -%}
+    <a class="logo__text-link" href="{{ routes.root_url }}">{{ shop.name }}</a>
+  {%- endif -%}
+</h1>
+    <!-- /partials/site-nav.liquid -->
+{%- assign highlight_item_color = section.settings.highlight_item_color -%}
+{%- capture style -%}
+  {%- if highlight_item_color != 'rgba(0,0,0,0)' and highlight_item_color != '' -%}
+    style="--highlight: {{ highlight_item_color }};"
+  {%- endif -%}
+{%- endcapture -%}
+
+<nav id="NavStandard" class="nav nav--default nav--weight-{{ settings.nav_font_weight }}{% if settings.nav_caps %} caps{% endif %}" role="navigation" data-nav {{ style }}>
+  <div class="menu__item menu__item--compress">
+    <a href="{{ routes.search_url }}" class="navlink navlink--icon" aria-label="{{ 'layout.navigation.search' | t }}" data-nav-search-open>
+      <span class="visually-hidden">{{ 'general.accessibility.open_search_bar' | t }}</span>
+      {%- render 'icon-search' -%}
+    </a>
+
+    <a href="{{ routes.cart_url }}" class="navlink navlink--icon cart__toggle cart__toggle{% if cart.item_count > 0 %} cart__toggle--has-items{% endif %}{% if cart_animation %} cart__toggle--animation{% endif %}" aria-controls="cart-drawer" aria-expanded="false" data-focus-element{% unless template.name == 'cart' or settings.cart_type == 'page' %} data-cart-drawer-toggle{% endunless %}>
+      <span class="visually-hidden">{{ 'general.accessibility.open_cart' | t }}</span>
+      {%- render 'icon-shopping-bag' -%}
+    </a>
+
+    <button type="button" class="icon-fallback-text navlink navlink--icon js-drawer-open" aria-controls="nav-drawer" data-drawer-toggle>
+      <span class="visually-hidden">{{ 'general.accessibility.mobile_menu_toggle' | t }}</span>
+      {%- render 'icon-hamburger' -%}
+    </button>
+  </div>
+
+  {%- for link in linklists[section.settings.main-menu].links -%}
+    {%- render 'nav-item', link: link, section: section, index: forloop.index, highlight_item: highlight_item -%}
+  {%- endfor -%}
+
+  <div class="menu__item menu__item--icons" data-nav-icons>
+    {%- if section.settings.show_search -%}
+      <div class="menu__item menu__item--icon">
+        <a href="{{ routes.search_url }}" class="navlink navlink--icon" aria-label="{{ 'layout.navigation.search' | t }}" data-nav-search-open>
+          <span class="visually-hidden">{{ 'general.accessibility.open_search_bar' | t }}</span>
+          {%- render 'icon-search' -%}
+        </a>
+      </div>
+    {%- endif -%}
+
+    {%- if shop.customer_accounts_enabled -%}
+      <div class="menu__item menu__item--icon">
+        <a href="{{ routes.account_url }}" class="navlink navlink--icon">
+          <span class="visually-hidden">{{ 'general.accessibility.my_account' | t }}</span>
+          {%- render 'icon-user' -%}
+        </a>
+      </div>
+    {%- endif -%}
+
+    <div class="menu__item menu__item--icon">
+      <a href="{{ routes.cart_url }}" class="navlink navlink--icon cart__toggle{% if cart.item_count > 0 %} cart__toggle--has-items{% endif %}{% if cart_animation %} cart__toggle--animation{% endif %}" aria-controls="cart-drawer" aria-expanded="false" data-focus-element{% unless template.name == 'cart' or settings.cart_type == 'page' %} data-cart-drawer-toggle{% endunless %}>
+        <span class="visually-hidden">{{ 'general.accessibility.open_cart' | t }}</span>
+        {%- render 'icon-shopping-bag' -%}
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  {%- if section.settings.show_search -%}
+    <a href="{{ routes.search_url }}" class="mobile-menu__button" aria-label="{{ 'layout.navigation.search' | t }}" data-nav-search-open>
+      <span class="visually-hidden">{{ 'general.accessibility.open_search_bar' | t }}</span>
+      {%- render 'icon-search' -%}
+    </a>
+  {%- endif -%}
+
+  <a href="{{ routes.cart_url }}" class="mobile-menu__button cart__toggle{% if cart.item_count > 0 %} cart__toggle--has-items{% endif %}{% if cart_animation %} cart__toggle--animation{% endif %}" aria-controls="cart-drawer" aria-expanded="false" data-focus-element {% unless template.name == 'cart' or settings.cart_type == 'page' %} data-cart-drawer-toggle{% endunless %}>
+    <span class="visually-hidden">{{ 'general.accessibility.open_cart' | t }}</span>
+    {%- render 'icon-shopping-bag' -%}
+  </a>
+
+  <button type="button" class="mobile-menu__button js-drawer-open" aria-controls="nav-drawer" data-drawer-toggle>
+    <span class="visually-hidden">{{ 'general.accessibility.mobile_menu_toggle' | t }}</span>
+    {%- render 'icon-hamburger' -%}
+  </button>
+</div>
+  </div>
+
+  {%- if section.settings.show_search -%}
+    <div class="nav-search" aria-expanded="false" data-nav-search>
+  <button class="nav-search__close" data-nav-search-close>
+    <span class="visually-hidden">{{ 'general.accessibility.close_search_bar' | t }}</span>
+    {%- render 'icon-close' -%}
+  </button>
+
+  <div class="nav-search__scroller" data-nav-search-scroller>
+    <div class="nav-search__container" data-nav-search-container>
+      <div class="wrapper">
+        <form action="{{ routes.search_url }}" method="get" class="search-form" role="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="250" data-nav-search-form>
+          <div class="nav-search__input-group">
+            <label for="search-field" class="visually-hidden">{{ 'general.accessibility.search-field' | t }}</label>
+            <input class="nav-search__input" name="q" type="search" id="search-field" placeholder="{{ 'general.search.placeholder' | t }}" value="" data-nav-search-input>
+            <input type="hidden" name="type" value="product" data-nav-search-type>
+            <button type="submit" class="nav-search__submit"><span class="visually-hidden">{{ 'general.accessibility.submit_search_request' | t }}</span>{% render 'icon-search' %}</button>
+          </div>
+        </form>
+
+        {%- assign popular_links = section.settings.menu_searches_list -%}
+        {%- unless popular_links == blank -%}
+          <div class="results-popular">
+            <p class="results-popular__title">{{ 'general.search.popular' | t }}</p>
+            <ul class="results-popular__links" data-scroll-lock-scrollable>
+              {%- for link in linklists[popular_links].links -%}
+                <li><a href="{{ link.url }}" data-popular-search-link>{{ link.title | escape }}</a></li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endunless -%}
+
+        {%- if section.settings.show_search_links -%}
+          <div class="results-popular">
+            <p class="results-popular__title">{{ 'general.search.browse_categories' | t }}</p>
+            <ul class="results-popular__links" data-scroll-lock-scrollable>
+              {%- for collection in collections -%}
+                <li><a href="{{ collection.url }}" class="results-popular__link" data-popular-search-link>{{ collection.title }}</a></li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+
+        <div id="search-results" class="results" data-nav-search-results>
+          <ul class="results__list grid" data-products-wrap>
+            {% comment %} product-grid-item-template results append here {% endcomment %}
+          </ul>
+
+          <div class="pagination pagination--search" data-results-pagination>
+            <a href="{{ routes.search_url }}" class="btn">{{ "general.search.view_all" | t }}</a>
+          </div>
+        </div>
+
+        <div class="pagination__loading"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script product-grid-item-template type="text/x-template">
+  <li class="result">
+    {% raw %}
+      <div class="result__image">
+        <a href="{{ it.product.url }}" class="result__image-link" aria-label='{{ it.product.title }}'>
+          <div class="product__media__outer">
+            <div class="product__media__inner">
+              <div class="product__media__container{{@if(it.product.image.layout)}} product__media__container--{{ it.product.image.layout }}{{/if}}" style="--aspect-ratio: {{ it.product.image.aspectRatio }}">
+                <div class="result__image-img product__media lazyload fade-in"
+                  data-bgset="{{ it.product.image.thumb }}"
+                  data-aspectratio="{{ it.product.image.aspectRatio }}"
+                  data-sizes="auto"
+                  data-product-image>
+                </div>
+
+                {% endraw %}
+                  {%- capture product_badges -%}
+                    {% raw %}
+                      {{@if(it.product.customBadgeText)}}
+                        <div class="product__badge__item product__badge__item--custom"><span>{{ it.product.customBadgeText | safe }}</span></div>
+                      {{/if}}
+
+                      {{@if(it.product.soldBadgeText)}}
+                        <div class="product__badge__item product__badge__item--sold"><span>{{ it.product.soldBadgeText | safe }}</span></div>
+                      {{/if}}
+
+                      {{@if(it.product.preorderBadgeText)}}
+                        <div class="product__badge__item product__badge__item--custom"><span>{{ it.product.preorderBadgeText | safe }}</span></div>
+                      {{/if}}
+
+                      {{@if(it.product.saleBadgeText)}}
+                        <div class="product__badge__item product__badge__item--sale"><span>{{ it.product.saleBadgeText | safe }}</span></div>
+                      {{/if}}
+
+                      {{@if(it.product.savingBadgeText)}}
+                        <div class="product__badge__item product__badge__item--saving"><span>{{ it.product.savingBadgeText | safe }}</span></div>
+                      {{/if}}
+                    {% endraw %}
+                  {%- endcapture -%}
+
+                  {%- unless product_badges == blank -%}
+                    <div class="product__badge" data-product-badge>{{ product_badges }}</div>
+                  {%- endunless -%}
+
+                {% raw %}
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <p class="result__title">
+        <a href="{{ it.product.url }}">{{ it.product.title }}</a>
+      </p>
+    {% endraw %}
+  </li>
+</script>
+
+<script noresult-item-template type="text/x-template">
+  <li class="result result--full">
+    {% raw %}
+      <p class="result__title">{{ it.item.text }}</p>
+    {% endraw %}
+  </li>
+</script>
+  {%- endif -%}
+
+  <div class="drawer__overlay"></div>
+</header>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": {{ shop.name | json }},
+  {%- if section.settings.logo or section.settings.logo_not_home -%}
+    {%- if section.settings.logo -%}
+      {%- assign logo = section.settings.logo -%}
+    {%- elsif section.settings.logo_not_home -%}
+      {%- assign logo = section.settings.logo_not_home -%}
+    {%- endif -%}
+    {%- assign image_size = logo.width | append:'x' -%}
+
+    "logo": {{ logo | img_url: image_size | prepend: "https:" | json }},
+  {%- endif -%}
+  "sameAs": [
+    {{ settings.instagram_link | json }},
+    {{ settings.facebook_link | json }},
+    {{ settings.twitter_link | json }},
+    {{ settings.youtube_link | json }},
+    {{ settings.vimeo_link | json }},
+    {{ settings.pinterest_link | json }},
+    {{ settings.tumblr_link | json }}
+  ],
+  "url": {{ shop.url | append: page.url | json }}
+}
+</script>
+
+{%- if template.name == 'index' -%}
+  {%- assign potential_action_target = shop.url | append: routes.search_url | append: "?q={search_term_string}" -%}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ shop.url | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Header",
+  "class": "header--sticky",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "sticky_header",
+      "label": "Enable sticky header",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "header_text_color",
+      "label": "Transparent background text color",
+      "info": "This is only for transparent background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "header_mobile_text_color",
+      "label": "Mobile transparent background text color",
+      "info": "This is only for transparent background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "info": "This is before the page is scrolled. Leave blank for transparent background.",
+      "label": "Header color",
+      "default": "#515f54"
+    },
+    {
+      "type": "color",
+      "id": "dgd_header_text_color",
+      "label": "Header text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "submenu_bg_color",
+      "label": "Submenu background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "submenu_text_color",
+      "label": "Submenu text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_not_home",
+      "label": "Image",
+      "info": "Used on the other pages and on scroll when the header is sticky"
+    },
+    {
+      "type": "select",
+      "id": "meganav_logo_color",
+      "label": "Logo color when meganav is open",
+      "info": "This is the color of the logo when the meganav is open.",
+      "default": "dark",
+      "options": [
+        { "label": "Light", "value": "light" },
+        { "label": "Dark", "value": "dark" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "logo_max_width",
+      "label": "Width",
+      "min": 30,
+      "max": 400,
+      "default": 100,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_logo",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "range",
+      "id": "mobile_logo_max_width",
+      "label": "Width",
+      "min": 30,
+      "max": 250,
+      "default": 100,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "link_list",
+      "id": "main-menu",
+      "label": "Main menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_images",
+      "label": "Show mega menu images",
+      "info": "Collection and Product links",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "image_aspect_ratio",
+      "min": 0.5,
+      "max": 1.5,
+      "step": 0.1,
+      "unit": ":1",
+      "label": "Image scaling ratio",
+      "info": "Wide to tall",
+      "default": 0.5
+    },
+    {
+      "type": "select",
+      "id": "menu_alignment",
+      "label": "Alignment",
+      "default": "center",
+      "options": [
+        { "label": "Links | Logo | Icons", "value": "left" },
+        { "label": "Logo | Links (center) | Icons", "value": "center" },
+        { "label": "Logo | Links (right) | Icons", "value": "right" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Highlight link"
+    },
+    {
+      "type": "text",
+      "id": "highlight_item",
+      "label": "Menu item",
+      "default": "Sale"
+    },
+    {
+      "type": "color",
+      "id": "highlight_item_color",
+      "label": "Color",
+      "default": "#D02E2E"
+    },
+    {
+      "type": "header",
+      "content": "Search"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "Show search",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "menu_searches_list",
+      "label": "Search menu",
+      "info": "This menu won't show dropdown items"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search_links",
+      "label": "Show collection links",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Transparent header"
+    },
+    {
+      "type": "checkbox",
+      "id": "header_transparent",
+      "label": "Enable transparent header",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "info": "Used on Home and Collection pages when the header is transparent"
+    },
+    {
+      "type": "checkbox",
+      "id": "override_mega_menu_styles",
+      "label": "Override mega menu styles",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "override_mega_menu_background_color",
+      "label": "Override mega menu background color",
+      "default": "#515f54"
+    },
+    {
+      "type": "color",
+      "id": "override_mega_menu_text_color",
+      "label": "Override mega menu text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "mobile_logo_color",
+      "label": "Mobile logo color",
+      "info": "This is the color of the logo when the mobile drawer is open.",
+      "default": "light",
+      "options": [
+        { "label": "Light", "value": "light" },
+        { "label": "Dark", "value": "dark" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "image",
+      "settings": [
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Link position in main menu",
+          "default": "1",
+          "options": [
+            { "value": "1", "label": "Item 1"},
+            { "value": "2", "label": "Item 2"},
+            { "value": "3", "label": "Item 3"},
+            { "value": "4", "label": "Item 4"},
+            { "value": "5", "label": "Item 5"},
+            { "value": "6", "label": "Item 6"},
+            { "value": "7", "label": "Item 7"},
+            { "value": "8", "label": "Item 8"},
+            { "value": "9", "label": "Item 9"},
+            { "value": "10", "label": "Item 10"}
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "aspect_ratio",
+          "min": 0.5,
+          "max": 1.5,
+          "step": 0.1,
+          "unit": ":1",
+          "label": "Image scaling ratio",
+          "info": "Wide to tall",
+          "default": 0.5
+        },
+        {
+          "type": "checkbox",
+          "id": "wide_image",
+          "label": "Wide image",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "bg_position",
+          "label": "Position",
+          "default": "center-center",
+          "options": [
+            { "label": "Top", "value": "center-top" },
+            { "label": "Right", "value": "right-center" },
+            { "label": "Center", "value": "center-center" },
+            { "label": "Left", "value": "left-center" },
+            { "label": "Bottom", "value": "center-bottom" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

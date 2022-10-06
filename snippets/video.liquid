@@ -1,0 +1,71 @@
+<!-- /snippets/video.liquid -->
+<div class="video__container video__container--{{ unique }}" id="video-{{ unique }}-container">
+
+  <div class="video__background {% if image == blank %}placeholder-bg{% else %}lazyload{% endif %}"
+    {% unless image == blank %}
+      data-bgset="{% render 'bgset', image: image %}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+    {% endunless %}>
+    {%- if image == blank -%}
+      {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+    {%- endif -%}
+  </div>
+  <noscript>
+    <div class="video__background{% if image == blank %} placeholder-bg{% endif %}"{% unless image == blank %} style="background-image: url({{ image | img_url: '2048x' }});"{% endunless %}>
+      {%- if image == blank -%}
+        {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+      {%- endif -%}
+    </div>
+  </noscript>
+
+  {%- if video_id != blank -%}
+    <div class="video__iframe" id="video-{{ unique }}" data-video="{{ video_id }}"></div>
+  {%- endif -%}
+
+  <div class="overlay video__overlay" style="--overlay-opacity: {{ overlay_opacity }};"></div>
+</div>
+
+<div class="align--{{ text_position }} {{ text_color }} text-inside">
+  {% comment %} Text {% endcomment %}
+  <div class="video-text-wrapper wrapper wrapper--narrow{% if show_text_shadow %} backdrop--radial{% endif %}" data-overflow-content>
+    {%- if title != blank -%}
+      <h1 class="main-heading {{ text_color }}"
+        {% if animations_enabled %}
+          data-aos="fade-up"
+          data-aos-anchor="{{ animation_anchor }}"
+          data-aos-delay="{{ animation_delay }}"
+        {% endif %}
+        style="font-size: calc({{ heading_size }} * 3rem * var(--FONT-ADJUST-HEADING))">
+        {{- title | escape -}}
+      </h1>
+
+      {%- assign animation_delay = animation_delay | plus: 250 -%}
+    {%- endif -%}
+
+    {%- if text != blank -%}
+      <h2 class="main-text"
+        {% if animations_enabled %}
+          data-aos="fade-up"
+          data-aos-anchor="{{ animation_anchor }}"
+          data-aos-delay="{{ animation_delay }}"
+        {% endif %}>
+        {{- text | escape -}}
+      </h2>
+
+      {%- assign animation_delay = animation_delay | plus: 250 -%}
+    {%- endif -%}
+
+    {% comment %} Button {% endcomment %}
+    {%- if button_text != blank -%}
+      <div class="buttons-wrapper main-buttons"
+        {% if animations_enabled %}
+          data-aos="fade-up"
+          data-aos-anchor="{{ animation_anchor }}"
+          data-aos-delay="{{ animation_delay }}"
+        {% endif %}>
+        <a class="btn btn--{{ button_style }}" href="{{ button_link }}">{{ button_text }}</a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>

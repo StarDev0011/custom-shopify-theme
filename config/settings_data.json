@@ -1,0 +1,546 @@
+{
+  "current": {
+    "color_body_bg": "#fafafa",
+    "color_headings": "#000000",
+    "color_body_text": "#000000",
+    "color_accent": "#adadad",
+    "color_borders_and_lines": "#ffffff",
+    "color_custom_badge": "#7a7a7a",
+    "color_saving_badge": "#eedaea",
+    "color_button_primary": "#000000",
+    "color_button_secondary": "#ffffff",
+    "type_heading_font": "sans-serif",
+    "heading_size": 85,
+    "type_base_font": "sans-serif",
+    "text_size": 110,
+    "type_nav_font": "heading",
+    "nav_font_weight": "normal",
+    "nav_size": 120,
+    "nav_caps": false,
+    "type_button_font": "heading",
+    "button_size": 80,
+    "button_letter_spacing": 125,
+    "button_caps": true,
+    "subheading_caps": false,
+    "first_section_padding": 8,
+    "show_spacer_lines": false,
+    "show_rounded_corners": true,
+    "show_text_shadow": false,
+    "mobile_menu_behaviour": "link",
+    "animations_enabled": true,
+    "button_style": "square",
+    "content_alignment": "left",
+    "products_per_row_on_mobile": "2",
+    "image_size": "cover",
+    "image_aspect_ratio": 1.1,
+    "show_gray_bg": false,
+    "product_grid_hover": "none",
+    "product_grid_hover_animation": "slide-in",
+    "enable_color_swatches_collection": false,
+    "show_rating": true,
+    "quick_button": "view",
+    "show_quantity": true,
+    "show_payment_button": true,
+    "show_product_gray_bg": false,
+    "enable_video_looping": true,
+    "cart_type": "drawer",
+    "enable_cart_animation": true,
+    "enable_cart_notes": false,
+    "enable_additional_buttons": true,
+    "show_empty_cart_buttons": false,
+    "empty_cart_buttons": "main-menu",
+    "show_continue_shopping": true,
+    "continue_shopping_link": "",
+    "show_free_shipping_message": false,
+    "message": "All FACEWATER products are $20 each. Always free shipping. Online order minimum of any two products.",
+    "free_shipping_limit": "20",
+    "cart_custom_message_text": "<p>All FACEWATER products are $20 each. Always free shipping. Online order minimum of any two products.<\/p>",
+    "cart_custom_message_color": "text-dark",
+    "enable_accept_terms": false,
+    "social_facebook_link": "",
+    "social_twitter_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/plantbeautydistillery\/",
+    "favicon": "shopify:\/\/shop_images\/PBD_icon-2-01_46.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/PBD_LOGO_TAG.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fafafa",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#000000",
+    "checkout_button_color": "#000000",
+    "checkout_error_color": "#f91313",
+    "type_body_font": "chivo_n4",
+    "enable_color_swatches": true,
+    "show_popup_newsletter": true,
+    "popup_delay": "3000",
+    "popup_reappear_time": "7",
+    "logo_max_width": "30",
+    "show_shop_name": true,
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "sticky_header": true,
+          "header_text_color": "#ffffff",
+          "header_mobile_text_color": "#000000",
+          "header_color": "#fafafa",
+          "dgd_header_text_color": "#000000",
+          "submenu_bg_color": "#7a7a7a",
+          "submenu_text_color": "#ffffff",
+          "logo_not_home": "shopify:\/\/shop_images\/PBD_logo_BK-01_ae1854d3-30b1-456b-ace1-ab77f47bbd1c.png",
+          "meganav_logo_color": "dark",
+          "logo_max_width": 210,
+          "mobile_logo": "shopify:\/\/shop_images\/PBD_logo_BK-01_ae1854d3-30b1-456b-ace1-ab77f47bbd1c.png",
+          "mobile_logo_max_width": 170,
+          "main-menu": "main-menu",
+          "show_images": false,
+          "image_aspect_ratio": 0.5,
+          "menu_alignment": "right",
+          "highlight_item": "Sale",
+          "highlight_item_color": "#fde9f1",
+          "show_search": true,
+          "menu_searches_list": "",
+          "show_search_links": false,
+          "header_transparent": false,
+          "logo": "shopify:\/\/shop_images\/PBD_logo_BK-01.png",
+          "override_mega_menu_styles": false,
+          "override_mega_menu_background_color": "#7a7a7a",
+          "override_mega_menu_text_color": "#ffffff",
+          "mobile_logo_color": "dark"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-block-2": {
+            "type": "newsletter",
+            "settings": {
+              "title": "SIGN UP FOR OUR EMAILS",
+              "text": "<p>stay up to date on promos, new product launches, and skincare news.<\/p>"
+            }
+          },
+          "footer-block-0": {
+            "type": "link",
+            "settings": {
+              "menu": "footer",
+              "show_title": false
+            }
+          },
+          "footer-block-1": {
+            "type": "text",
+            "settings": {
+              "title": "THE SKIN TRANSFORMING 100% PLANT BASED MOISTURE - FOR YOUR FACE",
+              "footer_text": "<p>fresh, energetic and highly absorbing water-form serums, cleansers, toners, moisturizers and more... with immediately visible radiance - noticeable skin clearing and long-term youth preserving effects<\/p>"
+            }
+          },
+          "1e331471-deb5-4057-929d-72cdbee52818": {
+            "type": "link",
+            "disabled": true,
+            "settings": {
+              "menu": "footer-about",
+              "show_title": true
+            }
+          }
+        },
+        "block_order": [
+          "footer-block-2",
+          "footer-block-0",
+          "footer-block-1",
+          "1e331471-deb5-4057-929d-72cdbee52818"
+        ],
+        "settings": {
+          "show_footer_wave": false,
+          "color_wave": "#f8c1d9",
+          "show_social_links": true,
+          "show_payment_icons": true,
+          "bottom_menu": "",
+          "color_text": "#ffffff",
+          "color_bg": "#7a7a7a",
+          "color_border": "#ffffff",
+          "show_locale_selector": false,
+          "show_currency_selector": false,
+          "currency_type": "currency"
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "blocks": {
+          "b5d00f40-49f9-42b9-945c-b00670b9c7c0": {
+            "type": "popup-with-image",
+            "settings": {
+              "position": "center-center",
+              "image": "shopify:\/\/shop_images\/7473v5_a1ebcb86-0631-40e4-9cdb-c51791fc53ec.jpg",
+              "height": "four-fifty-height",
+              "title": "GET 10% OFF YOUR FIRST ORDER",
+              "text": "<p>sign up to to our email list and get 10% off your first order. we promise we won’t bug you too much - just promotions and new product releases.<\/p>",
+              "show_newsletter_form": true,
+              "extra_fields": "",
+              "button_text": "",
+              "trigger": "always",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile",
+              "bg_color": "#fff",
+              "text_color": "text-dark"
+            }
+          }
+        },
+        "block_order": [
+          "b5d00f40-49f9-42b9-945c-b00670b9c7c0"
+        ],
+        "settings": {}
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "082097bc-5d06-4cba-9deb-84634e4ed8c5": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Always free shipping. Online order minimum of any two products.<\/p>",
+              "icon_name": "none",
+              "icon_color": "#c7a3cd",
+              "icon_width": 15,
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          }
+        },
+        "block_order": [
+          "082097bc-5d06-4cba-9deb-84634e4ed8c5"
+        ],
+        "settings": {
+          "bg_color": "#7a7a7a",
+          "color": "#ffffff",
+          "layout": "slider",
+          "padding": 10,
+          "slider_speed": 5,
+          "marquee_speed": 100,
+          "text_size": 100,
+          "message_spacing": 25
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "12120936241911852800": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/reviews_tab\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+          "position": "right"
+        }
+      },
+      "4551646370426404704": {
+        "type": "shopify:\/\/apps\/pasilobus-turbo\/blocks\/turbo\/b60f64a7-2618-4d56-876c-fcf619939a47",
+        "disabled": false,
+        "settings": {}
+      },
+      "672c476f-6ab7-42d1-b871-82fae11cec8f": {
+        "type": "shopify:\/\/apps\/instagram-feed-story-tiktok\/blocks\/social-widget\/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Palo Alto": {
+      "favicon": "",
+      "color_body_bg": "#ffffff",
+      "color_headings": "#000",
+      "color_body_text": "#000",
+      "color_accent": "#004AC7",
+      "color_borders_and_lines": "#d3d3d3",
+      "color_button_primary": "#004AC7",
+      "color_button_secondary": "#ffffff",
+      "type_heading_font": "harmonia_sans_n6",
+      "type_body_font": "chivo_n4",
+      "nav_size": "90",
+      "button_style": "square",
+      "show_spacer_lines": false,
+      "quick_button": "view",
+      "enable_color_swatches": true,
+      "show_payment_button": true,
+      "cart_type": "drawer",
+      "social_facebook_link": "",
+      "social_twitter_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#1990c6",
+      "checkout_error_color": "#ff6d6d",
+      "show_popup_newsletter": true,
+      "popup_delay": "3000",
+      "popup_reappear_time": "7",
+      "logo_max_width": "30",
+      "show_shop_name": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "header_text_color": "#ffffff",
+            "header_mobile_text_color": "#000000",
+            "header_color": "#515f54",
+            "dgd_header_text_color": "#000000",
+            "submenu_bg_color": "#ffffff",
+            "submenu_text_color": "#000000",
+            "logo_not_home": "",
+            "logo_max_width": 100,
+            "main-menu": "main-menu",
+            "menu_alignment": "right",
+            "highlight_item_color": "#D02E2E",
+            "show_search": true,
+            "menu_searches_list": "",
+            "show_search_links": true,
+            "logo": "",
+            "override_mega_menu_background_color": "#515f54",
+            "override_mega_menu_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-block-0": {
+              "type": "link",
+              "settings": {
+                "menu": "footer",
+                "show_title": true
+              }
+            },
+            "footer-block-1": {
+              "type": "text",
+              "settings": {
+                "title": "About us",
+                "footer_text": "<p>Leave your customers with a final message about your brand in this rich text block.<\/p>"
+              }
+            },
+            "footer-block-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter"
+              }
+            }
+          },
+          "block_order": [
+            "footer-block-0",
+            "footer-block-1",
+            "footer-block-2"
+          ],
+          "settings": {
+            "color_wave": "#000",
+            "show_social_links": true,
+            "show_payment_icons": true,
+            "color_text": "#fff",
+            "color_bg": "#000",
+            "color_border": "#fff",
+            "show_locale_selector": false,
+            "show_currency_selector": false
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "blocks": {
+            "popup-0": {
+              "type": "popup",
+              "disabled": true,
+              "settings": {
+                "bg_color": "#fff"
+              }
+            }
+          },
+          "block_order": [
+            "popup-0"
+          ],
+          "settings": {}
+        },
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-0": {
+              "type": "text",
+              "disabled": true,
+              "settings": {}
+            },
+            "announcement-1": {
+              "type": "text",
+              "disabled": true,
+              "settings": {
+                "text": "<p>New collections just released - <a href=\"\/collections\" title=\"All collections\">Shop now<\/a><\/p>"
+              }
+            },
+            "announcement-2": {
+              "type": "text",
+              "disabled": true,
+              "settings": {
+                "text": "<p>Use code <strong>TENOFF<\/strong> for 10% off first purchase<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-0",
+            "announcement-1",
+            "announcement-2"
+          ],
+          "settings": {
+            "bg_color": "#f7f7f7",
+            "color": "#545454"
+          }
+        }
+      }
+    },
+    "Stanford": {
+      "color_body_bg": "#f5f1eb",
+      "color_headings": "#222222",
+      "color_body_text": "#222222",
+      "color_accent": "#6c7c6c",
+      "color_borders_and_lines": "#222222",
+      "color_custom_badge": "#222222",
+      "color_saving_badge": "#D02E2E",
+      "color_button_primary": "#222222",
+      "color_button_secondary": "#f5f1eb",
+      "type_heading_font": "harmonia_sans_n4",
+      "heading_size": 90,
+      "type_base_font": "harmonia_sans_n4",
+      "text_size": 90,
+      "nav_font_weight": "normal",
+      "nav_size": 90,
+      "nav_caps": false,
+      "button_size": 80,
+      "button_letter_spacing": 125,
+      "button_caps": true,
+      "subheading_caps": false,
+      "quick_button": "view",
+      "enable_color_swatches": true,
+      "show_payment_button": true,
+      "cart_type": "drawer",
+      "show_popup_newsletter": true,
+      "popup_delay": "3000",
+      "popup_reappear_time": "7",
+      "logo_max_width": "30",
+      "show_shop_name": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "header_text_color": "#ffffff",
+            "header_mobile_text_color": "#000000",
+            "header_color": "#515f54",
+            "dgd_header_text_color": "#000000",
+            "submenu_bg_color": "#ffffff",
+            "submenu_text_color": "#000000",
+            "logo_not_home": "",
+            "logo_max_width": 50,
+            "main-menu": "main-menu",
+            "menu_alignment": "right",
+            "highlight_item_color": "#D02E2E",
+            "show_search": true,
+            "menu_searches_list": "",
+            "show_search_links": true,
+            "logo": "",
+            "override_mega_menu_background_color": "#515f54",
+            "override_mega_menu_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-block-0": {
+              "type": "link",
+              "settings": {
+                "menu": "footer",
+                "show_title": true
+              }
+            },
+            "footer-block-1": {
+              "type": "text",
+              "settings": {
+                "title": "About us",
+                "footer_text": "<p>Leave your customers with a final message about your brand in this rich text block.<\/p>"
+              }
+            },
+            "footer-block-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter"
+              }
+            }
+          },
+          "block_order": [
+            "footer-block-0",
+            "footer-block-1",
+            "footer-block-2"
+          ],
+          "settings": {
+            "color_wave": "#000",
+            "show_social_links": true,
+            "show_payment_icons": true,
+            "color_text": "#fff",
+            "color_bg": "#000",
+            "color_border": "#fff",
+            "show_locale_selector": false,
+            "show_currency_selector": false
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "blocks": {
+            "popup-0": {
+              "type": "popup",
+              "disabled": true,
+              "settings": {
+                "bg_color": "#fff"
+              }
+            }
+          },
+          "block_order": [
+            "popup-0"
+          ],
+          "settings": {}
+        },
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-0": {
+              "type": "message",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "announcement-0"
+          ],
+          "settings": {
+            "bg_color": "#f7f7f7",
+            "color": "#545454"
+          }
+        }
+      }
+    }
+  }
+}

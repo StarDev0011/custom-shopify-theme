@@ -1,0 +1,403 @@
+<!-- /sections/section-tab-collections -->
+{%- liquid
+  assign columns = settings.products_per_row_on_desktop | plus: 0
+  assign columns_small = columns | at_most: 2
+  assign bg_color = section.settings.bg_color
+
+  assign wrapper_class = 'wrapper'
+  if section.settings.wrapper == 'full'
+    assign wrapper_class = 'wrapper wrapper--full'
+  endif
+-%}
+
+{%- style -%}
+  {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+    #TabCollections--{{ section.id }} {
+      background-color: {{ bg_color }};
+    }
+    #TabCollections--{{ section.id }} .product-grid-item {
+      --bg: {{ bg_color }};
+    }
+  {%- endif -%}
+
+  @media screen and (min-width: 1024px) {
+    #TabCollections--{{ section.id }} {
+      --grid: repeat({{ columns }}, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    #TabCollections--{{ section.id }} {
+      --grid: repeat({{ columns_small }}, minmax(0, 1fr));
+    }
+  }
+{%- endstyle -%}
+
+<section
+  id="TabCollections--{{ section.id }}"
+  class="tab-collections"
+  data-section-id="{{ section.id }}"
+  data-section-type="tab-collections"
+  data-columns="{{ columns }}">
+
+  <div class="{{ wrapper_class }}">
+    {%- if section.settings.title != empty -%}
+      <h2 class="section__heading">{{ section.settings.title }}</h2>
+
+      {%- if settings.show_spacer_lines -%}
+        <hr>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      {%- assign current_idx = 0 -%}
+
+      {%- if section.blocks.size == 3 -%}
+        {%- assign current_idx = 1 -%}
+      {%- endif -%}
+
+      <div class="tab-collections-wrapper" data-tabs-holder data-start-index="{{ current_idx }}">
+        {%- assign tabs_navigation = '' -%}
+        {%- assign tabs = '' -%}
+
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign tab_collection = collections[block.settings.tab_collection]
+            assign tab_collection_title = block.settings.title | default: tab_collection.title | default: 'Collection'
+            assign tab_collection_products = tab_collection.products
+            assign image = block.settings.image | default: tab_collection.image
+            assign description = block.settings.description
+            assign overlay_opacity = block.settings.overlay_opacity | times: 0.01
+            assign link_text = block.settings.link_text
+            assign link = block.settings.link | default: tab_collection.url
+            assign show_image = block.settings.show_image
+
+            capture onboarding_products_one
+              for i in (1..8)
+                capture index
+                  cycle 1,2,3,4,5,6
+                endcapture
+                assign columns = settings.products_per_row_on_desktop | plus: 0
+                assign product_index = forloop.index0
+                if show_image
+                  assign product_index = forloop.index
+                endif
+                assign animation_delay = product_index
+                render 'product-grid-item--onboarding', carousel: true, index: index, animation_delay: animation_delay
+              endfor
+            endcapture
+
+            capture onboarding_products_two
+              for i in (1..8)
+                capture index
+                  cycle 6,5,4,3,2,1
+                endcapture
+                assign columns = settings.products_per_row_on_desktop | plus: 0
+                assign product_index = forloop.index0
+                if show_image
+                  assign product_index = forloop.index
+                endif
+                assign animation_delay = product_index
+                render 'product-grid-item--onboarding', carousel: true, index: index, animation_delay: animation_delay
+              endfor
+            endcapture
+          -%}
+
+          {%- style -%}
+            #TabCollections--{{ section.id }} .item--{{ block.id }} { --overlay-opacity: {{ overlay_opacity }}; }
+          {%- endstyle -%}
+
+          {%- capture tabs_navigation -%}
+            {{ tabs_navigation }}
+
+            <li class="tab__link{% if forloop.first %} current{% endif %}"
+              data-focus-element
+              data-tab-link="{{ forloop.index0 }}"
+              data-block-id="{{ block.id }}"
+              tabindex="0"
+              {{ block.shopify_attributes }}>
+              <span>{{ tab_collection_title }}</span>
+            </li>
+          {%- endcapture -%}
+
+          {%- capture tabs -%}
+            {{ tabs }}
+
+            <div class="tab__content{% if forloop.first %} current{% endif %}" data-tab-content="{{ forloop.index0 }}">
+              <div class="tab-collections__container carousel__container">
+
+                <div class="carousel carousel--mobile" data-slider data-slider-id="slider--{{ section.id }}-{{ block.id }}"{% if show_image %} data-slider-show-image{% endif %}>
+                  {%- if show_image -%}
+                    <div class="product-grid-item product-grid-item--featured carousel__item one-third mobile--one-whole"
+                      data-slide
+                      {% if settings.animations_enabled %}
+                        data-aos="fade-up"
+                        data-aos-delay="0"
+                      {% endif %}>
+                      {%- capture featured_image -%}
+                        <div class="tab-collections__featured-item item--{{ block.id }} {{ block.settings.text_color }}">
+                          <div class="tab-collections__featured-image{% if image != blank %} lazyload{% endif %}"
+                            {% if image != blank %}
+                            aria-label="{{ image.alt | strip_html | escape }}"
+                            data-bgset="{% render 'bgset', image: image %}"
+                            {% endif %}
+                            role="img">
+                          </div>
+                          <noscript>
+                            <div class="tab-collections__featured-image"
+                              {% if image != blank %}
+                              aria-label="{{ image.alt | strip_html | escape }}"
+                              style="background-image: url({{ image | img_url: '600x' }})"
+                              {% endif %}
+                              role="img">
+                            </div>
+                          </noscript>
+
+                          {%- if image == blank -%}
+                            <div class="tab-collections__featured-item__svg svg-placeholder placeholder-svg-filled">
+                              {{- 'collection-1' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+                            </div>
+                          {%- endif -%}
+                          <div class="overlay"></div>
+
+                          {%- if tab_collection_products.size > 0 -%}
+                            <span class="tab-collections__products-counter subheading-text">{{ 'products.general.products_with_count' | t: count: tab_collection.all_products_count }}</span>
+                          {%- endif -%}
+
+                          {%- if description != blank -%}
+                            <div class="tab-collections__description h1">
+                              {{- description -}}
+                            </div>
+                          {%- endif -%}
+
+                          {%- if link_text != blank -%}
+                            <div class="tab-collection__btn-wrapper">
+                              <a class="btn btn--{{ block.settings.button_style }}"
+                                href="{{ link | default: '#' }}">
+                                {{- link_text | escape -}}
+                              </a>
+                            </div>
+                          {%- endif -%}
+                        </div>
+                      {%- endcapture -%}
+
+                      {%- if link_text == blank and link != blank -%}
+                        <a href="{{ link }}">{{ featured_image }}</a>
+                      {%- else -%}
+                        {{- featured_image -}}
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+
+                  {%- if tab_collection != blank -%}
+                    {% comment %} Check if there are any products in the collection {% endcomment %}
+                    {%- if tab_collection_products.size > 0 -%}
+                      {%- for product in tab_collection_products limit: 12 -%}
+                        {%- assign product_index = forloop.index0 -%}
+                        {%- if show_image -%}
+                          {%- assign product_index = forloop.index -%}
+                        {%- endif -%}
+                        {%- assign animation_delay = product_index -%}
+                        {%- render 'product-grid-item', product: product, carousel: true, animation_delay: animation_delay -%}
+                      {%- endfor -%}
+                    {%- else -%}
+                      <div class="collection--no-results">
+                        <p>{{ 'collections.general.no_matches' | t }}</p>
+                      </div>
+                    {%- endif -%}
+                  {%- else -%}
+                    {%- assign tab_index = forloop.index | modulo: 2 -%}
+                    {%- if tab_index == 0 -%}
+                      {{- onboarding_products_one -}}
+                    {%- else -%}
+                      {{- onboarding_products_two -}}
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endcapture -%}
+        {%- endfor -%}
+
+        {%- if tabs_navigation != '' and section.blocks.size > 1 -%}
+          <div class="tabs__head tab-collections__head">
+            <div class="tabs-scrollbar" data-custom-scrollbar-parent>
+              <div class="tabs-scrollbar__holder" data-custom-scrollbar-holder>
+                <ul class="tabs" data-custom-scrollbar-items>
+                  {{ tabs_navigation }}
+                </ul>
+
+                <div class="custom-scrollbar" data-custom-scrollbar>
+                  <div class="custom-scrollbar__thumb" data-custom-scrollbar-thumb></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+
+        {{ tabs }}
+      </div>
+    {%- else -%}
+      {%- render 'no-blocks' -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tab collections",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "wrapper",
+      "label": "Width",
+      "default": "normal",
+      "options": [
+        { "value": "normal", "label": "Normal" },
+        { "value": "full", "label": "Wide" }
+      ]
+    },
+    {
+      "label": "Heading",
+      "id": "title",
+      "type": "text",
+      "default": "Best Sellers"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Collection"
+        },
+        {
+          "label": "Tab heading",
+          "id": "title",
+          "type": "text"
+        },
+        {
+          "type": "collection",
+          "id": "tab_collection",
+          "label": "Collection",
+          "info": "Shows first 12 products"
+        },
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_image",
+          "label": "Show image",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Featured image"
+        },
+        {
+          "type": "header",
+          "content": "Overlay"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "label": "Text contrast",
+          "info": "Improves readability of text",
+          "min": 0,
+          "max": 95,
+          "step": 5,
+          "unit": "%",
+          "default": 10
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "select",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "text-light",
+          "options": [
+            { "value": "text-light", "label": "Light"},
+            { "value": "text-dark", "label": "Dark"}
+          ]
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Text",
+          "default": "View All",
+          "info": "Leave blank to link entire image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "default": "primary btn--small",
+          "options": [
+            { "label": "Text", "value": "text" },
+            { "label": "Small button", "value": "primary btn--small" },
+            { "label": "Large button", "value": "primary" },
+            { "label": "Small outline button", "value": "secondary btn--small" },
+            { "label": "Large outline button", "value": "secondary" }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tab collections",
+      "category": "Collection",
+      "blocks": [
+        {
+          "type": "collection",
+          "settings": {
+            "title": "Sale"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "title": "New Arrivals"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

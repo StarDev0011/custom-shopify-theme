@@ -1,0 +1,1584 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_page_title": false
+      }
+    },
+    "165910557130231305": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "1659105570fcb641f7-0": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 10,
+            "text_position": "center",
+            "subheading": "",
+            "title": "Shop Trending",
+            "text": "Add more info or delete this text",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1659105570fcb641f7-1": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 10,
+            "text_position": "center",
+            "subheading": "",
+            "title": "Shop Clearance",
+            "text": "Add more info or delete this text",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1659105570fcb641f7-2": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 10,
+            "text_position": "center",
+            "subheading": "",
+            "title": "Shop <br> Best Sellers",
+            "text": "Add more info or delete this text",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "1659105570fcb641f7-0",
+        "1659105570fcb641f7-1",
+        "1659105570fcb641f7-2"
+      ],
+      "settings": {
+        "height": "450",
+        "min_tablet_height": 370,
+        "min_mobile_height": 215,
+        "wrapper": "normal",
+        "add_spacing": true,
+        "heading_font_size": 28,
+        "heading_mobile_font_size": 28,
+        "heading_font_weight": "700",
+        "heading_color": "#ffffff",
+        "text_font_size": 18,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "text_color": "#ffffff",
+        "button_style": "secondary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": true
+      }
+    },
+    "1656534534e35b4f23": {
+      "type": "section-columns",
+      "blocks": {
+        "1656534534c2268bce-0": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GL-Wall-Plant-Industries-Logo_f86a3642-7fd0-421f-bfd6-136ddcb69754.jpg",
+            "image_link": "",
+            "bg_position": "left-center",
+            "title": "who we are",
+            "text": "<p>Plant Beauty Distillery is a division of Plant Industries, which produces a diverse range of plant based products. Plant Industries is a vertically integrated manufacturer and grower with multiple facilities in the Northeastern, United States.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "def8c325-bfa0-4c90-a785-27407ca7d632": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Finished_Sign_1.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "the distillery",
+            "text": "<p>the distillery is located on Cosmetic Farm™. each and every drop of hydrosol for our products is produced at our distillery using our patent pending dual phase distillation process.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1656534534c2268bce-1": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fullstill-Recovered_1.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "a new patent-pending breakthrough",
+            "text": "<p>our patent-pending distillation method captures whole, undamaged plant actives, resulting in a hydrosol – a water saturated with plant actives at peak potency and effectiveness.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "1656534534c2268bce-0",
+        "def8c325-bfa0-4c90-a785-27407ca7d632",
+        "1656534534c2268bce-1"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 3,
+        "heading_font_size": 30,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": true,
+        "text_width": 90,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.8,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": false
+      }
+    },
+    "165894937329255a58": {
+      "type": "section-image-accordions",
+      "disabled": true,
+      "blocks": {
+        "16589493734bdc8bd7-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GL-Wall-Plant-Industries-Logo.jpg",
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "text_width": "narrow",
+            "text_position": "top-left",
+            "text_color": "text-light",
+            "title": "who we are",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+            "btn_text": "",
+            "btn_link": "",
+            "btn_style": "primary",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "btn_style_2": "secondary"
+          }
+        },
+        "16589493734bdc8bd7-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/100_plant_based.png",
+            "bg_position": "center-top",
+            "overlay_opacity": 0,
+            "text_width": "narrow",
+            "text_position": "top-left",
+            "text_color": "text-light",
+            "title": "",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+            "btn_text": "",
+            "btn_link": "",
+            "btn_style": "primary",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "btn_style_2": "secondary"
+          }
+        },
+        "16589493734bdc8bd7-2": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "text_width": "full",
+            "text_position": "left",
+            "text_color": "text-light",
+            "title": "Welcome to Palo Alto",
+            "text": "This text helps you provide some more detail to the title above.",
+            "btn_text": "",
+            "btn_link": "",
+            "btn_style": "primary",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "btn_style_2": "secondary"
+          }
+        },
+        "16589493734bdc8bd7-3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "text_width": "full",
+            "text_position": "left",
+            "text_color": "text-light",
+            "title": "Welcome to Palo Alto",
+            "text": "This text helps you provide some more detail to the title above.",
+            "btn_text": "",
+            "btn_link": "",
+            "btn_style": "primary",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "btn_style_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "16589493734bdc8bd7-0",
+        "16589493734bdc8bd7-1",
+        "16589493734bdc8bd7-2",
+        "16589493734bdc8bd7-3"
+      ],
+      "settings": {
+        "wrapper": "full",
+        "add_spacing": true,
+        "accordion_height": "six-fifty-height",
+        "heading_size": 75
+      }
+    },
+    "16565350202bec56bc": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "seven-fifty-height",
+        "text_position": "right",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/GL-Wall-Plant-Industries-Logo.jpg",
+        "image_background": false,
+        "bg_position": "center-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#7a7a7a",
+        "border_width": 2,
+        "textbox_background_color": "#7a7a7a",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "",
+        "heading": "who we are",
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+        "text_font_size": 20,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "1657214918eb62c5a7": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "seven-fifty-height",
+        "text_position": "left",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/fullstill-Recovered_2_816e414b-eecc-478e-aa77-976aab5f2857.jpg",
+        "image_background": false,
+        "bg_position": "center-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#7a7a7a",
+        "border_width": 2,
+        "textbox_background_color": "#7a7a7a",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "the invention",
+        "heading": "beauty breakthrough",
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+        "text_font_size": 20,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "1658930827cfb47491": {
+      "type": "section-text",
+      "disabled": true,
+      "blocks": {
+        "16589308266b2fdd85-0": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "<p>the innovation - the beauty breakthough<\/p>",
+            "subheading_size": 26,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "16589308266b2fdd85-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>why facewater works?<\/p>",
+            "size": 180,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "94686440-ceb9-4bcd-aa8d-8e2babee0945": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>why cosmetic water works?<\/p>",
+            "size": 170,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "16589308266b2fdd85-2": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "size": 100,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "16589308266b2fdd85-0",
+        "16589308266b2fdd85-1",
+        "94686440-ceb9-4bcd-aa8d-8e2babee0945",
+        "16589308266b2fdd85-2"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "normal",
+        "padding": "standard-padding",
+        "bg_color": "#ffffff",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    },
+    "1658931444da7faacd": {
+      "type": "section-columns",
+      "disabled": true,
+      "blocks": {
+        "7a655677-1908-4287-ab91-da8a88d582bf": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fullstill-Recovered_2_816e414b-eecc-478e-aa77-976aab5f2857.jpg",
+            "image_link": "",
+            "bg_position": "center-bottom",
+            "title": "patent-pending process",
+            "text": "<p>many plants contain highly effective energetic compounds capable of working beauty wonders. to really perform, these delicate ingredients must be undamaged and present in ample quantities. our patent pending pre press and low heat vacuum distillation process starts with fresh, healthy plants and ends with a water-based solution that is loaded with whole phytonutrients.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16589314440c59287c-0": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "distilled to transform your skin on a deeper level",
+            "text": "<p>by removing bacteria, toxins, ions and minerals during distillation, the water is effectively purified. since water is polar it will seek out ions to bind with and in this \"stripped\" state, is able to bind to the plant actives more optimally and at a higher concentrations. <\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16589314440c59287c-1": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/phil-REV.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "highly absorbent water-form(ula)s",
+            "text": "<p>our distillation method preserves the quality, purity, and delivery of full spectrum plant actives. our water form(ulas) are super lightweight and the perfect vehicle to transport these delicate plant actives.  <\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16589314440c59287c-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shutterstock_185509019.jpg",
+            "image_link": "",
+            "bg_position": "right-center",
+            "title": "plant actives in motion",
+            "text": "<p>due to its proper molecular structure, the plant actives are able to be absorbed from the surface of the skin (epidermis) and travel into the lower layers of the skin’s cells<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "7a655677-1908-4287-ab91-da8a88d582bf",
+        "16589314440c59287c-0",
+        "16589314440c59287c-1",
+        "16589314440c59287c-2"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "normal",
+        "columns": 4,
+        "heading_font_size": 20,
+        "bg_color": "#ffffff",
+        "align_text": "text-left",
+        "remove_text_spacing": true,
+        "text_width": 90,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.8,
+        "show_images": false,
+        "disable_slider": true,
+        "remove_margin_bottom": false
+      }
+    },
+    "1658930751b45cc2f2": {
+      "type": "section-accordions",
+      "disabled": true,
+      "blocks": {
+        "165893075115a6a0fe-0": {
+          "type": "text",
+          "settings": {
+            "title": "01. the prep",
+            "text": "<p>removes the toxicity of synthetics & impurities (from other products and pollution) and stabilizes the pH balance of your skin so that the plant active ingredients can penetrate<\/p>"
+          }
+        },
+        "165893075115a6a0fe-1": {
+          "type": "text",
+          "settings": {
+            "title": "02. the activation",
+            "text": "<p>once the plant active ingredients penetrate, they stimulate the skin’s natural production of essential collagen and elastin (the building blocks of your skin)<\/p>"
+          }
+        },
+        "165893075115a6a0fe-2": {
+          "type": "text",
+          "settings": {
+            "title": "03. the results",
+            "text": "<p>cells are stimulated and plant actives are able to target specific skin concerns + immediately visible radiance, noticeable skin clearing and long-term youth preserving effects<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "165893075115a6a0fe-0",
+        "165893075115a6a0fe-1",
+        "165893075115a6a0fe-2"
+      ],
+      "settings": {
+        "wrapper": "normal",
+        "title": "",
+        "text_position": "center",
+        "subheading": "",
+        "text": "",
+        "tabs_bg_color": "#7a7a7a",
+        "bg_color": "",
+        "text_color": "text-light",
+        "tab_alignment": false,
+        "remove_margin_bottom": false
+      }
+    },
+    "16589399042ad7ead6": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "1658939904a3c3a247-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/new_charts_1.png",
+            "image_position": "right-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "06404cb6-b94e-4bfb-8b90-ab1ea6aeb52e": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/new_charts_2.png",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "1658939904a3c3a247-0",
+        "06404cb6-b94e-4bfb-8b90-ab1ea6aeb52e"
+      ],
+      "settings": {
+        "height": "five-fifty-height",
+        "add_spacing": true,
+        "wrapper": "normal",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "16564362495a101b43": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "seven-fifty-height",
+        "text_position": "right",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/shroom_moisture_boom.jpg",
+        "image_background": false,
+        "bg_position": "center-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#425043",
+        "border_width": 2,
+        "textbox_background_color": "#425043",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "",
+        "heading": "100% plant based is different from \"natural\"",
+        "heading_font_size": 32,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants.<\/p><p>vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them!<\/p><p>natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and parrafin wax.<\/p>",
+        "text_font_size": 18,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "16565350888fb85be2": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "seven-fifty-height",
+        "text_position": "left",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/puffChill_JULY_1.jpg",
+        "image_background": false,
+        "bg_position": "right-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#425043",
+        "border_width": 2,
+        "textbox_background_color": "#425043",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "",
+        "heading": "way beyond clean",
+        "heading_font_size": 32,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>healthy skin starts with eliminating questionable, harmful, and toxic chemicals. all of our products never have these harmful chemicals:<\/p><p>100% plant based formula <\/p><p>no glycols: glycols are derived from petroleum and known to cause irritation<\/p><p>no petrochemicals<\/p><p>no synthetic fragrance<\/p><p>no added dye or color<\/p><p>vegan* & cruelty-free<\/p><p>made by us<\/p><p>no parabens<\/p><p>no phthalates<\/p><p>100% recyclable packaging<\/p><p>*all of our products are vegan with the exception of products containing honey.<\/p>",
+        "text_font_size": 18,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "16566001492f566fec": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "0008e7c4-2b54-43de-b231-3aa14919bf8c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CLACY_POTS_G.jpg",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "b6bff8fd-760c-412f-9bbb-8ffdbe6f74f2": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "what are cosmetic waters",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#656765",
+            "mobile_order": "default"
+          }
+        },
+        "82dd7eb5-51dd-44a7-ace4-f36bd1c72145": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "for your mind, body and spirit",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#656765",
+            "mobile_order": "default"
+          }
+        },
+        "5e893dd8-f7ca-4888-be7b-c1d5cc541cd3": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "plant energetic and highly absorbing",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#656765",
+            "mobile_order": "default"
+          }
+        },
+        "e0620c81-f642-4ceb-a36c-e7c3aae97f2e": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "way beyond clean",
+            "text": "healthy skin starts with eliminating questionable, harmful, and toxic chemicals. all of our products never have these harmful chemicals: <br> no glycols: glycols are derived from petroleum and known to cause irritation <br> no petrochemicals <br> no synthetic fragrances <br> no colorants or dyes <br> no parabens <br> no phthalates <br> 100% recyclable packaging <br>cruelty-free and vegan* <br> all of our products are vegan with the exception of products containing honey.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#515f54",
+            "mobile_order": "default"
+          }
+        },
+        "fefdad6d-b63b-41d3-ada7-d46a46e3bebe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PORE_PUR_n.jpg",
+            "bg_position": "center-top",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "0008e7c4-2b54-43de-b231-3aa14919bf8c",
+        "b6bff8fd-760c-412f-9bbb-8ffdbe6f74f2",
+        "82dd7eb5-51dd-44a7-ace4-f36bd1c72145",
+        "5e893dd8-f7ca-4888-be7b-c1d5cc541cd3",
+        "e0620c81-f642-4ceb-a36c-e7c3aae97f2e",
+        "fefdad6d-b63b-41d3-ada7-d46a46e3bebe"
+      ],
+      "settings": {
+        "height": "250",
+        "min_tablet_height": 370,
+        "min_mobile_height": 215,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 28,
+        "heading_mobile_font_size": 28,
+        "heading_font_weight": "700",
+        "heading_color": "#ffffff",
+        "text_font_size": 18,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "text_color": "#ffffff",
+        "button_style": "secondary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "#ffffff",
+        "enable_slider_mobile": false
+      }
+    },
+    "1656435585b0e7d95a": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "seven-fifty-height",
+        "text_position": "right",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/farhousesunbeam_copy_1.jpg",
+        "image_background": false,
+        "bg_position": "center-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#7a7a7a",
+        "border_width": 2,
+        "textbox_background_color": "#7a7a7a",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "",
+        "heading": "environmental impact",
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.<\/p>",
+        "text_font_size": 20,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "1656436363788ac9e7": {
+      "type": "section-slideshow",
+      "disabled": true,
+      "blocks": {
+        "1656436363d55c1c3e-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/drone_aerial_c80ae99f-165a-4329-9f67-623fb6fe631d.jpg",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 32,
+            "heading_mobile_font_size": 32,
+            "heading_font_weight": "700",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 32,
+            "text_mobile_font_size": 32,
+            "text_font_weight": "200",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "normal",
+            "text_position": "left",
+            "override_mobile_text_position": false,
+            "mobile_text_position_y": 50,
+            "mobile_text_position_x": "center",
+            "title": "zero carbon distillery and farm",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "",
+            "slide_btn_text": "LEARN MORE",
+            "slide_btn_link": "",
+            "slide_btn_style": "text",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1656436363d55c1c3e-0"
+      ],
+      "settings": {
+        "wrapper": "full",
+        "slide_height": "six-fifty-height",
+        "show_nav_dots": true,
+        "show_nav_arrows": true,
+        "show_arrow_down": false,
+        "arrow_dot_color": "",
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": true,
+        "heading_size": 120,
+        "custom_css": ""
+      }
+    },
+    "16565345370a8c335a": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "1656534537ce476e60-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "for your mind, body and spirit",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit.lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.<\/p>",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        },
+        "32aaf72b-80ab-424f-9685-80f9c64ca3cc": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "plant energetic and highly absorbing",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit.lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.<\/p>",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1656534537ce476e60-1",
+        "32aaf72b-80ab-424f-9685-80f9c64ca3cc"
+      ],
+      "settings": {
+        "height": "four-fifty-height",
+        "add_spacing": false,
+        "wrapper": "full",
+        "bg_color": "#ffffff",
+        "custom_css": ""
+      }
+    },
+    "16564363675b001ced": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "959d1266-4500-494c-b587-25a0e628bc55": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "why is water-form better",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco <\/p><p>laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.<\/p><p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit.<\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit. <\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit.<\/p>",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        },
+        "1656436367c4db053b-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "way beyond clean",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "<p>healthy skin starts with eliminating questionable, harmful, and toxic chemicals. all of our products never have these harmful chemicals:<\/p><p>zero glycols: glycols are derived from petroleum and known to cause irritation<\/p><p>zero petrochemicals<\/p><p>zero synthetic fragrances<\/p><p>zero colorants or dyes<\/p><p>zero parabens<\/p><p>zero phthalates<\/p><p>100% recyclable packaging<\/p><p>cruelty-free and vegan*<\/p><p>*all of our products are vegan with the exception of products containing honey.<\/p>",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "959d1266-4500-494c-b587-25a0e628bc55",
+        "1656436367c4db053b-1"
+      ],
+      "settings": {
+        "height": "four-fifty-height",
+        "add_spacing": false,
+        "wrapper": "full",
+        "bg_color": "#ffffff",
+        "custom_css": ""
+      }
+    },
+    "1656600858a89babcb": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "5544268b-8ebf-4eac-8dad-ebbca17f4031": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FLUFFMEDIA--3.jpg",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "44798e72-cdf4-4cb0-aaff-08451ca32e47": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fullstill-Recovered_2_df42ca3a-ef31-4305-b42b-58b7fedd1c27.jpg",
+            "bg_position": "left-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "4cee4e6f-5627-4df3-85bc-0f056133f45d": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "the invention",
+            "title": "beauty breakthrough",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#656765",
+            "mobile_order": "default"
+          }
+        },
+        "e62ebd56-913d-43db-a2a8-069f7cb4673a": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "way beyond clean",
+            "text": "healthy skin starts with eliminating questionable, harmful, and toxic chemicals. all of our products never have these harmful chemicals: <br> no glycols: glycols are derived from petroleum and known to cause irritation <br> no petrochemicals <br> no synthetic fragrances <br> no colorants or dyes <br> no parabens <br> no phthalates <br> 100% recyclable packaging <br>cruelty-free and vegan* <br> all of our products are vegan with the exception of products containing honey.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#515f54",
+            "mobile_order": "default"
+          }
+        },
+        "0f08ae7c-fc52-4a10-ad7c-92d8db18d5b0": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "made by us",
+            "text": "unlike most beauty brands, all of our products are entirely made by us from start to finish. we independently do our own research and development, manufacturing, fulfillment, and distribution.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#656765",
+            "mobile_order": "default"
+          }
+        },
+        "53b3116a-d806-4699-95e8-50fb7b61f5d6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-05-11_at_9.01.52_AM.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "5544268b-8ebf-4eac-8dad-ebbca17f4031",
+        "44798e72-cdf4-4cb0-aaff-08451ca32e47",
+        "4cee4e6f-5627-4df3-85bc-0f056133f45d",
+        "e62ebd56-913d-43db-a2a8-069f7cb4673a",
+        "0f08ae7c-fc52-4a10-ad7c-92d8db18d5b0",
+        "53b3116a-d806-4699-95e8-50fb7b61f5d6"
+      ],
+      "settings": {
+        "height": "450",
+        "min_tablet_height": 370,
+        "min_mobile_height": 215,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 28,
+        "heading_mobile_font_size": 28,
+        "heading_font_weight": "700",
+        "heading_color": "#ffffff",
+        "text_font_size": 18,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "text_color": "#ffffff",
+        "button_style": "secondary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": false
+      }
+    },
+    "165972470404b42066": {
+      "type": "section-slideshow",
+      "blocks": {
+        "1659724704efde531a-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#fafafa",
+            "image": "shopify:\/\/shop_images\/appletree1_copy.jpg",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 42,
+            "heading_mobile_font_size": 22,
+            "heading_font_weight": "400",
+            "heading_letter_spacing": 0,
+            "heading_color": "#000000",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 20,
+            "text_mobile_font_size": 16,
+            "text_font_weight": "400",
+            "text_letter_spacing": 0,
+            "text_color": "#000000",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "left",
+            "override_mobile_text_position": true,
+            "mobile_text_position_y": 0,
+            "mobile_text_position_x": "left",
+            "title": "zero carbon property \nwithout offsets",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "400",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem",
+            "slide_btn_text": "",
+            "slide_btn_link": "shopify:\/\/collections\/all",
+            "slide_btn_style": "primary",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1659724704efde531a-0"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "five-fifty-height",
+        "show_nav_dots": false,
+        "show_nav_arrows": false,
+        "show_arrow_down": false,
+        "arrow_dot_color": "",
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": true,
+        "heading_size": 120,
+        "custom_css": ""
+      }
+    },
+    "16566001452be09e9e": {
+      "type": "section-text",
+      "blocks": {
+        "461fac03-7984-4778-9b47-4607800ac870": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>100% RECYCLABLE PACKAGING<\/p>",
+            "subheading_size": 26,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        },
+        "71343884-3346-48f2-bc75-057342e34240": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PET or PETE is the most widely recycled plastic in the world. It is a strong and inert material that is extremely lightweight, making it efficient to  transport (less carbon emissions during shipping compared to glass). PET can be  picked up through most curbside recycling programs - just make sure to rinse out any remaining product before recycling.<\/p>",
+            "size": 100,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        },
+        "7a0fb5b0-fce6-48c3-b532-a63caa5acf60": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>why we use plastic instead of glass bottles<\/p>",
+            "subheading_size": 26,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        },
+        "808d52ab-7870-4de4-ae37-7cea5278aff6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>glass may be a sturdier material but only has a lower environmental impact if reused. it also requires more materials and is much heavier, leading to higher emissions, especially from shipping. we chose PET plastic because it is 100% recyclable,  super lightweight, and produces significantly less carbon emissions during transport compared to glass bottles.<\/p>",
+            "size": 100,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "461fac03-7984-4778-9b47-4607800ac870",
+        "71343884-3346-48f2-bc75-057342e34240",
+        "7a0fb5b0-fce6-48c3-b532-a63caa5acf60",
+        "808d52ab-7870-4de4-ae37-7cea5278aff6"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/recycle_chart_SEP.png",
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "full",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": true
+      }
+    },
+    "1660660152de5cbf46": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "16606601510f002823-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/recycle_chart1-01_c69cafa6-2908-4222-9ee6-8a62e19504f0.png",
+            "bg_position": "right-center",
+            "mobile_image_position": "center",
+            "contain_image": true,
+            "overlay_opacity": 5,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "100% recyclable packaging",
+            "text": "PET or PETE is the most widely recycled plastic <br> in the world. It is a strong and inert material <br> that is extremely lightweight, making it efficient to <br> transport (less carbon emissions during <br> shipping compared to glass). PET can be <br> picked up through most curbside recycling <br>programs - just make sure to rinse out any <br>remaining product before recycling. <h3 style=\"color:black;\"><strong> <br> <br>why we use plastic instead of <br>glass bottles<\/strong><\/h3> glass may be a sturdier, \"luxe\" feeling material <br> but only has a lower environmental impact if <br>reused. it also requires more materials and is <br>much heavier, leading to higher emissions, <br>especially from shipping.  we chose PET <br>plastic because it is 100% recyclable, <br> super lightweight, and produces significantly <br>less carbon emissions during transport <br> compared to glass bottles.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "16606601510f002823-0"
+      ],
+      "settings": {
+        "height": "450",
+        "min_tablet_height": 370,
+        "min_mobile_height": 215,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 28,
+        "heading_mobile_font_size": 28,
+        "heading_font_weight": "700",
+        "heading_color": "#000000",
+        "text_font_size": 18,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "text_color": "#000000",
+        "button_style": "secondary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "#fafafa",
+        "enable_slider_mobile": true
+      }
+    },
+    "1659725178e4148e2c": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "1659725178e3feb6d4-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/clearbottles_copy_2.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "1659725178e3feb6d4-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "<strong> why we use 100% recyclable plastic instead of glass bottles<\/strong>",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "glass may be a sturdier, \"luxe\" feeling material but only has a lower environmental impact if reused. it also requires more materials and is much heavier, leading to higher emissions, especially from shipping.\n\nwe chose PET plastic because it is 100% recyclable, super lightweight, and produces significantly less carbon emissions during transport compared to glass bottles.",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1659725178e3feb6d4-0",
+        "1659725178e3feb6d4-1"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "add_spacing": true,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": "{\npadding-top: 0;\n}"
+      }
+    },
+    "165972529292f82144": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "165972529239a20560-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/garden1_copy_3.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "165972529239a20560-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "<strong> long-term goals<\/strong>",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "165972529239a20560-0",
+        "165972529239a20560-1"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "add_spacing": false,
+        "wrapper": "normal",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "1656436483c66822d1": {
+      "type": "section-custom-content",
+      "blocks": {
+        "16564364836fdd50e0-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/yusovmodel1_copy_1_9dbcbaf6-3cc9-49af-8d06-9c881ab85e04.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "16564364836fdd50e0-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "MADE BY US",
+            "heading_font_size_desktop": 42,
+            "heading_font_size_mobile": 30,
+            "heading_weight": "heading-normal",
+            "text": "<p>unlike most beauty brands, all of our products are entirely made by us from start to finish. we independently do our own research and development, manufacturing, fulfillment, and distribution. Because of this, we are able to control every aspect of the quality and integrity of our products.<\/p><p>After distillation, the final step of production (finishing, bottling and labeling) takes place at our Greenleaf facility, owned by our parent company, Plant Industries. Greenleaf is located in Allentown, PA and about 20 minutes away from the Distillery.<\/p>",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16564364836fdd50e0-0",
+        "16564364836fdd50e0-1"
+      ],
+      "settings": {
+        "height": "four-fifty-height",
+        "add_spacing": true,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165910557130231305",
+    "1656534534e35b4f23",
+    "165894937329255a58",
+    "16565350202bec56bc",
+    "1657214918eb62c5a7",
+    "1658930827cfb47491",
+    "1658931444da7faacd",
+    "1658930751b45cc2f2",
+    "16589399042ad7ead6",
+    "16564362495a101b43",
+    "16565350888fb85be2",
+    "16566001492f566fec",
+    "1656435585b0e7d95a",
+    "1656436363788ac9e7",
+    "16565345370a8c335a",
+    "16564363675b001ced",
+    "1656600858a89babcb",
+    "165972470404b42066",
+    "16566001452be09e9e",
+    "1660660152de5cbf46",
+    "1659725178e4148e2c",
+    "165972529292f82144",
+    "1656436483c66822d1"
+  ]
+}

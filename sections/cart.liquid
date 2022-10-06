@@ -1,0 +1,291 @@
+<!-- /templates/cart.liquid -->
+{%- liquid
+  assign subtotal = cart.total_price | plus: 0
+  assign original_subtotal = cart.original_total_price | plus: 0
+  assign cart_items_size = cart.item_count | plus: 0
+  assign cart_discount_size = cart.cart_level_discount_applications.size
+  assign out_of_stock_product_title = ''
+  assign show_continue_shopping = settings.show_continue_shopping
+  assign continue_shopping_link = routes.all_products_collection_url
+  assign show_empty_cart_buttons = settings.show_empty_cart_buttons
+  assign empty_cart_buttons = settings.empty_cart_buttons | default: 'main-menu'
+
+  capture cart_items
+    render 'cart-line-items'
+  endcapture
+
+  if settings.continue_shopping_link != blank
+    assign continue_shopping_link = settings.continue_shopping_link
+  endif
+-%}
+
+{%- if cart_items contains '<p class="hidden" data-out-of-stock-title>' -%}
+  {%- assign out_of_stock_product_title = cart_items | split: '<p class="hide hidden" data-out-of-stock-title>' | last | split: '</p>' | first -%}
+
+  <script>
+    window.theme.outOfStockProductTitle = {{ out_of_stock_product_title | json }};
+  </script>
+{%- endif -%}
+
+<div class="section cart">
+  <div class="wrapper">
+    <form action="{{ routes.cart_url }}" method="post" novalidate data-cart-form>
+      <div class="cart__empty{% if cart_items_size > 0 %} hidden{% endif %}" data-empty-message>
+        <h1 class="cart__title">{{ 'cart.general.title' | t }}</h1>
+
+        <p>{{ 'cart.general.empty' | t }}</p>
+
+        <div class="cart__empty__buttons">
+          {%- if show_continue_shopping and show_empty_cart_buttons == false -%}
+            <a href="{{ continue_shopping_link }}" class="btn btn--secondary" data-continue-shopping>{{ 'cart.general.continue_shopping' | t }}</a>
+          {%- endif -%}
+
+          {%- if show_empty_cart_buttons and linklists[empty_cart_buttons].links.size > 0 -%}
+            {%- for link in linklists[empty_cart_buttons].links limit: 3 -%}
+              <a href="{{ link.url }}" class="btn btn--secondary btn--small">{{ link.title | strip_html | escape }}</a>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+      </div>
+
+      {{ form.errors | default_errors }}
+
+      <div class="cart__inner">
+        <div class="cart__content">
+          <h1 class="cart__title">{{ 'cart.general.title' | t }}<span class="cart-drawer__item-qty" data-cart-items-qty>{{ 'cart.label.items_with_count' | t: count: cart_items_size }}</span></h1>
+
+          {%- if show_continue_shopping -%}
+            <a href="{{ continue_shopping_link }}" class="btn btn--secondary" data-continue-shopping>{{ 'cart.general.continue_shopping' | t }}</a>
+          {%- endif -%}
+
+          <div class="cart__errors" data-cart-errors>
+            <p class="cart__errors__heading">{{- 'cart.general.limit_error' | t -}}</p>
+
+            <p class="cart__errors__content" data-error-message></p>
+
+            <button type="button" class="cart__errors__close" data-cart-error-close aria-label="{{ 'general.accessibility.dismiss' | t }} {{ 'cart.general.title' | t }}">
+              {%- render 'icon-close-small' -%}
+            </button>
+          </div>
+
+          <div class="cart__items__wrapper" data-items-wrapper>
+            <div class="loader loader--line"><div class="loader-indeterminate"></div></div>
+
+            <div class="cart__items" data-items-holder>
+              {{ cart_items }}
+            </div>
+          </div>
+
+          <button type="submit" name="update" class="cart__update btn btn--secondary">
+            {{- 'cart.general.update' | t -}}
+          </button>
+        </div>
+
+        <div class="cart__aside{% if cart_items_size <= 0 %} hidden{% endif %}" data-foot-holder>
+          {%- liquid
+  assign free_shipping_text = block.settings.message | default: settings.message
+  assign is_enable = false
+
+  if block.settings.message != blank
+    assign is_enable = true
+  endif
+
+  if settings.show_free_shipping_message and settings.free_shipping_limit != blank and free_shipping_text != blank
+    assign is_enable = true
+  endif
+-%}
+
+{%- if is_enable -%}
+  {%- liquid
+    assign limit = settings.free_shipping_limit | plus: 0
+    assign limit_currency = limit | times: 100
+    assign subtotal_without_currency = cart.total_price | plus: 0 | divided_by: 100
+  -%}
+
+  {%- capture left_to_spend -%}
+    <span data-left-to-spend>{{ limit_currency | minus: cart.total_price | money_without_trailing_zeros }}</span>
+  {%- endcapture -%}
+
+  {%- liquid
+    assign free_shipping_message = free_shipping_text | replace: '||amount||', left_to_spend
+    assign qualified_shipping_message = 'cart.general.qualified_shipping_message' | t
+    assign class_message = ''
+
+    if subtotal_without_currency >= limit
+      if qualified_shipping_message != blank
+        assign class_message = ' is-success'
+        assign is_default_message_hidden = ' is-hidden'
+      else
+        assign class_message = ' is-hidden'
+      endif
+    elsif subtotal_without_currency == 0
+      assign class_message = ' is-hidden'
+    endif
+
+    assign percent = limit | minus: subtotal_without_currency | times: 100 | divided_by: limit
+    assign percent = 100 | minus: percent
+  -%}
+
+  <p class="{% unless template.name == 'cart' or section.id == 'announcement-bar' %}cart-drawer__message {% endunless %}cart__message{{ class_message }}" data-cart-message="{% if qualified_shipping_message != blank %}true{% else %}false{% endif %}" data-limit="{{ limit }}">
+    <span class="cart__message__default{{ is_default_message_hidden }}" data-message-default>{{ free_shipping_message }}</span>
+
+    {%- if qualified_shipping_message != blank -%}
+      <span class="cart__message__success">{{ qualified_shipping_message }}</span>
+    {%- endif -%}
+
+    {%- unless is_top -%}
+      <progress class="cart__message__progress" data-cart-message-progress value="{{ percent }}" max="100"></progress>
+    {%- endunless -%}
+  </p>
+{%- endif -%}
+
+          <div class="cart__total{% if original_subtotal < subtotal or cart_discount_size <= 0 %} hidden{% endif %}" data-cart-original-total>
+            <span>{{ 'cart.general.subtotal_items' | t }}</span>
+
+            <span data-cart-original-total-price>
+              {%- if original_subtotal == 0 -%}
+                {{ 'products.product.free' | t }}
+              {%- else -%}
+                {{- original_subtotal | money -}}
+              {%- endif -%}
+            </span>
+          </div>
+
+          <div class="cart__discounts{% if cart_discount_size <= 0 %} hidden{% endif %}" data-cart-discounts-holder>
+            {%- if cart.cart_level_discount_applications.size > 0 -%}
+              {%- for discount in cart.cart_level_discount_applications -%}
+                <div class="cart__total" data-cart-discount>
+                  <span data-cart-discount-title>
+                    {{- discount.title -}}
+                  </span>
+
+                  <span data-cart-discount-price>
+                    -{{- discount.total_allocated_amount | money -}}
+                  </span>
+                </div>
+              {%- endfor -%}
+            {%- endif -%}
+          </div>
+
+          <div class="cart__total">
+            <span>{{- 'cart.general.subtotal' | t -}}</span>
+
+            <span data-cart-total class="cart__total__money">
+              {%- if subtotal == 0 -%}
+                {{ 'products.product.free' | t }}
+              {%- else -%}
+                {{- subtotal | money -}}
+              {%- endif -%}
+            </span>
+          </div>
+
+          {%- for block in section.blocks -%}
+            {%- render block -%}
+          {%- endfor -%}
+
+          <div class="cart__pair hidden" data-cart-widget data-pair-products-holder>
+            <div data-pair-products></div>
+          </div>
+
+          {%- if settings.enable_cart_notes or settings.enable_gift_notes -%}
+          <div class="cart__widget__wrapper">
+          {%- endif -%}
+
+          {%- if settings.enable_cart_notes -%}
+            <div class="cart__widget" data-cart-widget>
+              <button
+                class="cart__widget__title"
+                type="button"
+                data-collapsible-trigger
+                aria-expanded="false"
+                aria-controls="notes">
+                {{- 'cart.general.cart_notes_label' | t -}}
+              </button>
+
+              <div id="notes" aria-hidden="true" data-collapsible-container>
+                <div class="cart__widget__content" data-collapsible-content>
+                  <label for="note">{{ 'cart.general.customer_note' | t }}</label>
+
+                  <textarea id="note" name="note" class="cart__field cart__field--textarea"  aria-label="{{ 'cart.general.customer_note' | t }}">{{- cart.note -}}</textarea>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if settings.enable_gift_notes -%}
+            <div class="cart__widget" data-cart-widget>
+              <button
+                class="cart__widget__title"
+                type="button"
+                data-collapsible-trigger
+                aria-expanded="false"
+                aria-controls="gift-notes">
+                {{- 'cart.general.gift_notes_label' | t -}}
+              </button>
+
+              <div id="gift-notes" aria-hidden="true" data-collapsible-container>
+                <div class="cart__widget__content" data-collapsible-content>
+                  {%- assign gift_note_attribute = 'cart.general.gift_note_attribute' | t -%}
+                  <label for="gift-note">{{ 'cart.general.note' | t }}</label>
+
+                  <textarea id="gift-note" name="attributes[{{ gift_note_attribute }}]" class="cart__field cart__field--textarea" aria-label="{{ 'cart.general.note' | t }}">{{ cart.attributes[gift_note_attribute] }}</textarea>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if settings.enable_cart_notes or settings.enable_gift_notes -%}
+          </div>
+          {%- endif -%}
+
+          {% if settings.cart_custom_message_text != blank %}
+            <div class="cart__message cart__message--custom {{ settings.cart_custom_message_color }}" data-cart-bar>
+              {{ settings.cart_custom_message_text }}
+            </div>
+          {% endif %}
+
+          <div class="cart__foot-inner">
+            <div class="cart__buttons-wrapper">
+              {%- if settings.enable_accept_terms -%}
+                <input type="checkbox" class="cart__acceptance__input" name="acceptance" id="acceptance" data-cart-acceptance-checkbox>
+                <label for="acceptance" class="cart__acceptance__label" data-cart-acceptance-label>{{ settings.accept_terms_text }}</label>
+              {%- endif -%}
+
+              <p class="cart__errors__content" data-terms-error-message></p>
+
+              <div class="cart__buttons{% if settings.enable_accept_terms %} cart__buttons--disabled{% endif %}" data-cart-checkout-buttons>
+                <fieldset class="cart__buttons__fieldset" data-cart-checkout-button>
+                  <button type="submit" name="checkout" class="cart__checkout btn">
+                    {{- 'cart.general.checkout' | t -}}
+                  </button>
+                  <noscript>
+                    <span class="cart__checkout cart__checkout--no-js btn">{{ 'cart.general.checkout' | t }}</span>
+                  </noscript>
+
+                  {%- if settings.enable_additional_buttons and additional_checkout_buttons -%}
+                    <div class="additional-checkout-buttons additional-checkout-buttons--vertical" data-additional-checkout-button>
+                      {{- content_for_additional_checkout_buttons -}}
+                    </div>
+                  {%- endif -%}
+                </fieldset>
+              </div>
+            </div>
+
+            <p class="cart__text">{{- 'cart.general.shipping_at_checkout' | t -}}</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cart",
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}

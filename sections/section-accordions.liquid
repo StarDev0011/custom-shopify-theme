@@ -1,0 +1,260 @@
+{%- comment -%} Accordions section {%- endcomment -%}
+
+{%- liquid
+  assign animations_enabled = settings.animations_enabled
+  assign animation_anchor = '#Accordions--' | append: section.id
+  assign heading = section.settings.title
+  assign subheading = section.settings.subheading
+  assign text = section.settings.text
+  assign text_color = section.settings.text_color
+  assign bg_color = section.settings.bg_color
+  assign tabs_bg_color = section.settings.tabs_bg_color
+  assign padded = true
+  assign text_position = section.settings.text_position
+  if bg_color == tabs_bg_color or tabs_bg_color == '' or tabs_bg_color == 'rgba(0,0,0,0)'
+    assign padded = false
+  endif
+  assign wrapper = section.settings.wrapper
+  assign wrapper_class = 'wrapper'
+  if wrapper != 'normal'
+    assign wrapper_class = wrapper_class | append: ' wrapper--' | append: wrapper
+  endif
+-%}
+{%- style -%}
+  {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+    #Accordions--{{ section.id }} { --bg: {{ bg_color }}; }
+  {%- endif -%}
+
+  {%- if tabs_bg_color != 'rgba(0,0,0,0)' and tabs_bg_color != '' -%}
+    #Accordions--{{ section.id }} .accordion__item { --bg: {{ tabs_bg_color }}; }
+  {%- endif -%}
+{%- endstyle -%}
+
+<section data-section-id="{{ section.id }}" id="Accordions--{{ section.id }}" data-section-type="accordions" class="accordions-section {{ text_color }} {% if section.settings.remove_margin_bottom %}remove-margin-bottom{% endif %}">
+  {%- unless heading == blank and subheading == blank and text == blank -%}
+    <div class="accordion__header">
+      <div class="{{ wrapper_class }}">
+        {%- if heading != blank -%}
+          <h2 class="accordion__heading text-{{ text_position }}">{{ heading }}</h2>
+
+          {%- if settings.show_spacer_lines -%}
+            <hr>
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if subheading != blank -%}
+          <h4 class="accordion__subheading subheading-text">{{ subheading }}</h4>
+        {%- endif -%}
+
+        {%- if text != blank -%}
+          <div class="rte">{{ text }}</div>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endunless -%}
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="accordion__content">
+      <div class="{{ wrapper_class }}">
+        <ul class="accordion__list">
+          {%- assign animation_delay = 250 -%}
+          {%- for block in section.blocks -%}
+            {%- assign title = block.settings.title -%}
+            {%- assign text = pages[block.settings.raw_content].content | default: block.settings.text -%}
+
+            {%- unless title == blank -%}
+              <li class="accordion__item{% if forloop.index == 1 %} accordion__item--first{% endif %}{% if padded %} accordion__item--padded{% endif %}"
+                aria-haspopup="true"
+                {% if animations_enabled %}
+                  data-aos="fade-up"
+                  data-aos-anchor="{{ animation_anchor }}"
+                  data-aos-delay="{{ animation_delay }}"
+                {% endif %}
+                {{ block.shopify_attributes }}>
+                {%- assign animation_delay = animation_delay | plus: 250 -%}
+                <button {% if section.settings.tab_alignment %}style="text-align:center;padding:15px 53px;"{% endif %} class="accordion__item__title h3" aria-controls="Accordions-item--{{ forloop.index0 }}-{{ section.id }}" data-collapsible-trigger>
+                  <span class="accordion__item__title__text">{{ title }}</span>
+                  {%- render 'icon-toggle-plus' -%}
+                  {%- render 'icon-toggle-minus' -%}
+                </button>
+
+                <div class="accordion__item__text-wrapper" id="Accordions-item--{{ forloop.index0 }}-{{ section.id }}" aria-hidden="true" data-collapsible-container>
+                  <div class="accordion__item__text rte" data-collapsible-content>
+                    {{- text -}}
+                  </div>
+                </div>
+              </li>
+            {%- endunless -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  {%- else -%}
+    {%- render 'no-blocks' -%}
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Tabs",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "wrapper",
+      "label": "Width",
+      "default": "normal",
+      "options": [
+        { "label": "Normal" , "value": "normal" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Heading position",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "tabs_bg_color",
+      "label": "Tabs"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background"
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Text",
+      "default": "text-dark",
+      "options": [
+        { "value": "text-light", "label": "Light"},
+        { "value": "text-dark", "label": "Dark"}
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Tab headers"
+    },
+    {
+      "type": "checkbox",
+      "id": "tab_alignment",
+      "label": "Align tab headers center",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_margin_bottom",
+      "label": "Remove margin bottom",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Text",
+      "type": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Use this text block to discuss some commonly asked questions like shipping and returns, sizing, warranties, or product and company details.</p>"
+        }
+      ]
+    },
+    {
+      "name": "Page",
+      "type": "page",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Page",
+          "info": "Example: Size chart"
+        },
+        {
+          "type": "page",
+          "id": "raw_content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Text",
+      "name": "Tabs",
+      "blocks": [
+        {
+          "type": "text",
+          "settings": {
+            "title": "How long does it take to get my products?",
+            "text": "<p>Domestic shipping can take up to 5 business days.<br\/><br\/>Foreign shipping could take up to 14 business days.<br\/><br\/>Due to global supply chain challenges, shipping times could be longer than usual.<\/p>"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "title": "Do you offer warranty for your products?",
+            "text": "<p>All our products are subject to quality control.<br\/><br\/>Our warranty provides a guarantee against manufacturer defects.<br\/><br\/>The guarantee covers any manufacturing, design, or material defect. Please notify us within 2 months of noticing any defects.<br\/><br\/>It does not cover blows, improper use, or other issues that are not attributable to a manufacturer defects.<\/p>"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "title": "Do you offer refunds?",
+            "text": "<p>Yes, we offer full and partial refunds.<br\/><br\/>Please enquire for more information about our Refund policy.<\/p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

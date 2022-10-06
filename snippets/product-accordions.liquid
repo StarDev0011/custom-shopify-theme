@@ -1,0 +1,30 @@
+{%- for i in (1..5) -%}
+  {%- assign accordion_title = 'accordion_heading_' | append: forloop.index -%}
+  {%- assign accordion_title = block_settings[accordion_title] -%}
+
+  {%- assign accordion_text = 'accordion_text_' | append: forloop.index -%}
+  {%- assign accordion_page = 'accordion_page_' | append: forloop.index -%}
+  {%- assign accordion_content = block_settings[accordion_page].content | default: block_settings[accordion_text] -%}
+
+  {%- if accordion_title != '' and accordion_content != '' -%}
+    {%- capture accordions -%}
+      {{- accordions -}}
+
+      <div class="product__accordion">
+        <button class="product__accordion__title" aria-controls="ProductAccordion--page-{{ accordion_title | handle }}-{{ forloop.index }}-{{ section.id }}" data-accordion-trigger>
+          {{- accordion_title -}}
+          {%- render 'icon-toggle-plus' -%}
+          {%- render 'icon-toggle-minus' -%}
+        </button>
+
+        <div class="product__accordion__content" id="ProductAccordion--page-{{ accordion_title | handle }}-{{ forloop.index }}-{{ section.id }}" data-accordion-container>
+          <div class="product__accordion__inner rte" data-accordion-content>
+            {{- accordion_content -}}
+          </div>
+        </div>
+      </div>
+    {%- endcapture -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{{- accordions -}}

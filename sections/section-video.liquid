@@ -1,0 +1,230 @@
+{% comment %} /sections/background-video.liquid {% endcomment %}
+
+{%- liquid
+  assign unique = section.id
+  assign video_id = section.settings.hero_video_link.id
+  assign video_enable_sound = section.settings.video_enable_sound
+  assign section_height = section.settings.video_height
+  assign title = section.settings.title
+  assign heading_size = section.settings.heading_size | times: 0.01
+  assign text = section.settings.text
+  assign text_color = section.settings.text_color
+  assign image = section.settings.image
+  assign button_text = section.settings.button_text
+  assign button_link = section.settings.button_link | default: '#'
+  assign button_style = section.settings.button_style
+  assign text_position = section.settings.text_position
+  assign show_text_shadow = settings.show_text_shadow
+  assign overlay_opacity = section.settings.overlay_opacity | times: 0.01
+  assign animations_enabled = settings.animations_enabled
+  assign animation_anchor = '#FeaturedVideo--' | append: section.id
+  assign animation_delay = 250
+-%}
+
+{%- style -%}
+  #FeaturedVideo--{{ section.id }} { --overlay-opacity: {{ overlay_opacity }}; }
+  #FeaturedVideo--{{ section.id }} .main-heading { --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ heading_size }}); }
+{%- endstyle -%}
+
+<section id="FeaturedVideo--{{ unique }}"
+  class="featured-video-section {{ section_height }}"
+  data-section-id="{{ unique }}"
+  data-section-type="featured-video"
+  data-enable-sound="{{ video_enable_sound }}">
+  <div class="video-wrapper">
+    {%- render 'video',
+      unique: unique,
+      text_color: text_color,
+      video_id: video_id,
+      overlay_opacity: overlay_opacity,
+      title: title,
+      heading_size: heading_size,
+      text: text,
+      image: image,
+      button_text: button_text,
+      button_link: button_link,
+      button_style: button_style,
+      text_position: text_position,
+      show_text_shadow: show_text_shadow,
+      animations_enabled: animations_enabled,
+      animation_anchor: animation_anchor,
+      animation_delay: animation_delay
+    -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Video",
+  "class": "featured-video-section transparent-header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "video_height",
+      "label": "Height",
+      "default": "six-fifty-height",
+      "options": [
+        { "value": "full-height", "label": "Full screen" },
+        { "value": "seven-fifty-height", "label": "750px" },
+        { "value": "six-fifty-height", "label": "650px" },
+        { "value": "five-fifty-height ", "label": "550px" },
+        { "value": "four-fifty-height", "label": "450px" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Content alignment",
+      "default": "middle-center",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-center",
+          "label": "Top center"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "middle-center",
+          "label": "Center"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "video_url",
+      "id": "hero_video_link",
+      "label": "Link",
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+      "accept": [
+        "youtube"
+      ],
+      "info": "YouTube links only"
+    },
+    {
+      "type": "checkbox",
+      "id": "video_enable_sound",
+      "label": "Enable sound",
+      "default": false,
+      "info": "If enabled video will not autoplay on mobile devices."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Displays while the video loads."
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Text contrast",
+      "info": "Improves readability of text",
+      "min": 0,
+      "max": 95,
+      "step": 5,
+      "unit": "%",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Color",
+      "default": "text-light",
+      "options": [
+        {
+          "value": "text-light",
+          "label": "Light"
+        },
+        {
+          "value": "text-dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Welcome to Palo Alto"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "This text helps you provide some more detail to the title above."
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "default": 100,
+      "min": 100,
+      "max": 200,
+      "step": 10,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Text",
+      "default": "Welcome"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Style",
+      "default": "secondary",
+      "options": [
+        { "label": "Text", "value": "text" },
+        { "label": "Small button", "value": "primary btn--small" },
+        { "label": "Large button", "value": "primary" },
+        { "label": "Small outline button", "value": "secondary btn--small" },
+        { "label": "Large outline button", "value": "secondary" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

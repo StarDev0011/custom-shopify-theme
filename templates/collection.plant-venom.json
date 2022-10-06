@@ -1,0 +1,113 @@
+{
+  "sections": {
+    "hero": {
+      "type": "collection-image-with-title",
+      "disabled": true,
+      "settings": {
+        "banner_height": "one-fifty-height",
+        "text_position": "middle-left",
+        "show_image": false,
+        "text_color": "text-light",
+        "overlay_opacity": 0,
+        "banner_bg_color": "#ffffff",
+        "remove_margin_bottom": false
+      }
+    },
+    "1661267755b99fef9f": {
+      "type": "section-slideshow",
+      "blocks": {
+        "16612677548208bcf2-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/8059v8triple2.jpg",
+            "image_vertical": 50,
+            "image_horizontal": 0,
+            "image_contain": true,
+            "image_mobile": "shopify:\/\/shop_images\/8059v10_4.jpg",
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 5,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 42,
+            "heading_mobile_font_size": 20,
+            "heading_font_weight": "400",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 20,
+            "text_mobile_font_size": 16,
+            "text_font_weight": "400",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "left",
+            "override_mobile_text_position": true,
+            "mobile_text_position_y": 0,
+            "mobile_text_position_x": "left",
+            "title": "PLANT VENOM",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "This youth preserving nighttime <br>serum water is a super lightweight, <br> fast-absorbing targeted leave-on <br>treatment that accelerates your <br>skin’s natural regenerative process. <br>See an overnight transformation <br>that reveals wonderfully youthful, <br>well-rested skin like never before.",
+            "slide_btn_text": "",
+            "slide_btn_link": "",
+            "slide_btn_style": "primary",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16612677548208bcf2-0"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "original-height",
+        "show_nav_dots": false,
+        "show_nav_arrows": false,
+        "show_arrow_down": false,
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": false,
+        "heading_size": 100,
+        "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}"
+      }
+    },
+    "subcollections": {
+      "type": "subcollections",
+      "settings": {
+        "layout": "grid",
+        "image_source": "collection",
+        "image_aspect_ratio": 0.6,
+        "image_overlay_opacity": 10,
+        "bg_color": "",
+        "text_color": "text-light"
+      }
+    },
+    "main": {
+      "type": "collection",
+      "settings": {
+        "show_breadcrumbs": true,
+        "enable_sorting": true,
+        "enable_filters": true,
+        "filter_mode": "group",
+        "bg_color": "#fafafa"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "1661267755b99fef9f",
+    "subcollections",
+    "main"
+  ]
+}

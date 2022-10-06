@@ -1,0 +1,145 @@
+<style>
+.byob-fa-star:before {
+  content: '\f005';
+  font-family: stamped-font,FontAwesome!important;
+  font-size: 18px;
+  margin-right: -1px;
+}  
+.byob-fa-star {
+  /* color: {{ section.settings.star_color }}  #ffd200; */
+  padding: 0;
+}
+.byob-fa {
+  display: inline-block;
+  font-style: normal;
+  font-size: 100%;
+}
+.byob-badge-starrating {
+    color: {{ section.settings.star_color }};
+    margin: 0 3px 0 0!important;
+    vertical-align: middle;
+}
+</style>
+<!-- BYOB reviews widget - optional section to integrate with review apps -->
+<script type="text/x-template" id="byob-reviews-widget">
+  <span v-if="count && count > 0" class="stamped-product-reviews-badge" data-id="4628987510851" data-product-sku="keto-collagen-protein-shake-360g" data-product-type="Keto Shake" data-product-title="Keto Collagen Protein Shake 360g" style="display:block;">
+	<span class="stamped-badge" data-rating="" data-lang="" aria-label="s">
+		<span :title="rating? rating: ''" class="stamped-starrating byob-badge-starrating" aria-hidden="true">
+            <template v-for="n in total_stars">
+			<i class="byob-fa byob-fa-star" aria-hidden="true"/>
+            </template>
+		</span>
+		<span class="stamped-badge-caption" data-reviews="129" data-rating="4.9" data-label="reviews" aria-label="129 reviews" data-version="2">[[ count ]]<span style="display:none;"> reviews</span>
+		</span>
+	</span>
+  </span>
+</script>
+
+<script>
+  var review_app = '{{ section.settings.review_app }}';
+  var public_api_key = '{{ section.settings.public_api_key }}';
+  const byob_reviews = {
+      props: ['rating', 'count'],
+      data() {
+        return { 
+          // total_stars: Math.round(this.rating)
+          total_stars: 5
+        }
+      },
+      compilerOptions: {delimiters: ['[[', ']]'],},
+      template: "#byob-reviews-widget",
+      mounted() {
+        console.log('this.rating:', this.rating);
+        if (this.rating)
+          this.total_stars = Math.round(this.rating)
+      }
+    };
+
+function getReviews(vm) {
+  for (let buildrule of vm.buildrules) {
+    let data = {
+      "apiKey": public_api_key,
+      "storeUrl": Shopify.shop
+    }
+    let productIds = [];
+    buildrule.json_products.forEach(product => productIds.push({"productId": product.id + ""}));
+    data.productIds = productIds
+    console.log('data:', data);
+    fetch('https://stamped.io/api/widget/badges?isIncludeBreakdown=true', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+          console.log('data:', data);
+          for (let i=0; i<data.length; i++) {
+            buildrule.json_products[i].rating = data[i].rating
+            buildrule.json_products[i].count = data[i].count            
+          }
+        }
+      )
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
+}
+  
+function initBYOBBundle(vm) {
+  if (review_app === 'Stamped.io' && public_api_key === '-') {
+    alert("Please input the public API Key for Stamped.io in order to activate the integration! \n\nOtherwise, you should remove the BYOB Reviews Widget section");
+    return;
+  }
+  console.log('In initBYOBBundle', vm.buildrules[0].json_products)
+  getReviews(vm)
+}
+</script>
+
+{% schema %}
+  {
+    "name": "BYOB Reviews Widget",
+  	"limit": 1,
+    "settings": [
+        {
+          "type": "select",
+          "id": "review_app",
+          "info": "Select the review app to integrate with",
+          "label": "Reviews app",
+          "options": [
+            {
+              "value": "Stamped.io",
+              "label": "Stamped.io"
+            }
+          ],
+          "default": "Stamped.io"
+        },
+        {
+          "type": "text",
+          "id": "public_api_key",
+          "label": "API Key Public",
+          "default": "-"
+        },
+        {
+          "type": "color",
+          "id": "star_color",
+          "label": "Star color",
+          "default": "#FFD200"
+        }
+    ],
+    "presets": [
+      {
+        "name": "BYOB Reviews Widget",
+        "category": "BYOB Bundles APP"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

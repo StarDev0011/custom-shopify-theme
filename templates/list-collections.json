@@ -1,0 +1,123 @@
+{
+  "sections": {
+    "main": {
+      "type": "list-collections",
+      "disabled": true,
+      "blocks": {
+        "539aa35c-673f-4b5f-990b-5a1dbdcc3b25": {
+          "type": "collection",
+          "settings": {
+            "collection": "acne-and-blemishes"
+          }
+        }
+      },
+      "block_order": [
+        "539aa35c-673f-4b5f-990b-5a1dbdcc3b25"
+      ],
+      "settings": {
+        "wrapper": "full",
+        "layout": "grid",
+        "columns": 2,
+        "height": 80,
+        "text_size": 75,
+        "title": "",
+        "button_text": "Shop All",
+        "button_style": "text",
+        "bg_color": "",
+        "text_color": "light",
+        "overlay_opacity": 0,
+        "enable_slider_mobile": true
+      }
+    },
+    "16563374560bce2809": {
+      "type": "section-mosaic",
+      "blocks": {
+        "1656337456cd304120-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FLUFFMEDIA-_1.jpg",
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "shop by category",
+            "text": "",
+            "button_text": "",
+            "link": "shopify:\/\/pages\/by-category",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark"
+          }
+        },
+        "3f5ae3c6-4c2f-4cc2-b07c-7d4a98c8afe9": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "shop by collection",
+            "text": "",
+            "button_text": "",
+            "link": "shopify:\/\/pages\/by-collections",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#7a7a7a"
+          }
+        },
+        "3b0465b8-dfb4-418d-a77f-83c17e05eb8d": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "seasonal limited",
+            "text": "limited quantities available",
+            "button_text": "",
+            "link": "shopify:\/\/collections\/seasonal-limited",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#7a7a7a"
+          }
+        },
+        "1656337456cd304120-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FLUFFMEDIA--4.jpg",
+            "bg_position": "center-bottom",
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "shop by concern",
+            "text": "",
+            "button_text": "",
+            "link": "shopify:\/\/pages\/by-concern",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark"
+          }
+        }
+      },
+      "block_order": [
+        "1656337456cd304120-0",
+        "3f5ae3c6-4c2f-4cc2-b07c-7d4a98c8afe9",
+        "3b0465b8-dfb4-418d-a77f-83c17e05eb8d",
+        "1656337456cd304120-2"
+      ],
+      "settings": {
+        "height": "750",
+        "min_mobile_height": 250,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_size": 100,
+        "button_style": "primary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16563374560bce2809"
+  ]
+}

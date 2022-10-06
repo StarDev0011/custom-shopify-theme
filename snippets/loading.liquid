@@ -1,0 +1,48 @@
+{%- liquid
+  assign loading_appearance = settings.loading_appearance
+  assign image = settings.loading_image
+  assign image_width = settings.loading_image_width
+-%}
+
+{%- unless loading_appearance == 'never' -%}
+  <div class="loading-overlay">
+    {%- assign image_height = image_width | divided_by: image.aspect_ratio | round -%}
+    {%- capture image_size -%}{{ image_width }}x{{ image_height }}{%- endcapture -%}
+    {%- capture image_size_2x -%}{{ image_width | times: 2 }}x{{ image_height | times: 2 }}{%- endcapture -%}
+
+    {%- style -%}
+      {%- if image != blank -%}
+        :root { --loader-image: url({{ image | img_url: image_size }}); }
+        @media screen and (-webkit-min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+          :root { --loader-image: url({{ image | img_url: image_size_2x }}); }
+        }
+      {%- else -%}
+        :root { --loader-image: var(--loading-svg); }
+      {%- endif -%}
+    {%- endstyle -%}
+
+    <div class="loader loader--image">
+      <div class="loader__image__holder">
+        {%- if image != blank -%}
+          <img class="loader__image"
+            srcset="{% if image.width >= 50 %}{{ image | img_url: '50x' }} 50w,{% endif %}
+                    {% if image.width >= 100 %}{{ image | img_url: '100x' }} 100w,{% endif %}
+                    {% if image.width >= 150 %}{{ image | img_url: '150x' }} 150w,{% endif %}
+                    {% if image.width >= 200 %}{{ image | img_url: '200x' }} 200w,{% endif %}
+                    {% if image.width >= 250 %}{{ image | img_url: '250x' }} 250w,{% endif %}
+                    {% if image.width >= 300 %}{{ image | img_url: '300x' }} 300w{% endif %}"
+            src="{{ image | img_url: image_size }}"
+            loading="eager"
+            width="{{ image_width }}"
+            height="{{ image_height }}"
+            alt="{{ image.alt | strip_html | escape }}">
+          {%- else -%}
+            <div class="loader__image loader__image--fallback"></div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endunless -%}

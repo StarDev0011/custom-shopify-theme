@@ -1,0 +1,95 @@
+{%- comment -%} /snippets/search-results-item.liquid {%- endcomment -%}
+
+{%- liquid
+  assign columns = settings.products_per_row_on_desktop | plus: 0
+  assign columns_mobile = settings.products_per_row_on_mobile | plus: 0
+
+  case columns
+    when 1
+      assign size_desktop = 'one-whole'
+    when 2
+      assign size_desktop = 'one-half'
+    when 3
+      assign size_desktop = 'one-third'
+    when 4
+      assign size_desktop = 'one-quarter'
+  endcase
+
+  case columns_mobile
+    when 1
+      assign size_mobile = 'mobile--one-whole'
+    when 2
+      assign size_mobile = 'mobile--one-half'
+  endcase
+-%}
+
+{%- capture item_info -%}
+<div class="search-results__item__info">
+  <div class="search-results__item__title{% if item.object_type == 'page' %} h4-body{% endif %}">
+    {{- item.title | strip_html | escape -}}
+  </div>
+
+  {%- if item.object_type == 'article' -%}
+    <small><time datetime="{{ item.published_at | date: '%Y-%m-%d' }}">{{ item.published_at | date: format: 'month_day_year' }}</time></small>
+  {%- endif -%}
+</div>
+{%- endcapture -%}
+
+<a
+  class="search-results__item {{ size_desktop }} {{ size_mobile }}"
+  href="{{ item.url }}"
+  title="{{ item.title | strip_html | escape }}"
+  aria-label="{{ item.title | strip_html | escape }}"
+  {% if animations_enabled %}
+    data-aos="fade-up"
+    data-aos-delay="{{ animation_delay | times: 150 }}"
+  {% endif %}>
+
+  <div class="search-results__item__image__outer">
+    <div class="search-results__item__image">
+      {%- if item.object_type == 'article' -%}
+        {%- assign image_url_pattern = item.image | img_url: '540x' | replace: '_540x.', '_{width}x.' -%}
+        {%- assign image_widths = "[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048, 2450, 2700, 3000, 3350, 3750, 4100]" -%}
+        <img
+          class="search-results__item__img no-image-placeholder lazyload"
+          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+          data-src="{{ image_url_pattern }}"
+          data-widths= "{{ image_widths }}"
+          data-aspectratio="1"
+          data-sizes="auto"
+          width="540"
+          height="540"
+          alt="{{ item.image.alt | strip_html | escape | default: item.title | strip_html | escape }}">
+        <noscript>
+          <img
+            class="search-results__item__img no-image-placeholder"
+            src="{{ item.image | img_url: '1024x' }}"
+            width="1024"
+            height="1024"
+            alt="{{ item.image.alt | strip_html | escape | default: item.title | strip_html | escape }}">
+        </noscript>
+      {%- elsif item.object_type == 'page' -%}
+        {{- item_info -}}
+      {%- endif -%}
+
+      {%- if item.object_type == 'page' or item.object_type == 'article' -%}
+        <div class="search-results__item__badge product__badge" data-product-badge>
+          <span class="product__badge__item product__badge__item--custom">
+            {%- liquid
+              case item.object_type
+                when 'page'
+                  echo 'general.search.badge.page' | t
+                when 'article'
+                  echo 'general.search.badge.blog' | t
+              endcase
+            -%}
+          </span>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- if item.object_type == 'article' -%}
+    {{- item_info -}}
+  {%- endif -%}
+</a>

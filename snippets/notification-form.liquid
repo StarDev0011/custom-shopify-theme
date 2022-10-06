@@ -1,0 +1,31 @@
+<div class="product__notification{% unless sold_out %} product__notification--hidden{% endunless %}" data-notification-form>
+  {%- capture newsletter_form -%}NotificationForm--{{ section.id }}--{{ product_id }}{%- endcapture -%}
+  {%- form 'customer', id: newsletter_form -%}
+    {%- assign text_newsletter = settings.text_newsletter -%}
+    {%- if text_newsletter != blank -%}
+      <label for="Email--{{ section.id }}">{{ text_newsletter }}</label>
+    {%- endif -%}
+
+    {%- if form.posted_successfully? -%}
+      <div class="note form-success">{{ 'general.newsletter_form.newsletter_success' | t }}</div>
+    {%- elsif form.errors -%}
+      {{- form.errors | default_errors -}}
+    {%- endif -%}
+
+    <input type="hidden" name="contact[tags]" value="newsletter, out-of-stock-notification--{{ product_title | strip_html | escape }}"/>
+    <input type="hidden" name="contact[first_name]" value="Newsletter" />
+    <input type="hidden" name="contact[last_name]" value="Subscriber" />
+
+    <div class="input-group input-group--inline">
+      <div class="input-group__item">
+        <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter_form.email' | t }}" name="contact[email]" id="Email--{{ section.id }}" class="input-group__field input-group__field--email" aria-label="{{ 'general.newsletter_form.email' | t }}" autocorrect="off" autocapitalize="off" required>
+      </div>
+      <div class="input-group__item--btn">
+        <button type="submit" name="subscribe" id="SubscribeSubmit--{{ section.id }}" class="input-group__btn--icon" value="">
+          <span class="visually-hidden">{{ 'general.accessibility.submit_email' | t }}</span>
+          {%- render 'icon-arrow' -%}
+        </button>
+      </div>
+    </div>
+  {%- endform -%}
+</div>

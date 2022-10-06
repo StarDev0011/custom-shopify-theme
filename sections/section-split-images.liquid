@@ -1,0 +1,316 @@
+{%- comment -%} /sections/split-images.liquid {%- endcomment -%}
+
+{%- liquid
+  assign image_height = section.settings.image_height
+  assign mobile_layout = section.settings.mobile_layout
+  assign title = section.settings.title
+  assign text = section.settings.text
+  assign heading_size = section.settings.heading_size | times: 0.01
+  assign button_text = section.settings.button_text
+  assign button_link = section.settings.button_link | default: '#!'
+  assign button_style = section.settings.button_style
+  assign overlay_opacity = section.settings.overlay_opacity | times: 0.01
+  assign text_position = section.settings.text_position
+  assign show_text_shadow = settings.show_text_shadow
+  assign animations_enabled = settings.animations_enabled
+  assign animation_anchor = '#SplitImages--' | append: section.id
+  assign animation_delay = 250
+
+  assign image_mobile_fallback = false
+  unless section.blocks[0].settings.show_image_mobile or section.blocks[1].settings.show_image_mobile
+    assign image_mobile_fallback = true
+  endunless
+-%}
+
+<section
+  class="split-images-section split-images-section--{{ section.id }} {{ section.settings.text_color }}"
+  id="SplitImages--{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="split-images">
+
+  {%- style -%}
+    #SplitImages--{{ section.id }} { --overlay-opacity: {{ overlay_opacity }}; }
+    #SplitImages--{{ section.id }} .main-heading { --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ heading_size }}); }
+  {%- endstyle -%}
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="split-images__pane {{ image_height }}{% if mobile_layout == 'stacked' %} split-images__pane--stacked{% endif %}{% if image_mobile_fallback %} split-images__pane--mobile-fallback{% endif %}">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign image = block.settings.image
+          assign image_position = block.settings.image_position
+          assign image_bg_pos = image_position | prepend: 'bg-pos-'
+          assign show_image_mobile = block.settings.show_image_mobile
+        -%}
+
+        <div class="split-images__scale{% unless show_image_mobile %} split-images__scale--hidden{% endunless %}" {{ block.shopify_attributes }}>
+          {%- unless image == blank -%}
+            <div class="split-images__bg {{ image_bg_pos }} lazyload"
+              data-bgset="{% render 'bgset', image: image %}"
+              data-sizes="auto"
+              data-parent-fit="cover"
+            ></div>
+            <noscript>
+              <div class="split-images__bg {{ image_bg_pos }}" style="background-image: url('{{ image | img_url:'2048x' }}');"></div>
+            </noscript>
+          {%- else -%}
+            <div class="split-images__bg split-images__bg--placeholder {{ image_bg_pos }}">
+              {{- 'image' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+            </div>
+          {%- endunless -%}
+        </div>
+      {%- endfor -%}
+
+      <div class="overlay"></div>
+    </div>
+
+    <div class="split-images__content align--{{ text_position }}">
+      <div class="wrapper wrapper--narrow split-images__content-inner{% if show_text_shadow %} backdrop--radial{% endif %}"{% if animations_enabled %} data-aos="fade" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+        {%- if title != blank -%}
+          <h1 class="slide__heading main-heading">
+            {%- liquid
+              if animations_enabled
+                assign title_lines = title | escape | newline_to_br | split: '<br />'
+                for line in title_lines
+                  echo '<span class="text-reveal__cropper"><span data-aos="come-up" data-aos-delay="' | append: animation_delay | append: '">'
+                  echo line
+                  echo '</span></span>'
+
+                  unless forloop.last
+                    assign animation_delay = animation_delay | plus: 250
+                  endunless
+                endfor
+
+                assign animation_delay = animation_delay | plus: 250
+              else
+                echo title | escape
+              endif
+            -%}
+          </h1>
+        {%- endif -%}
+
+        {%- if text != blank -%}
+          <h2 class="slide__text main-text">
+            {%- liquid
+              if animations_enabled
+                assign text_lines = text | escape | newline_to_br | split: '<br />'
+                for line in text_lines
+                  echo '<span class="text-reveal__cropper"><span data-aos="come-up" data-aos-delay="' | append: animation_delay | append: '">'
+                  echo line
+                  echo '</span></span>'
+
+                  unless forloop.last
+                    assign animation_delay = animation_delay | plus: 250
+                  endunless
+                endfor
+
+                assign animation_delay = animation_delay | plus: 550
+              else
+                echo text | escape | newline_to_br
+              endif
+            -%}
+          </h2>
+        {%- endif -%}
+
+        {%- if button_text != blank -%}
+          <div class="slide__buttons main-buttons">
+            <div class="main-buttons__item" {% if animations_enabled %} data-aos="fade" data-aos-delay="{{ animation_delay }}"{% endif %}>
+              <a class="slide__btn btn btn--{{ button_style }}" href="{{ button_link }}">{{ button_text | escape }}</a>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- if button_text == blank and button_link != '#!' -%}
+        <a class="split-images__link" href="{{ button_link }}"></a>
+      {%- endif -%}
+    </div>
+  {%- else -%}
+    {%- render 'no-blocks' -%}
+  {%- endif -%}
+</section>
+
+{% schema %}
+  {
+  "name": "Split images",
+  "class": "transparent-header",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "label": "Height",
+      "default": "full-height",
+      "options": [
+        { "value": "full-height", "label": "Full screen" },
+        { "value": "seven-fifty-height", "label": "750px" },
+        { "value": "six-fifty-height", "label": "650px" },
+        { "value": "five-fifty-height", "label": "550px" },
+        { "value": "four-fifty-height", "label": "450px" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile layout",
+      "default": "stacked",
+      "info": "When both images are shown on mobile",
+      "options": [
+        { "label": "Inline", "value": "inline" },
+        { "label": "Stacked", "value": "stacked" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Content alignment",
+      "default": "middle-center",
+      "options": [
+        { "value": "top-left", "label": "Top left" },
+        { "value": "top-center", "label": "Top center" },
+        { "value": "top-right", "label": "Top right" },
+        { "value": "middle-center", "label": "Center" },
+        { "value": "bottom-left", "label": "Bottom left" },
+        { "value": "bottom-center", "label": "Bottom center" },
+        { "value": "bottom-right", "label": "Bottom right" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Text contrast",
+      "info": "Improves readability of text",
+      "min": 0,
+      "max": 95,
+      "step": 5,
+      "unit": "%",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Color",
+      "default": "text-light",
+      "options": [
+        {
+          "value": "text-light",
+          "label": "Light"
+        },
+        {
+          "value": "text-dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Heading",
+      "default": "Welcome to Palo Alto"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "default": 120,
+      "min": 100,
+      "max": 200,
+      "step": 10,
+      "unit": "%"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Describe in a few words your special products, collection, or brand."
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Text",
+      "default":"Learn More",
+      "info": "Leave blank to link entire image"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Style",
+      "default": "primary",
+      "options": [
+        { "label": "Text", "value": "text" },
+        { "label": "Small button", "value": "primary btn--small" },
+        { "label": "Large button", "value": "primary" },
+        { "label": "Small outline button", "value": "secondary btn--small" },
+        { "label": "Large outline button", "value": "secondary" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "label": "Position",
+          "id": "image_position",
+          "default": "center-center",
+          "options": [
+            { "label": "Top", "value": "center-top" },
+            { "label": "Right", "value": "right-center" },
+            { "label": "Center", "value": "center-center" },
+            { "label": "Left", "value": "left-center" },
+            { "label": "Bottom", "value": "center-bottom" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "show_image_mobile",
+          "label": "Show image on mobile",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Split images",
+      "category": "Image",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

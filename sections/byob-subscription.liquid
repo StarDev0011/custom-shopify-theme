@@ -1,0 +1,554 @@
+<!-- BYOB subscription widget - optional section -->
+<style>
+.byob-subscription-container {
+  display: flex;
+  flex-direction: row;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  /* for vue modal */
+  width: 800px;
+  margin: 0px auto;
+  background-color: {{ section.settings.background_color }};
+  color: {{ section.settings.text_color }};
+  transition: all 0.3s ease;
+  position: relative;
+}
+.byob-subscription-left {
+/*   padding: 0px 0px 15px 15px; */
+}
+.byob-subscription-right {
+  padding: 15px 15px 75px 0px;
+}
+.byob-subscription-panel {
+  margin: 15px;
+  width: 50%;
+  flex-basis: 50%;
+}
+.byob-images-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  line-height: 0;
+  margin: 15px;
+}
+.byob-thubmnails-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  gap: 3px;
+}
+.byob-thubmnail-image {
+  width: 100%;
+}
+.byob-subscription-feature {
+  width: 100%;
+}
+.byob-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.byob-subscription-title {
+  font-size: 2em;
+  font-weight: 600;
+}
+.byob-subscription-price {
+  font-size: 23px;
+  font-weight: 400;
+}
+.byob-subscription-save {
+  margin-left: 10px;
+  padding: 2px 6px;
+  border: 1px solid #da4f49;
+  border-radius: 3px;
+  font-size: 10px;
+  color: #da4f49;
+  font-weight: bold;
+  display: inline;
+  position: relative;
+  top: -3px;
+  letter-spacing: 1px;
+}
+.byob-product-options {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.byob-product-option {
+  display: grid;
+  grid-template-columns: 75px 65%;
+}
+.byob-subscription-button-container {
+  padding-top: 5px;
+}
+.byob-selling-plan-groups {
+  display: grid;
+  grid-template-columns: 25px auto 75px;
+  align-items: center;
+  border-bottom: 1px solid rgba(198, 198, 198, 0.55);
+  padding: 12px;
+  border-radius: 0;
+}
+.byob-selling-plan-groups>label {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.byob-group-options {
+  grid-row:    2 / 3;
+  grid-column: 2 / 4;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.byob-selling-plan-container {
+  display:flex;
+  flex-direction: column;
+  border: 1px solid rgba(198, 198, 198, 0.55);
+  border-bottom: none;
+  border-radius: 2px;
+}
+.byob-group-option {
+  display: block;
+  padding: 8px 10px;
+  border: 1px solid rgba(198, 198, 198, 0.55);
+}
+input[type="radio"] {
+  accent-color: #4d4d4d;
+}
+#btn-add-subscription {
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.8;
+  box-shadow: none;
+  margin: 0px;
+  padding: 5px;
+}
+.full-width {width: 100%;}
+.byob-subscription-close{
+    position: absolute;
+    z-index: 10;
+    top:0;
+    right: -40px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    /* from hystmodal */
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    border: none;
+    font-size: 0;
+    cursor: pointer;
+    outline: none;
+}
+.byob-subscription-close:focus{
+    outline: 2px dotted #afb3b9;
+    outline-offset: 2px;
+}
+.byob-subscription-label {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 768px) {
+  .byob-subscription-container {
+    width: 88%;
+  }
+  div.byob-subscription-container {
+    flex-direction: column;
+  }
+  .byob-subscription-panel {
+    margin: 0px;
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .byob-subscription-left {
+    padding: 0px;
+  }
+  .byob-subscription-right {
+    padding: 15px 15px 30px 15px;
+  }
+  .byob-subscription-close {
+    top:10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' stroke='%23111' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%23111' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E");
+  }
+}
+</style>
+
+<script type="text/x-template" id="byob-subscription-template">
+  <teleport to="body">
+    <transition name="modal">
+      <div class="byob-modal-mask">
+        <div class="byob-modal-wrapper" @click.self="$emit('close')">
+            <div class="byob-subscription-container">
+              <button class="byob-subscription-close" @click.self="$emit('close')">Close</button>
+
+              <div class="byob-subscription-panel byob-subscription-left">
+                <div class="byob-images-container">
+                  <div class="full-width"><img class="byob-subscription-feature" :src="[[ featured_image ]]"/></div>
+
+                  {% comment %}
+                  <div class="byob-thubmnails-container">
+                    <!-- other images -->
+                    <div v-for="image in product.images">
+                      <img class="byob-thubmnail-image" @click="featured_image = image" :src="[[ image ]] + '&width=400'"/>
+                    </div>
+                  </div>
+                  {% endcomment %}
+                </div>
+              </div>
+              <div class="byob-subscription-panel byob-subscription-right">
+                <div class="byob-product-info">
+                  <!-- product bg info -->
+                  <div class="byob-subscription-title">[[ product.title ]]</div>
+                  <div class="byob-subscription-price">
+                  	[[ currencySymbol ]][[ discountedPrice ]]
+                    <span v-if="selected_group_name !== 'single' && entitledDiscount !== -1" class="byob-subscription-save">
+                      [[entitledDiscount === -1? '' : entitledDiscount]]
+  					</span>
+  				  </div>
+                  <!-- <div class="byob-subscription-desc">[[ product.description ]]</div> -->
+                </div>
+
+                <div class="byob-product-options">
+                  <label>{{ 'sections.byob-subscription.purchaseOptions' | t }}</label>
+
+                  <div class="byob-selling-plan-container">
+                    <div v-if="!product.requires_selling_plan" class="byob-selling-plan-groups">
+                      <input type="radio" id="single" v-model="selected_group_name" value="single"/>
+                      <label for="single">{{ 'sections.byob-subscription.oneTimePurchase' | t }}</label>
+                      <label style="margin-left: auto">[[ currencySymbol ]][[ totalPrice ]]</label>
+                    </div>
+
+                    <div v-for="group in product.selling_plan_groups" class="byob-selling-plan-groups">
+                      <input type="radio" :id="'byob_' + group.name" v-model="selected_group_name" :value="group.name">
+                      <label :for="'byob_' + group.name">
+                      	[[ group.name ]]
+  					  </label>
+
+                      <label style="margin-left: auto">[[ currencySymbol ]][[ discountedPrice ]]</label>
+
+                      <template v-if="selected_group_name !== 'single' && selected_group_name == group.name">
+                        <div class="byob-group-options" v-for="(option, index) in group.options">
+                          <label v-if="subscription_app != 'skio'">
+                            [[ option.name ]]
+  						  </label>
+
+                          <select class="byob-group-option" v-model="selected_options[index]" @change="updateSelectedPlan(option, group.selling_plans, index)">
+                            <option v-for="(value, j) in option.values" :value="value">[[ toDisplayValue(value, group.selling_plans[j]) ]]</option>
+                          </select>
+
+                          <p v-if="selected_plan != '' && selected_plan.price_adjustments && selected_plan.price_adjustments.length == 2">[[ readablePriceAdjustments() ]]</p>
+                        </div>
+                      </template>
+                    </div>
+                  </div>
+
+                  <div class="byob-subscription-button-container">
+                    <button type="button" id="btn-add-subscription" class="btn-add-to-bundle byob-w-full" @click="addSubscriptionToCart">
+                      <span class="AddToBundleText">
+                        {{ 'sections.byob-subscription.CTAbuttonText' | t }}
+                      </span>
+                    </button>
+                  </div>
+
+                  <div v-if="itemAdded"><p>{{ 'sections.byob-subscription.itemAddedAlert' | t }}</p></div>
+                  <div v-else-if="option_not_selected"><p style="color:red">{{ 'sections.byob-subscription.optionMissedAlert' | t }}</p></div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+   		</div>
+    </transition>
+  </teleport>
+</script>
+
+<script>
+  const byob_bundle_product = {{ product | json }};
+  const byob_subscription_to_checkout = {{ section.settings.redirect_to_checkout | json }};
+  const subscriptionModal = {
+    props: ['variants'],
+    compilerOptions: {
+      delimiters: ['[[', ']]'],
+    },
+    mounted() {
+      console.log('product in sm', byob_bundle_product);
+      if (this.product.selling_plan_groups.length > 0) {
+        let group = this.product.selling_plan_groups[0]
+        if (group.app_id == '294517') {
+          this.subscription_app = 'recharge'
+          this.setInitOptions(this.subscription_app)
+        }
+        else if (group.app_id == 'WS-Subscription') {
+          this.subscription_app = 'ws-sub'
+        }
+        else if (group.app_id == 'appstle')
+          this.subscription_app = 'appstle'
+        else if (group.app_id == 'SKIO')
+          this.subscription_app = 'skio'
+
+        if (typeof initSubscriptionModal === 'function') initSubscriptionModal(this)
+      }
+    },
+    data() {
+      return {
+        itemAdded: false,
+        product: byob_bundle_product,
+        currencySymbol: currencySymbol,
+        price: 100,
+        selected_group_name: 'single',
+        selected_options: [],
+        selected_plan: '',
+        selected_plan_index: 0,
+        option_not_selected: false,
+        discount_text: '',
+        subscription_app: '',
+        default_settings: {  // default options following Shopify subscription API
+          recharge: {
+            selling_plan_groups: [{
+              name: "Subscribe",
+              options: [{
+                name: "Deliver Every"
+              }]
+            }]
+          }
+        },
+      }
+    },
+    computed: {
+      featured_image() {
+        return this.product.featured_image
+      },
+      totalPrice() {
+        return this.variants.reduce((a, variant) => a + variant.price / 100.0, 0).toFixed(2);
+      },
+      subscriptionDataNotFound() {
+        return this.variants.some(variant => {
+          console.log('In subscriptionDataNotFound, variant = ', variant)
+          if (variant.selling_plan_allocations.length == 0 || typeof variant.selling_plan_allocations[this.selected_plan_index] === 'undefined' || variant.selling_plan_allocations[this.selected_plan_index].per_delivery_price == null) {
+			alert(`The subscription plan or per delivery price of ${variant.name} - ${variant.title} is not found. \n\nPlease set the subscription plans to the products in your subscription app`)
+            return true
+          }
+
+          return false;
+        })
+      },
+      discountedPrice() { // show the discounted price with the largest saving
+      	if (this.selected_group_name == 'single' || this.selected_plan === '' || ((this.selected_plan && this.selected_plan.price_adjustments.length === 0)))
+          return this.totalPrice
+        else {
+          let pa = this.priceAdjustment();
+          if (pa.value_type == 'percentage') {
+            if (this.subscriptionDataNotFound)
+                return "N/A"
+
+            let total = this.variants.reduce((a, variant) => {
+                return a + variant.selling_plan_allocations[this.selected_plan_index].per_delivery_price
+              }, 0
+            )  / 100.0;
+            return Math.floor(total * 100) / 100  // round down to 2dp
+          }
+          else if (pa.value_type == 'fixed_amount')
+            return (this.totalPrice - pa.value).toFixed(2)
+          else if (pa.value_type == 'price')
+            return pa.value
+        }
+      },
+      entitledDiscount() {  // current discount text shown in red badge
+        // no discount - original price
+        if (this.selected_plan === '' || ((this.selected_plan && this.selected_plan.price_adjustments.length === 0)))
+          return -1
+        else {
+          let pa = this.priceAdjustment();
+          if (pa.value_type == 'percentage')
+            return pa.value != 0? 'SUBSCRIPTION . SAVE ' + pa.value + '%' : 'SUBSCRIPTION'
+          else if (pa.value_type == 'fixed_amount')
+            return 'SUBSCRIPTION . SAVE ' + this.currencySymbol + pa.value
+          else if (pa.value_type == 'price')
+            return -1
+        }
+
+      }
+  	},
+    template: "#byob-subscription-template",
+    methods: {
+      redirectUsers() {  // auto redirect customers to the cart
+        let link = 'https://' + window.location.hostname + (byob_subscription_to_checkout? cart_url + '/checkout' : cart_url)
+        link += `/?ref=BYOB${bundleID}&attributes[where-from]=BYOB-${byob_handle}&utm_source=BYOB` // order tracking
+        window.location.href = link
+      },
+      aggregateByID(data) {  // aggregate variants quantity by id, return dict
+        let dictionary = data.reduce((dic, value)=> {
+        if(!dic[value.id])
+        {dic[value.id] = value; } else {
+            let old =  dic[value.id];
+           Object.keys(old).forEach((key)=> { if(key == 'quantity') {   old[key] += value[key] } } )
+          }      return dic } ,{});
+
+        return Object.values(dictionary);
+      },
+      addSubscriptionToCart() {
+        console.log('selected_options = ', this.selected_options)
+        if (this.selected_group_name != 'single' && this.selected_plan === '') { // check if no option selected in dropdown
+          this.option_not_selected = true;
+          return
+        }
+        let formData = {'items': []}
+        console.log('this.variants = ', this.variants)
+        for (variant of this.variants) {
+          let item = {
+            id: parseInt(variant.id),
+            quantity: 1,
+          }
+
+          if (this.selected_group_name !== 'single') {
+            // validate not matched selling plan options
+            if (typeof variant.selling_plan_allocations[this.selected_plan_index] === 'undefined') {
+              alert(`Error: Cannot add the variant to the Cart.\n\nThe variant ${variant.name} does not have the subscription plan as the bundle product. Please check if you set the same subscription plans in your subscription app!`)
+              return
+            }
+            item.selling_plan = variant.selling_plan_allocations[this.selected_plan_index].selling_plan_id
+          }
+          formData.items.push(item)
+        }
+//        console.log('this.variants = ', this.variants)
+//        console.log('formData 1 = ', formData)
+	   formData = {'items': this.aggregateByID(formData.items)}
+       console.log('formData 2 = ', formData)
+// 		return;
+       let vm1 = this;
+       fetch(window.Shopify.routes.root + 'cart/add.js', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(formData)
+       })
+       .then(response => response.json())
+       .then(data => {
+         console.log('Adding variant to cart:', data);
+		 vm1.itemAdded = true;
+         vm1.option_not_selected = false;
+         vm1.redirectUsers()
+       })
+       .catch((error) => {
+         console.error('Error:', error);
+       });
+      },
+      priceAdjustment() {  // return the largest saving price adjustment from a selling plan
+        const getMax = (a, b) => Math.max(a.value, b.value);
+        let price_adjustments = this.selected_plan.price_adjustments
+        return price_adjustments.reduce(getMax);
+      },
+      readableDiscount(pa) {  // pa == price_adjustment
+        let period = '';
+        if (pa.order_count == null )
+          period = 'ongoing orders'
+        else if (pa.order_count == 1)
+          period = 'first order'
+        else
+          period = `first ${pa.order_count} orders`
+
+        if (pa.value_type == 'percentage')
+          return `SAVE ${pa.value}% for the ${period}`
+        else if (pa.value_type == 'fixed_amount')
+          return `SAVE ${this.currencySymbol}${pa.value}% for the ${period}`
+        else if (pa.value_type == 'price')
+          return `PAY ${this.currencySymbol} ${pa.value} for the ${period}`
+      },
+      readablePriceAdjustments() {
+        let price_adjustments = this.selected_plan.price_adjustments
+        if (price_adjustments && price_adjustments.length === 2) {
+          return this.readableDiscount(price_adjustments[0]) + ', ' + this.readableDiscount(price_adjustments[1]);
+        }
+      },
+      updateSelectedPlan(option, plans, index) {
+        console.log('option, index = ', option);
+        console.log('selected_options[index] = ', this.selected_options[index])
+        console.log('selected_options = ', this.selected_options)
+        console.log('plans = ', plans)
+        let vm = this;
+//         for (let plan of plans)
+        for (let i=0; i<plans.length; i++)
+          if (plans[i].options.every((option, index) => { return option.value ===  vm.selected_options[index]} )) {
+            this.selected_plan = plans[i];
+            this.selected_plan_index = i;
+            console.log('this.selected_plan = ', this.selected_plan);
+            console.log('this.selected_plan_index = ', this.selected_plan_index);
+            return;
+          }
+      },
+      setInitOptions(app) {
+        if (app in this.default_settings)  // check if app is supported, override with default plan options
+          for (let i=0; i< this.default_settings[app].selling_plan_groups.length; i++) {
+            let group =  this.default_settings[app].selling_plan_groups[i]
+            this.product.selling_plan_groups[i].name = group.name
+            if (group.hasOwnProperty('options'))
+              group.options.forEach((option, index) => {
+                this.product.selling_plan_groups[i].options[index].name = option.name
+              });
+          }
+      },
+      toDisplayValue(value, plan) {  // value: option value, plan: selected plan
+        if (this.subscription_app == 'appstle')
+          return plan.name
+        else if (this.subscription_app == 'ws-sub') {
+          let values = value.split(';');
+          let frequency = values[2].split('=')[1];
+          let type = values[1].split('=')[1];
+          return frequency + ' ' + type.toLowerCase() + 's';
+        }
+        else
+          return value
+      }
+    }
+  }
+</script>
+{% schema %}
+  {
+    "name": "BYOB Subscription Pop-up",
+  	"limit": 1,
+    "settings": [
+	  {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#fff"
+      },
+	  {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#333"
+      },
+	  {
+        "type": "checkbox",
+        "id": "redirect_to_checkout",
+        "label": "Redirect to Checkout",
+        "info": "Skip the cart page. Redirect to the checkout page"
+      }
+	],
+    "presets": [
+      {
+        "name": "BYOB Subscription Pop-up",
+        "category": "BYOB Bundles APP"
+      }
+    ],
+    "locales": {
+        "en": {
+          "CTAbuttonText": "Add to Cart",
+		  "purchaseOptions": "Purchase Options:",
+		  "oneTimePurchase": "One-time purchase",
+	 	  "itemAddedAlert": "The subscription items have been added to the cart!",
+		  "optionMissedAlert": "Please select your subscription option!"
+        }
+    }
+  }
+{% endschema %}

@@ -1,0 +1,406 @@
+{
+  "sections": {
+    "hero": {
+      "type": "collection-image-with-title",
+      "settings": {
+        "banner_height": "one-fifty-height",
+        "text_position": "middle-left",
+        "show_image": false,
+        "text_color": "text-light",
+        "overlay_opacity": 0,
+        "banner_bg_color": "#fafafa",
+        "remove_margin_bottom": true
+      }
+    },
+    "1663683240ddf65ae9": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "0b318798-d7d0-40e8-844b-e1cef85b2f09": {
+          "type": "video",
+          "settings": {
+            "text_position": "middle-center",
+            "hero_video_link": "https:\/\/www.youtube.com\/watch?v=Eu2sBTOB4Dw",
+            "video_enable_sound": false,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "text": "",
+            "heading_size": 100,
+            "button_text": "",
+            "button_link": "",
+            "button_style": "secondary"
+          }
+        },
+        "166368324062089a0f-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "<h1> <strong>bubble rinse cleansers<\/strong>\n<\/h1>",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "This new type of water-form cleanser is lightweight, gentle, non-stripping and ultra-healthy for your skin. Bubble Rinse Cleanser will not leave your skin feeling tight or dry like conventional cleansers with harsh surfactants that remove your skin’s naturally beneficial oils. This moisture preserving formula removes NON-waterproof makeup, oil, dirt, and impurities easily. Leaves skin feeling soft, clean and refreshed.",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "0b318798-d7d0-40e8-844b-e1cef85b2f09",
+        "166368324062089a0f-1"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "add_spacing": true,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "1663684752155397dd": {
+      "type": "section-text",
+      "disabled": true,
+      "blocks": {
+        "1663684752564904d1-0": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Subheading<\/p>",
+            "subheading_size": 26,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "1663684752564904d1-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>bubble rinse cleansers<\/p>",
+            "size": 300,
+            "font_weight": "200",
+            "letter_spacing": 0
+          }
+        },
+        "1663684752564904d1-2": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>This new type of water-form cleanser is lightweight, gentle, non-stripping and ultra-healthy for<br\/>your skin. Bubble Rinse Cleanser will not leave your skin feeling tight or dry<br\/>like conventional cleansers with harsh surfactants that remove your skin’s<br\/>naturally beneficial oils. This moisture preserving formula removes<br\/>NON-waterproof makeup, oil, dirt, and impurities easily. Leaves skin feeling<br\/>soft, clean and refreshed.<\/p>",
+            "size": 100,
+            "font_weight": "200",
+            "letter_spacing": 0
+          }
+        },
+        "1663684752564904d1-3": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "btn_text": "Read More",
+            "btn_link": "",
+            "btn_style": "primary btn--small"
+          }
+        }
+      },
+      "block_order": [
+        "1663684752564904d1-0",
+        "1663684752564904d1-1",
+        "1663684752564904d1-2",
+        "1663684752564904d1-3"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "full",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": true
+      }
+    },
+    "16636828044e9463df": {
+      "type": "section-custom-content",
+      "blocks": {
+        "16636828042dabfb96-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/MG_2315.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "1d43692d-ef12-4b90-8e19-fc07bc4feef6": {
+          "type": "video",
+          "settings": {
+            "text_position": "middle-center",
+            "hero_video_link": "https:\/\/youtu.be\/PbPGpSQMaT4",
+            "video_enable_sound": false,
+            "image": "shopify:\/\/shop_images\/MG_2317.jpg",
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "text": "",
+            "heading_size": 100,
+            "button_text": "",
+            "button_link": "",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "16636828042dabfb96-0",
+        "1d43692d-ef12-4b90-8e19-fc07bc4feef6"
+      ],
+      "settings": {
+        "height": "four-fifty-height",
+        "add_spacing": true,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": "{\npadding-top: 0;\n}"
+      }
+    },
+    "16636848763211a230": {
+      "type": "section-text",
+      "disabled": true,
+      "blocks": {
+        "166368487671304ef5-0": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Subheading<\/p>",
+            "subheading_size": 26,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "166368487671304ef5-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Our Story<\/p>",
+            "size": 100,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "166368487671304ef5-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This new type of water-form cleanser is lightweight, gentle, non-stripping and <\/p><p>ultra-healthy for your skin. Bubble Rinse Cleanser will not leave your skin feeling<\/p><p>tight or dry like conventional cleansers with harsh surfactants that remove your <\/p><p>skin’s naturally beneficial oils. This moisture preserving formula removes<br\/>NON-waterproof makeup, oil, dirt, and impurities easily. Leaves skin feeling soft, <\/p><p>clean and refreshed.<\/p>",
+            "size": 100,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        },
+        "166368487671304ef5-3": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "btn_text": "Read More",
+            "btn_link": "",
+            "btn_style": "primary btn--small"
+          }
+        }
+      },
+      "block_order": [
+        "166368487671304ef5-0",
+        "166368487671304ef5-1",
+        "166368487671304ef5-2",
+        "166368487671304ef5-3"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "full",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": true
+      }
+    },
+    "16636828006e708c98": {
+      "type": "section-columns",
+      "disabled": true,
+      "blocks": {
+        "16636828009039cf7c-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_2317.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16636828009039cf7c-3": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=Eu2sBTOB4Dw"
+          }
+        }
+      },
+      "block_order": [
+        "16636828009039cf7c-2",
+        "16636828009039cf7c-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 2,
+        "heading_font_size": 20,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": true,
+        "text_width": 100,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.8,
+        "show_images": true,
+        "disable_slider": false,
+        "remove_margin_bottom": true
+      }
+    },
+    "16620564589d3d3d70": {
+      "type": "section-slideshow",
+      "disabled": true,
+      "blocks": {
+        "16620564582a9fcffe-1": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/MG_2317.jpg",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": true,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 26,
+            "heading_mobile_font_size": 20,
+            "heading_font_weight": "700",
+            "heading_letter_spacing": 0,
+            "heading_color": "#000000",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 20,
+            "text_mobile_font_size": 16,
+            "text_font_weight": "200",
+            "text_letter_spacing": 0,
+            "text_color": "#000000",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "right",
+            "override_mobile_text_position": false,
+            "mobile_text_position_y": 50,
+            "mobile_text_position_x": "center",
+            "title": "bubble rinse cleansers",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "This new type of water-form cleanser is a super lightweight, gentle, non-stripping formulation that adds skin barrier strengthening moisture and removes NON-waterproof makeup, oil, dirt, and impurities. Bubble Rinse Cleanser will not leave your skin feeling tight or dry like conventional cleansers with harsh surfactants that remove your skin’s naturally beneficial oils.",
+            "slide_btn_text": "",
+            "slide_btn_link": "",
+            "slide_btn_style": "primary",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16620564582a9fcffe-1"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "original-height",
+        "show_nav_dots": false,
+        "show_nav_arrows": false,
+        "show_arrow_down": false,
+        "arrow_dot_color": "",
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": true,
+        "heading_size": 120,
+        "custom_css": ""
+      }
+    },
+    "subcollections": {
+      "type": "subcollections",
+      "settings": {
+        "layout": "grid",
+        "image_source": "collection",
+        "image_aspect_ratio": 0.7,
+        "image_overlay_opacity": 0,
+        "bg_color": "",
+        "text_color": "text-light"
+      }
+    },
+    "main": {
+      "type": "collection",
+      "settings": {
+        "show_breadcrumbs": true,
+        "enable_sorting": true,
+        "enable_filters": true,
+        "filter_mode": "group",
+        "bg_color": "#fafafa"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "1663683240ddf65ae9",
+    "1663684752155397dd",
+    "16636828044e9463df",
+    "16636848763211a230",
+    "16636828006e708c98",
+    "16620564589d3d3d70",
+    "subcollections",
+    "main"
+  ]
+}

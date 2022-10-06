@@ -1,0 +1,993 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_page_title": false
+      }
+    },
+    "166377542505a92069": {
+      "type": "section-custom-content",
+      "blocks": {
+        "1663775424740a93d7-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/7243v3_2.jpg",
+            "image_position": "center-top",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "1663775424740a93d7-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 16,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "FREE YOUR FACE",
+            "heading_font_size_desktop": 50,
+            "heading_font_size_mobile": 26,
+            "heading_weight": "heading-normal",
+            "text": "WATER-FORM serums, cleansers, toners, moisturizers and more...\n<p>100% PLANT BASED MOISTURE\n<br>for visibly clearer & healthier skin<\/p>",
+            "text_font_size_desktop": 28,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "shop facewater",
+            "button_link": "",
+            "button_style": "text",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1663775424740a93d7-0",
+        "1663775424740a93d7-1"
+      ],
+      "settings": {
+        "height": "four-fifty-height",
+        "add_spacing": false,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": "{\npadding-top: 0;\npadding-bottom: 60px;\n}"
+      }
+    },
+    "16636999280cd200e6": {
+      "type": "section-columns",
+      "blocks": {
+        "166369992871b6e4ad-0": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fullstill-Recovered_1_2ea5f117-9e14-4444-a3a3-4f4941451e9b.jpg",
+            "image_link": "",
+            "bg_position": "left-center",
+            "title": "THE INVENTION - PATENT-PENDING DISTILLATION PROCESS",
+            "text": "<p>many plants contain highly effective energetic compounds capable of working beauty wonders. to really perform, these delicate ingredients must be undamaged and present in ample quantities. our patent pending pre press and low heat vacuum distillation process starts with fresh, healthy plants and ends with a water-based solution that is loaded with whole phytonutrients.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "166369992871b6e4ad-1": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3069v4.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "WATER-FORM IS BETTER FOR YOUR SKIN",
+            "text": "<p>our distillation method preserves the quality, purity, and delivery of full spectrum plant actives. our water form(ulas) are super lightweight and the perfect vehicle to transport delicate plant actives. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla <\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "166369992871b6e4ad-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/plant_2_COLLECTION.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "100% PLANT BASED IS DIFFERENT FROM \"NATURAL\"",
+            "text": "<p>when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants. vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them! natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and paraffin wax.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "166369992871b6e4ad-0",
+        "166369992871b6e4ad-1",
+        "166369992871b6e4ad-2"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 3,
+        "heading_font_size": 26,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 85,
+        "equalize_height": true,
+        "image_aspect_ratio": 1.1,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": true
+      }
+    },
+    "166394226152d30617": {
+      "type": "section-slideshow",
+      "blocks": {
+        "16639422612bb186c2-1": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/2227.png",
+            "image_vertical": 40,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "right-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 42,
+            "heading_mobile_font_size": 24,
+            "heading_font_weight": "400",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 20,
+            "text_mobile_font_size": 16,
+            "text_font_weight": "400",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "right",
+            "override_mobile_text_position": false,
+            "mobile_text_position_y": 50,
+            "mobile_text_position_x": "center",
+            "title": "VISIBLY CLEARER & HEALTHIER SKIN",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+            "slide_btn_text": "",
+            "slide_btn_link": "",
+            "slide_btn_style": "primary",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16639422612bb186c2-1"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "original-height",
+        "show_nav_dots": true,
+        "show_nav_arrows": true,
+        "show_arrow_down": false,
+        "arrow_dot_color": "",
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": false,
+        "heading_size": 100,
+        "custom_css": ""
+      }
+    },
+    "16637753231bdf1b92": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "0b5a72ba-23b3-4e55-b7aa-950101eb01f9": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "THE INNOVATION",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "bg_color": "#fafafa",
+            "mobile_order": "default"
+          }
+        },
+        "166377532317321324-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FW_SQ.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "0b5a72ba-23b3-4e55-b7aa-950101eb01f9",
+        "166377532317321324-0"
+      ],
+      "settings": {
+        "height": "650",
+        "min_tablet_height": 255,
+        "min_mobile_height": 275,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 40,
+        "heading_mobile_font_size": 28,
+        "heading_font_weight": "400",
+        "heading_color": "#000000",
+        "text_font_size": 16,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "400",
+        "text_color": "#000000",
+        "button_style": "secondary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": false
+      }
+    },
+    "16589399042ad7ead6": {
+      "type": "section-custom-content",
+      "blocks": {
+        "6a9a8dc4-46e6-47fd-b8b3-cbf595cee760": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "THE INNOVATION",
+            "heading_font_size_desktop": 42,
+            "heading_font_size_mobile": 24,
+            "heading_weight": "heading-normal",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 16,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        },
+        "1658939904a3c3a247-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/FW_SQ.png",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "6a9a8dc4-46e6-47fd-b8b3-cbf595cee760",
+        "1658939904a3c3a247-0"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "add_spacing": true,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": "{\npadding-top: 0;\n}"
+      }
+    },
+    "1658931444da7faacd": {
+      "type": "section-columns",
+      "disabled": true,
+      "blocks": {
+        "7a655677-1908-4287-ab91-da8a88d582bf": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fullstill-Recovered_2_816e414b-eecc-478e-aa77-976aab5f2857.jpg",
+            "image_link": "",
+            "bg_position": "center-bottom",
+            "title": "patent-pending process",
+            "text": "<p>many plants contain highly effective energetic compounds capable of working beauty wonders. to really perform, these delicate ingredients must be undamaged and present in ample quantities. our patent pending pre press and low heat vacuum distillation process starts with fresh, healthy plants and ends with a water-based solution that is loaded with whole phytonutrients.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16589314440c59287c-0": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "distilled to transform your skin",
+            "text": "<p>by removing bacteria, toxins, ions and minerals during distillation, the water is effectively purified. since water is polar it will seek out ions to bind with and in this \"stripped\" state, is able to bind to the plant actives more optimally and at a higher concentrations. <\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16589314440c59287c-1": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/phil-REV.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "highly absorbent water-form(ula)s",
+            "text": "<p>our distillation method preserves the quality, purity, and delivery of full spectrum plant actives. our water form(ulas) are super lightweight and the perfect vehicle to transport these delicate plant actives.  <\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16589314440c59287c-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shutterstock_185509019.jpg",
+            "image_link": "",
+            "bg_position": "right-center",
+            "title": "plant actives in motion",
+            "text": "<p>due to its proper molecular structure, the plant actives are able to be absorbed from the surface of the skin (epidermis) and travel into the lower layers of the skin’s cells<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "7a655677-1908-4287-ab91-da8a88d582bf",
+        "16589314440c59287c-0",
+        "16589314440c59287c-1",
+        "16589314440c59287c-2"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 4,
+        "heading_font_size": 20,
+        "bg_color": "#fafafa",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 90,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.8,
+        "show_images": false,
+        "disable_slider": true,
+        "remove_margin_bottom": true
+      }
+    },
+    "1659973851484a9c0c": {
+      "type": "section-columns",
+      "disabled": true,
+      "blocks": {
+        "1659973851799f18ce-0": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "detoxification",
+            "text": "<p>removes the toxicity of synthetics & impurities (from other products and pollution) and stabilizes the pH balance of your skin so that the plant active ingredients can penetrate<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1659973851799f18ce-3": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "100% plant based",
+            "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur <\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1659973851799f18ce-1": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "youth preserving effects",
+            "text": "<p>once the plant active ingredients penetrate, they stimulate the skin’s natural production of essential collagen and elastin (the building blocks of your skin)<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1659973851799f18ce-2": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "radiance-rich results",
+            "text": "<p>cells are stimulated and plant actives are able to target specific skin concerns + immediately visible radiance, noticeable skin clearing and long-term youth preserving effects<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "1659973851799f18ce-0",
+        "1659973851799f18ce-3",
+        "1659973851799f18ce-1",
+        "1659973851799f18ce-2"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 4,
+        "heading_font_size": 20,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 90,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.8,
+        "show_images": false,
+        "disable_slider": true,
+        "remove_margin_bottom": true
+      }
+    },
+    "1656436483c66822d1": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "16564364836fdd50e0-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/7464v5.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "16564364836fdd50e0-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "<strong>100% plant based is different from \"all natural\"<\/strong>",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "<p>when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants. vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them! natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and paraffin wax.<\/p>",
+            "text_font_size_desktop": 30,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16564364836fdd50e0-0",
+        "16564364836fdd50e0-1"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "add_spacing": true,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": "{\npadding-top: 0;\n}"
+      }
+    },
+    "1660768547ca9e0c0f": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "6d6ba198-e9de-45cb-a2cb-5b504382b53b": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "<strong> way beyond clean <\/strong> <br> <br>100% plant based formula <br> no glycols <br>  no petrochemicals <br>  no synthetic fragrance <br> no added dye or color <br> vegan* and cruelty-free <br> made by us <br>",
+            "text": "*all of our products are vegan with <br>the exception of those containing honey.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#fafafa",
+            "mobile_order": "default"
+          }
+        },
+        "1660768546e89a07e1-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_44.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "bottom",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "<strong> way beyond clean <\/strong> <br> <br>100% plant based formula <br> no glycols <br>  no petrochemicals <br>  no synthetic fragrance <br> no added dye or color <br> vegan* and cruelty-free <br> made by us <br>",
+            "text": "*all of our products are vegan <br> with the exception of those <br> containing honey",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "7a6a8e92-a88f-4e5f-9555-a124dfdceb14": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shutterstock_1647760408_12244775.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": true,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "07fdcae4-b0a1-41b7-b0ff-d8eba8ee0ede": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shutterstock_166498511.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": true,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "6d6ba198-e9de-45cb-a2cb-5b504382b53b",
+        "1660768546e89a07e1-0",
+        "7a6a8e92-a88f-4e5f-9555-a124dfdceb14",
+        "07fdcae4-b0a1-41b7-b0ff-d8eba8ee0ede"
+      ],
+      "settings": {
+        "height": "550",
+        "min_tablet_height": 370,
+        "min_mobile_height": 350,
+        "wrapper": "full",
+        "add_spacing": false,
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 20,
+        "heading_font_weight": "200",
+        "heading_color": "#000000",
+        "text_font_size": 18,
+        "text_mobile_font_size": 12,
+        "text_font_weight": "200",
+        "text_color": "#000000",
+        "button_style": "secondary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "#fafafa",
+        "enable_slider_mobile": true
+      }
+    },
+    "16637792522013ab25": {
+      "type": "section-columns",
+      "blocks": {
+        "1663779252838b7eb3-1": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_45.png",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "WAY BEYOND CLEAN",
+            "text": "<p>100% plant based formula<\/p><p>no glycols <\/p><p>no petrochemicals <\/p><p>no synthetic fragrance <\/p><p>no added dye or color <\/p><p>vegan* and cruelty-free <\/p><p>made by us <br\/><\/p><p>*all of our products are vegan with<br\/>the exception of those containing honey.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663779252838b7eb3-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yusovmodel1_copy_1_9dbcbaf6-3cc9-49af-8d06-9c881ab85e04.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "MADE BY US",
+            "text": "<p>unlike most beauty brands, all of our products are entirely made by us from start to finish. we independently do our own research and development, manufacturing, fulfillment, and distribution. Because of this, we are able to control every aspect of the quality and integrity of our products.<br\/><br\/>After distillation, the final step of production (finishing, bottling and labeling) takes place at our Greenleaf facility, owned by our parent company, Plant Industries. Greenleaf is located in Allentown, PA and about 20 minutes away from the Distillery.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "c9b998da-da1a-42e9-97ca-4bb0c10caac1": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/RECYCLE.png",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "100% RECYCLABLE PACKAGING",
+            "text": "<p>PET or PETE is the most widely recycled plastic in the world. It is a strong and inert material that is extremely lightweight, making it efficient to transport (less carbon emissions during shipping compared to glass). PET can be picked up through most curbside recycling programs - just make sure to rinse out any remaining product before recycling.<\/p><p>WHY WE USE PLASTIC INSTEAD OF GLASS BOTTLES<\/p><p>glass may be a sturdier material but only has a lower environmental impact if reused. it also requires more materials and is much heavier, leading to higher emissions, especially from shipping. we chose PET plastic because it is 100% recyclable, super lightweight, and produces significantly less carbon emissions during transport  compared to glass bottles.<\/p><p><\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "1663779252838b7eb3-1",
+        "1663779252838b7eb3-2",
+        "c9b998da-da1a-42e9-97ca-4bb0c10caac1"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 3,
+        "heading_font_size": 26,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 85,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.7,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": false
+      }
+    },
+    "1663764846d4901551": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "1663764846cbfdfaf3-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/yusovmodel1_copy_1_9dbcbaf6-3cc9-49af-8d06-9c881ab85e04.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "1663764846cbfdfaf3-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "<strong> made by us<\/strong>",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "unlike most beauty brands, all of our products are entirely made by us from start to finish. we independently do our own research and development, manufacturing, fulfillment, and distribution. Because of this, we are able to control every aspect of the quality and integrity of our products.\n\nAfter distillation, the final step of production (finishing, bottling and labeling) takes place at our Greenleaf facility, owned by our parent company, Plant Industries. Greenleaf is located in Allentown, PA and about 20 minutes away from the Distillery.",
+            "text_font_size_desktop": 30,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1663764846cbfdfaf3-0",
+        "1663764846cbfdfaf3-1"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "add_spacing": true,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "1658930827cfb47491": {
+      "type": "section-text",
+      "disabled": true,
+      "blocks": {
+        "83997420-6d85-4de5-8bf0-324a891bc4d1": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>100% recyclable packaging<\/p>",
+            "subheading_size": 26,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "16589308266b2fdd85-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PET or PETE is the most widely recycled plastic in the world. <br\/> It is a strong and inert material that is extremely lightweight, <br\/>making it efficient to transport (less carbon emissions during <br\/>shipping compared to glass). PET can be picked up through <br\/>most curbside recycling programs - just make sure to rinse<\/p><p>out any remaining product before recycling. <\/p>",
+            "size": 100,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        },
+        "553e8d95-7842-46cc-90dc-f08acfd38730": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>why we use plastic instead of glass bottles<\/p>",
+            "subheading_size": 26,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "e62fb3b7-bdb1-4026-b9fd-4dd4796e1398": {
+          "type": "text",
+          "settings": {
+            "text": "<p>glass may be a sturdier material but only has a lower<\/p><p>environmental impact if reused. it also requires more <\/p><p>materials and is much heavier, leading to higher emissions, <\/p><p>especially from shipping. we chose PET plastic because it is <\/p><p>100% recyclable, super lightweight, and produces <\/p><p>significantly less carbon emissions during transport  compared <\/p><p>to glass bottles.<\/p>",
+            "size": 100,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "83997420-6d85-4de5-8bf0-324a891bc4d1",
+        "16589308266b2fdd85-2",
+        "553e8d95-7842-46cc-90dc-f08acfd38730",
+        "e62fb3b7-bdb1-4026-b9fd-4dd4796e1398"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/recycle_chart_SEP.png",
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "full",
+        "padding": "standard-padding",
+        "bg_color": "#fafafa",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    },
+    "166076803891764da6": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "1660768038cc872231-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/recycle_chart_BKG-01.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": true,
+            "overlay_opacity": 0,
+            "text_position": "left",
+            "subheading": "",
+            "title": "100% recyclable packaging",
+            "text": "PET or PETE is the most widely recycled plastic in the world. <br> It is a strong and inert material that is extremely lightweight, <br> making it efficient to transport (less carbon emissions during <br> shipping compared to glass). PET can be picked up through <br> most curbside recycling programs - just make sure to rinse out any remaining product before recycling. <h3 style=\"color:black;\"><strong> <br> <br>why we use plastic instead of <br>glass bottles<\/strong><\/h3> glass may be a sturdier material but only has a lower <br>environmental impact if reused. it also requires more <br>materials and is much heavier, leading to higher emissions, <br>especially from shipping. we chose PET plastic because <br> it is 100% recyclable, super lightweight, and produces <br> significantly less carbon emissions during transport <br> compared to glass bottles.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "1660768038cc872231-0"
+      ],
+      "settings": {
+        "height": "auto",
+        "min_tablet_height": 370,
+        "min_mobile_height": 350,
+        "wrapper": "full",
+        "add_spacing": false,
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 20,
+        "heading_font_weight": "700",
+        "heading_color": "#000000",
+        "text_font_size": 18,
+        "text_mobile_font_size": 16,
+        "text_font_weight": "200",
+        "text_color": "#000000",
+        "button_style": "secondary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "#ffffff",
+        "enable_slider_mobile": true
+      }
+    },
+    "1658930751b45cc2f2": {
+      "type": "section-accordions",
+      "disabled": true,
+      "blocks": {
+        "165893075115a6a0fe-0": {
+          "type": "text",
+          "settings": {
+            "title": "01. the prep",
+            "text": "<p>removes the toxicity of synthetics & impurities (from other products and pollution) and stabilizes the pH balance of your skin so that the plant active ingredients can penetrate<\/p>"
+          }
+        },
+        "165893075115a6a0fe-1": {
+          "type": "text",
+          "settings": {
+            "title": "02. the activation",
+            "text": "<p>once the plant active ingredients penetrate, they stimulate the skin’s natural production of essential collagen and elastin (the building blocks of your skin)<\/p>"
+          }
+        },
+        "165893075115a6a0fe-2": {
+          "type": "text",
+          "settings": {
+            "title": "03. the results",
+            "text": "<p>cells are stimulated and plant actives are able to target specific skin concerns + immediately visible radiance, noticeable skin clearing and long-term youth preserving effects<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "165893075115a6a0fe-0",
+        "165893075115a6a0fe-1",
+        "165893075115a6a0fe-2"
+      ],
+      "settings": {
+        "wrapper": "normal",
+        "title": "",
+        "text_position": "center",
+        "subheading": "",
+        "text": "",
+        "tabs_bg_color": "#7a7a7a",
+        "bg_color": "",
+        "text_color": "text-light",
+        "tab_alignment": false,
+        "remove_margin_bottom": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "166377542505a92069",
+    "16636999280cd200e6",
+    "166394226152d30617",
+    "16637753231bdf1b92",
+    "16589399042ad7ead6",
+    "1658931444da7faacd",
+    "1659973851484a9c0c",
+    "1656436483c66822d1",
+    "1660768547ca9e0c0f",
+    "16637792522013ab25",
+    "1663764846d4901551",
+    "1658930827cfb47491",
+    "166076803891764da6",
+    "1658930751b45cc2f2"
+  ]
+}

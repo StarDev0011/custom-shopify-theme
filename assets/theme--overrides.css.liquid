@@ -1,0 +1,621 @@
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+pre,
+body,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+   font-family: akzidenz-grotesk-next, Helvetica, Arial, sans-serif!important;
+}
+
+
+/***** GLOBAL LINK STYLE *****/
+
+a.btn.btn--text {
+  font-weight: 600;
+}
+
+.h1 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.h2 {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.h4 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.h3 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.h6 {
+  font-size: 24px;
+  font-weight: 400; 
+}
+
+
+/*****  HEADER LOGO SIZE ON SCROLL OVERRIDE *****/
+.has-scrolled .site-header--fixed {
+  height: auto !important;
+}
+
+.has-scrolled .logo,
+.has-scrolled .logo__image-link {
+  height: auto !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .has-scrolled .logo,
+  .has-scrolled .logo__image-link {
+    width: var(--logo-width) !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+      padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo__image-link {
+      height: auto !important;
+  }
+}
+
+/** Header	**/
+  .site-header {
+    --text: var(--header-text-color);
+    --bg: var(--header-color);
+  }
+
+  .header__dropdown {
+    --text: var(--header-text-color);
+  }
+
+  .site-header--transparent {
+    background: transparent;
+  }
+
+  .site-header--transparent:not(.meganav--visible) {
+    --text: var(--header-transparent-text-color);
+  }
+      
+  @media only screen and (max-width: 479px) {
+    .site-header--transparent:not(.meganav--visible) {
+      --text: var(--header-mobile-transparent-text-color);
+    }
+  }
+
+
+  header.meganav--visible.meganav--override {
+    --text: var(--override-header-text-color);
+    --bg: var(--override-header-bg);
+  }
+      
+  header.meganav--visible.meganav--override .header__dropdown {
+    --text: var(--override-header-text-color);
+  }
+      
+  header.meganav--visible .logo__image {
+    filter: var(--meganav-logo-color);
+  } 
+      
+/** Mobile menu **/
+  .drawer {
+    --text: var(--header-text-color);
+    --bg: var(--header-color);
+  }
+
+  .drawer__logo-image {
+    max-height: 100% !important;
+  }
+  
+  .drawer.is-open .drawer__logo-image {
+    filter: var(--meganav-logo-color);
+  }
+      
+  .drawer.meganav--override.is-open .drawer__logo-image {
+    filter: var(--mobile-logo-color);
+  }
+
+/**** Breadcrumbs ****/
+  .breadcrumbs {
+    text-transform: lowercase;
+  }
+
+/***** GLOBAL ANNOUCEMENT BAR *****/
+
+	/*////// ONLY FONT WEIGHT  TEXT TRANSFORM AND LETTER SPACING SHOULD BE ADJUSTED HERE.  ALL OTHER STYLING IS DONE IN THE CUSTOMIZER //////*/
+
+	#shopify-section-announcement-bar p {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+
+/***** HOME PAGE MARQUEE *****/
+
+	/*////// ONLY FONT WEIGHT AND LETTER SPACING SHOULD BE ADJUSTED HERE.  ALL OTHER STYLING IS DONE IN THE CUSTOMIZER //////*/
+
+	.shopify-section--marquee p {
+      font-weight: 600;
+    }
+
+
+/***** NAVIGATION *****/
+
+  /*////// TOP LEVEL //////*/
+  span.navtext {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+
+  /*////// DROPDOWN HEADINGS //////*/
+  div.dropdown__family span.navtext {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  /*////// DROPDOWN LINKS //////*/
+  div.dropdown__family a.navlink--grandchild span.navtext {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+
+	/*////// ALIGN TOP LEVEL MENU ITEMS TO BOTTOM OF LOGO //////*/
+	#NavStandard .menu__item {
+      align-items: flex-end;
+    }
+
+	#NavStandard .navlink--icon {
+      padding-bottom: 18px;
+    }
+
+	#NavStandard a.navlink--toplevel {
+      padding: 15px 15px 18px 15px;
+      line-height: 1;
+    }
+
+
+/***** SPLIT IMAGE HERO SLIDES *****/
+
+	/*////// H1 Level SLIDE HEADING //////*/
+
+    h1.slide__heading.main-heading {
+      margin-bottom: 0;  
+    }
+
+
+	/*////// SLIDE LINK BUTTONS AS TEXT //////*/
+	a.slide__btn.btn.btn--text {
+      font-weight: 600;
+    }
+
+
+/***** HOME PAGE 'COLUMNS" SECTION *****/
+
+	/*////// COLUMNS SECTION TITLE //////*/
+	.section-columns h2.section__heading {
+      color: #000;
+      font-weight: 400;
+      font-size: 22px; 
+    }
+
+	.section-columns h3.column__item__heading.h6 {
+      color: #000;
+    }
+
+	.section-columns div.column__item__text.rte p {
+      color: #000;
+      font-weight: 400; 
+    }
+
+
+/***** "OVERLAPPING IMAGES" SECTION *****/
+
+	/*////// OVERLAPPING IMAGES TITLE //////*/
+	.overlapping-images__block h2 {
+      font-weight: 600;
+    }
+	
+	/*////// OVERLAPPING IMAGES PARAGRAPH TEXT //////*/
+	.overlapping-images__block p {
+      color: #000;
+      font-weight: 200;
+    }
+	
+	
+
+
+/***** HOME PAGE 'TAB COLLECTIONS" CONTENT ARRAY *****/
+
+	/*////// TAB COLLECTIONS TITLE //////*/
+	.tab-collections h2.section__heading {
+      color: #000;
+      font-weight: 200;
+    }
+	
+	/*////// TAB COLLECTIONS LINKS //////*/
+	.tab-collections li.tab__link {
+      color: #f90;
+      font-weight: 200;
+    }
+	
+	/*////// FEATURED ITEM TAB COLLECTIONS PRODUCT COUNT //////*/
+	.tab-collections .tab-collections__featured-item span.tab-collections__products-counter {
+      font-size: 18px;
+      color: #000;
+      font-weight: 200;
+      display: none; 
+    }
+	
+
+	/*////// PRODUCT TITLE //////*/
+	.tab-collections .product-grid-item__inner a.product-grid-item__title {
+      font-size: 18px;
+      color: #000;
+      font-weight: 400;
+      text-transform: uppercase; 
+    }
+	
+	/*////// PRODUCT PRICE //////*/
+	.tab-collections .product-grid-item__inner a.product-grid-item__price {
+      font-size: 16px;
+      color: #000;
+      font-weight: 400;
+    }
+
+
+/***** HOME PAGE RICH TEXT FEATURED CONTENT ARRAY ****/
+
+
+
+/***** "MOSAIC" CONTENT ARRAY *****/
+    .shopify-section--mosaic:first-child {
+      padding-top: 0 !important;
+    }
+	
+	/*////// H3 Level MOSAIC HEADING ODDLY CLASSED AS H2 //////*/
+    h3.mosaic__item__heading.h2 {
+      font-weight: 400;
+      font-size: 28px;
+    }
+
+	/*////// MOSAIC LINK BUTTONS AS TEXT //////*/
+	a.mosaic__item__btn.btn.btn--text {
+      font-weight: 600;
+    }
+	
+	/*////// MOSAIC "SUBHEADING" BEING USED FOR PRICE DISPLAY //////*/
+	p.mosaic__item__subheading.subheading-text {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+
+
+/***** VIDEO PANEL ITEMS *****/
+
+	/*////// H1 Level VIDEO HEADING //////*/
+
+	div.video-text-wrapper h1.main-heading {
+      font-size: 32px!important;
+      font-weight: 400;
+      color: #fff;
+    }
+
+
+/***** "LOOK" CONTENT ARRAY *****/
+
+	/*////// LOOK PANEL H3 TEXT CONTENT //////*/
+    .look h3.rich-text__heading {
+      color: #000;
+      font-weight: 400;
+      font-size: 32px;
+    }
+
+
+	/*////// LOOK PANEL LINK BUTTONS AS TEXT //////*/
+    .look a.btn.btn--text {
+          font-weight: 600;
+    }
+
+
+
+/***** "PRODUCT LIST" SECTION *****/
+
+	/*////// PRODUCT HEADING //////*/	
+    .products-list-section h2.products-list__heading {
+      font-weight: 400;
+      font-size: 32px;
+    }
+
+	/*////// PRODUCT TITLE WITH NUMERAL //////*/	
+    .products-list-section button.products-list__nav__button {
+      font-weight: 200;
+      font-size: 28px;
+      color: #000;
+    }
+
+	/*////// PRODUCT TITLE WITH PRICE //////*/
+	.products-list-section p.products-list__item__title {
+      color: #000;
+    }
+
+	/*////// PRODUCT TITLE WITH PRICE //////*/
+	.products-list-section p.products-list__item__description {
+      color: #000;
+      font-weight: 200; 
+    }
+
+
+/***** "PRODUCT SINGLE DETAILS" SECTION *****/
+	
+	/*////// PRODUCT TITLE //////*/
+	.product-single__details .product__block.product__title-and-price h1 {
+      text-transform: lowercase;
+      font-weight: 400;
+      font-size: 24px;
+    }
+
+	/*////// PRODUCT PRICE //////*/
+	.product-single__details .product__block.product__price-and-badge div.product__price {
+      color: #000;
+      font-weight: 400;
+    }
+
+	/*////// PRODUCT DESCRIPTION  //////*/
+	.product-single__details .product__block.product__description.rte  {
+      color: #000;
+      font-weight: 400; 
+    }
+
+
+/***** TESTIMONIALS SECTION *****/
+
+	/*////// TESTIMONAIL SECTION HEADING //////*/	
+    .testimonials-section h2.testimonials__header {
+      color: #000;
+      font-weight: 400;
+    }
+
+
+/***** HOME PAGE 'FEATURED COLLECTIONS" CONTENT ARRAY *****/
+	
+	/*////// SECTION HEADING //////*/	
+    .featured-collection h2.section__heading {
+      color: #000;
+      font-weight: 400;
+      font-size: 32px;
+    }
+		
+	/*////// PRODUCT TITLE //////*/	
+    .featured-collection .product-grid-item a.product-grid-item__title {
+      color: #000;
+      font-weight: 400;
+      font-size: 18px;
+      text-transform: uppercase; 
+    }
+	
+	/*////// PRODUCT PRICE //////*/	
+    .featured-collection .product-grid-item a.product-grid-item__price {
+      color: #000;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+/** Related Products **/
+	/*////// PRODUCT TITLE //////*/	
+    .related-products .product-grid-item a.product-grid-item__title {
+      color: #000;
+      font-weight: 400;
+      font-size: 18px;
+      text-transform: lowercase; 
+    }
+	
+	/*////// PRODUCT PRICE //////*/	
+    .related-products .product-grid-item a.product-grid-item__price {
+      color: #000;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+
+/***** FOOTER ELEMENTS *****/
+
+	/*////// FOOTER NEWSLETTER BLOCK TITLE //////*/
+	.footer-newsletter .footer-title.h5 {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+	/*////// FOOTER NEWSLETTER BLOCK TEXT  //////*/
+	.footer-newsletter div.rte p {
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+	/*////// FOOTER MENU BLOCK TITLE //////*/
+	.footer-block .footer-title.footer-title--links.h5 {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+	/*////// FOOTER MENU BLOCK LINK ITEMS  //////*/
+	.footer-block a.footer-link {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+
+	/*////// FOOTER TEXT BLOCK TITLE //////*/
+	.footer-block.footer-text p.footer-title.h5 {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 20px;
+      color: #fff;
+    }
+
+	/*////// FOOTER TEXT BLOCK PARAGRAPH TEXT //////*/
+	.footer-block.footer-text div.rte p {
+      font-weight: 400;
+      font-size: 20px;
+      color: #fff;
+    }
+
+
+
+/* #################### PRODUCT PAGES ################### */
+
+	/*////// PRODUCT TITLE //////*/
+  .template-product .product-single__details .product__block.product__title-and-price h1.product__title {
+    color: #000;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+	
+	/*////// PRODUCT PRICE //////*/
+  .template-product .product-single__details .product__block.product__price-and-badge div.product__price {
+    color: #000;
+  }
+
+	/*////// PRODUCT SUBHEAD //////*/
+  .template-product .product-single__details .product__block .product__subheading p {
+    color: #000;
+    font-weight: 400;
+  }
+	
+	/*////// PRODUCT DESCRIPTION //////*/
+  .template-product .product-single__details .product__block .shg-rich-text.shg-theme-text-content p {
+    color: #000;
+    font-weight: 400; 
+  }
+	
+	/*////// ACCORDION TITLE //////*/
+  .template-product .product__accordion button.product__accordion__title  {
+    color: #000;
+    font-weight: 400;
+  }
+
+	/*////// ACCORDION "ANSWER" CONTENT //////*/
+  .template-product .product__accordion .product__accordion__inner.rte p  {
+    color: #000;
+  }
+
+.product-meta {
+  margin: 0;
+}
+
+
+
+/* #################### COLLECTION PAGES/INDICES ################### */
+	
+	/*////// COLLECTION DESCRIPTION //////*/
+	.template-collection div.collection__description {
+      color: #000;
+    }
+	
+	/*////// PRODUCT TITLE //////*/
+	.template-collection a.product-grid-item__title {
+      color: #000;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 400;
+    }
+	/*////// PRODUCT PRICE //////*/
+	.template-collection a.product-grid-item__price.price {
+      color: #000;
+      font-size: 16px; 
+      font-weight: 400;
+    }
+
+    .collection-section {
+      padding-top: 0;
+    }
+      
+.banner .collection__header {
+  margin: 0;
+}
+      
+.banner .banner-inner {
+  height: auto;
+  min-height: auto;
+}
+      
+.banner .collection__header .collection__title {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+/* #################### GLOBAL ELEMENT ADJUSTMENTS ################### */
+
+
+/* Global */
+.shopify-section {
+  margin-top: 0 !important;
+}
+
+.main-content > .shopify-section:first-child {
+  padding-top: var(--first-section-padding) !important;
+}
+
+.shopify-section > div:first-of-type,
+.shopify-section section:first-of-type {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: var(--gutter-mobile);
+}
+      
+@media only screen and (min-width: 1024px) {
+  .shopify-section > div:first-of-type,
+  .shopify-section section:first-of-type {
+    margin-bottom: var(--gutter);
+  }
+}
+      
+      
+@media only screen and (max-width: 767px) {
+  .rich-text__wrapper {
+    padding-bottom: 0;
+  }
+}
+      
+@media only screen and (max-width: 479px) {
+  .wrapper--narrow {
+    width: 100%;
+  }
+}
+      
+#Announcement--announcement-bar {
+  margin-bottom: 0;
+}
+      
+.remove-margin-bottom {
+  margin-bottom: 0 !important;
+}
+

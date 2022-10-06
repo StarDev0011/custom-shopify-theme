@@ -1,0 +1,201 @@
+{% liquid
+  assign show_banner_image = section.settings.show_image
+  assign show_text_shadow = settings.show_text_shadow
+  assign banner_image = collection.image
+  assign banner_height = section.settings.banner_height
+  assign text_position = section.settings.text_position
+  assign overlay_opacity = section.settings.overlay_opacity | times: 0.01
+  if collection.handle == 'all'
+    assign banner_image = section.settings.banner_image
+  endif
+
+  assign banner_bg_color = section.settings.banner_bg_color
+  assign has_banner_bg_color = false
+  if banner_bg_color != 'rgba(0,0,0,0)' and banner_bg_color != ''
+    assign has_banner_bg_color = true
+  endif
+
+  if show_banner_image and banner_image
+    assign show_banner_image = true
+  else
+    assign show_banner_image = false
+  endif
+%}
+
+{%- if has_banner_bg_color and show_banner_image == false -%}
+  {%- style -%}
+    .banner-inner {
+      --header-height: 0px;
+      background-color: {{ banner_bg_color }};
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+{%- capture collection_header -%}
+  {%- liquid
+    if show_banner_image
+      assign collection_header_class = 'collection__header collection__header--has-image ' | append: section.settings.text_color
+    else
+      assign collection_header_class = 'collection__header collection__header--no-image'
+    endif
+  -%}
+
+  <header class="{{ collection_header_class }}" {% unless show_banner_image %}data-prevent-transparent-header data-overflow-content{% endunless %}>
+    <div class="wrapper wrapper--narrow{% if show_text_shadow and show_banner_image %} backdrop--radial{% endif %}">
+      {%- if collection.description != blank -%}
+        <h1 class="section-header__title collection__title">{{ collection.title | escape }}</h1>
+
+        <div class="rte rte--header collection__description">
+          {{- collection.description -}}
+        </div>
+<!--       <p class="collection-meta">{{ collection.metafields.my_fields.collection_description }}</p> -->
+      {%- else -%}
+        {%- if collection.handle == 'all' -%}
+          <h1 class="section-header__title collection__title">{{ 'products.general.catalog' | t }}</h1>
+        {%- else -%}
+          <h1 class="section-header__title collection__title">{{ collection.title }}</h1>
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+  </header>
+{%- endcapture -%}
+
+{%- if show_banner_image -%}
+  {%- style -%}
+    .banner { --overlay-opacity: {{ overlay_opacity }}; }
+  {%- endstyle -%}
+{%- endif -%}
+
+<section class="banner {% if section.settings.remove_margin_bottom %}remove-margin-bottom{% endif %}" data-section-type="image-with-title" data-section-id="{{ section.id }}">
+  <div class="banner-inner {{ banner_height }} align--{{ text_position }}" data-overflow-container>
+    {%- if show_banner_image -%}
+      <div class="banner-img lazyload"
+        data-bgset="{% render 'bgset', image: banner_image %}"
+        data-sizes="auto"
+        data-parent-fit="cover"
+        {% if banner_height == 'original-height' %}
+          style="padding-top: {{ 1 | divided_by: banner_image.aspect_ratio | times: 100 | round: 1 }}%;"
+        {% endif %}
+      >
+      </div>
+      <noscript>
+        <div class="banner-img" style="background-image: url('{{ banner_image | img_url: '1024x' }}');{% if banner_height == 'original-height' %}padding-top: {{ 1 | divided_by: banner_image.aspect_ratio | times: 100 | round: 1 }}%;{% endif %}"></div>
+      </noscript>
+
+      <div class="banner-content" data-overflow-content>
+        {{- collection_header -}}
+      </div>
+    {%- else -%}
+      {{- collection_header -}}
+    {%- endif -%}
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Image with title",
+    "templates": ["collection"],
+    "class": "transparent-header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Style"
+      },
+      {
+        "type": "select",
+        "id": "banner_height",
+        "label": "Height",
+        "options": [
+          { "value": "full-height", "label": "Full screen" },
+          { "value": "original-height", "label": "Auto" },
+          { "value": "seven-fifty-height", "label": "750px" },
+          { "value": "six-fifty-height", "label": "650px" },
+          { "value": "five-fifty-height", "label": "550px" },
+          { "value": "four-fifty-height", "label": "450px" },
+          { "value": "three-fifty-height", "label": "350px" },
+          { "value": "two-fifty-height", "label": "250px" },
+          { "value": "one-fifty-height", "label": "150px" }
+        ],
+        "default": "four-fifty-height"
+      },
+      {
+        "type": "select",
+        "id": "text_position",
+        "label": "Text position",
+        "default": "middle-center",
+        "options": [
+          { "label": "Left", "value": "middle-left" },
+          { "label": "Center", "value": "middle-center" },
+          { "label": "Right", "value": "middle-right" },
+          { "label": "Bottom left", "value": "bottom-left" },
+          { "label": "Bottom right", "value": "bottom-right" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Banner image"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_image",
+        "label": "Show image",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "banner_image",
+        "label": "Default image",
+        "info": "Shows on collections/all"
+      },
+      {
+        "type": "select",
+        "id": "text_color",
+        "label": "Text color",
+        "info": "When banner image is uploaded",
+        "default": "text-light",
+        "options": [
+          {
+            "value": "text-light",
+            "label": "Light"
+          },
+          {
+            "value": "text-dark",
+            "label": "Dark"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Overlay"
+      },
+      {
+        "type": "range",
+        "id": "overlay_opacity",
+        "label": "Text contrast",
+        "info": "Improves readability of text",
+        "step": 5,
+        "max": 95,
+        "min": 0,
+        "unit": "%",
+        "default": 10
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "banner_bg_color",
+        "label": "Background ",
+        "default": "#fafafa"
+      },
+      {
+        "type": "checkbox",
+        "id": "remove_margin_bottom",
+        "label": "Remove margin bottom",
+        "default": false
+      }
+    ]
+  }
+{% endschema %}

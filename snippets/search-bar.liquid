@@ -1,0 +1,11 @@
+<!-- /snippets/search-bar.liquid -->
+
+<form action="{{ routes.search_url }}" class="input-group search-bar" role="search" data-search-form>
+	<input type="hidden" name="type" value="{{ terms }}">
+	<input name="options[prefix]" type="hidden" value="last">
+	<input type="search" class="search-input" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}" class="input-group__field" aria-label="{{ 'general.search.placeholder' | t }}">
+	<button type="submit" class="search-submit">
+		<span class="visually-hidden">{{ 'layout.navigation.search' | t }}</span>
+		{%- render 'icon-search' -%}
+	</button>
+</form>

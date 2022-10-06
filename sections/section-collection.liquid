@@ -1,0 +1,268 @@
+<!-- /sections/featured-collection.liquid -->
+{%- liquid
+  assign collection = collections[section.settings.collection] | default: false
+  assign products = collection.products
+  assign heading =  section.settings.title
+  assign description = section.settings.description
+  assign columns = settings.products_per_row_on_desktop | plus: 0
+  assign columns_small = columns | at_most: 2
+  assign columns_mobile = settings.products_per_row_on_mobile | plus: 0
+  assign products_rows = section.settings.products_rows | plus: 0
+  assign products_limit = columns | times: products_rows
+  assign layout = section.settings.products_layout
+  assign bg_color = section.settings.bg_color
+  assign spacing_range = section.settings.spacing_range
+  assign show_collection = section.settings.show_collection
+
+  assign carousel = false
+  if layout == 'carousel'
+    assign carousel = true
+  endif
+
+  assign mobile_class = ' grid--mobile'
+  if section.settings.enable_slider_mobile
+    assign mobile_class = ' carousel--mobile'
+  endif
+  
+  assign inline_styles = ""
+  if section.settings.heading_alignment
+  	assign inline_styles = "text-align:left"
+  endif
+  
+  if section.settings.show_description and section.settings.heading_alignment
+  	assign inline_styles = inline_styles | append: ";margin-bottom:30px"
+  elsif section.settings.show_description
+    assign inline_styles = "margin-bottom:30px"
+  endif
+-%}
+
+{%- style -%}
+  {%- if section.settings.remove_top_padding -%}
+    #FeaturedCollection--{{ section.id }} {
+      padding-top: 0;
+    }
+  {%- endif -%}
+  {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+    #FeaturedCollection--{{ section.id }} {
+      background-color: {{ bg_color }};
+    }
+    #FeaturedCollection--{{ section.id }} .product-grid-item {
+      --bg: {{ bg_color }};
+    }
+  {%- endif -%}
+
+  @media screen and (min-width: 1024px) {
+    #FeaturedCollection--{{ section.id }} {
+      --grid: repeat({{ columns }}, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    #FeaturedCollection--{{ section.id }} {
+      --grid: repeat({{ columns_small }}, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    #FeaturedCollection--{{ section.id }} {
+      --grid-mobile: repeat({{ columns_mobile }}, minmax(0, 1fr));
+    }
+  }
+{%- endstyle -%}
+
+<section
+  id="FeaturedCollection--{{ section.id }}"
+  class="featured-collection featured-collection--{{ layout }} {% if section.settings.remove_margin_bottom %}remove-margin-bottom{% endif %}"
+  data-section-id="{{ section.id }}"
+  data-section-type="featured-collection"
+  data-columns="{{ columns }}">
+
+  {%- if heading != blank and collection.handle != 'all' -%}
+    <div class="featured-collection__title">
+      <div class="{% if section.settings.heading_alignment %}wrapper wrapper--narrow{% else %}wrapper wrapper--full{% endif %}" {% if section.settings.heading_alignment %}style="margin:0; padding-right: 0;"{% endif %}>
+        <h2 class="section__heading" {% if section.settings.heading_alignment or section.settings.show_description %}style="{{ inline_styles }}"{% endif %}><div style="letter-spacing: {{spacing_range}}px">{{ heading | escape }}</div></h2>
+        <div class="section_desc" style="{{ inline_styles }}"> {{description }}</div>
+        {%- if section.settings.show_collection_button -%}
+        <div{% if settings.animations_enabled %} data-aos="fade-up" data-aos-delay="{{ columns | plus: 1 | times: 150 }}" data-aos-anchor="#FeaturedCollection--{{ section.id }}"{% endif %} style="{{ inline_styles }}">
+          <a class="btn btn--{{ section.settings.button_style }} btn--view-all" href="{{ collection.url | default: '#!' }}">{{ show_collection }}</a>
+        </div>
+      {%- endif -%}
+		{% if section.settings.show_description and collection.metafields.my_fields.collection_description != "blank" %}
+        <p class="featured-collection__description" style="{{ inline_styles }}">{{ collection.metafields.my_fields.collection_description }}</p>
+        {% endif %}
+        {%- if settings.show_spacer_lines -%}
+          <hr>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="wrapper wrapper--full">
+    <div class="featured-collection__container {% if carousel %}carousel__container{% else %}grid__container{% endif %}">
+      <div class="{% if carousel %}carousel{% else %}grid{% endif %}{{ mobile_class }}{% if products.size == 0 %} featured-collection--empty{% endif %}"{% if carousel %} data-slider data-slider-id="slider--{{ section.id }}"{% endif %}>
+        {%- if collection -%}
+          {% comment %} Check if there are any products in the collection {% endcomment %}
+          {%- if products.size > 0 -%}
+            {%- for product in collection.products limit: products_limit -%}
+              {%- if carousel -%}
+                {%- assign animation_delay = forloop.index0 -%}
+              {%- else -%}
+                {%- assign assign columns = settings.products_per_row_on_desktop | plus: 0 -%}
+                {%- assign animation_delay = forloop.index0 | modulo: columns | times: 1 -%}
+              {%- endif -%}
+              {%- render 'product-grid-item', product: product, carousel: carousel, animation_delay: animation_delay -%}
+            {%- endfor -%}
+          {%- else -%}
+            <div class="collection--no-results">
+              <p>{{ 'collections.general.no_matches' | t }}</p>
+            </div>
+          {%- endif -%}
+        {%- else -%}
+          {%- for i in (1..products_limit) -%}
+            {%- capture index -%}{%- cycle 1,2,3,4,5,6 -%}{%- endcapture -%}
+            {%- if carousel -%}
+              {%- assign animation_delay = forloop.index0 -%}
+            {%- else -%}
+              {%- assign assign columns = settings.products_per_row_on_desktop | plus: 0 -%}
+              {%- assign animation_delay = forloop.index0 | modulo: columns | times: 1 -%}
+            {%- endif -%}
+            {%- render 'product-grid-item--onboarding', carousel: carousel, index: index, animation_delay: animation_delay -%}
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured collection",
+  "class": "best-seller-collection-section",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Best Sellers"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Add a description here.</p>"
+    },
+    {
+      "type": "range",
+      "id": "spacing_range",
+      "min": -3,
+      "max": 3,
+      "step": 0.5,
+      "unit": "px",
+      "label": "Letter Spacing",
+      "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_alignment",
+      "label": "Left align title",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "products_rows",
+      "label": "Product rows",
+      "default":2,
+      "min": 1,
+      "max": 12,
+      "step": 1
+    },
+    {
+      "type": "select",
+      "id": "products_layout",
+      "label": "Layout",
+      "default": "grid",
+      "options": [
+        { "value": "grid", "label": "Grid" },
+        { "value": "carousel", "label": "Carousel" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_button",
+      "label": "Show collection link button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "show_collection",
+      "label": "Link Text",
+      "default": "View Collection"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        { "label": "Text", "value": "text" },
+        { "label": "Small button", "value": "primary btn--small" },
+        { "label": "Large button", "value": "primary" },
+        { "label": "Small outline button", "value": "secondary btn--small" },
+        { "label": "Large outline button", "value": "secondary" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background"
+    },
+    {
+      "type": "header",
+      "content": "Mobile slider"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_slider_mobile",
+      "label": "Enable slider",
+      "default": true,
+      "info": "Horizontal slider in mobile layout."
+    },
+    {
+      "type": "header",
+      "content": "Remove top spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_top_padding",
+      "label": "Remove top padding",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_margin_bottom",
+      "label": "Remove margin bottom",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collection",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "hero": {
+      "type": "collection-image-with-title",
+      "disabled": true,
+      "settings": {
+        "banner_height": "one-fifty-height",
+        "text_position": "middle-left",
+        "show_image": true,
+        "text_color": "text-light",
+        "overlay_opacity": 0,
+        "banner_bg_color": "#ffffff",
+        "remove_margin_bottom": false
+      }
+    },
+    "166126888810d8f026": {
+      "type": "section-slideshow",
+      "blocks": {
+        "1661268888a164c083-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/tonerish_bannerv3_1.jpg",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": true,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 26,
+            "heading_mobile_font_size": 20,
+            "heading_font_weight": "700",
+            "heading_letter_spacing": 0,
+            "heading_color": "#000000",
+            "text_font_size": 22,
+            "text_mobile_font_size": 16,
+            "text_font_weight": "200",
+            "text_letter_spacing": 0,
+            "text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "right",
+            "override_mobile_text_position": false,
+            "mobile_text_position_y": 50,
+            "mobile_text_position_x": "center",
+            "title": "toner-ish",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "unlike other alcohol-free toners with synthetic substitutes for alcohol, this innovative new type of TONER is 100% plant based and skin healthy. Toner-ish is made with antioxidant-rich larch tree extract for healthful deep cleansing and moisture barrier support.",
+            "slide_btn_text": "",
+            "slide_btn_link": "",
+            "slide_btn_style": "primary",
+            "button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1661268888a164c083-0"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "original-height",
+        "show_nav_dots": false,
+        "show_nav_arrows": false,
+        "show_arrow_down": false,
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": false,
+        "heading_size": 120,
+        "custom_css": ""
+      }
+    },
+    "subcollections": {
+      "type": "subcollections",
+      "settings": {
+        "layout": "grid",
+        "image_source": "collection",
+        "image_aspect_ratio": 0.6,
+        "image_overlay_opacity": 10,
+        "bg_color": "",
+        "text_color": "text-light"
+      }
+    },
+    "main": {
+      "type": "collection",
+      "settings": {
+        "show_breadcrumbs": true,
+        "enable_sorting": true,
+        "enable_filters": true,
+        "filter_mode": "group",
+        "bg_color": "#fafafa"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "166126888810d8f026",
+    "subcollections",
+    "main"
+  ]
+}

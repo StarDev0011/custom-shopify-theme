@@ -1,0 +1,237 @@
+<!-- /sections/section--promo.liquid -->
+{%- liquid
+  assign wrapper_class = 'wrapper'
+  if section.settings.wrapper == 'full'
+    assign wrapper_class = wrapper_class | append: ' wrapper--full'
+  endif
+
+  assign height = section.settings.height
+  assign bg_color = section.settings.bg_color
+  assign promo_image = section.settings.promo_image
+  assign promo_layout = section.settings.promo_layout
+  assign promo_text_color = section.settings.promo_text_color
+  assign promo_content_position =  'item--' | append: section.settings.text_position
+  assign overlay_opacity = section.settings.overlay_opacity | times: 0.01
+-%}
+
+<section id="Promo--{{ section.id }}"
+  class="promo"
+  data-section-type="promo"
+  data-section-id="{{ section.id }}">
+  <div class="{{ wrapper_class }}">
+    {%- if section.blocks.size > 0 -%}
+      {%- render 'promo',
+        height: height,
+        bg_color: bg_color,
+        promo_image: promo_image,
+        promo_layout: promo_layout,
+        promo_text_color: promo_text_color,
+        promo_content_position: promo_content_position,
+        overlay_opacity: overlay_opacity
+      -%}
+    {%- else -%}
+      {%- render 'no-blocks' -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Promo",
+    "settings": [
+      {
+        "type": "select",
+        "id": "height",
+        "label": "Height",
+        "default": "one-fifty-height",
+        "options": [
+          { "value": "five-fifty-height", "label": "550px" },
+          { "value": "four-fifty-height", "label": "450px" },
+          { "value": "three-fifty-height", "label": "350px" },
+          { "value": "two-fifty-height", "label": "250px" },
+          { "value": "two-hundred-height", "label": "200px" },
+          { "value": "one-fifty-height", "label": "150px" },
+          { "value": "one-hundred-height", "label": "100px" }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "wrapper",
+        "label": "Width",
+        "default": "normal",
+        "options": [
+          { "value": "normal", "label": "Normal" },
+          { "value": "full", "label": "Wide" }
+        ]
+      },
+      {
+        "type": "image_picker",
+        "id": "promo_image",
+        "label": "Image"
+      },
+      {
+        "type": "range",
+        "id": "overlay_opacity",
+        "label": "Text contrast",
+        "info": "Improves readability of text",
+        "min": 0,
+        "max": 95,
+        "step": 5,
+        "unit": "%",
+        "default": 10
+      },
+      {
+        "type": "select",
+        "id": "promo_text_color",
+        "label": "Text color",
+        "default": "text-light",
+        "options": [
+          {
+            "value": "text-light",
+            "label": "Light"
+          },
+          {
+            "value": "text-dark",
+            "label": "Dark"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "text_position",
+        "label": "Content position",
+        "default": "center",
+        "options": [
+          { "value": "left", "label": "Left" },
+          { "value": "center", "label": "Center" },
+          { "value": "right", "label": "Right" },
+          { "value": "bottom-left", "label": "Bottom left" },
+          { "value": "bottom-right", "label": "Bottom right" },
+          { "value": "top-left", "label": "Top left" },
+          { "value": "top-right", "label": "Top right" }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "promo_layout",
+        "label": "Layout",
+        "default": "stacked",
+        "options": [
+          { "label": "Inline", "value": "inline" },
+          { "label": "Stacked", "value": "stacked" }
+        ]
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color",
+        "default": "#004AC7"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading",
+        "settings": [
+          {
+            "type": "text",
+            "id": "promo_heading",
+            "label": "Heading",
+            "default": "Save up to 25% on Clearance"
+          },
+          {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading size",
+            "default": 150,
+            "min": 100,
+            "max": 200,
+            "step": 10,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "promo_content",
+            "label": "Text",
+            "default": "Our best sale of the year"
+          },
+          {
+            "type": "range",
+            "id": "text_size",
+            "label": "Text size",
+            "default": 150,
+            "min": 100,
+            "max": 200,
+            "step": 5,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "name": "Button",
+        "settings": [
+          {
+            "type": "text",
+            "id": "promo_btn_text",
+            "label": "Button text",
+            "default":"Shop Now",
+            "info": "Leave blank to link entire image"
+          },
+          {
+            "type": "url",
+            "id": "promo_btn_link",
+            "label": "Button URL"
+          },
+          {
+            "type": "select",
+            "id": "promo_btn_style",
+            "label": "Button style",
+            "default": "primary btn--small",
+            "options": [
+              { "label": "Text", "value": "text" },
+              { "label": "Small button", "value": "primary btn--small" },
+              { "label": "Large button", "value": "primary" },
+              { "label": "Small outline button", "value": "secondary btn--small" },
+              { "label": "Large outline button", "value": "secondary" }
+            ]
+          }
+        ]
+      }
+    ],
+  "presets": [
+      {
+        "category": "Text",
+        "name": "Promo",
+        "blocks": [
+          {
+            "type": "heading"
+          },
+          {
+            "type": "text"
+          },
+          {
+            "type": "button",
+            "settings": {
+              "promo_btn_text": "Shop Mens",
+              "promo_btn_style": "secondary btn--small"
+            }
+          },
+          {
+            "type": "button",
+            "settings": {
+              "promo_btn_text": "Shop Womens",
+              "promo_btn_style": "secondary btn--small"
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,659 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": true
+      }
+    },
+    "16637694876234411c": {
+      "type": "section-custom-content",
+      "blocks": {
+        "166376948701adbae2-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 10,
+            "text_color": "text-light",
+            "title": "Welcome to Palo Alto",
+            "heading_size": 100,
+            "text": "Describe in a few words your special products, collection, or brand.",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "166376948701adbae2-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "Subheading",
+            "title": "Our Story",
+            "text": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "text",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "166376948701adbae2-0",
+        "166376948701adbae2-1"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "add_spacing": true,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "16637695105e94de9e": {
+      "type": "section-grid",
+      "blocks": {
+        "1663769510c3e6c8e5-0": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 10,
+            "text_position": "center",
+            "subheading": "",
+            "title": "Shop Trending",
+            "text": "Add more info or delete this text",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1663769510c3e6c8e5-1": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 10,
+            "text_position": "center",
+            "subheading": "",
+            "title": "Shop Clearance",
+            "text": "Add more info or delete this text",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1663769510c3e6c8e5-2": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 10,
+            "text_position": "center",
+            "subheading": "",
+            "title": "Shop <br> Best Sellers",
+            "text": "Add more info or delete this text",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "1663769510c3e6c8e5-0",
+        "1663769510c3e6c8e5-1",
+        "1663769510c3e6c8e5-2"
+      ],
+      "settings": {
+        "height": "450",
+        "min_tablet_height": 370,
+        "min_mobile_height": 215,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 28,
+        "heading_mobile_font_size": 28,
+        "heading_font_weight": "700",
+        "heading_color": "#ffffff",
+        "text_font_size": 18,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "text_color": "#ffffff",
+        "button_style": "secondary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": true
+      }
+    },
+    "16637695226c608f11": {
+      "type": "section-image-accordions",
+      "blocks": {
+        "1663769522013cf9ba-0": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "text_width": "full",
+            "text_position": "left",
+            "text_color": "text-light",
+            "title": "Welcome to Palo Alto",
+            "text": "This text helps you provide some more detail to the title above.",
+            "btn_text": "",
+            "btn_link": "",
+            "btn_style": "primary",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "btn_style_2": "secondary"
+          }
+        },
+        "1663769522013cf9ba-1": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "text_width": "full",
+            "text_position": "left",
+            "text_color": "text-light",
+            "title": "Welcome to Palo Alto",
+            "text": "This text helps you provide some more detail to the title above.",
+            "btn_text": "",
+            "btn_link": "",
+            "btn_style": "primary",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "btn_style_2": "secondary"
+          }
+        },
+        "1663769522013cf9ba-2": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "text_width": "full",
+            "text_position": "left",
+            "text_color": "text-light",
+            "title": "Welcome to Palo Alto",
+            "text": "This text helps you provide some more detail to the title above.",
+            "btn_text": "",
+            "btn_link": "",
+            "btn_style": "primary",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "btn_style_2": "secondary"
+          }
+        },
+        "1663769522013cf9ba-3": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "text_width": "full",
+            "text_position": "left",
+            "text_color": "text-light",
+            "title": "Welcome to Palo Alto",
+            "text": "This text helps you provide some more detail to the title above.",
+            "btn_text": "",
+            "btn_link": "",
+            "btn_style": "primary",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "btn_style_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "1663769522013cf9ba-0",
+        "1663769522013cf9ba-1",
+        "1663769522013cf9ba-2",
+        "1663769522013cf9ba-3"
+      ],
+      "settings": {
+        "wrapper": "full",
+        "add_spacing": true,
+        "accordion_height": "six-fifty-height",
+        "heading_size": 100
+      }
+    },
+    "166376954225fbb10b": {
+      "type": "section-mosaic",
+      "blocks": {
+        "1663769542963c7e7a-0": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "Shop Trending",
+            "text": "Add more info or delete this text",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light"
+          }
+        },
+        "1663769542963c7e7a-1": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "Shop Clearance",
+            "text": "Add more info or delete this text",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light"
+          }
+        },
+        "1663769542963c7e7a-2": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "Shop <br> Best Sellers",
+            "text": "Add more info or delete this text",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light"
+          }
+        }
+      },
+      "block_order": [
+        "1663769542963c7e7a-0",
+        "1663769542963c7e7a-1",
+        "1663769542963c7e7a-2"
+      ],
+      "settings": {
+        "height": "650",
+        "min_mobile_height": 215,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_size": 150,
+        "button_style": "primary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": true
+      }
+    },
+    "1663769555ebba8cb0": {
+      "type": "section-image-with-text",
+      "settings": {
+        "section_height": "six-fifty-height",
+        "text_position": "left",
+        "wrapper": "full",
+        "image_background": false,
+        "bg_position": "center-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#000000",
+        "border_width": 2,
+        "textbox_background_color": "#ffffff",
+        "text_color": "#000000",
+        "text_alignment": "left",
+        "subheading": "Subheading",
+        "heading": "Our Story",
+        "heading_font_size": 32,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "text_font_size": 18,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "Learn More",
+        "button_link": "",
+        "button_style": "text",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "16637695670e18e8a6": {
+      "type": "section-slideshow",
+      "blocks": {
+        "16637695667aad908d-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "heading_font_size": 32,
+            "heading_mobile_font_size": 32,
+            "heading_font_weight": "700",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "text_font_size": 32,
+            "text_mobile_font_size": 32,
+            "text_font_weight": "200",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "text_width": "normal",
+            "text_position": "center",
+            "override_mobile_text_position": false,
+            "mobile_text_position_y": 50,
+            "mobile_text_position_x": "center",
+            "title": "Welcome to Palo Alto",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "Add more info or delete this text",
+            "slide_btn_text": "Shop All",
+            "slide_btn_link": "shopify:\/\/collections\/all",
+            "slide_btn_style": "primary",
+            "button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": ""
+          }
+        },
+        "16637695667aad908d-1": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "heading_font_size": 32,
+            "heading_mobile_font_size": 32,
+            "heading_font_weight": "700",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "text_font_size": 32,
+            "text_mobile_font_size": 32,
+            "text_font_weight": "200",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "text_width": "normal",
+            "text_position": "center",
+            "override_mobile_text_position": false,
+            "mobile_text_position_y": 50,
+            "mobile_text_position_x": "center",
+            "title": "Welcome to Palo Alto",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "Add more info or delete this text",
+            "slide_btn_text": "Shop All",
+            "slide_btn_link": "shopify:\/\/collections\/all",
+            "slide_btn_style": "primary",
+            "button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "16637695667aad908d-0",
+        "16637695667aad908d-1"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "original-height",
+        "show_nav_dots": true,
+        "show_nav_arrows": true,
+        "show_arrow_down": false,
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": true,
+        "heading_size": 120,
+        "custom_css": ""
+      }
+    },
+    "16637695821ebfd59e": {
+      "type": "section-overlapping-images",
+      "settings": {
+        "text_position": "right",
+        "text_alignment": "center",
+        "images_width": 750,
+        "images_offset": 60,
+        "image_1_position": "center-center",
+        "image_link_1": "",
+        "image_2_position": "center-center",
+        "image_link_2": "",
+        "hide_image_2": false,
+        "heading": "Our Story, Our Promise",
+        "description": "<p>Use this text to describe a product, promotion, or your company.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_btn_text": "",
+        "bg_color": ""
+      }
+    },
+    "166376959685a0fed3": {
+      "type": "section-split-images",
+      "blocks": {
+        "1663769596e7b67ab7-0": {
+          "type": "image",
+          "settings": {
+            "image_position": "center-center",
+            "show_image_mobile": true
+          }
+        },
+        "1663769596e7b67ab7-1": {
+          "type": "image",
+          "settings": {
+            "image_position": "center-center",
+            "show_image_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "1663769596e7b67ab7-0",
+        "1663769596e7b67ab7-1"
+      ],
+      "settings": {
+        "image_height": "six-fifty-height",
+        "mobile_layout": "stacked",
+        "text_position": "middle-center",
+        "overlay_opacity": 10,
+        "text_color": "text-light",
+        "title": "Welcome to Palo Alto",
+        "heading_size": 120,
+        "text": "Describe in a few words your special products, collection, or brand.",
+        "button_text": "Learn More",
+        "button_link": "",
+        "button_style": "text"
+      }
+    },
+    "1663769644867df6a0": {
+      "type": "section-columns",
+      "blocks": {
+        "1663769644596670b7-0": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "Add a title or tagline",
+            "text": "<p>Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663769644596670b7-1": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "Add a title or tagline",
+            "text": "<p>Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663769644596670b7-2": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "Add a title or tagline",
+            "text": "<p>Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663769644596670b7-3": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "Add a title or tagline",
+            "text": "<p>Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "1663769644596670b7-0",
+        "1663769644596670b7-1",
+        "1663769644596670b7-2",
+        "1663769644596670b7-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 3,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 100,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.8,
+        "show_images": true,
+        "disable_slider": false,
+        "remove_margin_bottom": false
+      }
+    },
+    "16637696699740912b": {
+      "type": "section-text",
+      "blocks": {
+        "166376966924085944-0": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>Subheading<\/p>",
+            "size": 100,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "166376966924085944-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>Our Story<\/p>",
+            "size": 100,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "166376966924085944-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "size": 100,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "166376966924085944-3": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Read More",
+            "btn_link": "",
+            "btn_style": "text"
+          }
+        }
+      },
+      "block_order": [
+        "166376966924085944-0",
+        "166376966924085944-1",
+        "166376966924085944-2",
+        "166376966924085944-3"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "narrow",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16637694876234411c",
+    "16637695105e94de9e",
+    "16637695226c608f11",
+    "166376954225fbb10b",
+    "1663769555ebba8cb0",
+    "16637695670e18e8a6",
+    "16637695821ebfd59e",
+    "166376959685a0fed3",
+    "1663769644867df6a0",
+    "16637696699740912b"
+  ]
+}

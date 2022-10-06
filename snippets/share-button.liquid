@@ -1,0 +1,27 @@
+{%- comment -%}
+  Renders share button for featured product section, product page and article page
+
+  Accepts:
+  - text: {String} Share button text. Default: "Share"
+  - link: {String} URL that will be shared (Optional)
+
+  Usage:
+  {%- render 'share-button', text: text, link: link
+  -%}
+{%- endcomment -%}
+
+<div class="share-button">
+  <button class="btn btn--text btn--share"{% if link != blank %} data-share-link="{{ link }}"{% endif %} data-share-button>
+    {%- render 'icon-share' -%}
+    {{- text -}}
+  </button>
+
+  <div class="tooltip-default" data-share-button-tooltip>
+    <div class="tooltip-default__inner">
+      <div class="tooltip-default__arrow"></div>
+      <div class="tooltip-default__text">
+        {{- 'general.accessibility.link_copied' | t -}}
+      </div>
+    </div>
+  </div>
+</div>

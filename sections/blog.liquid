@@ -1,0 +1,201 @@
+{%- comment -%} /sections/blog-template.liquid {%- endcomment -%}
+{%- liquid
+  assign enable_infinity_scroll = settings.enable_infinity_scroll
+  assign columns = section.settings.post_columns | plus: 0
+  if columns == 1
+    assign paginator = 5
+  elsif columns == 2
+    assign article_width = 'blog-post--two-col'
+    assign paginator = 10
+  elsif columns == 3
+    assign article_width = 'blog-post--three-col'
+    assign paginator = 9
+  else
+    assign article_width = 'blog-post--four-col'
+    assign paginator = 15
+  endif
+-%}
+
+{%- style -%}
+.article__preview-image { padding-top: {{ section.settings.image_aspect_ratio | times: 100 | append: '%' }}; }
+{%- endstyle -%}
+
+<section class="blog-posts" data-section-type="blog-posts" data-section-id="{{ section.id }}">
+  <div class="wrapper wrapper--narrow">
+    <h1 class="section-title text-center">
+      {{- blog.title | link_to: blog.url -}}
+      {%- if section.settings.show_rss_icon -%}
+      <a href="{{ shop.url }}{{ blog.url }}.atom" class="rss" target="_blank">
+        {%- render 'icon-rss' -%}
+      </a>
+      {%- endif -%}
+    </h1>
+
+    {%- if blog.all_tags.size > 0 -%}
+      <div class="blog-tag-wrapper">
+        {%- comment -%}
+          Blog tags
+        {%- endcomment -%}
+        <ul class="blog-tags-list">
+          {%- for tag in blog.all_tags limit: 15 -%}
+              {%- unless tag contains 'time_' -%}
+                <li class="blog-tag">
+                  {%- if current_tags contains tag -%}
+                    <span class="blog-tag__current">{{- tag -}}</span>
+                  {%- else -%}
+                    {{ tag | link_to_tag: tag }}
+                  {%- endif -%}
+                </li>
+              {%- endunless -%}
+            {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+  </div>
+
+  {%- paginate blog.articles by paginator -%}
+    <div class="wrapper{% if columns == 1 %} wrapper--narrow{% endif %}">
+      <div class="blog-post {{ article_width }}"{% if enable_infinity_scroll %} id="AjaxinateLoop"{% endif %}>
+        {%- comment -%}
+          Loop through each article.
+        {%- endcomment -%}
+
+        {%- for article in blog.articles -%}
+          <div class="blog-post__item">
+            {%- if article.image -%}
+              <a href="{{ article.url }}" class="blog-post__item__image-link">
+                <div
+                  class="article__preview-image lazyload"
+                  data-bgset="{% render 'bgset', image: article.image %}"
+                  data-sizes="auto"
+                  data-parent-fit="cover">
+                </div>
+                <noscript>
+                  <div class="article__preview-image" style="background-image:url('{{ article.image | img_url: '2048x' }};')"></div>
+                </noscript>
+              </a>
+            {%- endif -%}
+
+            <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+
+            {%- if section.settings.show_author or section.settings.show_date -%}
+              <p class="article__meta">
+                {%- capture author -%}{{ article.author }}{%- endcapture -%}
+                {%- capture date -%}<time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>{%- endcapture -%}
+
+                {%- if section.settings.show_author -%}
+                  <small class="light-gray">{{ 'blogs.article.by_author' | t: author: author }}</small>
+                {%- endif -%}
+                {%- if section.settings.show_date -%}
+                  <small class="light-gray">{{ date }}</small>
+                {%- endif -%}
+              </p>
+            {%- endif -%}
+            <a href="{{ article.url }}">
+              <div class="rte">
+                {%- if article.excerpt.size > 0 -%}
+                  {{- article.excerpt -}}
+                {%- else -%}
+                  <p class="excerpt">{{ article.excerpt_or_content | strip_html | truncatewords: 35 }}</p>
+                {%- endif -%}
+              </div>
+            </a>
+            {%- if blog.comments_enabled? and article.comments_count > 0 or article.tags.size > 0 -%}
+              <ul class="inline-list">
+                {%- if blog.comments_enabled? and article.comments_count > 0 -%}
+                  <li>
+                    <a href="{{ article.url }}#Comments" class="blog-comments-link">
+                      <small class="light-gray">
+                      <i class="custom-icon-comment"></i>
+                      {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
+                      </small>
+                    </a>
+                  </li>
+                {%- endif -%}
+
+                {%- if article.tags.size > 0 and section.settings.show_tags -%}
+                  {%- render 'tags-article', article: article, blog: blog -%}
+                {%- endif -%}
+              </ul>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="blog-post__pagination">
+        {%- if enable_infinity_scroll -%}
+          <div class="pagination pagination--infinite" id="AjaxinatePagination">
+            {%- if paginate.next -%}
+              <div class="pagination__loading">
+                <a href="{{ paginate.next.url }}"></a>
+              </div>
+            {%- endif -%}
+          </div>
+
+          {%- if paginate.pages > 1 -%}
+            <noscript>
+              {%- render 'pagination', paginate: paginate -%}
+            </noscript>
+          {%- endif -%}
+        {%- else -%}
+          {%- if paginate.pages > 1 -%}
+            {%- if settings.show_spacer_lines -%}
+              <hr>
+            {%- endif -%}
+            {%- render 'pagination', paginate: paginate -%}
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endpaginate -%}
+</section>
+
+{% schema %}
+  {
+    "name": "Blog",
+    "settings": [
+      {
+        "type": "range",
+        "id": "post_columns",
+        "label": "Posts per row",
+        "info": "Desktop only",
+        "min": 1,
+        "max": 4,
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "image_aspect_ratio",
+        "label": "Image aspect ratio",
+        "min": 0.5,
+        "max": 1.5,
+        "step": 0.1,
+        "unit": ":1",
+        "default": 0.6
+      },
+      {
+        "type": "checkbox",
+        "id": "show_rss_icon",
+        "label": "Show RSS icon",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_date",
+        "label": "Show date",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_author",
+        "label": "Show author",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_tags",
+        "label": "Show tags",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

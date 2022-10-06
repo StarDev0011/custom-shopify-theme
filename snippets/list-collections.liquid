@@ -1,0 +1,197 @@
+{%- liquid
+  assign layout = section.settings.layout
+  assign wrapper = section.settings.wrapper
+  assign height = section.settings.height
+  assign image_size = section.settings.image_size
+  assign columns = section.settings.columns
+  assign columns_small = columns | at_most: 4
+  assign columns_mobile = section.settings.columns_mobile | plus: 0 | at_least: 1
+  assign collection_limit = 50
+  assign text_size = section.settings.text_size
+  assign bg_color = section.settings.bg_color
+  assign bg_color_brightness = bg_color | color_brightness
+  assign wrapper_class = 'wrapper'
+  if wrapper != 'normal'
+    assign wrapper_class = wrapper_class | append: ' wrapper--' | append: wrapper
+  endif
+
+  assign carousel = false
+  if layout == 'carousel'
+    assign carousel = true
+  endif
+
+  if bg_color_brightness > 125
+    assign text_color = '#000'
+  else
+    assign text_color = '#fff'
+  endif
+
+  case columns
+    when 2
+      assign item_width = 'one-half'
+    when 3
+      assign item_width = 'one-third'
+    when 4
+      assign item_width = 'one-quarter'
+    when 5
+      assign item_width = 'one-fifth'
+    when 6
+      assign item_width = 'one-sixth'
+    when 7
+      assign item_width = 'one-seventh'
+    when 8
+      assign item_width = 'one-eighth'
+    else
+      assign item_width = 'one-whole'
+  endcase
+
+  case columns_mobile
+    when 2
+      assign item_width_mobile = 'mobile--one-half'
+    when 3
+      assign item_width_mobile = 'mobile--one-third'
+    else
+      assign item_width_mobile = 'mobile--one-whole'
+  endcase
+
+  assign adjust_heading = text_size | divided_by: 100.0
+
+  assign grid_class = 'grid'
+  if columns > section.blocks.size and section.blocks.size > 0
+    assign grid_class = 'grid--center'
+  endif
+
+  assign carousel = false
+  if layout == 'carousel'
+    assign carousel = true
+  endif
+
+  assign mobile_class = ' grid--mobile'
+  if section.settings.enable_slider_mobile
+    assign mobile_class = ' carousel--mobile'
+  endif
+
+  if circles
+    assign height = 100
+  endif
+-%}
+
+{%- style -%}
+  {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != blank -%}
+    #ListCollections--{{ section.id }} { background-color: {{ bg_color }}; }
+  {%- endif -%}
+
+  #ListCollections--{{ section.id }} {
+    --overlay-opacity: {{ section.settings.overlay_opacity | times: 0.01 }};
+    --height: {{ height | append: '%' }};
+
+    {%- if circles -%}
+      --image-size: {{ image_size | append: '%' }};
+    {%- endif -%}
+  }
+
+  {%- if text_size != blank -%}
+    #ListCollections--{{ section.id }} .list-collections__item__title { --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ adjust_heading }}); }
+  {%- endif -%}
+
+  @media screen and (min-width: 1024px) {
+    #ListCollections--{{ section.id }} { --grid: repeat({{ columns }}, minmax(0, 1fr)); }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    #ListCollections--{{ section.id }} {
+      --grid: repeat({{ columns_small }}, minmax(0, 1fr));
+    }
+  }
+  @media screen and (max-width: 479px) {
+    #ListCollections--{{ section.id }} { --grid-mobile: repeat({{ columns_mobile }}, minmax(0, 1fr)); }
+    {%- if columns_mobile > 1 %}
+      #ListCollections--{{ section.id }} .carousel--mobile { --item-width-mobile: calc(100% / {{ columns_mobile }} - var(--grid-gutter)); }
+    {%- endif %}
+  }
+{%- endstyle -%}
+
+<section
+  id="ListCollections--{{ section.id }}"
+  class="list-collections-section list-collections-section--{{ layout }} {% if section.settings.remove_margin_bottom %}remove-margin-bottom{% endif %}"
+  data-section-type="list-collections"
+  data-section-id="{{ section.id }}"
+  data-columns="{{ columns }}">
+
+  <div class="{{ wrapper_class }}">
+    {%- if section.settings.title != blank -%}
+      <h2 class="list-collections__title section__heading">{{ section.settings.title | escape }}</h2>
+
+      {%- if settings.show_spacer_lines -%}
+        <hr>
+      {%- endif -%}
+    {%- endif -%}
+
+    <div class="{% if carousel %}carousel__container{% else %}grid__container{% endif %}">
+      <div class="{% if carousel %}carousel{% else %}{{ grid_class }}{% endif %}{{ mobile_class }}"
+        data-color-style="{{ text_color }}"
+        {% if carousel %}
+          data-slider
+          data-slider-id="slider--{{ section.id }}"
+        {% endif %}
+        >
+        {%- liquid
+          if section.blocks.size > 0
+            for block in section.blocks limit: section.blocks.size
+              assign collection = collections[block.settings.collection]
+              assign custom_collection_image = block.settings.custom_collection_image
+              if carousel
+                assign animation_delay = forloop.index0
+              else
+                assign animation_delay = forloop.index0 | modulo: columns | times: 1
+              endif
+
+              capture placeholder_index
+                cycle 1, 2, 3
+              endcapture
+
+              render 'collection-grid-item', collection: collection, item_width: item_width, item_width_mobile: item_width_mobile, custom_collection_image: custom_collection_image, animation_delay: animation_delay, carousel: carousel, circles: circles, block_shopify_attributes: block.shopify_attributes, placeholder_index: placeholder_index
+            endfor
+          else
+            comment
+              Show all collections if list collections template and no blocks
+            endcomment
+
+            if template.name == 'list-collections'
+              assign index = 0
+              for collection in collections limit: collection_limit
+                unless collection.handle == 'frontpage'
+                  if carousel
+                    assign animation_delay = index
+                  else
+                    assign animation_delay = index | modulo: columns | times: 1
+                  endif
+
+                  capture placeholder_index
+                    cycle 1, 2, 3
+                  endcapture
+                  
+                  render 'collection-grid-item', collection: collection, item_width: item_width, item_width_mobile: item_width_mobile, carousel: carousel, circles: circles, animation_delay: animation_delay, placeholder_index: placeholder_index
+                  assign index = index | plus: 1
+                endunless
+              endfor
+            else
+              comment
+                Show onboarding items if no blocks
+              endcomment
+
+              for i in (0..columns)
+                if carousel
+                    assign animation_delay = forloop.index0
+                  else
+                    assign animation_delay = forloop.index0 | modulo: columns | times: 1
+                  endif
+                render 'collection-grid-item', item_width: item_width, item_width_mobile: item_width_mobile, carousel: carousel, animation_delay: animation_delay
+              endfor
+            endif
+          endif
+        -%}
+      </div>
+    </div>
+  </div>
+</section>

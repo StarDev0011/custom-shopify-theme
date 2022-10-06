@@ -1,0 +1,86 @@
+  <script data-cart-total-discount type="text/x-template">
+    {% raw %}
+    <div class="cart__total" data-cart-discount>
+      <span data-cart-discount-title>{{it.discountTitle}}</span>
+      <span data-cart-discount-price>-{{it.discountTotalAllocatedAmount | safe}}</span>
+    </div>
+    {% endraw %}
+  </script>
+
+  <script pair-product-template type="text/x-template">
+    {% raw %}
+      <div class="product-upsell__holder product-upsell__holder--cart" data-upsell-holder>
+        <div data-cart-errors-container class="product-upsell__errors"></div>
+
+        {{ @if(it.product.hasVariants) }}
+          <a href="{{ it.product.url }}" class="product-upsell">
+        {{ #else }}
+          <div class="product-upsell">
+        {{ /if }}
+
+          <div class="product-upsell__content">
+            {% endraw %}
+            <p class="product-upsell__subtitle">{{ 'products.general.pair_products' | t }}</p>
+            {% raw %}
+
+            <p class="product-upsell__title h3">
+              {{ @if(it.product.hasVariants != true) }}
+                <a href="{{ it.product.url }}">{{ it.product.title }}</a>
+              {{ /if }}
+            </p>
+            
+            {{ @if(it.product.hasVariants != true) }}
+              <button type="button" name="add" 
+                class="product-upsell__btn btn btn--secondary"
+                data-add-to-cart
+                data-focus-element
+                data-upsell-btn
+                data-product-id="{{ it.product.firstAvailableVariant.id }}">
+                <span class="product-upsell__btn-hidden" data-upsell-btn-text>{{ it.product.addToCartText }}</span>
+                <span class="product-upsell__btn-text">{{ it.product.addToCartText }}</span>
+                <span class="product-upsell__btn-price">{{ it.product.firstAvailableVariant.price | safe }}</span>
+                <span class="product-upsell__btn-progress">
+                  <svg height="18" width="18" class="svg-loader">
+                    <circle r="7" cx="9" cy="9" />
+                    <circle stroke-dasharray="87.96459430051421 87.96459430051421" r="7" cx="9" cy="9" />
+                  </svg>
+                </span>
+
+                <span class="product-upsell__btn-check">&nbsp;</span>
+              </button>
+            {{ #else }}
+              <p class="product-upsell__title h3">{{ it.product.title }}</p>
+              {% endraw %}
+              <span class="product-upsell__btn btn btn--secondary">{{ 'products.product.view_product' | t }}</span>
+              {% raw %}
+            {{ /if }}
+          </div>
+
+          {{ @if(it.product.image) }}
+            <div class="product-upsell__image">
+              {{ @if(it.product.hasVariants != true) }}
+                <a href="{{ it.product.url }}" aria-label='{{ it.product.title }}'>
+              {{ /if }}
+
+                <div class="product-upsell__image__thumb lazyload"
+                  aria-label="{{ it.product.title }}"
+                  role="img"
+                  data-aspectratio="{{ it.product.image.aspectRatio }}"
+                  data-sizes="auto"
+                  data-bgset="{{ it.product.image.thumb }}">
+                </div>
+
+              {{ @if(it.product.hasVariants != true) }}
+                </a>
+              {{ /if }}
+            </div>
+          {{ /if }}
+
+        {{ @if(it.product.hasVariants) }}
+          </a>
+        {{ #else }}
+          </div>
+        {{ /if }}
+      </div>
+    {% endraw %}
+  </script>

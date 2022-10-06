@@ -1,0 +1,441 @@
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "subheading": "breadcrumbs",
+            "show_rating": true,
+            "show_rating_count": false
+          }
+        },
+        "cdea67ff-1bba-4925-a035-5ab949a46afc": {
+          "type": "text",
+          "settings": {
+            "title": "<p>{{ product.metafields.my_fields.fluid_o.value }}<\/p>",
+            "text_alignment": "left"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "1630242e-abee-42f7-b45e-9410804cec2e": {
+          "type": "form",
+          "settings": {
+            "info_page": "",
+            "info_page_title_override": "",
+            "show_labels": false,
+            "show_quantity": true,
+            "show_payment_button": true,
+            "enable_subscriptions_selectors": true
+          }
+        },
+        "product_accordions": {
+          "type": "product_accordions",
+          "settings": {
+            "accordion_heading_1": "ingredients",
+            "accordion_text_1": "<p>{{ product.metafields.my_fields.ingredients | metafield_tag }}<\/p>",
+            "accordion_page_1": "",
+            "accordion_heading_2": "how to use",
+            "accordion_text_2": "<p>{{ product.metafields.my_fields.how_to_use | metafield_tag }}<\/p>",
+            "accordion_page_2": "",
+            "accordion_heading_3": "",
+            "accordion_text_3": "",
+            "accordion_page_3": "",
+            "accordion_heading_4": "",
+            "accordion_text_4": "",
+            "accordion_page_4": "",
+            "accordion_heading_5": "",
+            "accordion_text_5": "",
+            "accordion_page_5": ""
+          }
+        },
+        "share-button": {
+          "type": "share-button",
+          "settings": {
+            "text": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "cdea67ff-1bba-4925-a035-5ab949a46afc",
+        "description",
+        "1630242e-abee-42f7-b45e-9410804cec2e",
+        "product_accordions",
+        "share-button"
+      ],
+      "settings": {
+        "wrapper": "full",
+        "image_size": "small",
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "bg_color": ""
+      }
+    },
+    "1658771597795d8bc2": {
+      "type": "section-slideshow",
+      "disabled": true,
+      "blocks": {
+        "16587715977708cfda-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "wide",
+            "slide_bg_color": "#ffffff",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "heading_font_size": 32,
+            "heading_mobile_font_size": 32,
+            "heading_font_weight": "700",
+            "heading_color": "#ffffff",
+            "text_font_size": 32,
+            "text_mobile_font_size": 32,
+            "text_font_weight": "200",
+            "text_color": "#ffffff",
+            "text_width": "normal",
+            "text_position": "center",
+            "override_mobile_text_position": false,
+            "mobile_text_position_y": 50,
+            "mobile_text_position_x": "center",
+            "title": "Welcome to Palo Alto",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "Add more info or delete this text",
+            "slide_btn_text": "Shop All",
+            "slide_btn_link": "shopify:\/\/collections\/all",
+            "slide_btn_style": "primary",
+            "button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16587715977708cfda-0"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "six-fifty-height",
+        "show_nav_dots": true,
+        "show_nav_arrows": true,
+        "show_arrow_down": false,
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": true,
+        "heading_size": 120
+      }
+    },
+    "165877132578da3fb4": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "six-fifty-height",
+        "text_position": "left",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/shroom_moisture_boom_284e7a71-4012-4c3c-bded-df6cb03fda45.jpg",
+        "image_background": false,
+        "bg_position": "left-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#425043",
+        "border_width": 2,
+        "textbox_background_color": "#425043",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "",
+        "heading": "what is cosmetic water",
+        "heading_font_size": 32,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>many plants contain highly effective energetic compounds capable of working beauty wonders. to really perform, these delicate ingredients must be undamaged and present in ample quantities . patent pending pre press and low heat vacuum distillation process starts with fresh, healthy plants and ends with a water-based solution called a hydrosol that is loaded with whole phytonutrients. cosmetic waters can form many types of products - but always with the same result: beautiful, healthy, and radiant skin with results unlike anything you have ever experienced.<\/p>",
+        "text_font_size": 18,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "1658777137f1857264": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "six-fifty-height",
+        "text_position": "right",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/snow-mushroom-on-tree.jpg",
+        "image_background": false,
+        "bg_position": "right-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#425043",
+        "border_width": 2,
+        "textbox_background_color": "#425043",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "",
+        "heading": "way beyond clean",
+        "heading_font_size": 32,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>100% plant based formula: when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants.<\/p><p>vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them!<\/p><p>natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and parrafin wax.<\/p><p>no glycols: <em>glycols are derived from petroleum and known to cause irritation<\/em><\/p><p>no petrochemicals<\/p><p>no synthetic fragrance<\/p><p>no added dye or color<\/p><p>vegan<\/p><p>cruelty-free<\/p><p>made by us<\/p><p>no parabens<\/p><p>no phthalates<\/p><p>*all of our products are vegan with the exception of products containing honey<\/p>",
+        "text_font_size": 18,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "Learn More",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "1658858341e78b33d9": {
+      "type": "section-image-accordions",
+      "blocks": {
+        "16588583401fdf44f7-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/plantonic_hyaluronic_incomplete_9216fe0f-1de5-4113-b9da-68b50acc5e64.jpg",
+            "bg_position": "center-top",
+            "overlay_opacity": 10,
+            "text_width": "narrow",
+            "text_position": "top-left",
+            "text_color": "text-light",
+            "title": "what is facewater",
+            "text": "many plants contain highly effective energetic compounds capable of working beauty wonders. to really perform, these delicate ingredients must be undamaged and present in ample quantities. patent pending pre press and low heat vacuum distillation process starts with fresh, healthy plants and ends with a water-based solution that is loaded with whole phytonutrients.",
+            "btn_text": "",
+            "btn_link": "",
+            "btn_style": "primary",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "btn_style_2": "secondary"
+          }
+        },
+        "16588583401fdf44f7-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shutterstock_1430648684.jpg",
+            "bg_position": "center-center",
+            "overlay_opacity": 30,
+            "text_width": "full",
+            "text_position": "left",
+            "text_color": "text-light",
+            "title": "100% plant based is different from natural",
+            "text": "when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants.vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them! natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and paraffin wax.",
+            "btn_text": "",
+            "btn_link": "",
+            "btn_style": "primary",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "btn_style_2": "secondary"
+          }
+        },
+        "16588583401fdf44f7-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/puffChill_4.jpg",
+            "bg_position": "right-center",
+            "overlay_opacity": 10,
+            "text_width": "narrow",
+            "text_position": "left",
+            "text_color": "text-light",
+            "title": "way beyond clean",
+            "text": "100% plant based formulas\nno glycols: glycols are derived from petroleum and known to cause irritation\nno petrochemicals\nno synthetic fragrance\nno added dye or color\nvegan* and cruelty-free\nmade by us\nno parabens\nno phthalates\n\n*all of our products are vegan with the exception of those containing honey",
+            "btn_text": "",
+            "btn_link": "",
+            "btn_style": "primary",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "btn_style_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "16588583401fdf44f7-0",
+        "16588583401fdf44f7-1",
+        "16588583401fdf44f7-2"
+      ],
+      "settings": {
+        "wrapper": "full",
+        "add_spacing": true,
+        "accordion_height": "five-fifty-height",
+        "heading_size": 90
+      }
+    },
+    "16573014914257da92": {
+      "type": "section-slideshow",
+      "blocks": {
+        "165730149038f12c26-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#f1f1f1",
+            "image": "shopify:\/\/shop_images\/REC_HOR.png",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": true,
+            "image_mobile": "shopify:\/\/shop_images\/RECY_OP_2.png",
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-bottom",
+            "overlay_opacity": 0,
+            "heading_font_size": 26,
+            "heading_mobile_font_size": 22,
+            "heading_font_weight": "700",
+            "heading_color": "#222222",
+            "text_font_size": 22,
+            "text_mobile_font_size": 18,
+            "text_font_weight": "200",
+            "text_color": "#222222",
+            "text_width": "narrow",
+            "text_position": "top-left",
+            "override_mobile_text_position": true,
+            "mobile_text_position_y": 0,
+            "mobile_text_position_x": "left",
+            "title": "100% recyclable packaging",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "PET or PETE is the most widely recycled plastic in the world and can be picked up through most curbside recycling programs - just make sure to rinse out any remaining product before recycling.",
+            "slide_btn_text": "",
+            "slide_btn_link": "",
+            "slide_btn_style": "primary",
+            "button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "165730149038f12c26-0"
+      ],
+      "settings": {
+        "wrapper": "full",
+        "slide_height": "seven-fifty-height",
+        "show_nav_dots": false,
+        "show_nav_arrows": false,
+        "show_arrow_down": false,
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": false,
+        "heading_size": 120
+      }
+    },
+    "165635106766c71bb8": {
+      "type": "apps",
+      "blocks": {
+        "27d2e36e-dd94-4cff-83a8-5f8b4ebc06c8": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "27d2e36e-dd94-4cff-83a8-5f8b4ebc06c8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "icons": {
+      "type": "section-icons-row",
+      "disabled": true,
+      "blocks": {
+        "icon-0": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "title": "Free Shipping",
+            "text": "<p>on all order over $99<\/p>"
+          }
+        },
+        "icon-1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "refresh-cw",
+            "title": "Free Returns",
+            "text": "<p>within 30 days of purchase<\/p>"
+          }
+        },
+        "icon-2": {
+          "type": "text",
+          "settings": {
+            "icon_name": "heart",
+            "title": "1% Donated Annually",
+            "text": "<p>to forest conservation<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon-0",
+        "icon-1",
+        "icon-2"
+      ],
+      "settings": {
+        "alignment": "center",
+        "columns": 3,
+        "icons_width": 30,
+        "bg_color": "#fafafa",
+        "box_color": "",
+        "text_color": "#333333"
+      }
+    },
+    "related": {
+      "type": "related-products",
+      "settings": {
+        "wrapper": "full",
+        "limit": 4,
+        "product_recommendations_heading": "you may also like",
+        "bg_color": ""
+      }
+    },
+    "social_widget_product": {
+      "type": "social-widget",
+      "settings": {
+        "social_widget_id": "none",
+        "social_product_id": "none",
+        "social_widget_type": "product"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1658771597795d8bc2",
+    "165877132578da3fb4",
+    "1658777137f1857264",
+    "1658858341e78b33d9",
+    "16573014914257da92",
+    "165635106766c71bb8",
+    "icons",
+    "related",
+    "social_widget_product"
+  ]
+}

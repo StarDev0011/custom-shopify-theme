@@ -1,0 +1,24 @@
+{%- comment -%}
+  Renders a pagination bar
+  Accepts:
+
+  - paginate: {Object} Paginate Liquid object (required)
+
+  Usage:
+  {%- render 'pagination', paginate: paginate -%}
+{%- endcomment -%}
+{%- capture icon_previous -%}
+  <button class="pagination__button pagination__button--previous">
+    {% render 'icon-arrow' %}
+  </button>
+{%- endcapture -%}
+
+{%- capture icon_next -%}
+  <button class="pagination__button pagination__button--next">
+    {% render 'icon-arrow' %}
+  </button>
+{%- endcapture -%}
+
+<div class="pagination" data-pagination>
+  {{- paginate | default_pagination | replace: '&laquo; Previous', icon_previous | replace: 'Next &raquo;', icon_next -}}
+</div>

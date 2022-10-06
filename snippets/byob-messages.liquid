@@ -1,0 +1,36 @@
+<script>
+{% comment %}used by vue i18n, shopify iso code may have '-', so js object needed "" {% endcomment %}
+var locale = "{{ request.locale.iso_code }}";  // window.navigator.userLanguage || window.navigator.language;
+const messages = {
+  "{{request.locale.iso_code }}": {
+    message: {
+      addMore: '{{ 'sections.byob-bundle-info.addMore' | t }}',
+	  addMoreFrom: '{{ 'sections.byob-bundle-info.addMoreFrom' | t }}',
+      addToBundle: '{{ 'sections.byob-bundle-info.addToBundle' | t }}',
+      addBundleToCart: '{{ 'sections.byob-bundle-info.addBundleToCart' | t }}',
+      alertSoldOut: '{{ 'sections.byob-bundle-info.alertSoldOut' | t }}',
+      bundleAddedToCart: '{{ 'sections.byob-bundle-info.bundleAddedToCart' | t }}',
+      loadMore: '{{ 'sections.byob-bundle-info.loadMore' | t }}',
+      loading: '{{ 'sections.byob-bundle-info.loading' | t }}',
+      pick: '{{ 'sections.byob-bundle-info.pick' | t }}',
+      soldOut: '{{ 'sections.byob-bundle-info.soldOut' | t }}',
+  	  any: '{{ 'sections.byob-bundle-info.any' | t }}',
+	  atLeast: '{{ 'sections.byob-bundle-info.atLeast' | t }}',
+  	  maximumOf: '{{ 'sections.byob-bundle-info.maximumOf' | t }}',
+  	  lessThan: '{{ 'sections.byob-bundle-info.lessThan' | t }}',
+      tabHeading: '{{ 'sections.byob-bundle-info.tabHeading' | t }}',
+      totalPrice: '{{ 'sections.byob-bundle-info.totalPrice' | t }}',
+      unavailable: '{{ 'sections.byob-bundle-info.unavailable' | t }}',
+      viewCart: '{{ 'sections.byob-bundle-info.viewCart' | t }}',
+	  selectOnce: '{{ 'sections.byob-bundle-info.selectOnce' | t }}',
+      noteHeader: '{{ 'sections.byob-bundle-info.noteHeader' | t }}',
+      required: '{{ 'sections.byob-bundle-info.required' | t }}',
+      checkout: '{{ 'sections.byob-bundle-info.checkout' | t }}',
+      createAnother: '{{ 'sections.byob-bundle-info.createAnother' | t }}',
+      quantity: '{{ 'sections.byob-bundle-info.quantity' | t }}',
+  	  optional: '{{ 'sections.byob-bundle-info.optional' | t }}',
+  	  quickviewIconText: '{{ 'sections.byob-bundle-info.quickviewIconText' | t }}'
+    }
+  }
+}
+</script>

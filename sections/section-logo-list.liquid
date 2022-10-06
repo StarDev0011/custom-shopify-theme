@@ -1,0 +1,156 @@
+<!-- /sections/section-logo-list.liquid -->
+{%- liquid
+  assign bg_color = section.settings.bg_color
+  assign animations_enabled = settings.animations_enabled
+  assign animation_anchor = '#LogoList--' | append: section.id
+  assign animation_delay = 250
+-%}
+
+{%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+  {%- style -%}
+    #LogoList--{{ section.id }} {
+      background-color: {{ bg_color }};
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+<section id="LogoList--{{ section.id }}" class="logo-list" data-section-id="{{ section.id }}" data-section-type="logo-list">
+  <div class="logo-list__container">
+    <div class="logo-list__slider" data-slider {% if animations_enabled %} data-aos="fade-right" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+      {%- if section.blocks.size > 0 -%}
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign image = block.settings.image
+            assign url = block.settings.url
+            assign logos_width = block.settings.logos_width
+            assign logo_aspect_ratio = image.aspect_ratio | default: 1.333
+            assign padding_top = 1 | divided_by: logo_aspect_ratio | times: 100 | round: 1
+          -%}
+
+          {%- if image != blank -%}
+            <div class="logo-list__slide" data-slider-item {{ block.shopify_attributes }}>
+              {%- if url != blank -%}
+                <a href="{{ url }}"
+                  class="logo-list__slide-image lazyload"
+                  data-bgset="{% render 'bgset', image: image %}"
+                  data-sizes="auto"
+                  data-parent-fit="cover"
+                  data-aspectratio="{{ logo_aspect_ratio }}"
+                  style="width: {{ logos_width | append: 'px' }}; padding-top: {{ padding_top }}%;"
+                  ><span class="visually-hidden">{{ 'general.accessibility.logo_image' | t }}</span></a>
+                <noscript>
+                  <a href="{{ url }}" class="logo-list__slide-image" style="background-image: url({{ image | img_url: '360x' }}); width: {{ logos_width | append: 'px' }}; padding-top: {{ padding_top }}%;"></a>
+                </noscript>
+              {%- else -%}
+                <div
+                  class="logo-list__slide-image lazyload"
+                  data-bgset="{% render 'bgset', image: image %}"
+                  data-sizes="auto"
+                  data-parent-fit="cover"
+                  data-aspectratio="{{ logo_aspect_ratio }}"
+                  style="width: {{ logos_width | append: 'px' }}; padding-top: {{ padding_top }}%;"
+                  ><span class="visually-hidden">{{ 'general.accessibility.logo_image' | t }}</span>
+                </div>
+                <noscript>
+                  <div class="logo-list__slide-image" style="background-image: url({{ image | img_url: '360x' }}); width: {{ logos_width | append: 'px' }}; padding-top: {{ padding_top }}%;"></div>
+                </noscript>
+              {%- endif -%}
+            </div>
+          {%- else -%}
+            <div class="logo-list__slide" data-slider-item {{ block.shopify_attributes }}>
+              {%- if url != blank -%}
+                <a href="{{ url }}" class="logo-list__slide-image svg-placeholder" style="width: {{ logos_width | append: 'px' }}; padding-top: {{ padding_top }}%;">
+                  {{- 'logo' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+                </a>
+              {%- else -%}
+                <div class="logo-list__slide-image svg-placeholder" style="width: {{ logos_width | append: 'px' }}; padding-top: {{ padding_top }}%;">
+                  {{- 'logo' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- else -%}
+        {%- for i in (1..5) -%}
+          {%- assign logo_aspect_ratio = image.aspect_ratio | default: 1.333 -%}
+          {%- assign padding_top = 1 | divided_by: logo_aspect_ratio | times: 100 | round: 1 -%}
+
+          <div class="logo-list__slide" data-slider-item>
+            <div class="logo-list__slide-image svg-placeholder" style="width: {{ logos_width | append: 'px' }}; padding-top: {{ padding_top }}%;">
+              {{- 'logo' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Logo list",
+  "max_blocks": 25,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item_logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "logos_width",
+          "label": "Logos width",
+          "min": 100,
+          "max": 180,
+          "step": 10,
+          "unit": "px",
+          "default": 120
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo list",
+      "category": "Image",
+      "blocks": [
+        {
+          "type": "item_logo"
+        },
+        {
+          "type": "item_logo"
+        },
+        {
+          "type": "item_logo"
+        },
+        {
+          "type": "item_logo"
+        },
+        {
+          "type": "item_logo"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

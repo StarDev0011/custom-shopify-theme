@@ -1,0 +1,104 @@
+{%- liquid
+  assign heading = section.settings.product_recommendations_heading
+  assign limit = section.settings.limit
+  assign columns = settings.products_per_row_on_desktop
+  assign bg_color = section.settings.bg_color
+  assign wrapper_class = 'wrapper'
+  if section.settings.wrapper == 'full'
+    assign wrapper_class = 'wrapper wrapper--full'
+  endif
+-%}
+
+{%- style -%}
+  {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+		#RelatedProducts--{{ section.id }} { background-color: {{ bg_color }}; }
+    #RelatedProducts--{{ section.id }} .product-grid-item {
+      --bg: {{ bg_color }};
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+<section
+  id="RelatedProducts--{{ section.id }}"
+  data-section-type="related-products"
+  data-section-id="{{ section.id }}"
+  data-product-id="{{ product.id }}"
+  data-limit="{{ limit }}"
+  data-columns="{{ columns }}">
+
+  <div class="related-products" data-related-products>
+    {%- if recommendations.performed -%}
+      {%- if recommendations.products_count > 0 -%}
+        <div class="{{ wrapper_class }}">
+          {%- if heading != blank -%}
+            <div class="featured-collection__title">
+              <h2 class="featured-collection__heading section__heading h4">{{ heading }}</h2>
+
+              {%- if settings.show_spacer_lines -%}
+                <hr>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          <div class="carousel__container">
+            <div class="carousel carousel--inactive carousel--mobile" data-slider data-slider-id="slider--{{ section.id }}">
+              {%- for product in recommendations.products -%}
+                {%- assign animation_delay = forloop.index0 -%}
+                {%- render 'product-grid-item', product: product, carousel: true, animation_delay: animation_delay -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- else -%}
+      <div class="related__placeholder"></div>
+    {%- endif -%}
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Product recommendations",
+  "settings": [
+    {
+      "type": "paragraph",
+			"content": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)"
+    },
+    {
+      "type": "select",
+      "id": "wrapper",
+      "label": "Width",
+      "default": "normal",
+      "options": [
+        { "value": "normal", "label": "Normal" },
+        { "value": "full", "label": "Wide" }
+      ]
+    },
+    {
+			"type":    "range",
+			"id":      "limit",
+			"min":     1,
+			"max":     6,
+			"step":    1,
+			"label":   "Product limit",
+			"default": 4
+		},
+    {
+      "type": "text",
+      "id": "product_recommendations_heading",
+      "label": "Heading",
+      "default": "You May Also Like"
+    },
+    {
+			"type": "header",
+			"content": "Colors"
+		},
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background"
+		}
+  ]
+}
+{% endschema %}

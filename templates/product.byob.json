@@ -1,0 +1,80 @@
+{
+  "sections": {
+    "166430483616cc4bb3": {
+      "type": "byob-quickview",
+      "settings": {
+        "icon_background_color": "#454545",
+        "background_color": "#ffffff",
+        "show_icon_text": true,
+        "show_view_more": false,
+        "show_quantity_input": false,
+        "show_html_product_description": true
+      }
+    },
+    "byob-bundle-info": {
+      "type": "byob-bundle-info",
+      "settings": {
+        "show_banner_image": false,
+        "media_size": "full",
+        "image_header_padding": 0,
+        "byob_section_wrapper": true,
+        "align_text": "left",
+        "title_size": "h1",
+        "description_font_size": 20,
+        "custom_css": "<script>\nfor (let br of vm.buildrules)\n    br.isActiveTab = true\n<\/script>"
+      }
+    },
+    "byob-product-grid": {
+      "type": "byob-product-grid",
+      "settings": {
+        "items_per_row": 3,
+        "byob_section_wrapper": true,
+        "card_background": "#fafafa",
+        "tab_color": "#ffffff",
+        "tab_text_color": "#000000",
+        "tick_icon_color": "#008000",
+        "button_color": "#ffffff",
+        "button_text_color": "#000000",
+        "disable_product_link": true,
+        "enable_quickview": true,
+        "show_product_price": false,
+        "show_currency_code": false,
+        "show_product_type": true,
+        "show_product_vendor": false,
+        "enable_quantity_input": false,
+        "background_color": "#e8e8e8",
+        "footer_product_name_color": "#222222",
+        "footer_show_product_title": true,
+        "footer_show_total_price": false,
+        "footer_show_total_compare_at_price": false,
+        "footer_bottom_position": 10,
+        "product_card_padding": 0,
+        "icon_type": "bag",
+        "icon_horizontal_position": "left"
+      }
+    },
+    "byob-footer": {
+      "type": "byob-footer",
+      "settings": {}
+    },
+    "byob-confirm-modal": {
+      "type": "byob-confirm-modal",
+      "settings": {
+        "button_color": "",
+        "button_text_color": "",
+        "show_view_cart_button": true,
+        "show_create_another_button": true,
+        "direct_checkout": false,
+        "hide_sku_on_cart": false,
+        "show_quantity_in_line_items": false
+      }
+    }
+  },
+  "order": [
+    "166430483616cc4bb3",
+    "byob-bundle-info",
+    "byob-product-grid",
+    "byob-footer",
+    "byob-confirm-modal"
+  ]
+}

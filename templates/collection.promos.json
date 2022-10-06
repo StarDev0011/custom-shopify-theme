@@ -1,0 +1,112 @@
+{
+  "sections": {
+    "hero": {
+      "type": "collection-image-with-title",
+      "settings": {
+        "banner_height": "four-fifty-height",
+        "text_position": "middle-left",
+        "show_image": true,
+        "banner_image": "shopify:\/\/shop_images\/FLUFFMEDIA--7.jpg",
+        "text_color": "text-light",
+        "overlay_opacity": 10,
+        "banner_bg_color": "#fafafa"
+      }
+    },
+    "subcollections": {
+      "type": "subcollections",
+      "settings": {
+        "layout": "grid",
+        "image_source": "collection",
+        "image_aspect_ratio": 0.6,
+        "image_overlay_opacity": 10,
+        "bg_color": "",
+        "text_color": "text-light"
+      }
+    },
+    "main": {
+      "type": "collection",
+      "blocks": {
+        "promo-0": {
+          "type": "promo",
+          "settings": {
+            "collection": "",
+            "promo_row": "three",
+            "promo_height": "one-hundred-height",
+            "promo_width": "half",
+            "promo_text_color": "text-light",
+            "text_position": "center",
+            "promo_layout": "stacked",
+            "overlay_opacity": 10,
+            "bg_color": "#D3D3D3",
+            "promo_heading": "Image promo",
+            "heading_size": 120,
+            "promo_content": "Advertise a promotion or a sale",
+            "text_size": 100,
+            "promo_btn_text": "Shop Now",
+            "promo_btn_link": "",
+            "promo_btn_style": "primary"
+          }
+        },
+        "promo-1": {
+          "type": "promo",
+          "settings": {
+            "collection": "",
+            "promo_row": "three",
+            "promo_height": "one-hundred-height",
+            "promo_width": "auto",
+            "promo_text_color": "text-light",
+            "text_position": "center",
+            "promo_layout": "stacked",
+            "overlay_opacity": 10,
+            "bg_color": "#D3D3D3",
+            "promo_heading": "Image promo",
+            "heading_size": 120,
+            "promo_content": "Advertise a promotion or a sale",
+            "text_size": 100,
+            "promo_btn_text": "Shop Now",
+            "promo_btn_link": "",
+            "promo_btn_style": "primary"
+          }
+        },
+        "promo-2": {
+          "type": "promo",
+          "settings": {
+            "collection": "",
+            "promo_row": "three",
+            "promo_height": "one-hundred-height",
+            "promo_width": "full",
+            "promo_text_color": "text-light",
+            "text_position": "center",
+            "promo_layout": "stacked",
+            "overlay_opacity": 10,
+            "bg_color": "#D3D3D3",
+            "promo_heading": "Image promo",
+            "heading_size": 120,
+            "promo_content": "Advertise a promotion or a sale",
+            "text_size": 100,
+            "promo_btn_text": "Shop Now",
+            "promo_btn_link": "",
+            "promo_btn_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "promo-0",
+        "promo-1",
+        "promo-2"
+      ],
+      "settings": {
+        "show_breadcrumbs": true,
+        "enable_sorting": true,
+        "enable_filters": true,
+        "filter_mode": "default",
+        "bg_color": ""
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "subcollections",
+    "main"
+  ]
+}

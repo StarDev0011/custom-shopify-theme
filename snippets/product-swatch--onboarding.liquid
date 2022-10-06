@@ -1,0 +1,18 @@
+{%- for i in (1..3) -%}
+	{%- capture value -%}{%- cycle 'White', 'Grey', 'Black' -%}{%- endcapture -%}
+	{%- assign swatch_color = value | split: ' ' | last | handle -%}
+	<span class="swatch__button" data-tooltip="{{ value | escape_once | capitalize }}">
+		<input type="radio"
+			class="swatch__input"
+			data-single-option-selector
+			data-index="option1"
+			name="color--{{ section.id }}"
+			value="{{ value | escape_once }}"
+			id="option-{{ value }}-0-{{ section.id }}"
+			{% if forloop.index == 1 %}checked{% endif %}>
+		<label for="option-{{ value }}-0-{{ section.id }}" class="swatch__label" data-swatch="{{ value | escape_once }}" data-tooltip="{{ value | escape_once }}">
+			<span class="visually-hidden">{{ value | escape_once }}</span>
+			{% render 'icon-check' %}
+		</label>
+	</span>
+{%- endfor -%}

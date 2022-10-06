@@ -1,0 +1,822 @@
+{%- comment -%} /sections/collection-template.liquid {%- endcomment -%}
+
+{%- liquid
+  assign carousel = false
+
+  if layout == 'carousel'
+    assign carousel = true
+  endif
+
+  assign collection_count = collection.all_products_count
+  assign filter_mode = section.settings.filter_mode
+  assign filter_by_tags = false
+  assign enable_filters = section.settings.enable_filters
+
+  if enable_filters
+    if filter_mode == 'tag' or filter_mode == 'group'
+      assign filter_by_tags = true
+    endif
+  endif
+
+  if enable_filters and filter_by_tags
+    for tag in current_tags
+      unless tag contains '_badge' and tag contains '_preorder'
+        assign current_tag_handle = tag | replace: '&#39;', '' | replace: '&#34;', '' | handle
+        assign selected_tags = selected_tags | append: current_tag_handle
+        unless forloop.last
+          assign selected_tags = selected_tags | append: '+'
+        endunless
+      endunless
+    endfor
+  endif
+
+  assign enable_sorting = section.settings.enable_sorting
+  assign enable_infinity_scroll = settings.enable_infinity_scroll
+  assign pagination_limit = settings.products_per_row_on_desktop | times: 12
+  assign show_breadcrumbs = section.settings.show_breadcrumbs
+  assign bg_color = section.settings.bg_color
+-%}
+
+{%- style -%}
+  {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+    .template-collection .collection-section {
+      background-color: {{ bg_color }};
+    }
+    .collection__sticky-bar,
+    .collection__filters {
+      --bg: {{ bg_color }};
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
+<div
+  id="Collection--{{ section.id }}"
+  class="collection"
+  data-section-type="collection-template"
+  data-section-id="{{ section.id }}"
+  data-enable-filters="{{ enable_filters }}"
+  data-filter-mode="{{ filter_mode }}"
+  {% if filter_by_tags %}
+    data-collection="{{ collection.url | default: routes.all_products_collection_url }}"
+    data-tags="{{ selected_tags }}"
+  {% endif %}>
+
+  <div class="collection__wrapper" data-collection-wrapper>
+    <div class="wrapper wrapper--full">
+      <div class="collection__inner">
+        {%- if show_breadcrumbs or enable_filters or enable_sorting -%}
+          <div class="collection__sticky-bar" id="CollectionStickyBar" data-collection-sticky-bar>
+            {%- if enable_filters or enable_sorting -%}
+              <button class="collection__filters__toggle" aria-label="{{ 'products.general.filters' | t }}" data-toggle-filters>
+                {%- render 'icon-filter' -%}
+              </button>
+            {%- endif -%}
+
+            {%- if show_breadcrumbs -%}
+              {%- render 'breadcrumbs' -%}
+            {%- endif -%}
+          </div>
+
+          {%- if enable_filters or enable_sorting -%}
+            {%- liquid
+  assign filters_available = false
+  assign filter_count = 0
+  assign all_active_tags_count = 0
+
+  capture sort_param
+    if collection.sort_by != collection.default_sort_by
+      echo '?sort_by=' | append: collection.sort_by
+    endif
+  endcapture
+-%}
+
+{%- capture filters -%}
+  {%- case filter_mode -%}
+
+    {%- when 'default' -%}
+      {%- liquid
+        if collection.filters != empty
+          assign filters_available = true
+        endif
+
+        for filter in collection.filters
+          render 'filter', filter: filter
+        endfor
+      -%}
+
+      <noscript>
+        <button type="submit" class="btn">{{ 'collection.filters.filter_button' | t }}</button>
+      </noscript>
+
+    {%- when 'tag' -%}
+      {%- liquid
+        assign is_active = false
+        assign active_count = 0
+        assign active_tag_filters = ''
+        assign tags_list = ''
+
+        for tag in collection.all_tags
+          assign filters_available = true
+          unless tag contains '_badge' or tag contains '_preorder'
+            if current_tags contains tag
+              assign is_active = true
+              assign active_count = active_count | plus: 1
+              assign all_active_tags_count = all_active_tags_count | plus: 1
+            endif
+          endunless
+        endfor
+      -%}
+
+      <div class="collection__filter" data-collection-filter>
+        <button type="button" class="collection__filter__title{% if is_active %} is-expanded{% endif %}"
+          aria-expanded="false"
+          aria-controls="CollectionFilter--tags"
+          data-collapsible-trigger>
+
+          {{- 'products.general.filter_by' | t -}}
+
+          <span class="collection__filter__count" data-count="{{ active_count }}" data-collection-filter-group-count>
+            {%- render 'icon-toggle-plus' -%}
+            {%- render 'icon-toggle-minus' -%}
+          </span>
+        </button>
+
+        <div class="collection__filter-tags-wrapper {% if is_active %} is-expanded{% endif %}" id="CollectionFilter--tags" aria-hidden="true" data-collapsible-container style="{% if is_active %}height:auto;{% endif %}">
+          <ul class="collection__filter-tags{% if is_color %} collection__filter-tags--swatches{% endif %}" data-collapsible-content>
+
+            {%- for tag in collection.all_tags -%}
+              {%- unless tags_list contains tag or tag contains '_badge' or tag contains '_preorder' -%}
+                {%- capture temp_list -%}{{ tags_list | append: tag | append: ' ' }}{%- endcapture -%}
+                {%- liquid
+                  assign tags_list = temp_list
+                  assign current_tag_handle = tag | replace: '&#39;', '' | replace: '&#34;', '' | handle
+
+                  if current_tags contains tag
+                    assign linked_tags = selected_tags | remove: current_tag_handle
+                    assign filter_count = filter_count | plus: 1
+                  else
+                    assign linked_tags = selected_tags | append: '+' | append: current_tag_handle
+                  endif
+
+                  capture tag_link
+                    echo collection.url
+                    if linked_tags != blank
+                      echo '/' | append: linked_tags
+                    endif
+                    echo sort_param
+                  endcapture
+
+                  assign tag_link = tag_link | replace: '/+', '/' | replace: '++', '+' | replace: '+?', '?'
+                -%}
+                <li class="collection__filter-tag collection__filter-tag--default{% if current_tags contains tag %} is-active{% endif %}" data-collection-filter-tag>
+                  <a href="{{ tag_link }}" data-tag="{{ tag | handleize }}" class="filter__button" data-collection-filter-tag-button>{{ tag }}</a>
+                </li>
+
+                {%- if current_tags contains tag -%}
+                  {%- capture active_tag_filters -%}
+                    {{- active_tag_filters -}}
+                    <a class="filter__active__remove" href="{{ tag_link }}" data-tag="{{ tag | handleize }}" data-filter-tag-reset-button>
+                      {{ tag }}
+                      <span class="filter__x">✕</span>
+                    </a>
+                  {%- endcapture -%}
+                {%- endif -%}
+              {%- endunless -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+      </div>
+
+    {%- when 'group' -%}
+      {%- liquid
+        assign groups = ''
+        assign active_tag_filters = ''
+
+        for tag in collection.all_tags
+          assign tag_parts = tag | split: '_'
+
+          if tag_parts.size == 2
+            assign groups = groups | append: tag_parts.first | append: ','
+          endif
+        endfor
+
+        assign groups = groups | split: ',' | compact | uniq
+        assign color_label = 'color,colour,couleur,colore,farbe,색,色,färg,farve' | split: ','
+
+        comment
+          These tags will be hidden from the Filters
+        endcomment
+        assign special_tags = '_preorder,_badge' | split: ','
+      -%}
+
+      {%- for group in groups -%}
+        {%- liquid
+          assign is_active = false
+          assign active_count = 0
+          assign group_label = group | downcase
+          assign group_with_suffix = group | append: '_'
+
+          comment
+            group_with_suffix is needed in order to avoid edge cases where group tags contain the same words
+            For example:
+            Color_Metalic
+            Metalic_Yes
+          endcomment
+        -%}
+
+        {%- comment -%} Don't show "_badge" and "_preorder" as filters {%- endcomment -%}
+        {%- unless special_tags contains group_label or group_label == blank -%}
+          {%- liquid
+            assign filters_available = true
+            for tag in current_tags
+              if tag contains group_with_suffix
+                assign is_active = true
+                assign active_count = active_count | plus: 1
+                assign all_active_tags_count = all_active_tags_count | plus: 1
+              endif
+            endfor
+
+            if color_label contains group_label and settings.enable_color_swatches_collection
+              assign is_color = true
+            else
+              assign is_color = false
+            endif
+          -%}
+
+          <div class="collection__filter" data-collection-filter>
+            <button type="button" class="collection__filter__title{% if is_active %} is-expanded{% endif %}"
+              aria-expanded="false"
+              aria-controls="CollectionFilter--{{ group | handle }}-{{ forloop.index }}"
+              data-collapsible-trigger>
+              {{- group -}}
+
+              <span class="collection__filter__count" data-count="{{ active_count }}" data-collection-filter-group-count>
+                {%- render 'icon-toggle-plus' -%}
+                {%- render 'icon-toggle-minus' -%}
+              </span>
+
+            </button>
+
+            <div class="collection__filter-tags-wrapper{% if is_active %} is-expanded{% endif %}" id="CollectionFilter--{{ group | handle }}-{{ forloop.index }}" aria-hidden="true" data-collapsible-container style="{% if is_active %}height:auto;{% endif %}">
+              <ul class="collection__filter-tags{% if is_color %} collection__filter-tags--swatches{% endif %}" data-collapsible-content>
+                {%- for tag in collection.all_tags -%}
+                  {%- liquid
+                    assign tag_parts = tag | split: '_'
+                    assign group_tag = tag_parts.last
+
+                    assign current_tag_handle = tag | replace: '&#39;', '' | replace: '&#34;', '' | handle
+
+                    if current_tags contains tag
+                      assign linked_tags = selected_tags | remove: current_tag_handle
+                    else
+                      assign linked_tags = selected_tags | append: '+' | append: current_tag_handle
+                    endif
+
+                    capture tag_link
+                      echo collection.url
+                      if linked_tags != blank
+                        echo '/' | append: linked_tags
+                      endif
+                      echo sort_param
+                    endcapture
+
+                    assign tag_link = tag_link | replace: '/+', '/' | replace: '++', '+' | replace: '+?', '?'
+                  -%}
+
+                  {%- if tag_parts.first == group -%}
+                    {%- if is_color -%}
+                      {%- assign swatch_color = group_tag | split: ' ' | last | handle -%}
+                      <li class="collection__filter-tag collection__filter-tag--swatch{% if current_tags contains tag %} is-active{% endif %}" data-collection-filter-tag>
+                        <a
+                          href="{{ tag_link }}"
+                          class="swatch__button filter__button"
+                          title="{{ group_tag }}"
+                          data-value="{{ group_tag }}"
+                          data-tag="{{ tag | handleize }}"
+                          data-collection-filter-tag-button>
+                          <div class="swatch__label" data-swatch="{{ group_tag | escape_once }}" data-tooltip="{{ group_tag | escape_once }}">
+                            {% render 'icon-check' %}
+                          </div>
+                        </a>
+                      </li>
+                    {%- else -%}
+
+                      {% comment %} Check if the tag value is a number {% endcomment %}
+                      {%- capture tag_value -%}
+                        {{ group_tag | abs }}
+                      {%- endcapture -%}
+
+                      <li class="collection__filter-tag collection__filter-tag--default{% if current_tags contains tag %} is-active{% endif %}" data-collection-filter-tag>
+                        <a
+                          href="{{ tag_link }}"
+                          data-tag="{{ tag | handleize }}"
+                          class="filter__button filter__button--{{ group_tag | handle }}"
+                          data-collection-filter-tag-button>
+                          {{- group_tag -}}
+                        </a>
+                      </li>
+                    {%- endif -%}
+
+                    {%- if current_tags contains tag -%}
+                      {%- capture active_tag_filters -%}
+                        {{- active_tag_filters -}}
+                        <a class="filter__active__remove" href="{{ tag_link }}" data-tag="{{ tag | handleize }}" data-filter-tag-reset-button>
+                          {{ group_tag }}
+                          <span class="filter__x">✕</span>
+                        </a>
+                      {%- endcapture -%}
+                    {%- endif -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+          </div>
+        {%- endunless -%}
+      {%- endfor -%}
+
+      {%- liquid
+        if collection.filters != empty
+          assign filters_available = true
+        endif
+
+        for filter in collection.filters
+          assign filter_label = filter.label | downcase
+          if filter_label == 'price'
+            render 'filter', filter: filter
+          endif 
+        endfor
+      -%}
+  {%- endcase -%}
+{%- endcapture -%}
+
+{%- capture filter_reset_buttons -%}
+  {%- if filter_mode == 'default' -%}
+    {%- for filter in collection.filters -%}
+      {%- if filter.type == 'price_range' -%}
+        {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+          {%- if filter.min_value.value != 0 or filter.max_value.value != filter.range_max -%}
+            {%- assign filter_count = filter_count | plus: 1 -%}
+            <a class="filter__active__remove" href="{{ filter.url_to_remove }}" data-filter-reset-button>
+              {%- assign min_value = filter.min_value.value | default: 0 -%}
+              {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
+              {{ min_value | money_without_trailing_zeros }} - {{ max_value | money_without_trailing_zeros }}
+              <span class="filter__x">✕</span>
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+      {%- else -%}
+        {%- for filter_value in filter.active_values -%}
+          {%- assign filter_count = filter_count | plus: 1 -%}
+          <a class="filter__active__remove" href="{{ filter_value.url_to_remove }}" data-filter-reset-button>
+            {{ filter_value.label }}
+            <span class="filter__x">✕</span>
+          </a>
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- elsif filter_mode == 'tag' or filter_mode == 'group' -%}
+    {%- assign filter_count = all_active_tags_count -%}
+    {{- active_tag_filters -}}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- if enable_sorting or enable_filters -%}
+  <div class="collection__filters" data-collection-filters>
+    <div class="collection__filters-wrapper" data-collection-filters-wrapper>
+      <div class="collection__filters-list" data-collection-filters-list>
+        <div class="collection__filters-list__inner">
+          <div class="collection__filters__clear" data-filters-reset>
+            {{- filter_reset_buttons -}}
+          </div>
+
+          <form data-collection-filters-form data-container>
+            {%- if enable_sorting -%}
+                        {%- assign sort_by = search.sort_by | default: collection.sort_by | default: collection.default_sort_by -%}
+          {%- assign sort_options = search.sort_options | default: collection.sort_options -%}
+
+          <div class="collection__sort">
+            <button type="button" class="collection__sort__label" aria-expanded="false" aria-controls="CollectionSorting" data-collapsible-trigger>
+              {{ 'collections.sorting.title' | t }}
+              {%- render 'icon-toggle-plus' -%}
+              {%- render 'icon-toggle-minus' -%}
+            </button>
+
+            <div class="collection__sort__option-wrapper" id="CollectionSorting" aria-hidden="true" data-collapsible-container>
+              <div class="collection__sort__options" data-collapsible-content>
+                <ul class="collection__filter-tags collection__filter-tags--default" collection-sort-by="{{ sort_by }}">
+                  {%- for option in sort_options -%}
+                    {% liquid
+                      assign option_name = option.name | downcase | replace: ' ', '_'
+                    %}
+                    {% if option_name == 'featured' or option_name == 'best_selling' %}
+                      <li class="collection__filter-tag">
+                        <input class="collection__sort__input" type="radio" name="sort_by" value="{{ option.value }}" id="filter-{{ option.name | handle | append: option.value | handle | append: section.id }}" data-input-sort{% if option.value == sort_by %} checked{% endif %}>
+                        <label class="collection__sort__button" for="filter-{{ option.name | handle | append: option.value | handle | append: section.id }}">
+                          {{- option.name -}}
+                        </label>
+                      </li>
+                    {% endif %}
+                  {%- endfor -%}
+                </ul>
+
+                <noscript>
+                  <button type="submit" class="btn">{{ 'collection.filters.sort_button' | t }}</button>
+                </noscript>
+              </div>
+            </div>
+          </div>
+            {%- endif -%}
+
+            {%- if enable_filters and filters_available -%}
+              {{- filters -}}
+            {%- endif -%}
+          </form>
+        </div>
+      </div>
+
+      <div class="collection__filters__buttons">
+        {%- if enable_filters -%}
+          <a href="{{ collection.url }}/{{ sort_param }}" class="collection__filters__reset btn btn--primary{% if current_tags != blank or filter_count > 0 %} is-visible{% endif %}" data-filter-reset-button>
+            {{- 'products.general.reset' | t }}
+            (<span data-selected-filters-count>{{ filter_count }}</span>)
+          </a>
+
+          <a href="{{ collection.url }}/{{ sort_param }}" class="collection__filters__reset btn btn--secondary{% if current_tags != blank or filter_count > 0 %} is-visible{% endif %}" data-filter-reset-button>
+            {{- 'products.general.reset' | t }}
+            (<span data-selected-filters-count>{{ filter_count }}</span>)
+          </a>
+        {%- endif -%}
+
+        <button class="collection__filters__close btn btn--primary" data-close-filters>
+          {{- 'products.general.close' | t -}}
+        </button>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- paginate collection.products by pagination_limit -%}
+          <div class="collection__products" data-collection-products>
+
+            {%- if collection_count > 0 -%}
+              {%- if collection.products_count > 0 -%}
+                <div class="grid"{% if enable_infinity_scroll %} id="AjaxinateLoop"{% endif %}>
+                  {%- liquid
+                    assign columns = settings.products_per_row_on_desktop | plus: 0
+
+                    for product in collection.products
+                      assign index = forloop.index
+                      assign animation_delay = forloop.index0 | modulo: columns | times: 1
+                      render 'product-grid-item', product: product, animation_delay: animation_delay
+                    endfor
+                  -%}
+
+                  {%- if paginate.current_page == 1 -%}
+                    {%- for block in section.blocks -%}
+                      {%- liquid
+                        assign height = block.settings.promo_height
+                        assign width = block.settings.promo_width
+                        assign width_class = ''
+                        assign promo_row = block.settings.promo_row
+                        assign bg_color = block.settings.bg_color
+                        assign promo_collection = block.settings.collection
+                        assign promo_image = block.settings.promo_image
+                        assign promo_heading = block.settings.promo_heading | strip_html
+                        assign promo_heading_size = block.settings.heading_size | times: 0.01
+                        assign promo_text_size = block.settings.text_size | times: 0.01
+                        assign promo_content = block.settings.promo_content | strip_html
+                        assign promo_content_position = 'item--' | append: block.settings.text_position
+                        assign promo_layout = block.settings.promo_layout
+                        assign promo_btn_text = block.settings.promo_btn_text | strip_html
+                        assign promo_btn_link = block.settings.promo_btn_link
+                        assign promo_btn_style = block.settings.promo_btn_style
+                        assign promo_text_color = block.settings.promo_text_color
+                        assign overlay_opacity = block.settings.overlay_opacity | times: 0.01
+                        assign grid_items = settings.products_per_row_on_desktop
+
+                        case width
+                          when 'full'
+                            assign width_class = 'promo-banner--full'
+                          when 'half'
+                            if grid_items == 4
+                              assign width_class = 'promo-banner--two-columns'
+                            else
+                              assign width_class = 'promo-banner--one-column'
+                            endif
+                          when 'auto'
+                            assign width_class = 'promo-banner--one-column'
+                        endcase
+                      -%}
+
+                      {%- render 'promo',
+                        block_id: block.id,
+                        block_shopify_attributes: block.shopify_attributes,
+                        height: height,
+                        width_class: width_class,
+                        promo_row: promo_row,
+                        bg_color: bg_color,
+                        promo_collection: promo_collection,
+                        promo_image: promo_image,
+                        promo_heading: promo_heading,
+                        promo_heading_size: promo_heading_size,
+                        promo_text_size: promo_text_size,
+                        promo_content: promo_content,
+                        promo_content_position: promo_content_position,
+                        promo_layout: promo_layout,
+                        promo_btn_text: promo_btn_text,
+                        promo_btn_link: promo_btn_link,
+                        promo_btn_style: promo_btn_style,
+                        promo_text_color: promo_text_color,
+                        overlay_opacity: overlay_opacity,
+                      -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+                </div>
+              {%- else -%}
+                <div class="collection--no-results">
+                  <p class="no-matches">{{ 'collections.general.no_matches_by_filter' | t : products_count: collection.products_count }}</p>
+                  {%- if enable_filters and filter_tags != blank -%}
+                    <div class="collection__filters-reset">
+                      <button class="collection__filters__reset btn btn--{{ section.settings.button_style }}{% if current_tags != blank %} is-visible{% endif %}" data-reset-filters>
+                        {{ 'products.general.reset' | t }}
+                        <span data-selected-filters-count>({{ current_tags | size }})</span>
+                      </button>
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- elsif collection.handle != 'all' and collection_count == 0 -%}
+              <div class="collection--no-results">
+                <p class="no-matches">{{ 'collections.general.no_matches' | t }}</p>
+                <a href="{{ routes.root_url }}" class="btn" >{{ 'general.404.button_text' | t }}</a>
+              </div>
+            {%- endif -%}
+
+            {%- if enable_infinity_scroll -%}
+              <div class="pagination pagination--infinite" id="AjaxinatePagination">
+                {%- if paginate.next -%}
+                  <div class="pagination__loading">
+                    <a href="{{ paginate.next.url }}"></a>
+                  </div>
+                {%- endif -%}
+              </div>
+
+              {%- if paginate.pages > 1 -%}
+                <noscript>
+                  {%- render 'pagination', paginate: paginate -%}
+                </noscript>
+              {%- endif -%}
+            {%- else -%}
+              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+
+        {%- endpaginate -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collection pages",
+    "class": "collection-section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_breadcrumbs",
+        "label": "Show breadcrumbs",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Filters and sorting"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sorting",
+        "label": "Enable sorting",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_filters",
+        "label": "Enable filters",
+        "default": true
+      },
+      {
+        "type": "select",
+        "label": "Filter mode",
+        "id": "filter_mode",
+        "info": "Filters by group requires specific tag formatting. [Learn more](https://presidiocreative.com/link/palo-alto/collection-filtering)",
+        "default": "default",
+        "options": [
+          { "label": "Default (Faceted)", "value": "default" },
+          { "label": "By tag", "value": "tag" },
+          { "label": "By group", "value": "group" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "promo",
+        "name": "Promo",
+        "limit": 5,
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "Desktop only"
+          },
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection",
+            "info": "Show on specific collection only"
+          },
+          {
+            "type": "select",
+            "id": "promo_row",
+            "label": "Show in row",
+            "info": "Only 1 full or 2 half width blocks per row can be shown",
+            "default": "three",
+            "options": [
+              { "label": "1", "value": "one" },
+              { "label": "2", "value": "two" },
+              { "label": "3", "value": "three" },
+              { "label": "4", "value": "four" },
+              { "label": "5", "value": "five" },
+              { "label": "6", "value": "six" },
+              { "label": "7", "value": "seven" },
+              { "label": "8", "value": "eight" },
+              { "label": "9", "value": "nine" },
+              { "label": "10", "value": "ten" }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "promo_height",
+            "label": "Height",
+            "default": "one-hundred-height",
+            "options": [
+              { "value": "five-fifty-height", "label": "550px" },
+              { "value": "four-fifty-height", "label": "450px" },
+              { "value": "three-fifty-height", "label": "350px" },
+              { "value": "two-fifty-height", "label": "250px" },
+              { "value": "two-hundred-height", "label": "200px" },
+              { "value": "one-fifty-height", "label": "150px" },
+              { "value": "one-hundred-height", "label": "100px" }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "promo_width",
+            "label": "Width",
+            "default": "full",
+            "options": [
+              { "value": "full", "label": "Wide" },
+              { "value": "half", "label": "Half" },
+              { "value": "auto", "label": "Grid item" }
+            ]
+          },
+          {
+            "type": "image_picker",
+            "id": "promo_image",
+            "label": "Image"
+          },
+          {
+            "type": "select",
+            "id": "promo_text_color",
+            "label": "Text",
+            "default": "text-light",
+            "options": [
+              {
+                "value": "text-light",
+                "label": "Light"
+              },
+              {
+                "value": "text-dark",
+                "label": "Dark"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "text_position",
+            "label": "Content position",
+            "default": "center",
+            "options": [
+              { "value": "left", "label": "Left" },
+              { "value": "center", "label": "Center" },
+              { "value": "right", "label": "Right" },
+              { "value": "bottom-left", "label": "Bottom left" },
+              { "value": "bottom-right", "label": "Bottom right" },
+              { "value": "top-left", "label": "Top left" },
+              { "value": "top-right", "label": "Top right" }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "promo_layout",
+            "label": "Layout",
+            "default": "stacked",
+            "options": [
+              { "label": "Inline", "value": "inline" },
+              { "label": "Stacked", "value": "stacked" }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "overlay_opacity",
+            "label": "Text contrast",
+            "info": "Improves readability of text",
+            "min": 0,
+            "max": 95,
+            "step": 5,
+            "unit": "%",
+            "default": 10
+          },
+          {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background color",
+            "default": "#D3D3D3"
+          },
+          {
+            "type": "text",
+            "id": "promo_heading",
+            "label": "Heading",
+            "default": "Image promo"
+          },
+          {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading size",
+            "default": 120,
+            "min": 100,
+            "max": 200,
+            "step": 10,
+            "unit": "%"
+          },
+          {
+            "type": "textarea",
+            "id": "promo_content",
+            "label": "Text",
+            "default": "Advertise a promotion or a sale"
+          },
+          {
+            "type": "range",
+            "id": "text_size",
+            "label": "Text size",
+            "default": 100,
+            "min": 100,
+            "max": 200,
+            "step": 5,
+            "unit": "%"
+          },
+          {
+            "type": "text",
+            "id": "promo_btn_text",
+            "label": "Button text",
+            "default":"Shop Now",
+            "info": "Leave blank to link entire image"
+          },
+          {
+            "type": "url",
+            "id": "promo_btn_link",
+            "label": "Button URL"
+          },
+          {
+            "type": "select",
+            "id": "promo_btn_style",
+            "label": "Button style",
+            "default": "primary",
+            "options": [
+              { "label": "Text", "value": "text" },
+              { "label": "Small button", "value": "primary btn--small" },
+              { "label": "Large button", "value": "primary" },
+              { "label": "Small outline button", "value": "secondary btn--small" },
+              { "label": "Large outline button", "value": "secondary" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

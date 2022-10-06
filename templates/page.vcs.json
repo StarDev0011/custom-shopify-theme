@@ -1,0 +1,691 @@
+{
+  "sections": {
+    "165972216369178eca": {
+      "type": "section-text",
+      "disabled": true,
+      "blocks": {
+        "16597221632362743e-0": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Subheading<\/p>",
+            "size": 100,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "16597221632362743e-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>what is facewater<\/p>",
+            "size": 225,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "16597221632362743e-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>getting the most from plants is essential if effective products are going to be made exclusively from plant-based ingredients.our patent-pending distillation method captures whole, undamaged plant actives. we soak and then press our plants before beginning distillation  and then separate the solid and liquid plant components into different parts of our specially designed stills. the still is then placed under vacuum pressure to significantly reduce the amount of heat required for distillation. (heat can damage or change plant extracts by essentially “cooking’ them.) during distillation, the solid and liquid components are reunited to form a hydrosol – a water saturated with plant actives at peak potency and effectiveness.<\/p>",
+            "size": 100,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        },
+        "16597221632362743e-3": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "btn_text": "Read More",
+            "btn_link": "",
+            "btn_style": "primary btn--small"
+          }
+        }
+      },
+      "block_order": [
+        "16597221632362743e-0",
+        "16597221632362743e-1",
+        "16597221632362743e-2",
+        "16597221632362743e-3"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "full",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": true
+      }
+    },
+    "16597220042231bb5d": {
+      "type": "section-slideshow",
+      "disabled": true,
+      "blocks": {
+        "16597220043cc386ed-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/puffChill_JULY_1.jpg",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "heading_font_size": 32,
+            "heading_mobile_font_size": 32,
+            "heading_font_weight": "700",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "text_font_size": 32,
+            "text_mobile_font_size": 32,
+            "text_font_weight": "200",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "text_width": "normal",
+            "text_position": "center",
+            "override_mobile_text_position": false,
+            "mobile_text_position_y": 50,
+            "mobile_text_position_x": "center",
+            "title": "",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "",
+            "slide_btn_text": "",
+            "slide_btn_link": "shopify:\/\/collections\/all",
+            "slide_btn_style": "primary",
+            "button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16597220043cc386ed-0"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "five-fifty-height",
+        "show_nav_dots": true,
+        "show_nav_arrows": true,
+        "show_arrow_down": false,
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": true,
+        "heading_size": 120,
+        "custom_css": ""
+      }
+    },
+    "16566059652cdd0f1f": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "120c3108-4120-447a-8d2f-20e75c57321f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CLACY_POTS_a1ea951e-2ead-428c-9c00-a48d3917b109.jpg",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "43364b66-878b-45e8-924c-641a13cc4d10": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "",
+            "text": "<strong>long term youth preserving effects <\/strong>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "bg_color": "#ffffff",
+            "mobile_order": "default"
+          }
+        },
+        "e2c22075-bb47-4edd-9912-eb80ae476eff": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "noticeable skin clearing",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "bg_color": "#ffffff",
+            "mobile_order": "default"
+          }
+        },
+        "dacdf897-e66a-4496-99a8-0b88749f84b4": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "immediately visible radiance",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "bg_color": "#ffffff",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "120c3108-4120-447a-8d2f-20e75c57321f",
+        "43364b66-878b-45e8-924c-641a13cc4d10",
+        "e2c22075-bb47-4edd-9912-eb80ae476eff",
+        "dacdf897-e66a-4496-99a8-0b88749f84b4"
+      ],
+      "settings": {
+        "height": "750",
+        "min_tablet_height": 370,
+        "min_mobile_height": 215,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 22,
+        "heading_font_weight": "700",
+        "heading_color": "#000000",
+        "text_font_size": 26,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "400",
+        "text_color": "#000000",
+        "button_style": "secondary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": false
+      }
+    },
+    "165894756411f7e648": {
+      "type": "section-custom-content",
+      "blocks": {
+        "1658947564c479ddf2-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/SBberrybubbletest.jpg",
+            "image_position": "center-top",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "1658947564c479ddf2-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "title": "",
+            "text": "<p><strong><h3>noticeable skin clearing<\/h3><\/strong><\/p><p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<\/p><p><strong><h3>visible radiance<\/h3><\/strong><\/p><p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<\/p><p><strong><h3>long-term youth preservation<\/h3><\/strong><\/p><p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <\/p>\n <p><\/p><p><\/p><p><\/p>\n<p> <strong> <h3> immediate lasting moisture <\/h3><\/strong><\/p>\n<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1658947564c479ddf2-0",
+        "1658947564c479ddf2-1"
+      ],
+      "settings": {
+        "height": "five-fifty-height",
+        "add_spacing": true,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": "{\npadding-top: 0;\n}\n.brick__section__wrapper {\npadding-top: 0;\n}"
+      }
+    },
+    "16565094318a91cca5": {
+      "type": "section-icons-row",
+      "disabled": true,
+      "blocks": {
+        "16565094315c2d8a7a-0": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "icon_image": "shopify:\/\/shop_images\/NATR_SamanthaEHeadshot_1800x_d5a37ffe-11c1-4a45-a7ad-8d008dacb032.webp",
+            "title": "\"highly recommend to my patients with sensitive skin. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\"",
+            "text": "<p><strong>Dr. Michelle Warner, Dermatology Clinic of NY<\/strong><\/p>"
+          }
+        },
+        "16565094315c2d8a7a-1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "refresh-cw",
+            "icon_image": "shopify:\/\/shop_images\/NATR_RobinsonHeadshot_1800x_3c219e03-becc-48e6-9bcf-b8b885d43e7f.webp",
+            "title": "\"highly recommend to my patients with sensitive skin. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\"",
+            "text": "<p><strong>Dr. Miranda Beeker, Medispa of Brookville<\/strong><\/p>"
+          }
+        },
+        "16565094315c2d8a7a-2": {
+          "type": "text",
+          "settings": {
+            "icon_name": "heart",
+            "icon_image": "shopify:\/\/shop_images\/NATR_DermBoard_Dr-Shah_350px_1800x_8f6b0728-fa99-4263-8562-ada8a908d8e5.webp",
+            "title": "\"highly recommend to my patients with sensitive skin. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\"",
+            "text": "<p><strong>Dr. Allen Smith, Skin Center of NY<\/strong><\/p>"
+          }
+        },
+        "e21a5e3c-b25c-4ccc-b2ba-eae198bdaac1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "clock",
+            "icon_image": "shopify:\/\/shop_images\/idriss.webp",
+            "title": "\"highly recommend to my patients with sensitive skin. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut.\"",
+            "text": "<p><strong>Dr. Mary Roberts, Derm Clinic of NY<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16565094315c2d8a7a-0",
+        "16565094315c2d8a7a-1",
+        "16565094315c2d8a7a-2",
+        "e21a5e3c-b25c-4ccc-b2ba-eae198bdaac1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "columns": 4,
+        "icons_width": 80,
+        "bg_color": "#ffffff",
+        "box_color": "#adadad",
+        "text_color": "#ffffff"
+      }
+    },
+    "1656347496387be255": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "5c93e357-65af-42bb-b237-652d71f14948": {
+          "type": "testimonial",
+          "settings": {
+            "text_alignment": "left",
+            "star_rating": 5,
+            "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<\/p>",
+            "text_size": 100,
+            "image": "shopify:\/\/shop_images\/higher_resolution_headshot.png",
+            "image_width": 100,
+            "customer_name": "Dr. Maura Holcomb",
+            "subheading": "<p>Board Certified Dermatologist <\/p>",
+            "bg_color": ""
+          }
+        },
+        "cdb72cfc-3d56-45af-b1d3-7195b85eda0d": {
+          "type": "video",
+          "settings": {
+            "text_position": "middle-center",
+            "hero_video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "video_enable_sound": true,
+            "image": "shopify:\/\/shop_images\/other_photo.jpg",
+            "overlay_opacity": 10,
+            "text_color": "text-light",
+            "title": "",
+            "text": "what is facewater",
+            "heading_size": 100,
+            "button_text": "",
+            "button_link": "",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "5c93e357-65af-42bb-b237-652d71f14948",
+        "cdb72cfc-3d56-45af-b1d3-7195b85eda0d"
+      ],
+      "settings": {
+        "height": "four-fifty-height",
+        "add_spacing": true,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "1660146585907386f8": {
+      "type": "section-columns",
+      "blocks": {
+        "1660146585e025bd3b-0": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/higher_resolution_headshot.png",
+            "image_link": "",
+            "bg_position": "center-top",
+            "title": "Dr. Maura Holcomb, M.D.",
+            "text": "<p>Board Certified Dermatologist<\/p><p>Dr. Holcomb is the author of more than 60 papers on clinical interests that include psoriasis, acne, melanoma, tropical dermatology, and photosensitive skin disorders.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1660146585e025bd3b-1": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-08-10_at_2.15.55_PM.png",
+            "image_link": "",
+            "bg_position": "center-top",
+            "title": "what is facewater",
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": true,
+            "play_btn_color": "#ffffff",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1660146585e025bd3b-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-09-22_at_11.20.24_AM.png",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "100% plant based different from natural",
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": true,
+            "play_btn_color": "#ffffff",
+            "video_link": "https:\/\/youtu.be\/No9Pz9sFiRg"
+          }
+        }
+      },
+      "block_order": [
+        "1660146585e025bd3b-0",
+        "1660146585e025bd3b-1",
+        "1660146585e025bd3b-2"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 3,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": true,
+        "text_width": 93,
+        "equalize_height": true,
+        "image_aspect_ratio": 1.3,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_page_title": false
+      }
+    },
+    "1656527315c187537d": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "1656527315e9f8312f-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "title": "noticeable skin clearing or your money back*",
+            "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": "#515f54"
+          }
+        },
+        "f27b61d5-7d06-4a6a-970b-d1915289e69b": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "title": "immediately visible radiance",
+            "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1656527315e9f8312f-1",
+        "f27b61d5-7d06-4a6a-970b-d1915289e69b"
+      ],
+      "settings": {
+        "height": "four-fifty-height",
+        "add_spacing": false,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "165635138168780ca9": {
+      "type": "judgeme_carousel_section",
+      "disabled": true,
+      "settings": {
+        "maxwidth": 1920
+      }
+    },
+    "1656437962f86c6eea": {
+      "type": "section-text",
+      "disabled": true,
+      "blocks": {
+        "1656437962029ed9ed-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<p><strong>noticeable skin clearing or your money back*<\/strong><\/p>",
+            "size": 110,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "4f608eb8-a527-4aa4-94c3-b7d55b73cbb7": {
+          "type": "split-text",
+          "settings": {
+            "text_left": "",
+            "size_left": 100,
+            "font_weight": "700",
+            "letter_spacing": 0,
+            "text_right": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani.<\/p>",
+            "size_right": 100,
+            "font_weight_right": "700",
+            "letter_spacing_right": 0
+          }
+        },
+        "773b875b-f360-47ce-94f7-159d23883301": {
+          "type": "split-text",
+          "disabled": true,
+          "settings": {
+            "text_left": "<p><strong>put your face on a plant based diet<\/strong><\/p>",
+            "size_left": 100,
+            "font_weight": "700",
+            "letter_spacing": 0,
+            "text_right": "",
+            "size_right": 100,
+            "font_weight_right": "700",
+            "letter_spacing_right": 0
+          }
+        },
+        "1656437962029ed9ed-2": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>have you ever seen your skin on a plant based diet? EXTENSIVE testing proves that the use of skin healthy Plant Beauty Distillery products consistently produces clearer skin that appears more youthful and radiant.<\/p>",
+            "size": 100,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "52ea794a-8c06-4545-a2fb-4f9c8ae5688c": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>100% plant based is different from \"natural\"<\/strong><\/p><p>when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants <\/p><p>vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them!<\/p><p>natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and parrafin wax<\/p>",
+            "size": 100,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "f6806dd3-e0f0-4c5d-b300-0a4ee9d4c4bb": {
+          "type": "split-text",
+          "settings": {
+            "text_left": "<p>100% plant based is different from \"natural\"<\/p>",
+            "size_left": 100,
+            "font_weight": "700",
+            "letter_spacing": 0,
+            "text_right": "<p>have you ever seen your skin on a plant based diet? EXTENSIVE testing proves that the use of skin healthy Plant Beauty Distillery products consistently produces clearer skin that appears more youthful and radiant. when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants. vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them! natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and parrafin wax<\/p>",
+            "size_right": 100,
+            "font_weight_right": "700",
+            "letter_spacing_right": 0
+          }
+        },
+        "ab7eaf78-f671-40d0-a9fc-c8bcbea62ad0": {
+          "type": "split-text",
+          "settings": {
+            "text_left": "<p>way beyond clean™<\/p>",
+            "size_left": 100,
+            "font_weight": "700",
+            "letter_spacing": 0,
+            "text_right": "<p>healthy skin starts with eliminating questionable, harmful, and toxic chemicals. all of our products never have these harmful chemicals:<\/p><p><\/p><p>zero glycols: glycols are derived from petroleum and known to cause irritation<\/p><p>zero petrochemicals<\/p><p>zero synthetic fragrances<\/p><p>zero colorants or dyes<\/p><p>zero parabens<\/p><p>zero phthalates<\/p><p>100% recyclable packaging<\/p><p>cruelty-free and vegan*<\/p><p>*all of our products are vegan with the exception of products containing honey.<\/p>",
+            "size_right": 100,
+            "font_weight_right": "700",
+            "letter_spacing_right": 0
+          }
+        },
+        "597ab2c6-05ae-4cef-9207-14a611246b4a": {
+          "type": "split-text",
+          "settings": {
+            "text_left": "<p><strong>immediately visible radiance<\/strong><\/p>",
+            "size_left": 100,
+            "font_weight": "700",
+            "letter_spacing": 0,
+            "text_right": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani.<\/p>",
+            "size_right": 100,
+            "font_weight_right": "700",
+            "letter_spacing_right": 0
+          }
+        },
+        "30682476-34d2-43fa-a31a-8c1f827a1b3c": {
+          "type": "split-text",
+          "settings": {
+            "text_left": "<p><strong>long term youth preserving effects<\/strong><\/p>",
+            "size_left": 100,
+            "font_weight": "700",
+            "letter_spacing": 0,
+            "text_right": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<\/p>",
+            "size_right": 100,
+            "font_weight_right": "700",
+            "letter_spacing_right": 0
+          }
+        }
+      },
+      "block_order": [
+        "1656437962029ed9ed-1",
+        "4f608eb8-a527-4aa4-94c3-b7d55b73cbb7",
+        "773b875b-f360-47ce-94f7-159d23883301",
+        "1656437962029ed9ed-2",
+        "52ea794a-8c06-4545-a2fb-4f9c8ae5688c",
+        "f6806dd3-e0f0-4c5d-b300-0a4ee9d4c4bb",
+        "ab7eaf78-f671-40d0-a9fc-c8bcbea62ad0",
+        "597ab2c6-05ae-4cef-9207-14a611246b4a",
+        "30682476-34d2-43fa-a31a-8c1f827a1b3c"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "normal",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    },
+    "1657895652cf87b92e": {
+      "type": "apps",
+      "blocks": {
+        "06b8263a-f400-42b6-a5c6-43f11a92de36": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/all_reviews_page\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "extra_wrapper_classes": "page-width page-width--narrow"
+          }
+        }
+      },
+      "block_order": [
+        "06b8263a-f400-42b6-a5c6-43f11a92de36"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "165972216369178eca",
+    "16597220042231bb5d",
+    "16566059652cdd0f1f",
+    "165894756411f7e648",
+    "16565094318a91cca5",
+    "1656347496387be255",
+    "1660146585907386f8",
+    "main",
+    "1656527315c187537d",
+    "165635138168780ca9",
+    "1656437962f86c6eea",
+    "1657895652cf87b92e"
+  ]
+}

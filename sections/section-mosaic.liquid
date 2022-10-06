@@ -1,0 +1,557 @@
+{%- render 'mosaic-grid-layout' section: section -%}
+
+{% schema %}
+  {
+    "name": "Mosaic",
+    "class": "shopify-section--mosaic",
+    "max_blocks": 6,
+    "settings": [
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "select",
+        "id": "height",
+        "label": "Height",
+        "default": "650",
+        "options": [
+          {"label": "Fullscreen", "value": "fullscreen"},
+          {"label": "750px", "value": "750"},
+          {"label": "650px", "value": "650"},
+          {"label": "550px", "value": "550"},
+          {"label": "450px", "value": "450"},
+          {"label": "350px", "value": "350"},
+          {"label": "250px", "value": "250"},
+          {"label": "Auto", "value": "auto"}
+        ]
+      },
+      {
+        "type": "range",
+        "id": "min_mobile_height",
+        "min": 200,
+        "max": 350,
+        "step": 5,
+        "unit": "px",
+        "label": "Mobile grid item size",
+        "default": 215
+      },
+      {
+        "type": "select",
+        "id": "wrapper",
+        "label": "Width",
+        "default": "normal",
+        "options": [
+          { "value": "normal", "label": "Normal" },
+          { "value": "full", "label": "Wide" }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "add_spacing",
+        "label": "Add padding",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Text"
+      },
+      {
+        "type": "range",
+        "id": "heading_size",
+        "label": "Heading size",
+        "default": 150,
+        "min": 100,
+        "max": 200,
+        "step": 10,
+        "unit": "%"
+      },
+      {
+        "type": "header",
+        "content": "Buttons style"
+      },
+      {
+        "type": "select",
+        "id": "button_style",
+        "label": "Button 1",
+        "default": "primary btn--small",
+        "options": [
+          { "label": "Text", "value": "text" },
+          { "label": "Small button", "value": "primary btn--small" },
+          { "label": "Large button", "value": "primary" },
+          { "label": "Small outline button", "value": "secondary btn--small" },
+          { "label": "Large outline button", "value": "secondary" }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "secondary_button_style",
+        "label": "Button 2",
+        "default": "secondary btn--small",
+        "options": [
+          { "label": "Text", "value": "text" },
+          { "label": "Small button", "value": "primary btn--small" },
+          { "label": "Large button", "value": "primary" },
+          { "label": "Small outline button", "value": "secondary btn--small" },
+          { "label": "Large outline button", "value": "secondary" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Style"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background"
+      },
+      {
+        "type": "header",
+        "content": "Mobile slider"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_slider_mobile",
+        "label": "Enable slider",
+        "default": true,
+        "info": "Horizontal slider in mobile layout."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Replacement image"
+          },
+          {
+            "type": "select",
+            "id": "bg_position",
+            "label": "Image position",
+            "default": "center-center",
+            "options": [
+              { "label": "Top", "value": "center-top" },
+              { "label": "Right", "value": "right-center" },
+              { "label": "Center", "value": "center-center" },
+              { "label": "Left", "value": "left-center" },
+              { "label": "Bottom", "value": "center-bottom" }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "overlay_opacity",
+            "label": "Text contrast",
+            "info": "Improves readability of text",
+            "min": 0,
+            "max": 95,
+            "step": 5,
+            "unit": "%",
+            "default": 10
+          },
+          {
+            "type": "header",
+            "content": "Text"
+          },
+          {
+            "type": "select",
+            "id": "text_position",
+            "label": "Content position",
+            "default": "top-left",
+            "options": [
+              { "value": "left", "label": "Left" },
+              { "value": "center", "label": "Center" },
+              { "value": "right", "label": "Right" },
+              { "value": "bottom-left", "label": "Bottom left" },
+              { "value": "bottom-right", "label": "Bottom right" },
+              { "value": "top-left", "label": "Top left" },
+              { "value": "top-right", "label": "Top right" }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_description",
+            "label": "Show description",
+            "default": true
+          },
+          {
+            "type": "header",
+            "content": "Buttons"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text"
+          },
+          {
+            "type": "header",
+            "content": "Colors"
+          },
+          {
+            "type": "select",
+            "id": "text_color",
+            "label": "Text",
+            "default": "text-light",
+            "options": [
+              {
+                "value": "text-light",
+                "label": "Light"
+              },
+              {
+                "value": "text-dark",
+                "label": "Dark"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "select",
+            "id": "bg_position",
+            "label": "Image position",
+            "default": "center-center",
+            "options": [
+              { "label": "Top", "value": "center-top" },
+              { "label": "Right", "value": "right-center" },
+              { "label": "Center", "value": "center-center" },
+              { "label": "Left", "value": "left-center" },
+              { "label": "Bottom", "value": "center-bottom" }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "overlay_opacity",
+            "label": "Text contrast",
+            "info": "Improves readability of text",
+            "min": 0,
+            "max": 95,
+            "step": 5,
+            "unit": "%",
+            "default": 10
+          },
+          {
+            "type": "header",
+            "content": "Text"
+          },
+          {
+            "type": "select",
+            "id": "text_position",
+            "label": "Content position",
+            "default": "top-left",
+            "options": [
+              { "value": "left", "label": "Left" },
+              { "value": "center", "label": "Center" },
+              { "value": "right", "label": "Right" },
+              { "value": "bottom-left", "label": "Bottom left" },
+              { "value": "bottom-right", "label": "Bottom right" },
+              { "value": "top-left", "label": "Top left" },
+              { "value": "top-right", "label": "Top right" }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_price",
+            "label": "Show price",
+            "default": true
+          },
+          {
+            "type": "header",
+            "content": "Buttons"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text"
+          },
+          {
+            "type": "header",
+            "content": "Colors"
+          },
+          {
+            "type": "select",
+            "id": "text_color",
+            "label": "Text",
+            "default": "text-light",
+            "options": [
+              {
+                "value": "text-light",
+                "label": "Light"
+              },
+              {
+                "value": "text-dark",
+                "label": "Dark"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "select",
+            "id": "bg_position",
+            "label": "Image position",
+            "default": "center-center",
+            "options": [
+              { "label": "Top", "value": "center-top" },
+              { "label": "Right", "value": "right-center" },
+              { "label": "Center", "value": "center-center" },
+              { "label": "Left", "value": "left-center" },
+              { "label": "Bottom", "value": "center-bottom" }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "overlay_opacity",
+            "label": "Text contrast",
+            "info": "Improves readability of text",
+            "min": 0,
+            "max": 95,
+            "step": 5,
+            "unit": "%",
+            "default": 10
+          },
+          {
+            "type": "header",
+            "content": "Text"
+          },
+          {
+            "type": "select",
+            "id": "text_position",
+            "label": "Content position",
+            "default": "top-left",
+            "options": [
+              { "value": "left", "label": "Left" },
+              { "value": "center", "label": "Center" },
+              { "value": "right", "label": "Right" },
+              { "value": "bottom-left", "label": "Bottom left" },
+              { "value": "bottom-right", "label": "Bottom right" },
+              { "value": "top-left", "label": "Top left" },
+              { "value": "top-right", "label": "Top right" }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Image"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Description",
+            "default": "Add more info or delete this text"
+          },
+          {
+            "type": "header",
+            "content": "Buttons"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text",
+            "info": "Leave blank to link entire block"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Button link"
+          },
+          {
+            "type": "text",
+            "id": "secondary_button_text",
+            "label": "Second button text"
+          },
+          {
+            "type": "url",
+            "id": "secondary_button_link",
+            "label": "Second button link"
+          },
+          {
+            "type": "header",
+            "content": "Colors"
+          },
+          {
+            "type": "select",
+            "id": "text_color",
+            "label": "Text",
+            "default": "text-light",
+            "options": [
+              {
+                "value": "text-light",
+                "label": "Light"
+              },
+              {
+                "value": "text-dark",
+                "label": "Dark"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Text"
+          },
+          {
+            "type": "select",
+            "id": "text_position",
+            "label": "Content position",
+            "default": "top-left",
+            "options": [
+              { "value": "left", "label": "Left" },
+              { "value": "center", "label": "Center" },
+              { "value": "right", "label": "Right" },
+              { "value": "bottom-left", "label": "Bottom left" },
+              { "value": "bottom-right", "label": "Bottom right" },
+              { "value": "top-left", "label": "Top left" },
+              { "value": "top-right", "label": "Top right" }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Image"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Description",
+            "default": "Add more info or delete this text"
+          },
+          {
+            "type": "header",
+            "content": "Buttons"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text",
+            "info": "Leave blank to link entire block"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Button link"
+          },
+          {
+            "type": "text",
+            "id": "secondary_button_text",
+            "label": "Second button text"
+          },
+          {
+            "type": "url",
+            "id": "secondary_button_link",
+            "label": "Second button link"
+          },
+          {
+            "type": "header",
+            "content": "Colors"
+          },
+          {
+            "type": "select",
+            "id": "text_color",
+            "label": "Text",
+            "default": "text-light",
+            "options": [
+              {
+                "value": "text-light",
+                "label": "Light"
+              },
+              {
+                "value": "text-dark",
+                "label": "Dark"
+              }
+            ]
+          },
+          {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background color",
+            "default": "#cfcfcf"
+          }
+        ]
+      }
+    ],
+        "presets": [
+      {
+        "name": "Mosaic",
+        "category": "Image",
+        "category": "Image",
+        "blocks": [
+          {
+            "type": "image",
+            "settings": {
+                "title": "Shop Trending"
+              }
+          },
+          {
+            "type": "image",
+            "settings": {
+                "title": "Shop Clearance"
+              }
+          },
+          {
+            "type": "image",
+            "settings": {
+                "title":"Shop <br> Best Sellers"
+              }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

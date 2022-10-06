@@ -1,0 +1,194 @@
+{%- comment -%}
+  Renders promo blocks for Collection pages or single promo sections
+
+  Accepts:
+  - block_id: {String} current block id
+  - block_shopify_attributes: {Object} Shopify attributes for block
+  - height: {String} Class for height
+  - width_class: {String} Class for width
+  - promo_row: {Integer} Number of row to be shown in
+  - bg_color: {String} Background color
+  - promo_collection: {Object} Collection object used to display the Promo block on specific collection only (Optional)
+  - promo_image: {Object} Image object used for background
+  - promo_heading: {String} Heading text
+  - promo_heading_size: {Number} Heading text size factor
+  - promo_content: {String} Content text
+  - promo_content_position: {String} Class for content position
+  - promo_layout: {String} Class for layout
+  - promo_btn_text: {String} Button text
+  - promo_btn_link: {String} Button link
+  - promo_btn_style: {String} Button style
+  - promo_text_color: {Color} Text color
+  - overlay_opacity: {Number} Overlay opacity factor
+
+  Usage:
+  {%- render 'promo',
+    block_id: block.id,
+    block_shopify_attributes: block.shopify_attributes,
+    height: height,
+    width_class: width_class,
+    promo_row: promo_row,
+    bg_color: bg_color,
+    promo_collection: promo_collection,
+    promo_image: promo_image,
+    promo_heading: promo_heading,
+    promo_heading_size: promo_heading_size,
+    promo_content: promo_content,
+    promo_content_position: promo_content_position,
+    promo_layout: promo_layout,
+    promo_btn_text: promo_btn_text,
+    promo_btn_link: promo_btn_link,
+    promo_btn_style: promo_btn_style,
+    promo_text_color: promo_text_color,
+    overlay_opacity: overlay_opacity,
+  -%}
+{%- endcomment -%}
+
+{%- liquid
+  assign animations_enabled = settings.animations_enabled
+  assign animation_delay = 250
+  assign show_text_shadow = settings.show_text_shadow
+
+  assign promo_banner_class = 'promo-banner'
+  assign animation_anchor = '#Promo--' | append: section.id
+
+  if section.id contains 'main'
+    assign promo_id = 'PromoBanner--' | append: block_id
+    assign animation_anchor = '.promo-banner'
+    assign promo_row = 'promo-banner--row-' | append: promo_row
+  else
+    for block in section.blocks
+      assign promo_btn_text = block.settings.promo_btn_text
+      assign promo_btn_link = block.settings.promo_btn_link
+    endfor
+  endif
+
+  if promo_image != blank
+    assign promo_banner_class = promo_banner_class | append: ' promo-banner--image'
+  endif
+  if promo_text_color
+    assign promo_banner_class = promo_banner_class | append: ' ' | append: promo_text_color
+  endif
+  if promo_btn_text == blank and promo_btn_link != blank
+    assign promo_banner_class = promo_banner_class | append: ' promo-banner--outer-link'
+  endif
+
+  assign promo_banner_class = promo_banner_class | append: ' ' | append: height | append: ' ' | append: width_class | append: ' ' | append: promo_content_position | append: ' ' | append: promo_row
+  
+  assign show_promo_block = true
+  if promo_collection != blank and promo_collection != collection
+    assign show_promo_block = false
+  endif
+-%}
+
+{%- if show_promo_block -%}
+  <div class="{{ promo_banner_class }}" id="{{ promo_id }}" {{ block_shopify_attributes }}>
+    {%- style -%}
+      {%- if block_id != blank -%}
+        #PromoBanner--{{ block_id }} {
+          --overlay-opacity: {{ overlay_opacity }};
+          --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ promo_heading_size }});
+          --adjust-body: calc(var(--FONT-ADJUST-BODY) * {{ promo_text_size }});
+          {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' and promo_image == blank -%}
+            --bg: {{ bg_color }};
+          {%- endif -%}
+        }
+      {%- else -%}
+        #Promo--{{ section.id }} {
+          --overlay-opacity: {{ overlay_opacity }};
+          {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' and promo_image == blank -%}
+            --bg: {{ bg_color }};
+          {%- endif -%}
+        }
+      {%- endif -%}
+    {%- endstyle -%}
+
+    {%- if promo_btn_text == blank and promo_btn_link != blank -%}
+      <a class="promo-banner__link" href="{{ promo_btn_link }}">{{ promo_btn_text }}
+    {%- endif -%}
+
+    {%- if promo_image != blank -%}
+      <div class="promo-banner__bg">
+        <div class="promo-banner__bg__image lazyload"
+        data-bgset="{% render 'bgset', image: promo_image %}"
+        data-sizes="auto"
+        data-parent-fit="cover">
+        </div>
+        <noscript>
+          <div class="promo-banner__bg__image" style="background-image: url({{ promo_image | img_url: '2048x' }});"></div>
+        </noscript>
+      </div>
+
+      <div class="overlay"></div>
+    {%- endif -%}
+
+    <div class="promo-banner__content promo-banner__content--{{ promo_layout }}{% if show_text_shadow and promo_image != blank %} backdrop--radial{% endif %}"{% if animations_enabled %} data-aos="fade" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+      {%- if section.id contains 'main' -%}
+        {%- if promo_heading != blank -%}
+          <h3 class="promo-banner__heading"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+            {{- promo_heading -}}
+          </h3>
+          {%- assign animation_delay = animation_delay | plus: 250 -%}
+        {%- endif -%}
+
+        {%- if promo_content != blank -%}
+          <div class="promo-banner__text"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+            {{- promo_content -}}
+          </div>
+          {%- assign animation_delay = animation_delay | plus: 250 -%}
+        {%- endif -%}
+
+        {%- if promo_btn_text != blank -%}
+          <div class="promo-banner__button"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+            <a class="btn btn--{{ promo_btn_style }}" href="{{ promo_btn_link }}">{{ promo_btn_text }}</a>
+          </div>
+        {%- endif -%}
+      {%- else -%}
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              {%- assign promo_heading = block.settings.promo_heading -%}
+              {%- assign promo_heading_size = block.settings.heading_size | times: 0.01 -%}
+
+              {%- style -%}
+                #Promo--{{ section.id }} { --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ promo_heading_size }}); }
+              {%- endstyle- %}
+
+              {%- if promo_heading != blank -%}
+                <h3 class="promo-banner__heading"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %} {{ block.shopify_attributes }}>{{ promo_heading }}</h3>
+                {%- assign animation_delay = animation_delay | plus: 250 -%}
+              {%- endif -%}
+
+            {%- when 'text' -%}
+              {% assign promo_content = block.settings.promo_content %}
+              {%- assign promo_text_size = block.settings.text_size | times: 0.01 -%}
+
+              {%- style -%}
+                #Promo--{{ section.id }} { --adjust-body: calc(var(--FONT-ADJUST-BODY) * {{ promo_text_size }}); }
+              {%- endstyle- %}
+
+              {%- if promo_content != blank -%}
+                <div class="promo-banner__text"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %} {{ block.shopify_attributes }}>{{ promo_content }}</div>
+                {%- assign animation_delay = animation_delay | plus: 250 -%}
+              {%- endif -%}
+
+            {%- when 'button' -%}
+              {%- assign promo_btn_text = block.settings.promo_btn_text -%}
+              {%- assign promo_btn_style = block.settings.promo_btn_style -%}
+              {%- assign promo_btn_link = block.settings.promo_btn_style -%}
+
+              {%- if promo_btn_text != blank -%}
+                <div class="promo-banner__button"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %} {{ block.shopify_attributes }}>
+                  <a class="btn btn--{{ promo_btn_style }}" href="{{ promo_btn_link }}">{{ promo_btn_text }}</a>
+                </div>
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+
+    {%- if promo_btn_text == blank and promo_btn_link != blank -%}
+      </a>
+    {%- endif -%}
+  </div>
+{%- endif -%}

@@ -1,0 +1,140 @@
+{%- liquid
+  assign show_author = section.settings.author
+  assign show_date = section.settings.date
+
+  capture article_excerpt
+    echo article.excerpt_or_content | strip_html | strip | truncatewords: 50
+  endcapture
+
+  assign animations_enabled = settings.animations_enabled
+  assign animation_anchor = '#FeaturedBlog--' | append: section.id
+-%}
+
+{%- capture article_image -%}
+  {%- if article.image -%}
+    <a href="{{ article.url }}" title="{{ article.title }}" aria-label="{{ article.title }}"
+      class="post__image lazyload"
+      {% if article.image %}
+      data-bgset="{% render 'bgset', image: article.image %}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      {% endif %}>
+    </a>
+    <noscript>
+      <a class="post__image" style="background-image:url('{{ article.image | img_url: '2048x' }}');"></a>
+    </noscript>
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture article_image_onboarding -%}
+  <div class="post__image placeholder-svg--overlayed">
+    {{- 'image' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+  </div>
+{%- endcapture -%}
+
+{%- capture article_tags -%}
+  {%- for tag in article.tags -%}
+    {%- unless tag contains 'time_' -%}
+      <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="post__tags__tag">{{ tag }}</a>
+      {%- unless forloop.last %}, {% endunless -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- capture article_tags_onboarding -%}
+  {%- for tag in (1..2) -%}
+    <a href="#!" class="post__tags__tag">{{ 'blogs.article.onboarding.tag' | t }}</a>
+    {%- unless forloop.last %}, {% endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- liquid
+  unless onboarding
+    assign article_url = article.url
+    assign article_image = article_image
+    assign article_title = article.title | strip_html
+    assign article_excerpt = article_excerpt
+    assign article_tags = article_tags
+    assign author = 'blogs.article.by_author' | t: author: article.author
+    assign published_at = article.published_at | date: format: 'month_day_year'
+    assign datetime = article.published_at | date: '%Y-%m-%d'
+    assign comments_count = 'blogs.comments.comments_with_count' | t: count: article.comments_count
+  else
+    assign article_url = '#!'
+    assign article_image = article_image_onboarding
+    assign article_title = 'blogs.article.onboarding.title' | t
+    assign article_excerpt = 'blogs.article.onboarding.excerpt' | t
+    assign article_tags = article_tags_onboarding
+    assign author_name = 'blogs.article.onboarding.author' | t
+    assign author = 'blogs.article.by_author' | t: author: author_name
+    assign published_at = 'now' | date: format: 'month_day_year'
+    assign datetime = 'now' | date: '%Y-%m-%d'
+    assign comments_count = 'blogs.comments.comments_with_count' | t: count: 0
+  endunless
+
+  assign show_comments = false
+  if section.settings.show_comments and blog.comments_enabled?
+    assign show_comments = true
+  endif
+
+  assign show_article_tags = false
+    if section.settings.tags and article_tags != blank
+    assign show_article_tags = true
+  endif
+-%}
+
+<div class="post__item grid__item one-half mobile--one-whole"
+  data-slide
+  {% if animations_enabled %}
+    data-aos="fade-up"
+    data-aos-anchor="{{ animation_anchor }}"
+    data-aos-delay="{{ animation_delay }}"
+  {% endif %}>
+  {%- if article_image != blank -%}
+    <div class="post__image-wrapper" data-slide-image>
+      {{ article_image }}
+    </div>
+  {%- endif -%}
+
+  <a href="{{ article_url }}" class="post__content">
+    <p class="post__heading h6">{{ article_title }}</p>
+
+    {%- if show_date or show_author -%}
+      <div class="post__meta">
+        {%- if show_author -%}
+          <span class="post__meta__author">{{ author }}</span>
+        {%- endif -%}
+
+        {%- if show_article_tags -%}
+          <span class="post__tags">
+            <span class="screen-reader-text">{{ 'blogs.article.tags' | t }}: </span>
+            {{- article_tags -}}
+          </span>
+
+          <span class="post__square-divider"></span>
+        {%- endif -%}
+
+        {%- if show_date -%}
+          <span class="post__meta__date"><time datetime="{{ datetime }}">{{ published_at }}</time></span>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="post__text">
+      {%- if article_excerpt != blank -%}
+        <div class="post__excerpt">
+          {{- article_excerpt -}}
+        </div>
+      {%- endif -%}
+    </div>
+  </a>
+
+  {%- if show_comments or show_article_tags -%}
+    <div class="post__meta">
+      {%- if show_comments -%}
+        <span class="post__meta__comment-count">{{ comments_count }}</span>
+      {%- endif -%}
+
+    </div>
+  {%- endif -%}
+</div>

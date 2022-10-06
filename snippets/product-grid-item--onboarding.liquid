@@ -1,0 +1,128 @@
+{%- comment -%}
+  Logic to set the grid size
+{%- endcomment -%}
+{%- liquid
+  assign columns = settings.products_per_row_on_desktop | plus: 0
+  assign columns_mobile = settings.products_per_row_on_mobile | plus: 0
+
+  case columns
+    when 1
+      assign size_desktop = 'one-whole'
+    when 2
+      assign size_desktop = 'one-half'
+    when 3
+      assign size_desktop = 'one-third'
+    when 4
+      assign size_desktop = 'one-quarter'
+  endcase
+
+  case columns_mobile
+    when 1
+      assign size_mobile = 'mobile--one-whole'
+    when 2
+      assign size_mobile = 'mobile--one-half'
+  endcase
+
+  if carousel
+    assign size_mobile = 'mobile--one-whole'
+  endif
+
+  assign index_hover = 7 | minus: index
+
+  assign animations_enabled = settings.animations_enabled
+  assign product_grid_hover = settings.product_grid_hover
+  assign product_grid_hover_animation = settings.product_grid_hover_animation
+  if product.media.size <= 1 or product_grid_hover == 'none'
+    assign product_grid_hover = false
+  endif
+-%}
+
+<div class="product-grid-item {% if carousel %}carousel__item{% else %}grid__item{% endif %} {{ size_desktop }} {{ size_mobile }}"
+  {% if carousel %} data-slide{% endif %}
+  data-product-block>
+  <div class="product-grid-item__inner">
+    <div class="product-grid-item__image" data-product-media-container>
+      <div class="product__media__outer">
+        <div class="product__media__inner">
+          <div class="product__media__container">
+            <div class="product__media__holder"{% if animations_enabled %} data-aos="zoom-out" data-aos-easing="ease-out-sine" data-aos-duration="500" data-aos-delay="{{ animation_delay | times: 150 }}"{% endif %}>
+              <div class="product__media__image product__media__image--hover-{{ product_grid_hover_animation }}">
+                <div class="product__media product__media--featured placeholder-svg--overlayed">
+                  {{ 'product-' | append: index | placeholder_svg_tag: 'placeholder-svg-filled' }}
+                </div>
+              </div>
+
+              {%- if product_grid_hover == 'slideshow' -%}
+                <div class="product__media__hover product__media__hover--{{ product_grid_hover_animation }}">
+                  <div class="product__media__slider" data-product-media-slideshow>
+                    {%- for j in (1..3) -%}
+                      <div class="product__media__slide" data-product-media-slideshow-slide>
+                        <div class="product__media placeholder-svg--overlayed">
+                          {{- 'product-' | append: index_hover | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+                        </div>
+                      </div>
+                    {%- endfor -%}
+                  </div>
+
+                  <div class="progress-bar">
+                    <div class="progress-bar__inner" data-product-slideshow-progress></div>
+                  </div>
+                </div>
+              {%- elsif product_grid_hover == 'image' -%}
+                <div class="product__media__hover product__media__hover--{{ product_grid_hover_animation }} placeholder-svg--overlayed">
+                  {{- 'product-' | append: index_hover | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+                </div>
+              {%- endif -%}
+            </div>
+
+            {%- unless settings.quick_button == 'none' -%}
+              {%- if settings.quick_button == 'view' -%}
+                <span class="btn--quick">
+                  {%- render 'icon-shopping-bag' -%}
+                </span>
+              {%- elsif settings.quick_button == 'buy' -%}
+                <span class="btn--quick">
+                  {%- render 'icon-toggle-plus' -%}
+                </span>
+              {%- endif -%}
+            {%- endunless -%}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-grid-item__info{% if settings.content_alignment == 'left' %} product-grid-item__info--left{% endif %}">
+      <a class="product-grid-item__title" href="#!">
+        {{- 'homepage.onboarding.product_title' | t -}}
+      </a>
+
+      <p class="product-grid-item__price price">{{ 1999 | money }}</p>
+
+      {%- if settings.show_rating -%}
+        <div class="product-grid-item__rating">
+          {%- render 'rating', show_rating_count: false, onboarding: true -%}
+        </div>
+      {%- endif -%}
+
+      {%- if settings.enable_color_swatches_collection -%}
+        <div class="product-grid-item__swatch{% if settings.product_grid_hover_swatches %} product-grid-item__swatch--hover{% endif %} swatch">
+          <div data-value="White" class="swatch__button color white">
+            <div class="swatch__label" style="--swatch: white;" data-swatch="White" data-tooltip="White">
+              {% render 'icon-check' %}
+            </div>
+          </div>
+          <div data-value="Grey" class="swatch__button color grey">
+            <div class="swatch__label" style="--swatch: grey;" data-swatch="Grey" data-tooltip="Grey">
+              {% render 'icon-check' %}
+            </div>
+          </div>
+          <div data-value="Black" class="swatch__button color black">
+            <div class="swatch__label" style="--swatch: black;" data-swatch="Black" data-tooltip="Black">
+              {% render 'icon-check' %}
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

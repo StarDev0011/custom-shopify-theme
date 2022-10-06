@@ -1,0 +1,640 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": true
+      }
+    },
+    "16618723893dfb6b71": {
+      "type": "section-slideshow",
+      "blocks": {
+        "1661872389387cdb53-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/drone_aerial_12254c48-8b56-432c-a332-da3bd4cc57a6.jpg",
+            "image_vertical": 30,
+            "image_horizontal": 50,
+            "image_contain": true,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 42,
+            "heading_mobile_font_size": 22,
+            "heading_font_weight": "400",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 20,
+            "text_mobile_font_size": 16,
+            "text_font_weight": "400",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "top-left",
+            "override_mobile_text_position": true,
+            "mobile_text_position_y": 0,
+            "mobile_text_position_x": "left",
+            "title": "COSMETIC FARM",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "spanning 4 acres in New Tripoli, PA many of our plant ingredients are sustainably grown and harvested on Cosmetic Farm, which is a non-profit organization that is committed to educating and expanding the world of plant based skincare, carbon free farming, and permaculture.",
+            "slide_btn_text": "visit cosmeticfarm.org",
+            "slide_btn_link": "",
+            "slide_btn_style": "text",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#000000",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        },
+        "dbda45d1-6437-4e96-b438-278c07edc2ba": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/garden1_copy_3.jpg",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 42,
+            "heading_mobile_font_size": 20,
+            "heading_font_weight": "400",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 20,
+            "text_mobile_font_size": 16,
+            "text_font_weight": "400",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "top-left",
+            "override_mobile_text_position": true,
+            "mobile_text_position_y": 0,
+            "mobile_text_position_x": "left",
+            "title": "ZERO CARBON PROPERTY",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "<p>unlike carbon neutrality, which seeks to \"balance out\" carbon emissions through questionable “offsets”, the distillery, Cosmetic Farm, produce zero carbon emissions during normal operations and distillation on site.*<\/p><p>the entire property runs on electricity (powered by renewable energy sources - wind, solar, etc...).<\/p><p>*although we strive to minimize the carbon impact of our entire supply chain, the packaged product in its entirety cannot be considered “carbon free.” Also, there are certain repairs and improvements to the property carried out by contractors or others that from time to time may require carbon emitting tools or vehicles for a brief period of time.<\/p>",
+            "slide_btn_text": "visit cosmeticfarm.org",
+            "slide_btn_link": "",
+            "slide_btn_style": "text",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#000000",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1661872389387cdb53-0",
+        "dbda45d1-6437-4e96-b438-278c07edc2ba"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "original-height",
+        "show_nav_dots": true,
+        "show_nav_arrows": true,
+        "show_arrow_down": false,
+        "arrow_dot_color": "#ffffff",
+        "next_prev_color": "",
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": false,
+        "heading_size": 120,
+        "custom_css": ""
+      }
+    },
+    "16565303174e4346fe": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "full-height",
+        "text_position": "right",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/drone_aerial_c80ae99f-165a-4329-9f67-623fb6fe631d.jpg",
+        "image_background": false,
+        "bg_position": "center-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#ffffff",
+        "border_width": 2,
+        "textbox_background_color": "#ffffff",
+        "text_color": "#000000",
+        "text_alignment": "left",
+        "subheading": "non-profit organization",
+        "heading": "cosmetic farm",
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 22,
+        "heading_font_weight": "700",
+        "text": "<p>spanning 4 acres in New Tripoli, PA many of our plant ingredients are sustainably grown and harvested on Cosmetic Farm, which is a non-profit organization that is committed to educating and expanding the world of plant based skincare, carbon free farming, and permaculture.<\/p>",
+        "text_font_size": 20,
+        "text_mobile_font_size": 12,
+        "text_font_weight": "200",
+        "button_text": "Learn More",
+        "button_link": "shopify:\/\/blogs\/the-press\/did-you-know-unhealthy-soil-may-be-the-reason-why-your-skin-is-suffering",
+        "button_style": "text",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "165547587224492510": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "1655475872e5ed1f1a-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "<strong> zero carbon property<\/strong>",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "<p>unlike carbon neutrality, which seeks to \"balance out\" carbon emissions through questionable “offsets”, the distillery, Cosmetic Farm, produce zero carbon emissions during normal<br>operations and distillation on site.*<\/p><p>the entire property runs on electricity (powered by renewable energy sources - wind, solar, etc...).<\/p><p>*although we strive to minimize the carbon impact of our entire supply chain, the packaged product in its entirety cannot be considered “carbon free”. Also, there are certain repairs and improvements to the property carried out by contractors or others that from time to time may require carbon emitting tools or vehicles for a brief period of time.<\/p>",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "LEARN MORE",
+            "button_link": "",
+            "button_style": "text",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        },
+        "1655475872e5ed1f1a-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/drone_aerial_c80ae99f-165a-4329-9f67-623fb6fe631d.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 10,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "1655475872e5ed1f1a-1",
+        "1655475872e5ed1f1a-0"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "add_spacing": true,
+        "in_collection": false,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "16565305329c477208": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "seven-fifty-height",
+        "text_position": "left",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/PBD_sign.png",
+        "image_background": false,
+        "bg_position": "center-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": true,
+        "mobile_background_y_position": 4,
+        "mobile_background_x_position": 81,
+        "border_color": "#7a7a7a",
+        "border_width": 2,
+        "textbox_background_color": "#7a7a7a",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "zero carbon property",
+        "heading": "the distillery",
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>the distillery is located on Cosmetic Farm™<\/p><p>each and every drop of hydrosol for our products is produced at our distillery using our patent pending dual phase distillation process.<\/p>",
+        "text_font_size": 20,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "1658847888dabb6c90": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "six-fifty-height",
+        "text_position": "left",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/farhousesunbeam_copy_1.jpg",
+        "image_background": true,
+        "bg_position": "center-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#ffffff",
+        "border_width": 2,
+        "textbox_background_color": "#ffffff",
+        "text_color": "#000000",
+        "text_alignment": "left",
+        "subheading": "",
+        "heading": "zero carbon property",
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>unlike carbon neutrality, which seeks to \"balance out\" carbon emissions through questionable “offsets”, the distillery, Cosmetic Farm, produce zero carbon emissions during normal operations and distillation on site.*<\/p><p>the entire property runs on electricity (powered by renewable energy sources - wind, solar, etc...).<\/p><p>*although we strive to minimize the carbon impact of our entire supply chain, the packaged product in its entirety cannot be considered “carbon free”. Also, there are certain repairs and improvements to the property carried out by contractors or others that from time to time may require carbon emitting tools or vehicles for a brief period of time.<\/p>",
+        "text_font_size": 20,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "165547599591bf6403": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "16554759953299d79f-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "right",
+            "top_image_width": 50,
+            "text_color": "text-dark",
+            "subheading": "zero carbon property",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "the distillery",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "<p>the distillery is located on Cosmetic Farm™<\/p><p>each and every drop of hydrosol for our products is produced at our distillery using our patent pending dual phase distillation process.<\/p>",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        },
+        "16554759953299d79f-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/FARM2.png",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "16554759953299d79f-1",
+        "16554759953299d79f-0"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "add_spacing": true,
+        "in_collection": false,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "1655902982eef566d9": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "1655902982e326a40b-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2022-05-05T133419.791_c2d2fa1a-8083-4df8-be2d-0d1fc839e017.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1655902982e326a40b-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fullstill-Recovered_2_d1814e9e-796f-434b-b79c-d4215c506bcb.jpg",
+            "bg_position": "right-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1655902982e326a40b-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-05-11_at_9.01.52_AM.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "1655902982e326a40b-0",
+        "1655902982e326a40b-2",
+        "1655902982e326a40b-1"
+      ],
+      "settings": {
+        "height": "550",
+        "min_tablet_height": 370,
+        "min_mobile_height": 215,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 28,
+        "heading_mobile_font_size": 28,
+        "heading_font_weight": "700",
+        "heading_color": "#ffffff",
+        "text_font_size": 18,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "text_color": "#ffffff",
+        "button_style": "secondary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": true
+      }
+    },
+    "1656530899e876d1de": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "seven-fifty-height",
+        "text_position": "right",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/yusovmodel1_copy_1_e5f1fb3b-dbdb-48e4-b36f-c0eed715a5c5.jpg",
+        "image_background": false,
+        "bg_position": "right-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#7a7a7a",
+        "border_width": 2,
+        "textbox_background_color": "#7a7a7a",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "from start to finish",
+        "heading": "made by us",
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>unlike most beauty brands, all of our products are entirely made by us from start to finish. we independently do our own research and development, manufacturing, fulfillment, and distribution.<\/p><p>Because of this, we are able to control every aspect of the quality and integrity of our products.<\/p><p>After distillation, the final step of production (finishing, bottling and labeling) takes place at our Greenleaf facility, owned by our parent company, Plant Industries. Greenleaf is located in Allentown, PA and about 20 minutes away from the Distillery.<\/p>",
+        "text_font_size": 20,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "1655831780728553aa": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "1655831780731c8cb4-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/yusovmodel1_copy_1.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "1655831780731c8cb4-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "from start to finish",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "made by us",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "<p>unlike most beauty brands, all of our products are entirely made by us from start to finish. we independently do our own research and development, manufacturing, fulfillment, and distribution.<\/p><p>Because of this, we are able to control every aspect of the quality and integrity of our products.<\/p><p>After distillation, the final step of production (finishing, bottling and labeling) takes place at our Greenleaf facility, owned by our parent company, Plant Industries. Greenleaf is located in Allentown, PA and about 20 minutes away from the Distillery.<\/p>",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "1655831780731c8cb4-0",
+        "1655831780731c8cb4-1"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "add_spacing": true,
+        "in_collection": false,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "165583210276458d9f": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "16558321010e705ff2-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "right",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "patent-pending",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "the invention: more plant power from dual phase distillation",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "<p>getting the most from plants is essential if effective products are going to be made exclusively from plant-based ingredients.<\/p><p>our patent-pending distillation method captures whole, undamaged plant actives.<\/p><p>we soak and then press our plants before beginning distillation - and then separate the solid and liquid plant components into different parts of our specially designed stills.<\/p><p>the still is then placed under vacuum pressure to significantly reduce the amount of heat required for distillation. (heat can damage or change plant extracts by essentially “cooking’ them.)<\/p><p>during distillation, the solid and liquid components are reunited to form a hydrosol – a water saturated with plant actives at peak potency and effectiveness.<\/p>",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        },
+        "16558321010e705ff2-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/1_BOTTLE_BKGA_48d1ac88-f568-4885-b6d4-c9bf4bcb189b.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "16558321010e705ff2-1",
+        "16558321010e705ff2-0"
+      ],
+      "settings": {
+        "height": "six-fifty-height",
+        "add_spacing": true,
+        "in_collection": false,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16618723893dfb6b71",
+    "16565303174e4346fe",
+    "165547587224492510",
+    "16565305329c477208",
+    "1658847888dabb6c90",
+    "165547599591bf6403",
+    "1655902982eef566d9",
+    "1656530899e876d1de",
+    "1655831780728553aa",
+    "165583210276458d9f"
+  ]
+}

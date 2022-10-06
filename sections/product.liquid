@@ -1,0 +1,572 @@
+{%- comment -%} /sections/product-template {%- endcomment -%}
+{%- liquid
+  assign bg_color = section.settings.bg_color
+  assign wrapper = section.settings.wrapper
+  assign wrapper_class = 'wrapper'
+  if wrapper != 'normal'
+    assign wrapper_class = wrapper_class | append: ' wrapper--' | append: wrapper
+  endif
+-%}
+
+{%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+  {%- style -%}
+    #ProductTemplate--{{ section.id }} { background: {{ bg_color }}; }
+    .shop-pay-terms { --payment-terms-background-color: {{ bg_color }} }
+  {%- endstyle -%}
+{%- endif -%}
+
+<section id="ProductTemplate--{{ section.id }}"
+  class="product-single"
+  data-enable-history-state="true"
+  data-section-type="product-template"
+  data-section-id="{{ section.id }}">
+  <div class="{{ wrapper_class }}">
+    {%- render 'product' section: section, unique: section.id -%}
+  </div>
+</section>
+
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": {{ product.title | strip_html | json }},
+  "url": {{ shop.url | append: product.url | json }},
+  {%- if product.featured_media -%}
+    {%- assign media_size = product.featured_media.preview_image.width | append: 'x' -%}
+    "image": [
+      {{ product.featured_media | img_url: media_size | prepend: "https:" | json }}
+    ],
+  {%- endif -%}
+  "description": {{ product.description | strip_html | json }},
+  {%- if current_variant.sku != blank -%}
+    "sku": {{ current_variant.sku | json }},
+  {%- endif -%}
+  "brand": {
+    "@type": "Thing",
+    "name": {{ product.vendor | json }}
+  },
+  {%- if current_variant.barcode -%}
+    "gtin8": "{{ product.variants.first.barcode }}",
+  {%- endif -%}
+  {%- if current_variant.barcode.size == 12 -%}
+    "gtin12": "{{ product.variants.first.barcode }}",
+  {%- endif -%}
+  {%- if current_variant.barcode.size == 13 -%}
+    "gtin13": "{{ product.variants.first.barcode }}",
+  {%- endif -%}
+  {%- if current_variant.barcode.size == 14 -%}
+    "gtin14": "{{ product.variants.first.barcode }}",
+  {%- endif -%}
+  "offers": [
+    {%- for variant in product.variants -%}
+      {
+        "@type" : "Offer",
+        {%- if variant.sku != blank -%}
+          "sku": {{ variant.sku | json }},
+        {%- endif -%}
+        "availability" : "http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+        "price" : {{ variant.price | divided_by: 100.00 | json }},
+        "priceCurrency" : {{ cart.currency.iso_code | json }},
+        "url" : {{ shop.url | append: variant.url | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+
+{% schema %}
+{
+  "name": "Product pages",
+  "class": "shopify-section--product",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "wrapper",
+      "label": "Width",
+      "default": "normal",
+      "options": [
+        { "label": "Normal" , "value": "normal" },
+        { "label": "Wide", "value": "full" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "Image size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "header",
+      "content": "Media",
+      "info": "Learn more about [media types](https://help.shopify.com/manual/products/product-media)"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_zoom",
+      "label": "Enable zoom",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "label": "Enable video looping",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "Title and price",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "subheading",
+          "label": "Navigation",
+          "default": "none",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "breadcrumbs", "label": "Breadcrumbs" },
+            { "value": "collection", "label": "Collection" },
+            { "value": "vendor", "label": "Vendor" }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "Star rating",
+          "info": "Requires an app to set the metafield value for reviews.rating"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_rating",
+          "label": "Show star rating",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_rating_count",
+          "label": "Show rating count",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "Form",
+      "type": "form",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Size chart"
+        },
+        {
+          "type": "page",
+          "id": "info_page",
+          "label": "Page"
+        },
+        {
+          "type": "text",
+          "id": "info_page_title_override",
+          "label": "Page title override"
+        },
+        {
+          "type": "header",
+          "content": "Form elements"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_labels",
+          "label": "Show variant labels",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_quantity",
+          "label": "Show quantity selector",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "show_payment_button",
+          "label": "Show dynamic checkout buttons",
+          "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/en/manual/online-store/os/dynamic-checkout)",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Subscriptions",
+          "info": "Learn more about [subscriptions](https://help.shopify.com/en/manual/products/subscriptions)"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_subscriptions_selectors",
+          "label": "Enable subscription selectors",
+          "info": "Shown on products with subscription options",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "Product description",
+      "type": "description",
+      "settings": []
+    },
+    {
+      "name": "Accordions",
+      "type": "product_accordions",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_heading_1",
+          "label": "Accordion heading 1",
+          "default": "Materials and specs"
+        },
+        {
+          "type": "richtext",
+          "id": "accordion_text_1",
+          "label": "Accordion text 1",
+            "default": "<p>Use this accordion to add info such as Materials, Sizing, Features, Shipping and Returns policies</p>"
+        },
+        {
+          "type": "page",
+          "id": "accordion_page_1",
+          "label": "Accordion page 1",
+          "info": "Example: Size chart"
+        },
+        {
+          "type": "text",
+          "id": "accordion_heading_2",
+          "label": "Accordion heading 2",
+          "default": "Shipping and returns"
+        },
+        {
+          "type": "richtext",
+          "id": "accordion_text_2",
+          "label": "Accordion text 2",
+            "default": "<p>Use this accordion to add info such as Materials, Sizing, Features, Shipping and Returns policies</p>"
+        },
+        {
+          "type": "page",
+          "id": "accordion_page_2",
+          "label": "Accordion page 2"
+        },
+        {
+          "type": "text",
+          "id": "accordion_heading_3",
+          "label": "Accordion heading 3"
+        },
+        {
+          "type": "richtext",
+          "id": "accordion_text_3",
+          "label": "Accordion text 3"
+        },
+        {
+          "type": "page",
+          "id": "accordion_page_3",
+          "label": "Accordion page 3"
+        },
+        {
+          "type": "text",
+          "id": "accordion_heading_4",
+          "label": "Accordion heading 4"
+        },
+        {
+          "type": "richtext",
+          "id": "accordion_text_4",
+          "label": "Accordion text 4"
+        },
+        {
+          "type": "page",
+          "id": "accordion_page_4",
+          "label": "Accordion page 4"
+        },
+        {
+          "type": "text",
+          "id": "accordion_heading_5",
+          "label": "Accordion heading 5"
+        },
+        {
+          "type": "richtext",
+          "id": "accordion_text_5",
+          "label": "Accordion text 5"
+        },
+        {
+          "type": "page",
+          "id": "accordion_page_5",
+          "label": "Accordion page 5"
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "type": "upsell",
+      "name": "Upsell",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "paragraph",
+          "content": "Upsell is best as a one-click add to cart, so upsell products should have no variants. [Learn more](https://groupthought.com/link/pipeline/docs/upsell/variant)"
+        },
+        {
+          "type": "header",
+          "content": "Upsell in cart"
+        },
+        {
+          "type": "paragraph",
+          "content": "Use a dynamic source with the metafield Namespace and key 'theme.upsell' to allow product upsells to follow users into the cart. Use any other name to limit this feature to the product page. [Learn more](https://groupthought.com/link/pipeline/docs/upsell/cart)"
+        }
+      ]
+    },
+    {
+      "name": "Share button",
+      "type": "share-button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Share",
+          "info": "If you include a link in social media posts, the page\’s featured image will be shown as the preview image.[Learn more](https://help.shopify.com/en/manual/online-store/images/showing-social-media-thumbnail-images)"
+        },
+        {
+          "type": "paragraph",
+          "content": "A store title and description are included with the preview image.[Learn more](https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)"
+        }
+      ]
+    },
+    {
+      "name": "Pickup availability",
+      "type": "pickup",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Show customers where they can pick up the product. [Learn more](https://help.shopify.com/en/manual/shipping/setting-up-and-managing-your-shipping/local-methods/local-pickup#show-pickup-availability-to-your-customers)"
+        }
+      ]
+    },
+    {
+      "name": "Custom Liquid",
+      "type": "custom_liquid",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom liquid",
+          "info": "Add app snippets or other Liquid code to create advanced customizations."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Text",
+          "default": "<p>Give more details about the product</p>"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text alignment",
+          "default": "left",
+          "options": [
+            { "label": "Center", "value": "center" },
+            { "label": "Left", "value": "left" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "icon",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon_name",
+          "label": "Select an icon",
+          "default": "check",
+          "options": [
+            { "value": "alert-circle", "label": "Alert" },
+            { "value": "archive", "label": "Archive" },
+            { "value": "arrow-up-circle", "label": "Arrow" },
+            { "value": "arrow-up-right", "label": "Arrow right" },
+            { "value": "at-sign", "label": "At sign" },
+            { "value": "award", "label": "Award" },
+            { "value": "bell", "label": "Bell" },
+            { "value": "bookmark", "label": "Bookmark" },
+            { "value": "calendar", "label": "Calendar" },
+            { "value": "camera", "label": "Camera" },
+            { "value": "check", "label": "Check" },
+            { "value": "clipboard", "label": "Clipboard" },
+            { "value": "clock", "label": "Clock" },
+            { "value": "compass", "label": "Compass" },
+            { "value": "credit-card", "label": "Credit card" },
+            { "value": "dollar-sign", "label": "Dollar sign" },
+            { "value": "download", "label": "Download" },
+            { "value": "edit-2", "label": "Pencil" },
+            { "value": "flag", "label": "Flag" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "help-circle", "label": "Question mark" },
+            { "value": "info", "label": "Info" },
+            { "value": "mail", "label": "Mail" },
+            { "value": "map-pin", "label": "Map" },
+            { "value": "message-circle", "label": "Message" },
+            { "value": "music", "label": "Music" },
+            { "value": "paperclip", "label": "Paperclip" },
+            { "value": "phone", "label": "Phone" },
+            { "value": "plus", "label": "Plus" },
+            { "value": "refresh-cw", "label": "Recycle" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "smile", "label": "Smile" },
+            { "value": "star", "label": "Star" },
+            { "value": "thumbs-up", "label": "Thumbs up" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "zap", "label": "Lightening" },
+            { "value": "none", "label": "None"}
+          ]
+        },
+        {
+          "type": "color",
+          "id": "icon_color",
+          "label": "Color"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Image",
+          "info": "If set overrides the icon above"
+        },
+        {
+          "type": "range",
+          "id": "icon_width",
+          "label": "Width",
+          "min": 20,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "default": 20
+        },
+        {
+          "type": "header",
+          "content": "Text"
+        },
+        {
+          "type": "text",
+          "id": "icon_text",
+          "label": "Heading",
+          "default": "Free shipping over $99"
+        },
+        {
+          "type": "range",
+          "id": "text_size",
+          "label": "Size",
+          "default": 90,
+          "min": 50,
+          "max": 125,
+          "step": 5,
+          "unit": "%"
+        },
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Width",
+          "default": "full",
+          "options": [
+            { "label": "Wide", "value": "full" },
+            { "label": "Half", "value": "half" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Alignment",
+          "default": "left",
+          "options": [
+            { "label": "Center", "value": "center" },
+            { "label": "Left", "value": "left" }
+          ]
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "checkbox",
+          "id": "remove_padding",
+          "label": "Remove padding",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "inventory_countdown",
+      "name": "Inventory countdown",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "popup_text",
+      "name": "Popup text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Read more"
+        },
+        {
+          "type": "page",
+          "id": "popup_page",
+          "label": "Page"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

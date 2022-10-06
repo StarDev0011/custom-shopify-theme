@@ -1,0 +1,213 @@
+{%- liquid
+  assign animations_enabled = settings.animations_enabled
+  assign animation_anchor = '#RichText--' | append: unique
+  if show_image
+    assign animation_anchor = '#ImageWithText--' | append: unique
+  endif
+  assign animation_delay = 250
+
+  assign wrapper_class = 'wrapper wrapper--narrow'
+  if wrapper == 'full'
+    assign wrapper_class = 'wrapper wrapper--full'
+  elsif wrapper == 'normal'
+    assign wrapper_class = 'wrapper'
+  endif
+-%}
+
+{%- capture content -%}
+  {%- if top_image != blank -%}
+    <div class="rich-text__top-image"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+      {%- liquid
+        assign image_url_pattern = top_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        assign image_widths = "[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048, 2450, 2700, 3000, 3350, 3750, 4100]"
+        assign animation_delay = animation_delay | plus: 250
+      -%}
+
+      <img class="rich-text__top-image-img lazyload"
+        src="{{ 'blank.gif' | asset_img_url: '1x1' }}"
+        data-src="{{ image_url_pattern }}"
+        data-widths= "{{ image_widths }}"
+        data-aspectratio="{{ top_image.aspect_ratio }}"
+        data-sizes="auto"
+        style="width: {{ top_image_width }}px"
+        alt="{{ top_image.alt | escape }}">
+      <noscript>
+        <img src="{{ top_image | img_url: '512x' }}" class="rich-text__top-image-img" style="width: {{ top_image_width }}px" alt="{{ top_image.alt | escape }}">
+      </noscript>
+    </div>
+  {%- endif -%}
+
+  {%- style -%}
+  .subheading-text {
+    font-size: {{subheading_font_size_desktop}}px;
+  }
+  .rich-text__heading {
+    font-size: {{heading_font_size_desktop}}px;
+  }
+  .rich-text__text {
+    font-size: {{text_font_size_desktop}}px
+  }
+  {% if subheading_weight=='sub-normal' %}
+  .subheading-text {
+    font-weight: normal;
+  }
+  {% else %}
+  .subheading-text {
+    font-weight: bold;
+  }
+  {% endif %}
+
+  {% if heading_weight=='heading-normal' %}
+  .rich-text__heading {
+    font-weight: normal;
+  }
+  {% else %}
+  .rich-text__heading {
+    font-weight: bold;
+  }
+  {% endif %}
+
+  {% if text_weight=='text-normal' %}
+  .rich-text__text {
+    font-weight: normal;
+  }
+  {% else %}
+  .rich-text__text {
+    font-weight: bold;
+  }
+  {% endif %}
+
+  @media screen and (max-width: 465px) {
+    .subheading-text {
+      font-size: {{subheading_font_size_mobile}}px;
+    }
+    .rich-text__heading {
+      font-size: {{heading_font_size_mobile}}px;
+    }
+    .rich-text__text {
+      font-size: {{text_font_size_mobile}}px;
+    }
+  }
+  {%- endstyle -%}
+
+  {%- if subheading != blank -%}
+    <div class="subheading-text main-subheading"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{subheading}}</div>
+    {%- assign animation_delay = animation_delay | plus: 250 -%}
+  {%- endif -%}
+
+  {%- if heading != blank -%}
+    <h3 class="rich-text__heading h2"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ heading }}</h3>
+    {%- assign animation_delay = animation_delay | plus: 250 -%}
+
+    {%- if settings.show_spacer_lines -%}
+      <hr{% if animations_enabled %} data-aos="fade-up" data-aos-delay="{{ animation_delay }}" data-aos-anchor="{{ animation_anchor }}"{% endif %}>
+      {%- assign animation_delay = animation_delay | plus: 250 -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if text != blank -%}
+    <div class="rich-text__text"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ text }}</div>
+    {%- assign animation_delay = animation_delay | plus: 250 -%}
+  {%- endif -%}
+
+  {%- if button_text != blank or secondary_button_text != blank -%}
+    <div class="rich-text__buttons main-buttons">
+      {%- if button_text != blank -%}
+        <div class="main-buttons__item"{% if animations_enabled %} data-aos="fade" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+          <a class="btn btn--{{ button_style }}" href="{{ button_link }}">{{ button_text }}</a>
+          {%- assign animation_delay = animation_delay | plus: 150 -%}
+        </div>
+      {%- endif -%}
+
+      {%- if secondary_button_text != blank -%}
+        <div class="main-buttons__item"{% if animations_enabled %} data-aos="fade" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+          <a class="btn btn--{{ secondary_button_style }}" href="{{ secondary_button_link }}">{{ secondary_button_text }}</a>
+        </div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture video_link -%}
+  {%- unless video_url == blank -%}
+    {%- if video_url.type == 'youtube' -%}
+      {%- assign video_url = 'https://www.youtube.com/watch?v=' | append: video_url.id  -%}
+    {%- elsif video_url.type == 'vimeo' -%}
+      {%- assign video_url = 'https://vimeo.com/' | append: video_url.id  -%}
+    {%- endif -%}
+
+    <div class="rich-text__video-link"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+      <a class="play-button" href="{{ video_url }}" data-play-button>
+        {%- render 'icon-play' -%}
+      </a>
+    </div>
+  {%- endunless -%}
+{%- endcapture -%}
+
+{%- if show_image -%}
+  {%- if image_background -%}
+    <div class="rich-text__background">
+      <style>
+         @media only screen and (max-width: 479px) {
+            #ImageWithText--{{ section.id }} .rich-text__image-bg {
+              background-position: {{ mobile_background_x_position }}% {{ mobile_background_y_position }}% !important;
+            }
+          }
+      </style>
+      {%- unless image == blank -%}
+        <div class="rich-text__background-image {{ bg_position | prepend: 'bg-pos-' }} lazyload"
+          data-bgset="{% render 'bgset', image: image %}"
+          data-parent-fit="cover"
+          data-sizes="auto">
+        </div>
+        <noscript>
+          <div class="rich-text__background-image {{ bg_position | prepend: 'bg-pos-' }} no-js-image" style="background-image: url({{ image | img_url: '2048x' }});"></div>
+        </noscript>
+      {%- else -%}
+        <div class="rich-text__background-image svg-placeholder placeholder-svg--overlayed">
+          {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+        </div>
+      {%- endunless -%}
+    </div>
+  {%- endif -%}
+
+  <div class="{{ wrapper_class }}">
+    <div class="rich-text__wrapper{% if text_position == 'right' %} rich-text__wrapper--reversed{% endif %}{% if content == blank %} rich-text__wrapper--no-content{% endif %}{% if video_url == blank %} rich-text__wrapper--no-video{% endif %}">
+
+      {%- unless image_background -%}
+        <div class="rich-text__image">
+          {%- unless image == blank -%}
+            <div class="rich-text__image-bg {{ bg_position | prepend: 'bg-pos-' }} lazyload"
+                data-bgset="{% render 'bgset', image: image %}"
+                data-aspectratio="{{ image.aspect_ratio }}"
+                data-sizes="auto">
+            </div>
+            <noscript>
+              <div class="rich-text__image-bg {{ bg_position | prepend: 'bg-pos-' }} no-js-image" style="background-image: url({{ image | img_url: '2048x' }});"></div>
+            </noscript>
+          {%- else -%}
+            <div class="rich-text__image-bg rich-text__image-bg--placeholder placeholder-svg--overlayed">
+              {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+            </div>
+          {%- endunless -%}
+        </div>
+      {%- endunless -%}
+
+      {%- unless content == blank -%}
+        <div class="rich-text__content text-{{ text_alignment }}"{% if animations_enabled and show_image %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}"{% endif %} data-overflow-content>
+          {{- content -}}
+        </div>
+      {%- endunless -%}
+
+      {{- video_link -}}
+    </div>
+  </div>
+{%- else -%}
+  <div class="rich-text rich-text--no-image text-{{ text_position }}">
+    <div class="{{ wrapper_class }}">
+      <div class="rich-text__container">
+        {{- content -}}
+      </div>
+    </div>
+  </div>
+{%- endif -%}

@@ -1,0 +1,424 @@
+<!-- Shopify app - BYOB (Build Your Own Bundle) v0.7x -->
+<!-- Benny Chan © 2022 SillyCube Technology Ltd.  All rights reserved.  -->
+<!-- https://apps.shopify.com/byob-build-your-own-bundle -->
+{% comment %}section locale is used: https://shopify.dev/themes/architecture/sections/section-schema#locales{% endcomment %}
+{% render "byob-messages" %}
+<style>
+.byob-section-wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+img {
+    max-width: 100%;
+}
+.byob-banner-image {
+  {% unless section.settings.show_banner_image %}display:none;{% endunless %}
+}
+.byob-bundle-description   {
+  font-size: {{ section.settings.description_font_size }}px;
+}
+.byob-bundle-description-warning {
+  display:none;
+}
+.padding-top {
+  padding-top: {{ section.settings.image_header_padding }}px;
+}
+.m-auto {
+    margin: auto;
+}
+.lb-compare-at-price {
+  display:none;
+}
+.lh-sale-popup {z-index:0;} /* blocked layoutHub sales popup*/
+/* Custom CSS BEGIN */
+{{ section.settings.custom_css }}
+/* Custom CSS END */
+</style>
+{% if section.settings.byob_section_wrapper %}{%- assign wrapper-class = 'byob-section-wrapper' -%}{% endif %}
+<div id="textsection" class="page-width {{ wrapper-class }}">
+  {% case section.settings.align_text %}
+    {% when 'left' %}
+    	{%- assign text-classes = 'byob-text-left' -%}
+    {% when 'center' %}
+    	{%- assign text-classes = 'byob-text-center' -%}
+    {% when 'right' %}
+    	{%- assign text-classes = 'byob-text-right' -%}
+  {% endcase %}
+
+  {% case section.settings.media_size %}
+    {% when 'medium' %}
+      {%- assign product_media_width = 'medium-up--one-half' -%}
+    {% when 'large' %}
+      {%- assign product_media_width = 'medium-up--two-thirds' -%}
+    {% when 'full' %}
+      {%- assign product_media_width = 'medium-up--one-whole' -%}
+  {% endcase %}
+  <div class="byob-text-center byob-content-center {{ product_media_width }}">
+    {% if product.images.size >= 1 %}<img class="byob-banner-image" src="{{ product.images.last | img_url: 'master' }}" alt="{{ product.images.last.alt }}" >{% endif %}
+  </div>
+  <div class="{{ text-classes }} padding-top">
+    {% if section.settings.title_size == 'h1' %}<h1 id="byob-bundle-header">{{ product.title }}</h1>
+    {% elsif section.settings.title_size == 'h2' %}<h2 id="byob-bundle-header">{{ product.title }}</h2>
+    {% elsif section.settings.title_size == 'h3' %}<h3 id="byob-bundle-header">{{ product.title }}</h3>
+    {% elsif section.settings.title_size == 'p' %}<p id="byob-bundle-header" class="byob-bundle-description">{{ product.title }}</p>
+    {% endif %}
+    {% unless product.description == blank %}<p class="byob-bundle-description">{{ product.description }}</p>{% endunless %}
+    <p class="byob-bundle-description-warning" style="color: red">Please wait for a few seconds on the checkout page so the products can be loaded into your cart. </p>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "BYOB Bundle Info",
+    "settings": [
+        {
+          "type": "paragraph",
+          "content": "⚠️ Do NOT hide or remove this section. The product selection tabs may disappear after option changes. Just hit the 'Save' button and they will be re-rendered"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_banner_image",
+          "label": "Show Banner Image",
+          "default": true
+        },
+      {
+        "type": "select",
+        "id": "media_size",
+        "label": "Bundle image size",
+        "default": "full",
+        "options": [
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          },
+          {
+            "value": "full",
+            "label": "Full"
+          }
+        ]
+      },
+	  {
+        "type": "range",
+        "id": "image_header_padding",
+        "label": "Padding between image and title",
+        "min": 0,
+        "max": 30,
+        "step": 1,
+        "default": 0
+      },
+      {
+        "type": "checkbox",
+        "id": "byob_section_wrapper",
+        "label": "Add margins to both sides",
+        "info": "If the bundle image is too large, you may need to add margins",
+        "default": true
+      },
+	  {
+        "type": "select",
+        "id": "align_text",
+        "label": "Text alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "title_size",
+        "label": "Title size",
+        "default": "h1",
+        "options": [
+          {
+            "value": "h1",
+            "label": "Large"
+          },
+          {
+            "value": "h2",
+            "label": "Medium"
+          },
+          {
+            "value": "h3",
+            "label": "Small"
+          },
+          {
+            "value": "p",
+            "label": "Same as description"
+          }
+        ]
+      },
+	    {
+        "type": "range",
+        "id": "description_font_size",
+        "label": "Description font size",
+        "min": 10,
+        "max": 24,
+        "step": 1,
+        "default": 15
+      },
+	  {
+        "type": "header",
+        "content": "Advance"
+	  },
+	  {
+        "type": "paragraph",
+        "content": "Leave it alone if you're not going to make fine customizations"
+      },
+	  {
+        "type": "textarea",
+        "id": "custom_css",
+        "label": "Custom CSS"
+      }
+    ],
+	"locales": {
+	  "en": {
+          "addMore": "Add 1 more item | Add {quantity} more items!",
+          "addMoreFrom": "Add 1 more from {title}",
+          "addToBundle": "Add to Bundle",
+          "addBundleToCart": "Add to Cart",
+          "alertSoldOut": "This item has sold out! Please select another one",
+          "bundleAddedToCart": "Your bundle has been added to cart!",
+          "loadMore": "Load More",
+          "loading": "Loading...",
+          "pick": "Pick ",
+          "soldOut": "Sold Out",
+		  "any": "",
+		  "atLeast": " at least ",
+		  "maximumOf": " maximum of ",
+		  "lessThan": " less than ",
+          "tabHeading": "Choose {operator}{quantity} item from {title} | Choose {operator}{quantity} items from {title}",
+          "totalPrice": "Total price",
+          "unavailable": "Unavailable",
+          "viewCart": "View Cart",
+          "selectOnce": "Item can only be selected once only!",
+          "noteHeader": "Add a note",
+          "required": "Required",
+          "checkout": "Check Out",
+          "createAnother": "Create Another Bundle",
+          "quantity": "Quantity",
+		  "optional": "Optional",
+          "quickviewIconText": "Quick View"
+      },
+      "zh-TW": {
+          "addMore": "加入1個產品 | 加入{quantity}個產品!",
+          "addMoreFrom": "從{title}加入1個產品",
+          "addToBundle": "加入產品",
+          "addBundleToCart": "加入購物車",
+          "alertSoldOut": "這個產品已售罄, 請選擇另一個!",
+          "bundleAddedToCart": "已把優惠加入購物車!",
+          "loadMore": "更多...",
+          "loading": "處理中...",
+          "pick": "選擇",
+          "soldOut": "售罄",
+		  "any": "",
+		  "atLeast": "最少",
+		  "maximumOf": "最多",
+		  "lessThan": "少於",
+          "tabHeading": "從{title}選擇{operator}{quantity}個產品！",
+          "totalPrice": "總售價",
+          "unavailable": "無法提供",
+          "viewCart": "你的購物車",
+          "noteHeader": "加入備註",
+          "required": "必需",
+          "checkout": "結帳",
+          "createAnother": "建立另一套裝",
+          "quantity": "數量",
+		  "optional": "選填",
+          "quickviewIconText": "查看"
+      },
+      "ja": {
+          "addMore": "1点追加 | {quantity}点追加",
+          "addMoreFrom": "{title}から1点追加",
+          "addToBundle": "セットに入れる",
+          "addBundleToCart": "カートに入れる",
+          "alertSoldOut": "申し訳ありません、完売の為別のアイテムをお選びください",
+          "bundleAddedToCart": "セットがカートに追加されました！",
+          "loadMore": "もっと表示する",
+          "loading": "準備中",
+          "pick": "選ぶ",
+          "soldOut": "完売",
+		  "any": "",
+		  "atLeast": "少なくとも",
+		  "maximumOf": "最大",
+		  "lessThan": "以下",
+          "tabHeading": "{title}から{operator}{quantity}点お選びください",
+          "totalPrice": "合計金額",
+          "unavailable": "在庫なし",
+          "viewCart": "カートを見る",
+          "noteHeader": "メモを追加",
+          "required": "必要",
+          "checkout": "結帳",
+          "quantity": "数量",
+		  "optional": "随意",
+          "quickviewIconText": "見る"
+      },
+      "es": {
+          "addMore": "Agregar 1 item | Agregar {quantity} items",
+          "addMoreFrom": "Agregar 1 item desde {title}",
+          "addToBundle": "Agregar al Kit",
+          "addBundleToCart": "Agregar kit al carrito",
+          "alertSoldOut": "Este producto está agotado. Por favor selecciona otra opción",
+          "bundleAddedToCart": "¡Tu kit se ha agregado al carrito!",
+          "loadMore": "Ver más",
+          "loading": "Cargando...",
+          "pick": "Selecciona",
+          "soldOut": "Agotado",
+		  "any": "",
+		  "atLeast": " al menos ",
+		  "maximumOf": " máximo ",
+		  "lessThan": " menos que ",
+          "tabHeading": "Selecciona {operator}{quantity} item(s) desde {title}",
+          "totalPrice": "Precio total",
+          "unavailable": "No disponible",
+          "viewCart": "Ver Carrito",
+          "noteHeader": "Agrega una nota",
+          "required": "Necesario",
+          "checkout": "Pagar pedido",
+          "quantity": "Cantidad",
+		  "optional": "Opcional",
+          "quickviewIconText": "見る"
+      },
+      "fr": {
+          "addMore": "Ajouter 1 article de plus | Ajouter {quantity} articles",
+          "addMoreFrom": "Ajouter 1 article depuis {title}",
+          "addToBundle": "Ajouter au kit",
+          "addBundleToCart": "Ajouter le kit au panier",
+          "alertSoldOut": "Cet article est en rupture de stock. Veuillez en choisir un autre",
+          "bundleAddedToCart": "Le kit a été ajouté au panier !",
+          "loadMore": "Voir plus",
+          "loading": "Chargement...",
+          "pick": "Sélectionner",
+          "soldOut": "Epuisé",
+		  "any": "",
+		  "atLeast": " au moins ",
+		  "maximumOf": " maximum ",
+		  "lessThan": " moins que ",
+          "tabHeading": "Seléctionner {operator}{quantity} article(s) depuis {title}",
+          "totalPrice": "Prix total",
+          "unavailable": "Non disponible",
+          "viewCart": "Voir panier",
+          "noteHeader": "Ajouter une note",
+          "required": "Obligatoire",
+          "checkout": "Procéder Au Paiement",
+          "quantity": "Quantité",
+		  "optional": "Optionnel",
+          "quickviewIconText": "Vior"
+      },
+      "de": {
+          "addMore": "Wähle 1 Produkt noch dazu | Wähle {quantity} Produkte noch dazu",
+          "addMoreFrom": "Wähle noch 1 Produkt von {title}",
+          "addToBundle": "Zum Set hinzufügen",
+          "addBundleToCart": "Set zum Warenkorb hinzufügen",
+          "alertSoldOut": "Dieses Produkt ist ausverkauft! Bitte ein anderes Produkt auswählen",
+          "bundleAddedToCart": "Dein Set wurde zum Warenkorb hinzugefügt!",
+          "loadMore": "Mehr anzeigen",
+          "loading": "Lädt...",
+          "pick": "Auswählen",
+          "soldOut": "Ausverkauft",
+		  "any": "",
+		  "atLeast": " mindestens ",
+		  "maximumOf": " maximal ",
+		  "lessThan": " weniger als ",
+          "tabHeading": "Wähle {operator}{quantity} Produkt(e) von {title}",
+          "totalPrice": "Gesamtpreis",
+          "unavailable": "Nicht verfügbar",
+          "viewCart": "Warenkorb ansehen",
+          "selectOnce": "Das Produkt kann nur 1 mal gewählt werden!",
+          "noteHeader": "Füg ein Notiz hinzu",
+          "required": "Erforderlich",
+          "checkout": "zur Kasse",
+          "createAnother": "weiter einkaufen",
+          "quantity": "Anzahl",
+		  "optional": "Optional",
+          "quickviewIconText": "Ansehen"
+      },
+      "pl": {
+          "addMore": "Dodaj jeszcze 1 produkt | Dodaj jeszcze {quantity} produkty",
+          "addMoreFrom": "Dodaj jeszcze 1 produkt z {title}",
+          "addToBundle": "Dodaj do zestawu",
+          "addBundleToCart": "Dodaj zestaw do koszyka",
+          "alertSoldOut": "Ten produkt został wyprzedany! Wybierz proszę inny produkt.",
+          "bundleAddedToCart": "Twój zestaw został dodany do koszyka!",
+          "loadMore": "Więcej",
+          "loading": "Ładowanie...",
+          "pick": "Wybierz",
+          "soldOut": "Wyprzedane",
+		  "any": "",
+		  "atLeast": " co najmniej ",
+		  "maximumOf": " maksymalny ",
+		  "lessThan": " mniej niż ",
+          "tabHeading": "Wybierz {operator}{quantity} produkt(y) z {title}",
+          "totalPrice": "Razem",
+          "unavailable": "Niedostępne",
+          "viewCart": "Do koszyka",
+          "selectOnce": "Ten przedmiot może być dodany tylko 1 raz!",
+          "noteHeader": "Dodaj komentarz",
+          "required": "Obowiązkowe",
+          "checkout": "Realizuj Zakup",
+          "quantity": "Ilość",
+		  "optional": "Opcjonalny",
+          "quickviewIconText": "Obejrzeć"
+      }
+	}
+  }
+{% endschema %}
+
+{% stylesheet %}
+.byob-text-center {
+  text-align: center;
+}
+.byob-text-left {
+  text-align: left;
+}
+.byob-text-right {
+  text-align: right;
+}
+/* Whole */
+.medium-up--one-whole {
+    width: 100%;
+}
+/* Halves */
+.medium-up--one-half {
+	width: 50%;
+}
+/* Thirds */
+.medium-up--one-third {
+	width: 33.33333%;
+}
+.medium-up--two-thirds {
+    width: 66.66667%;
+}
+.byob-content-center {
+  margin: 0 auto;
+}
+{%- comment %}Set top banner to full width for mobile{% endcomment -%}
+@media screen and (max-width: 600px) {
+.medium-up--one-half {
+	width: 100%;
+}
+/* Thirds */
+.medium-up--one-third {
+	width: 100%;
+}
+.medium-up--two-thirds {
+    width: 100%;
+}
+.byob-bundle-description {
+    line-height: normal;
+}
+}
+{% endstylesheet %}

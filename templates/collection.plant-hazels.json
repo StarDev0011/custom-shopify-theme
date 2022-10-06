@@ -1,0 +1,65 @@
+{
+  "sections": {
+    "hero": {
+      "type": "collection-image-with-title",
+      "disabled": true,
+      "settings": {
+        "banner_height": "one-fifty-height",
+        "text_position": "middle-left",
+        "show_image": true,
+        "banner_image": "shopify:\/\/shop_images\/ROSE_2_COLLECTION.jpg",
+        "text_color": "text-light",
+        "overlay_opacity": 0,
+        "banner_bg_color": "#ffffff"
+      }
+    },
+    "1656612786c1f68870": {
+      "type": "section-image-with-text",
+      "settings": {
+        "section_height": "five-fifty-height",
+        "text_position": "left",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/hazel-1-COLLECTION.jpg",
+        "image_background": false,
+        "bg_position": "right-center",
+        "text_alignment": "left",
+        "subheading": "",
+        "heading": "plant hazels",
+        "heading_size": 100,
+        "text": "<p>this fast-absorbing WITCH HAZEL is made with 10 times more witch hazel compared to clear colored witch hazel products.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": ""
+      }
+    },
+    "subcollections": {
+      "type": "subcollections",
+      "settings": {
+        "layout": "grid",
+        "image_source": "collection",
+        "image_aspect_ratio": 0.6,
+        "image_overlay_opacity": 10,
+        "bg_color": "",
+        "text_color": "text-light"
+      }
+    },
+    "main": {
+      "type": "collection",
+      "settings": {
+        "show_breadcrumbs": true,
+        "enable_sorting": true,
+        "enable_filters": true,
+        "filter_mode": "default",
+        "bg_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "1656612786c1f68870",
+    "subcollections",
+    "main"
+  ]
+}

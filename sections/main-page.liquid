@@ -1,0 +1,31 @@
+{%- comment -%} sections/main-page.liquid {%- endcomment -%}
+{%- if section.settings.show_page_title or page.content != blank -%}
+  <section class="section">
+    <div class="wrapper">
+      {%- if section.settings.show_page_title -%}
+        <h1 class="page-title text-center">
+          {{- page.title -}}
+        </h1>
+      {%- endif -%}
+
+      <div class="rte">
+        {{- page.content -}}
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Page",
+    "class": "shopify-section--page",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_page_title",
+        "label": "Show page title",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

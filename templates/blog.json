@@ -1,0 +1,39 @@
+{
+  "sections": {
+    "main": {
+      "type": "blog",
+      "disabled": true,
+      "settings": {
+        "post_columns": 1,
+        "image_aspect_ratio": 0.6,
+        "show_rss_icon": false,
+        "show_date": true,
+        "show_author": true,
+        "show_tags": true
+      }
+    },
+    "165851275416ed9fff": {
+      "type": "section-blog",
+      "settings": {
+        "heading": "",
+        "blog": "the-press",
+        "cta": "View all posts",
+        "button_style": "text",
+        "tags": true,
+        "author": false,
+        "date": true,
+        "show_comments": false,
+        "image_aspect_ratio": 1,
+        "rows": 3,
+        "columns": 3,
+        "wrapper": "full",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165851275416ed9fff"
+  ]
+}

@@ -1,0 +1,1536 @@
+{
+  "sections": {
+    "1655905158580e2c4f": {
+      "type": "section-slideshow",
+      "blocks": {
+        "7c2ff6ca-5e63-4c92-a93c-f5d79a69c28e": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/9553v3_09423792-7bc2-4b4e-b0ea-d3c931e457af.jpg",
+            "image_vertical": 35,
+            "image_horizontal": 100,
+            "image_contain": true,
+            "image_mobile": "shopify:\/\/shop_images\/7243v3_2.jpg",
+            "mobile_image_vertical": 45,
+            "mobile_image_horizontal": 60,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 54,
+            "heading_mobile_font_size": 36,
+            "heading_font_weight": "400",
+            "heading_letter_spacing": -1,
+            "heading_color": "#ffffff",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 30,
+            "text_mobile_font_size": 16,
+            "text_font_weight": "400",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "right",
+            "override_mobile_text_position": true,
+            "mobile_text_position_y": 0,
+            "mobile_text_position_x": "left",
+            "title": "FREE YOUR FACE<sup>™<\/sup>",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "700",
+            "text": "<p> WATER-FORM serums, cleansers,\ntoners, moisturizers and more...<\/p>",
+            "slide_btn_text": "shop facewater",
+            "slide_btn_link": "shopify:\/\/collections\/all",
+            "slide_btn_style": "text",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#000000",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "7c2ff6ca-5e63-4c92-a93c-f5d79a69c28e"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "original-height",
+        "show_nav_dots": false,
+        "show_nav_arrows": false,
+        "show_arrow_down": false,
+        "arrow_dot_color": "#515f54",
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": false,
+        "heading_size": 100,
+        "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}"
+      }
+    },
+    "16638774042f6239ae": {
+      "type": "section-text",
+      "blocks": {
+        "8b467ef2-624c-4d5d-a336-d5c951335093": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>pore-liberating 100% PLANT BASED MOISTURE - <\/p><p>for visibly clearer & healthier skin<\/p>",
+            "size": 300,
+            "font_weight": "400",
+            "letter_spacing": -1
+          }
+        }
+      },
+      "block_order": [
+        "8b467ef2-624c-4d5d-a336-d5c951335093"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "narrow",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    },
+    "grid-0": {
+      "type": "section-grid",
+      "blocks": {
+        "15fe64b9-def1-4d08-b609-c36e6c73e920": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "immediately visible radiance <br> <br>noticeable skin clearing <br> <br> long-term youth preserving effects",
+            "text": "",
+            "button_text": "",
+            "link": "shopify:\/\/pages\/results",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#656765",
+            "mobile_order": "default"
+          }
+        },
+        "image-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9901v5_1.jpg",
+            "bg_position": "center-top",
+            "mobile_image_position": "bottom",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "top-right",
+            "subheading": "",
+            "title": "A NEW KIND OF <br> MICELLAR WATER",
+            "text": "",
+            "button_text": "coco micellar colada",
+            "link": "shopify:\/\/products\/coco-micellar-colada",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "mobile_order": "default"
+          }
+        },
+        "f392cba7-e83b-4a50-8def-5fbda75c7372": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/8070v3.jpg",
+            "bg_position": "left-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "bottom-right",
+            "subheading": "",
+            "title": "WONDER-WORKING <br>SERUM-WATER",
+            "text": "",
+            "button_text": "SERUMATO",
+            "link": "shopify:\/\/products\/serumato",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "mobile_order": "default"
+          }
+        },
+        "ad02ba3d-7df8-484c-b3cf-e693631890d9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3148.jpg",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "A NEW TYPE <br> OF CLEANSER",
+            "text": "",
+            "button_text": "berry bubble",
+            "link": "shopify:\/\/products\/berry-bubble",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "mobile_order": "default"
+          }
+        },
+        "df75b0f3-4fa2-4de0-bae9-357268f8dfd2": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "visibly clearer and <br> healthier skin",
+            "text": "from day one or your money back*",
+            "button_text": "",
+            "link": "shopify:\/\/pages\/visibly-clearer-skin",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#515f54",
+            "mobile_order": "default"
+          }
+        },
+        "image-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PBD_sign.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "top-right",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "shopify:\/\/pages\/cosmetic-farm",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "15fe64b9-def1-4d08-b609-c36e6c73e920",
+        "image-0",
+        "f392cba7-e83b-4a50-8def-5fbda75c7372",
+        "ad02ba3d-7df8-484c-b3cf-e693631890d9",
+        "df75b0f3-4fa2-4de0-bae9-357268f8dfd2",
+        "image-1"
+      ],
+      "settings": {
+        "height": "550",
+        "min_tablet_height": 370,
+        "min_mobile_height": 325,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 18,
+        "heading_mobile_font_size": 16,
+        "heading_font_weight": "400",
+        "heading_color": "#000000",
+        "text_font_size": 12,
+        "text_mobile_font_size": 12,
+        "text_font_weight": "400",
+        "text_color": "#000000",
+        "button_style": "text",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": false
+      }
+    },
+    "166326827019c9f3af": {
+      "type": "section-collection",
+      "settings": {
+        "collection": "serum-waters",
+        "title": "serum waters",
+        "description": "<p>This one-of-a-kindwater-form serum is an ultra-lightweight and wonder working leave-on treatment that instantly absorbs without ever pilling (even under makeup). Skin healthy Serum Water contains highly concentrated energetic plant actives that deeply penetrate the lower layers of your skin and deliver incredibly transformative radiance-rich results.<\/p>",
+        "spacing_range": -0.5,
+        "heading_alignment": true,
+        "show_description": false,
+        "products_rows": 2,
+        "products_layout": "carousel",
+        "show_collection_button": true,
+        "show_collection": "View Serum Waters",
+        "button_style": "text",
+        "bg_color": "",
+        "enable_slider_mobile": true,
+        "remove_top_padding": false,
+        "remove_margin_bottom": false
+      }
+    },
+    "166326105196ff14f4": {
+      "type": "section-custom-products-list",
+      "disabled": true,
+      "blocks": {
+        "1663261051038e5dc8-0": {
+          "type": "text_block",
+          "settings": {
+            "product": "pore-purge-potion",
+            "title": "fantastic pore cleansing toner $20",
+            "text": "<p>effectively clears out sebum, dirt, and blemish causing buildup deep within your pores<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663261051038e5dc8-1": {
+          "type": "text_block",
+          "settings": {
+            "product": "serumato",
+            "title": "brightening serum water $22",
+            "text": "<p>targets signs of aging and dark spots due to sun damage, pollution, and other environmental aggressors<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663261051038e5dc8-2": {
+          "type": "text_block",
+          "settings": {
+            "product": "claycial",
+            "title": "a new type of mattifying toner $20",
+            "text": "<p>primes your skin to create a remarkably smoother, longer lasting canvas for skincare and makeup<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663261051038e5dc8-3": {
+          "type": "text_block",
+          "settings": {
+            "product": "makeup-mash",
+            "title": "super healthy makeup remover $16",
+            "text": "<p>melts away tough waterproof and long wear makeup<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "1663261051038e5dc8-0",
+        "1663261051038e5dc8-1",
+        "1663261051038e5dc8-2",
+        "1663261051038e5dc8-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 4,
+        "bg_color": "#fafafa",
+        "align_text": "text-left",
+        "spacing_range": 5,
+        "text_width": 90,
+        "equalize_height": true,
+        "image_aspect_ratio": 1.3,
+        "show_images": true,
+        "disable_slider": false,
+        "remove_margin_bottom": false
+      }
+    },
+    "1656533036d527d1da": {
+      "type": "section-grid",
+      "blocks": {
+        "adf1fd54-a74a-4dcd-ba57-f6be3fd8233c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PBD_sign.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "bottom-right",
+            "subheading": "",
+            "title": "FUTURE PLANET ACTION",
+            "text": "",
+            "button_text": "zero carbon distillery",
+            "link": "shopify:\/\/pages\/about",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1656533036091a7b95-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PBD4-Comp-1_00000.gif",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "bottom-right",
+            "subheading": "",
+            "title": "WE GROW BEAUTY",
+            "text": "",
+            "button_text": "cosmetic farm",
+            "link": "shopify:\/\/pages\/cosmetic-farm",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1656533036091a7b95-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TOMA_july25.jpg",
+            "bg_position": "center-top",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "left",
+            "subheading": "",
+            "title": "fresh, energetic and <br> highly absorbing",
+            "text": "water-form serums, toners, <br> cleansers, moisturizers <br> and more...",
+            "button_text": "",
+            "link": "shopify:\/\/products\/serumato",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "adf1fd54-a74a-4dcd-ba57-f6be3fd8233c",
+        "1656533036091a7b95-0",
+        "1656533036091a7b95-1"
+      ],
+      "settings": {
+        "height": "450",
+        "min_tablet_height": 370,
+        "min_mobile_height": 350,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 16,
+        "heading_font_weight": "400",
+        "heading_color": "#ffffff",
+        "text_font_size": 26,
+        "text_mobile_font_size": 12,
+        "text_font_weight": "200",
+        "text_color": "#ffffff",
+        "button_style": "text",
+        "secondary_button_style": "text",
+        "bg_color": "",
+        "enable_slider_mobile": false
+      }
+    },
+    "16564295094c18a1f2": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "five-fifty-height",
+        "text_position": "right",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/100_petal_roses_3_1.jpg",
+        "image_background": false,
+        "bg_position": "left-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": true,
+        "mobile_background_y_position": 54,
+        "mobile_background_x_position": 31,
+        "border_color": "#7a7a7a",
+        "border_width": 2,
+        "textbox_background_color": "#7a7a7a",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "",
+        "heading": "<strong> 100 petal rosewater <\/strong><br>leaves your skin remarkably brighter and lit from within",
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 18,
+        "heading_font_weight": "200",
+        "text": "",
+        "text_font_size": 26,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "400",
+        "button_text": "SHOP COLLECTION",
+        "button_link": "shopify:\/\/collections\/100-petal-rosewater",
+        "button_style": "text",
+        "video_url": "",
+        "bg_color": "#ffffff",
+        "remove_margin_bottom": false
+      }
+    },
+    "1660056626d521ddbc": {
+      "type": "section-slideshow",
+      "blocks": {
+        "16600566253ed9345b-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/rosewater_COLLECTION-2-mirror.jpg",
+            "image_vertical": 100,
+            "image_horizontal": 100,
+            "image_contain": true,
+            "image_mobile": "shopify:\/\/shop_images\/rosewater_COLLECTION-2-mirror_11cb1d39-e267-4519-8ad9-e4f15b7edb03.jpg",
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-top",
+            "overlay_opacity": 0,
+            "heading_font_size": 42,
+            "heading_mobile_font_size": 22,
+            "heading_font_weight": "400",
+            "heading_letter_spacing": 0,
+            "heading_color": "#000000",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 20,
+            "text_mobile_font_size": 22,
+            "text_font_weight": "200",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "right",
+            "override_mobile_text_position": true,
+            "mobile_text_position_y": 0,
+            "mobile_text_position_x": "left",
+            "title": "AN UNMATCHED \nAMOUNT OF YOUTH\nPRESERVING EFFECTS",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "",
+            "slide_btn_text": "SHOP 100 Petal rosewater",
+            "slide_btn_link": "shopify:\/\/collections\/100-petal-rosewater",
+            "slide_btn_style": "text",
+            "button_color": "#000000",
+            "mobile_button_color": "#000000",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16600566253ed9345b-0"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "original-height",
+        "show_nav_dots": false,
+        "show_nav_arrows": false,
+        "show_arrow_down": false,
+        "arrow_dot_color": "",
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": false,
+        "heading_size": 120,
+        "custom_css": ""
+      }
+    },
+    "1655820298867db805": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "614e08e6-2a69-44ab-a4e9-0cdbc6a17296": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TOMA_BOTTLES_1_152f6d16-6552-470c-841d-af84932d6a21.jpg",
+            "bg_position": "center-top",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "top-right",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "shopify:\/\/products\/shroom-moisture-boom",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "62dc5348-62ed-4be6-90e7-47640f8e83fa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/farhousesunbeam_copy_1.jpg",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1f57376f-f57c-4c1c-b151-f1c17191ad41": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grayPlantonic.jpg",
+            "bg_position": "right-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 10,
+            "text_position": "bottom-left",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "mobile_order": "default"
+          }
+        },
+        "4a007ea7-e516-40cf-b29b-d7218137b182": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "long term <strong> youth <br> preserving <\/strong>effects <br> <br> noticeable <strong>skin <br> clearing <\/strong> <br>  <br>immediately <br> <strong>visible radiance<\/strong>",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "bg_color": "#adadad",
+            "mobile_order": "default"
+          }
+        },
+        "a94dc132-2319-4568-9053-61f915d34abc": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/skintervention_5.jpg",
+            "bg_position": "center-center",
+            "mobile_image_position": "bottom",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "bottom-left",
+            "subheading": "",
+            "title": "immediately <br> <strong>visible radiance<\/strong>",
+            "text": "",
+            "button_text": "",
+            "link": "shopify:\/\/products\/puff-chill-topical-tea",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1655820297b47e80fa-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/skintervention_5.jpg",
+            "bg_position": "right-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "long term <strong> youth <br> preserving <\/strong>effects <br> <br> noticeable <strong>skin <br> clearing <\/strong> <br>  <br>immediately <br> <strong>visible radiance<\/strong>",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "614e08e6-2a69-44ab-a4e9-0cdbc6a17296",
+        "62dc5348-62ed-4be6-90e7-47640f8e83fa",
+        "1f57376f-f57c-4c1c-b151-f1c17191ad41",
+        "4a007ea7-e516-40cf-b29b-d7218137b182",
+        "a94dc132-2319-4568-9053-61f915d34abc",
+        "1655820297b47e80fa-1"
+      ],
+      "settings": {
+        "height": "450",
+        "min_tablet_height": 370,
+        "min_mobile_height": 350,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 22,
+        "heading_font_weight": "200",
+        "heading_color": "#ffffff",
+        "text_font_size": 26,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "text_color": "#ffffff",
+        "button_style": "text",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": false
+      }
+    },
+    "16637392042c67527c": {
+      "type": "section-text",
+      "disabled": true,
+      "blocks": {
+        "16637392041ccdcf87-0": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>SEE RESULTS LIKE NEVER BEFORE<\/p>",
+            "subheading_size": 26,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        },
+        "16637392041ccdcf87-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>noticeable skin clearing<\/p><p>visible radiance<\/p><p>long-term youth<\/p><p>preserving effects<\/p><p>immediate lasting moisture<\/p>",
+            "size": 100,
+            "font_weight": "200",
+            "letter_spacing": 0
+          }
+        },
+        "16637392041ccdcf87-3": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Read More",
+            "btn_link": "shopify:\/\/pages\/the-results",
+            "btn_style": "text"
+          }
+        },
+        "988ddd63-71a8-4340-a4e5-7f2f6dc71eab": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "size": 100,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "16637392041ccdcf87-0",
+        "16637392041ccdcf87-2",
+        "16637392041ccdcf87-3",
+        "988ddd63-71a8-4340-a4e5-7f2f6dc71eab"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/fullstill-Recovered_1_2ea5f117-9e14-4444-a3a3-4f4941451e9b.jpg",
+        "bg_image": "shopify:\/\/shop_images\/7243v3_1_f10e34aa-faf5-4c42-80a3-628410c59740.jpg",
+        "image_link": "shopify:\/\/pages\/what-is-facewater",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "normal",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    },
+    "1658853987e12cad3f": {
+      "type": "section-text",
+      "blocks": {
+        "59a93b52-efd2-41a1-8401-f23552356a83": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>immediatey visible radiance | noticeable skin clearing | lomg-term youth preserving effects<\/p>",
+            "size": 100,
+            "font_weight": "700",
+            "letter_spacing": 0
+          }
+        },
+        "abcb44e7-0321-4b4d-8211-d39d25e3eb24": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "<p>in time, with facewater - everything changes<\/p><p><\/p>",
+            "size": 220,
+            "font_weight": "200",
+            "letter_spacing": 0
+          }
+        },
+        "c3847ab7-80dd-4644-b198-c1cd154b7939": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "<p>a new patent-pending breakthrough<strong> <\/strong>for <strong>visibly clearer & healthier skin<\/strong><\/p>",
+            "size": 220,
+            "font_weight": "200",
+            "letter_spacing": -1
+          }
+        },
+        "d56d390e-4748-4e4d-a124-45d378181b58": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>a new patent-pending breakthrough<\/p>",
+            "size": 300,
+            "font_weight": "400",
+            "letter_spacing": -1
+          }
+        }
+      },
+      "block_order": [
+        "59a93b52-efd2-41a1-8401-f23552356a83",
+        "abcb44e7-0321-4b4d-8211-d39d25e3eb24",
+        "c3847ab7-80dd-4644-b198-c1cd154b7939",
+        "d56d390e-4748-4e4d-a124-45d378181b58"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "full",
+        "padding": "standard-padding",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    },
+    "16565284797bfc6776": {
+      "type": "section-grid",
+      "blocks": {
+        "1656528479d198cf8b-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/make_the_spacing_from_the_lid_to_the_lip_equal_1.png",
+            "bg_position": "right-center",
+            "mobile_image_position": "top",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "<strong> way beyond clean <\/strong> <br> <br>100% plant based formula <br> no glycols <br>  no petrochemicals <br>  no synthetic fragrance <br> no added dye or color <br> vegan* and cruelty-free <br> made by us <br>",
+            "text": "*all of our products are vegan <br> with the exception of those <br> containing honey.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "mobile_order": "default"
+          }
+        },
+        "0e536494-f118-4b58-9f30-b55c5439baa9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/7243v3_1_f10e34aa-faf5-4c42-80a3-628410c59740.jpg",
+            "bg_position": "left-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "SEE RESULTS LIKE NEVER BEFORE",
+            "text": "noticeable skin clearing <br>visible radiance <br>long-term youth <br>preserving effects <br>immediate lasting <br>moisture",
+            "button_text": "learn more",
+            "link": "shopify:\/\/pages\/results",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "mobile_order": "default"
+          }
+        },
+        "076a2344-1cbf-4a4d-9f4b-28e34800ddca": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fullstill-Recovered.jpg",
+            "bg_position": "center-bottom",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "PATENT-PENDING <br>DISTILLATION PROCESS",
+            "text": "",
+            "button_text": "THE INVENTION",
+            "link": "shopify:\/\/pages\/what-is-facewater",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "mobile_order": "default"
+          }
+        },
+        "f8575617-19c4-4513-892e-7fcf916f1b82": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "<strong> the results <\/strong> <br> <br>noticeable skin clearing <br> visible radiance <br> long-term youth preserving effects <br>immediate lasting moisture",
+            "text": "",
+            "button_text": "LEARN MORE",
+            "link": "shopify:\/\/pages\/results",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "bg_color": "#cfcfcf",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "1656528479d198cf8b-1",
+        "0e536494-f118-4b58-9f30-b55c5439baa9",
+        "076a2344-1cbf-4a4d-9f4b-28e34800ddca",
+        "f8575617-19c4-4513-892e-7fcf916f1b82"
+      ],
+      "settings": {
+        "height": "550",
+        "min_tablet_height": 370,
+        "min_mobile_height": 215,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 24,
+        "heading_mobile_font_size": 16,
+        "heading_font_weight": "400",
+        "heading_color": "#000000",
+        "text_font_size": 24,
+        "text_mobile_font_size": 12,
+        "text_font_weight": "400",
+        "text_color": "#000000",
+        "button_style": "text",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": false
+      }
+    },
+    "1663268646cef71652": {
+      "type": "section-collection",
+      "settings": {
+        "collection": "bubble-rinse-cleansers",
+        "title": "bubble rinse cleansers",
+        "description": "<p>This new type of water-form cleanser is lightweight, gentle, non-stripping and ultra-healthy for your skin. Bubble Rinse Cleanser will not leave your skin feeling tight or dry like conventional cleansers with harsh surfactants that remove your skin’s naturally beneficial oils. This moisture preserving formula removes NON-waterproof makeup, oil, dirt, and impurities easily. Leaves skin feelingsoft, clean and refreshed.<\/p>",
+        "spacing_range": -1,
+        "heading_alignment": true,
+        "show_description": false,
+        "products_rows": 2,
+        "products_layout": "carousel",
+        "show_collection_button": true,
+        "show_collection": "View bubble rinse cleansers",
+        "button_style": "text",
+        "bg_color": "",
+        "enable_slider_mobile": true,
+        "remove_top_padding": false,
+        "remove_margin_bottom": false
+      }
+    },
+    "16632634038e2dad11": {
+      "type": "section-custom-products-list",
+      "disabled": true,
+      "blocks": {
+        "1663263403e55c2a0c-0": {
+          "type": "text_block",
+          "settings": {
+            "product": "puff-chill-topical-tea",
+            "title": "amazing depuffing toner $24",
+            "text": "<p>effectively combats the appearance of puffy, tired skin, especially after long indulgent nights - delivering wonderfully well-rested, stress free skin<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663263403e55c2a0c-1": {
+          "type": "text_block",
+          "settings": {
+            "product": "macinwash",
+            "title": "exfoliating bubble rinse cleanser $16",
+            "text": "<p>leaves your skin refreshed and revitalized without ever stripping your skin’s naturally beneficial oils<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663263403e55c2a0c-2": {
+          "type": "text_block",
+          "settings": {
+            "product": "skintervention",
+            "title": "intensely clarifying toner $21",
+            "text": "<p>effectively targets stubborn spots and rough, uneven texture<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663263403e55c2a0c-3": {
+          "type": "text_block",
+          "settings": {
+            "product": "b5-bee-honey-hazel",
+            "title": "ultra-soothing alcohol-free toner $14",
+            "text": "<p>instantly relieves and comforts your sensitive skin when it freaks out due to sudden and unpredictable internal or external stressors<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "1663263403e55c2a0c-0",
+        "1663263403e55c2a0c-1",
+        "1663263403e55c2a0c-2",
+        "1663263403e55c2a0c-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 4,
+        "bg_color": "",
+        "align_text": "text-left",
+        "spacing_range": 5,
+        "text_width": 90,
+        "equalize_height": true,
+        "image_aspect_ratio": 1.3,
+        "show_images": true,
+        "disable_slider": false,
+        "remove_margin_bottom": false
+      }
+    },
+    "16558220053c689ae2": {
+      "type": "section-columns",
+      "disabled": true,
+      "blocks": {
+        "16558220046f7d824f-3": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/puff-chill-bottle_FaceWater_wht.jpg",
+            "image_link": "shopify:\/\/products\/puff-chill-topical-tea",
+            "bg_position": "center-center",
+            "title": "amazing depuffing toner $24",
+            "text": "<p>effectively combats the appearance of puffy, tired skin, especially after long indulgent nights - delivering wonderfully well-rested, stress free skin<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16558220046f7d824f-1": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/macinwash-bottle_FaceWater_wht.jpg",
+            "image_link": "shopify:\/\/products\/macinwash",
+            "bg_position": "center-center",
+            "title": "exfoliating bubble rinse cleanser $16",
+            "text": "<p>leaves your skin refreshed and revitalized without ever stripping your skin’s naturally beneficial oils. <\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16558220046f7d824f-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/skintervention-bottle_FaceWater_wht.jpg",
+            "image_link": "shopify:\/\/products\/skintervention",
+            "bg_position": "center-center",
+            "title": "intensely clarifying toner $21",
+            "text": "<p>effectively targets stubborn spots and rough, uneven texture <\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16558220046f7d824f-0": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/b5-bee-bottle_FaceWater_wht.jpg",
+            "image_link": "shopify:\/\/products\/b5-bee-honey-hazel",
+            "bg_position": "center-center",
+            "title": "ultra-soothing alcohol-free toner $14",
+            "text": "<p>instantly relieves and comforts your sensitive skin when it freaks out due to sudden and unpredictable internal or external stressors<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "16558220046f7d824f-3",
+        "16558220046f7d824f-1",
+        "16558220046f7d824f-2",
+        "16558220046f7d824f-0"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 4,
+        "heading_font_size": 20,
+        "bg_color": "#fafafa",
+        "align_text": "text-left",
+        "remove_text_spacing": true,
+        "text_width": 88,
+        "equalize_height": true,
+        "image_aspect_ratio": 1.3,
+        "show_images": true,
+        "disable_slider": false,
+        "remove_margin_bottom": false
+      }
+    },
+    "166005705070be2216": {
+      "type": "section-slideshow",
+      "blocks": {
+        "1660057049116dc22f-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/7473v5_a1ebcb86-0631-40e4-9cdb-c51791fc53ec.jpg",
+            "image_vertical": 35,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "image_mobile": "shopify:\/\/shop_images\/8059v10_4.jpg",
+            "mobile_image_vertical": 100,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 42,
+            "heading_mobile_font_size": 22,
+            "heading_font_weight": "400",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 20,
+            "text_mobile_font_size": 22,
+            "text_font_weight": "400",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "right",
+            "override_mobile_text_position": true,
+            "mobile_text_position_y": 0,
+            "mobile_text_position_x": "left",
+            "title": "WONDERFULLY \nWELL-RESTED SKIN \nLIKE NEVER BEFORE",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "",
+            "slide_btn_text": "Shop PLANT VENOM",
+            "slide_btn_link": "shopify:\/\/collections\/plant-venom",
+            "slide_btn_style": "text",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#000000",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1660057049116dc22f-0"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "original-height",
+        "show_nav_dots": false,
+        "show_nav_arrows": false,
+        "show_arrow_down": false,
+        "arrow_dot_color": "",
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": false,
+        "heading_size": 120,
+        "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}"
+      }
+    },
+    "166326884264b65728": {
+      "type": "section-collection",
+      "settings": {
+        "collection": "toners",
+        "title": "toners",
+        "description": "<p>Facewater toners are superhealthy antioxidant rich elixirs that effectively cleanse, balance, clarify, and purify - without ever drying your skin. Our moisture replenishing, 100% plant based toners are completely free of harmful synthetic ingredients. <\/p>",
+        "spacing_range": -1.5,
+        "heading_alignment": true,
+        "show_description": false,
+        "products_rows": 2,
+        "products_layout": "carousel",
+        "show_collection_button": true,
+        "show_collection": "View toners",
+        "button_style": "text",
+        "bg_color": "",
+        "enable_slider_mobile": true,
+        "remove_top_padding": false,
+        "remove_margin_bottom": false
+      }
+    },
+    "166326365881b283a1": {
+      "type": "section-custom-products-list",
+      "disabled": true,
+      "blocks": {
+        "1663263658aae03471-0": {
+          "type": "text_block",
+          "settings": {
+            "product": "pore-vanish-brew",
+            "title": "miracle pore minimizing toner $17",
+            "text": "<p>delivers unbelievably smoother, more flawless skin; reduces the appearance of enlarged pores - without dimethicone or other damaging and pore-clogging occlusive agents.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663263658aae03471-1": {
+          "type": "text_block",
+          "settings": {
+            "product": "plantonic-hyaluronic",
+            "title": "juicy skin firming serum water $20",
+            "text": "<p>provides unparalleled, long lasting heavenly hydration that strengthens your moisture barrier to reveal firmer, bouncier skin<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663263658aae03471-2": {
+          "type": "text_block",
+          "settings": {
+            "product": "shroom-moisture-boom",
+            "title": "deeply hydrating moisture water $24",
+            "text": "<p>a creamy, fast-absorbing formula that hydrates from within, acting as a moisture magnet that visibly plumps your skin<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "1663263658aae03471-3": {
+          "type": "text_block",
+          "settings": {
+            "product": "hazel-for-real",
+            "title": "alcohol-free witch hazel $12",
+            "text": "<p>this witch hazel is actually made from fresh witch hazel in optimal concentrations of actives at peak potency that clarify, tone, and balance your skin<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "1663263658aae03471-0",
+        "1663263658aae03471-1",
+        "1663263658aae03471-2",
+        "1663263658aae03471-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 4,
+        "bg_color": "",
+        "align_text": "text-left",
+        "spacing_range": 5,
+        "text_width": 90,
+        "equalize_height": true,
+        "image_aspect_ratio": 1.3,
+        "show_images": true,
+        "disable_slider": false,
+        "remove_margin_bottom": false
+      }
+    },
+    "1655822022e2bc37e3": {
+      "type": "section-columns",
+      "disabled": true,
+      "blocks": {
+        "16558220225404fcbc-3": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pore-vanish-bottle_FaceWater_wht.jpg",
+            "image_link": "shopify:\/\/products\/pore-vanish-brew",
+            "bg_position": "center-center",
+            "title": "miracle pore minimizing toner $17",
+            "text": "<p>delivers unbelievably smoother, more flawless skin; reduces the appearance of enlarged pores - without dimethicone or other damaging and pore-clogging occlusive agents.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": true,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16558220225404fcbc-1": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/plantonic-bottle_FaceWater_wht.jpg",
+            "image_link": "shopify:\/\/products\/plantonic-hyaluronic",
+            "bg_position": "center-center",
+            "title": "juicy skin firming serum water $20",
+            "text": "<p>provides unparalleled, long lasting heavenly hydration that strengthens your moisture barrier to reveal firmer, bouncier skin<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16558220225404fcbc-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shroom-moisture-bottle_FaceWater_wht.jpg",
+            "image_link": "shopify:\/\/products\/shroom-moisture-boom",
+            "bg_position": "center-top",
+            "title": "deeply hydrating moisture water $24",
+            "text": "<p>a creamy, fast-absorbing formula that hydrates from within, acting as a moisture magnet that visibly plumps your skin<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16558220225404fcbc-0": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hazel-for-real-bottle_FaceWater_wht.jpg",
+            "image_link": "shopify:\/\/products\/hazel-for-real",
+            "bg_position": "center-center",
+            "title": "alcohol-free witch hazel $12",
+            "text": "<p>this witch hazel is actually made from fresh witch hazel in optimal concentrations of actives at peak potency that clarify, tone, and balance your skin<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "16558220225404fcbc-3",
+        "16558220225404fcbc-1",
+        "16558220225404fcbc-2",
+        "16558220225404fcbc-0"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 4,
+        "heading_font_size": 20,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": true,
+        "text_width": 89,
+        "equalize_height": true,
+        "image_aspect_ratio": 1.3,
+        "show_images": true,
+        "disable_slider": false,
+        "remove_margin_bottom": false
+      }
+    },
+    "testimonials": {
+      "type": "section-testimonials",
+      "blocks": {
+        "testimonial-0": {
+          "type": "text",
+          "settings": {
+            "heading": "<h3>we let our reviews speak for themselves.<\/h3>",
+            "text_size": 125,
+            "subheading": "<p>4.98 average<\/p>",
+            "block_color": "#ffffff",
+            "text_color": "text-dark",
+            "override_border": true,
+            "border_color": "#000000",
+            "border_width": 2,
+            "text_alignment": "text-left"
+          }
+        },
+        "testimonial-5": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "text": "<p>my pores looked good, the redness has calmed down<\/p>",
+            "customer_name": "Virginia V.",
+            "subheading": "",
+            "override_border": false,
+            "border_color": "#000000",
+            "border_width": 2
+          }
+        },
+        "testimonial-6": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "text": "<p>gives me a healthy glow<\/p>",
+            "customer_name": "Britany M.",
+            "subheading": "",
+            "override_border": false,
+            "border_color": "#000000",
+            "border_width": 2
+          }
+        },
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "text": "<p>makes me feel like a million bucks<\/p>",
+            "customer_name": "Lisa S.",
+            "subheading": "",
+            "override_border": false,
+            "border_color": "#000000",
+            "border_width": 2
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "text": "<p>my face felt immediately refreshed<\/p>",
+            "customer_name": "Gianna S.",
+            "subheading": "",
+            "override_border": false,
+            "border_color": "#000000",
+            "border_width": 2
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "text": "<p>my skin looks much better<\/p>",
+            "customer_name": "LuAnne T.",
+            "subheading": "",
+            "override_border": false,
+            "border_color": "#000000",
+            "border_width": 2
+          }
+        },
+        "testimonial-4": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "text": "<p>first time in a long time I havent had any breakouts<\/p>",
+            "customer_name": "Lauren W.",
+            "subheading": "",
+            "override_border": false,
+            "border_color": "#000000",
+            "border_width": 2
+          }
+        }
+      },
+      "block_order": [
+        "testimonial-0",
+        "testimonial-5",
+        "testimonial-6",
+        "testimonial-1",
+        "testimonial-2",
+        "testimonial-3",
+        "testimonial-4"
+      ],
+      "settings": {
+        "title": "",
+        "text_size": 100,
+        "text_alignment": "text-left",
+        "wrapper": "full",
+        "bg_color": "#fafafa",
+        "border_color": "#000000",
+        "border_width": 2
+      }
+    },
+    "16632641343e60bbea": {
+      "type": "section-collection",
+      "settings": {
+        "collection": "oilwaters",
+        "title": "oilwaters",
+        "description": "<p>This innovative, weightless advancement of conventional facial oil melts right into your skin - without ever feeling greasy or tacky. Pore healthy Oilwater rapidly absorbs upon contact for sumptuously soft skin and long-lasting luminous glow– a super healthy addition to any skincare routine.<\/p>",
+        "spacing_range": -1,
+        "heading_alignment": true,
+        "show_description": false,
+        "products_rows": 2,
+        "products_layout": "carousel",
+        "show_collection_button": true,
+        "show_collection": "View oilwaters",
+        "button_style": "text",
+        "bg_color": "",
+        "enable_slider_mobile": true,
+        "remove_top_padding": false,
+        "remove_margin_bottom": false
+      }
+    }
+  },
+  "order": [
+    "1655905158580e2c4f",
+    "16638774042f6239ae",
+    "grid-0",
+    "166326827019c9f3af",
+    "166326105196ff14f4",
+    "1656533036d527d1da",
+    "16564295094c18a1f2",
+    "1660056626d521ddbc",
+    "1655820298867db805",
+    "16637392042c67527c",
+    "1658853987e12cad3f",
+    "16565284797bfc6776",
+    "1663268646cef71652",
+    "16632634038e2dad11",
+    "16558220053c689ae2",
+    "166005705070be2216",
+    "166326884264b65728",
+    "166326365881b283a1",
+    "1655822022e2bc37e3",
+    "testimonials",
+    "16632641343e60bbea"
+  ]
+}

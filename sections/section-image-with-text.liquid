@@ -1,0 +1,425 @@
+{%- liquid
+  assign show_image = true
+  assign unique = section.id
+  assign section_height = section.settings.section_height
+  assign wrapper = section.settings.wrapper
+  assign image_background = section.settings.image_background
+  assign bg_position = section.settings.bg_position
+  assign image = section.settings.image
+  assign text_position = section.settings.text_position
+  assign text_alignment = section.settings.text_alignment
+  assign subheading = section.settings.subheading
+  assign heading = section.settings.heading
+  assign heading_size = section.settings.heading_font_size
+  assign heading_mobile_size = section.settings.heading_mobile_font_size
+  assign heading_font_weight = section.settings.heading_font_weight | times: 1
+  assign text = section.settings.text
+  assign text_size = section.settings.text_font_size
+  assign text_mobile_size = section.settings.text_mobile_font_size
+  assign text_font_weight = section.settings.text_font_weight | times: 1
+  assign video_url = section.settings.video_url
+  assign button_text = section.settings.button_text
+  assign button_link = section.settings.button_link | default: '#'
+  assign button_style = section.settings.button_style
+  assign bg_color = section.settings.bg_color
+  assign tablet_background_y_position = section.settings.tablet_background_y_position
+  assign tablet_background_x_position = section.settings.tablet_background_x_position
+  assign mobile_background_y_position = section.settings.mobile_background_y_position
+  assign mobile_background_x_position = section.settings.mobile_background_x_position
+  assign border_color = section.settings.border_color
+  assign border_width = section.settings.border_width
+  assign textbox_background_color = section.settings.textbox_background_color
+  assign text_color = section.settings.text_color
+-%}
+
+{%- style -%}
+  {%- if bg_color != 'rgba(0,0,0,0)' and bg_color != '' -%}
+    #ImageWithText--{{ section.id }} {
+      --bg: {{ bg_color }};
+    }
+  {%- endif -%}
+  #ImageWithText--{{ section.id }} .rich-text__heading { 
+    font-size: {{ heading_size }}px;
+    font-weight: {{ heading_font_weight }};
+  }
+
+  #ImageWithText--{{ section.id }} .rich-text__content {
+    --text: {{ text_color }};
+    --heading: {{ text_color }};
+    --COLOR-BLACK-WHITE: {{ border_color }};
+    --bg: {{ textbox_background_color }};
+    border-width: {{ border_width }}px;
+    font-size: {{ text_size }}px;
+    font-weight: {{ text_font_weight }};
+  }
+  {%- if section.settings.change_tablet_position -%}
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      #ImageWithText--{{ section.id }} .rich-text__image-bg {
+        background-position: {{ tablet_background_x_position }}% {{ tablet_background_y_position }}% !important;
+      }
+    }
+  {%- endif -%}
+
+  @media only screen and (max-width: 479px) {
+    #ImageWithText--{{ section.id }} .rich-text__heading { 
+      font-size: {{ heading_mobile_size }}px;
+    }
+
+    #ImageWithText--{{ section.id }} .rich-text__content {
+      font-size: {{ text_mobile_size }}px;
+    }
+
+    {%- if section.settings.change_mobile_position -%}
+      #ImageWithText--{{ section.id }} .rich-text__image-bg {
+        background-position: {{ mobile_background_x_position }}% {{ mobile_background_y_position }}% !important;
+      }
+    {%- endif -%}
+  }
+{%- endstyle -%}
+
+<section id="ImageWithText--{{ section.id }}"
+  class="rich-text{% if image_background %} rich-text--has-background{% endif %} featured-content-section {{ section_height }} {% if section.settings.remove_margin_bottom %}remove-margin-bottom{% endif %}"
+  data-section-id="{{ section.id }}"
+  data-section-type="image-with-text"
+  data-overflow-container
+  {% unless image_background %}
+    data-prevent-transparent-header
+  {% endunless %}>
+  <div class="featured-content-section__wrapper">
+    {%- render 'rich-text',
+      show_image: show_image,
+      image_background: image_background,
+      mobile_background_y_position: mobile_background_y_position,
+      mobile_background_x_position: mobile_background_x_position,
+      bg_position: bg_position,
+      unique: unique,
+      wrapper: wrapper,
+      image: image,
+      text_position: text_position,
+      text_alignment: text_alignment,
+      subheading: subheading,
+      heading: heading,
+      text: text,
+      video_url: video_url,
+      button_text: button_text,
+      button_link: button_link,
+      button_style: button_style -%}
+  </div>
+</section>
+
+{% schema %}
+{
+    "name": "Image with text",
+    "class": "rich-text transparent-header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "select",
+        "id": "section_height",
+        "label": "Height",
+        "default": "six-fifty-height",
+        "options": [
+          { "value": "full-height", "label": "Full screen" },
+          { "value": "seven-fifty-height", "label": "750px" },
+          { "value": "six-fifty-height", "label": "650px" },
+          { "value": "five-fifty-height ", "label": "550px" },
+          { "value": "four-fifty-height", "label": "450px" }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "text_position",
+        "label": "Block position",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "wrapper",
+        "label": "Width",
+        "default": "normal",
+        "options": [
+          { "value": "normal", "label": "Normal" },
+          { "value": "full", "label": "Wide" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "image_background",
+        "label": "Set image as a background",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "bg_position",
+        "label": "Position",
+        "default": "center-center",
+        "options": [
+          { "label": "Top", "value": "center-top" },
+          { "label": "Right", "value": "right-center" },
+          { "label": "Center", "value": "center-center" },
+          { "label": "Left", "value": "left-center" },
+          { "label": "Bottom", "value": "center-bottom" }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "change_tablet_position",
+        "label": "Change the tablet image position",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "tablet_background_y_position",
+        "label": "Tablet image vertical position",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%"
+      },
+      {
+        "type": "range",
+        "id": "tablet_background_x_position",
+        "label": "Tablet image horizontial position",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%"
+      },
+      {
+        "type": "checkbox",
+        "id": "change_mobile_position",
+        "label": "Change the mobile image position",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "mobile_background_y_position",
+        "label": "Mobile image vertical position",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%"
+      },
+      {
+        "type": "range",
+        "id": "mobile_background_x_position",
+        "label": "Mobile image horizontial position",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%"
+      },
+      {
+        "type": "header",
+        "content": "Textbox"
+      },
+      {
+        "type": "color",
+        "id": "border_color",
+        "label": "Border color",
+        "default": "#000000"
+      },
+      {
+        "type": "range",
+        "id": "border_width",
+        "label": "Textbox border width",
+        "default": 2,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "color",
+        "id": "textbox_background_color",
+        "label": "Textbox background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": "Text"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#000000"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Alignment",
+        "default": "left",
+        "options": [
+          { "label": "Left", "value": "left" },
+          { "label": "Center", "value": "center" }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "Subheading"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Our Story"
+      },
+      {
+        "type": "range",
+        "id": "heading_font_size",
+        "label": "Heading font size",
+        "default": 32,
+        "min": 20,
+        "max": 60,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "heading_mobile_font_size",
+        "label": "Heading mobile font size",
+        "default": 32,
+        "min": 16,
+        "max": 40,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "type": "select",
+        "id": "heading_font_weight",
+        "label": "Heading font weight",
+        "default": "700",
+        "options": [
+          { "label": "700", "value": "700" },
+          { "label": "400", "value": "400" },
+          { "label": "200", "value": "200" }
+        ]
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+      {
+        "type": "range",
+        "id": "text_font_size",
+        "label": "Text font size",
+        "default": 18,
+        "min": 12,
+        "max": 60,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "text_mobile_font_size",
+        "label": "Text mobile font size",
+        "default": 18,
+        "min": 12,
+        "max": 40,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "type": "select",
+        "id": "text_font_weight",
+        "label": "Text font weight",
+        "default": "200",
+        "options": [
+          { "label": "700", "value": "700" },
+          { "label": "400", "value": "400" },
+          { "label": "200", "value": "200" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Button"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Text",
+        "default": "Learn More"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Link"
+      },
+      {
+        "type": "select",
+        "id": "button_style",
+        "label": "Style",
+        "default": "primary",
+        "options": [
+          { "label": "Text", "value": "text" },
+          { "label": "Small button", "value": "primary btn--small" },
+          { "label": "Large button", "value": "primary" },
+          { "label": "Small outline button", "value": "secondary btn--small" },
+          { "label": "Large outline button", "value": "secondary" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Video button"
+      },
+      {
+        "type": "video_url",
+        "id": "video_url",
+        "label": "Link",
+        "accept": ["youtube", "vimeo"]
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background"
+      },
+      {
+        "type": "checkbox",
+        "id": "remove_margin_bottom",
+        "label": "Remove margin bottom",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image with text",
+        "category": "Image"
+      }
+    ]
+}
+{% endschema %}

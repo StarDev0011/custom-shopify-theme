@@ -1,0 +1,29 @@
+{%- liquid
+	assign image = media.preview_image
+	assign image_url_pattern = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+	assign image_widths = "[98, 196, 294, 392, 588]"
+-%}
+
+<div class="product-single__thumbnail" data-id="{{ media.id }}" data-thumbnail-id="{{ section.id }}-{{ media.id }}">
+	<a class="product-single__thumbnail-link" aria-label="{{ product_title | strip_html | escape }}" href="{{ media.preview_image | img_url: '2048x' }}">
+		<img src="{{ 'blank.gif' | asset_img_url: '1x1' }}"
+			 class="product-single__thumbnail-img lazyload"
+			 data-src="{{ image_url_pattern }}"
+			 data-widths= "{{ image_widths }}"
+			 data-aspectratio="{{ image.aspect_ratio }}"
+			 data-sizes="auto"
+			 width="98"
+			 height="98"
+			 data-object-fit="cover"
+			 alt="{{ image.alt | escape }}">
+		<noscript>
+			<img src="{{ image.src | img_url: '98x' }}" alt="{{ image.alt | escape }}" class="product-single__thumbnail-img">
+		</noscript>
+
+		{%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+			{%- render 'icon-media-video' -%}
+		{%- elsif media.media_type == 'model' -%}
+			{%- render 'icon-media-model' -%}
+		{%- endif -%}
+	</a>
+</div>
