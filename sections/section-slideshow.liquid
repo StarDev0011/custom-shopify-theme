@@ -17,8 +17,9 @@
 
   assign id = section.id
   assign custom_css = section.settings.custom_css
-  assign arrow_dot_color = section.settings.arrow_dot_color
+  assign dot_color = section.settings.dot_color
   assign next_prev_color = section.settings.next_prev_color
+  assign down_color = section.settings.down_color
 -%}
 
 {%- style -%}
@@ -36,10 +37,10 @@
     --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ heading_size }});
   }
   #Slideshow--{{ section.id }} .slider__scroll-down {
-    color: {{arrow_dot_color}};
+    color: {{down_color}};
   }
   #Slideshow--{{ section.id }} .flickity-page-dots .dot {
-    border: solid 2px {{arrow_dot_color}};
+    border: solid 2px {{dot_color}};
   }
   #Slideshow--{{ section.id }} .flickity-prev-next-button {
     color: {{next_prev_color}};
@@ -397,13 +398,18 @@
     },
     {
       "type": "color",
-      "id": "arrow_dot_color",
+      "id": "dot_color",
       "label": "Dots Color"
     },
     {
       "type": "color",
       "id": "next_prev_color",
       "label": "Arrows Color"
+    },
+    {
+      "type": "color",
+      "id": "down_color",
+      "label": "Down Arrows Color"
     },
     {
       "type": "header",

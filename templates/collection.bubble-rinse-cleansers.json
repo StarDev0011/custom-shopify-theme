@@ -67,6 +67,7 @@
       "settings": {
         "height": "six-fifty-height",
         "add_spacing": true,
+        "in_collection": false,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""
@@ -179,6 +180,7 @@
       "settings": {
         "height": "four-fifty-height",
         "add_spacing": true,
+        "in_collection": true,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": "{\npadding-top: 0;\n}"
@@ -362,6 +364,7 @@
         "show_nav_arrows": false,
         "show_arrow_down": false,
         "arrow_dot_color": "",
+        "next_prev_color": "",
         "autoplay": false,
         "duration": 4,
         "transition": "slide",
