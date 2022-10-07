@@ -96,6 +96,7 @@
                   {%- when 'image' -%}
                     {%- liquid
                       assign image_position = block.settings.image_position
+                      assign mobile_image = block.settings.mobile_image
                       assign image_bg_pos = image_position | prepend: 'bg-pos-'
                       assign aspect_ratio = image.aspect_ratio | default: 1.66
                     -%}
@@ -118,58 +119,70 @@
                         {%- endif -%}
                       {%- endstyle -%}
 
-<div class="featured-image__pane">
-  <div class="featured-image__scale{% if enable_parallax %} parallax--{{ section.id }}{% endif %}"
-    {% if enable_parallax %}
-      style="height: {{ 1 | divided_by: aspect_ratio | times: 100 }}vw;"
-      data-parallax-img
-    {% endif %}>
+                      <div class="featured-image__pane">
+                        <div class="featured-image__scale{% if enable_parallax %} parallax--{{ section.id }}{% endif %}"
+                          {% if enable_parallax %}
+                            style="height: {{ 1 | divided_by: aspect_ratio | times: 100 }}vw;"
+                            data-parallax-img
+                          {% endif %}>
 
-    {%- unless image == blank -%}
-      <div
-        class="featured-image__bg {{ image_bg_pos }} lazyload"
-        data-bgset="{% render 'bgset', image: image %}"
-        data-sizes="auto"
-        data-parent-fit="cover"
-      ></div>
-      <noscript>
-        <div class="featured-image__bg {{ image_bg_pos }}" style="background-image: url('{{ image | img_url:'2048x' }}');{% if enable_parallax %}background-attachment: fixed;{% endif %}"></div>
-      </noscript>
-    {%- else -%}
-      <div class="featured-image__bg featured-image__bg--placeholder {{ image_bg_pos }}">
-        {{- 'image' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
-      </div>
-    {%- endunless -%}
+                          {%- unless image == blank -%}
+                            <div
+                              class="featured-image__bg {{ image_bg_pos }} lazyload"
+                              data-bgset="{% render 'bgset', image: image %}"
+                              data-sizes="auto"
+                              data-parent-fit="cover"
+                            ></div>
+                            <noscript>
+                              <div class="featured-image__bg {{ image_bg_pos }}" style="background-image: url('{{ image | img_url:'2048x' }}');{% if enable_parallax %}background-attachment: fixed;{% endif %}"></div>
+                            </noscript>
+                          {%- else -%}
+                            <div class="featured-image__bg featured-image__bg--placeholder {{ image_bg_pos }}">
+                              {{- 'image' | placeholder_svg_tag: 'placeholder-svg-filled' -}}
+                            </div>
+                          {%- endunless -%}
 
-    <div class="overlay"></div>
-  </div>
-</div>
+                          {%- unless mobile_image == blank -%}
+                            <div
+                              class="mobile_featured-image__bg featured-image__bg {{ image_bg_pos }} lazyload"
+                              data-bgset="{% render 'bgset', image: mobile_image %}"
+                              data-sizes="auto"
+                              data-parent-fit="cover"
+                            ></div>
+                            <noscript>
+                              <div class="featured-image__bg {{ image_bg_pos }}" style="background-image: url('{{ image | img_url:'2048x' }}');{% if enable_parallax %}background-attachment: fixed;{% endif %}"></div>
+                            </noscript>
+                          {%- endunless -%}
 
-<div class="featured-image__content align--{{ text_position }}">
-  <div class="featured-image__content-inner{% if show_text_shadow and wrapper == 'full' %} backdrop--radial{% endif %}" data-overflow-content>
-    {%- if title != blank -%}
-      <h1 class="featured-image__heading main-heading"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ title | escape }}</h1>
-      {%- assign animation_delay = animation_delay | plus: 250 -%}
-    {%- endif -%}
+                          <div class="overlay"></div>
+                        </div>
+                      </div>
 
-    {%- if text != blank -%}
-      <h2 class="featured-image__caption main-text"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ text | escape }}</h2>
-      {%- assign animation_delay = animation_delay | plus: 250 -%}
-    {%- endif -%}
+                      <div class="featured-image__content align--{{ text_position }}">
+                        <div class="featured-image__content-inner{% if show_text_shadow and wrapper == 'full' %} backdrop--radial{% endif %}" data-overflow-content>
+                          {%- if title != blank -%}
+                            <h1 class="featured-image__heading main-heading"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ title | escape }}</h1>
+                            {%- assign animation_delay = animation_delay | plus: 250 -%}
+                          {%- endif -%}
 
-    {%- if button_text != blank -%}
-      <div class="featured-image__buttons main-buttons">
-        <div class="main-buttons__item"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
-          <a class="btn btn--{{ button_style }} call-to-action" href="{{ button_link }}">{{ button_text | escape }}</a>
-        </div>
-      </div>
-    {%- endif -%}
-  </div>
+                          {%- if text != blank -%}
+                            <h2 class="featured-image__caption main-text"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>{{ text | escape }}</h2>
+                            {%- assign animation_delay = animation_delay | plus: 250 -%}
+                          {%- endif -%}
 
-  {%- if button_text == blank and button_link != '#!' -%}
-    <a class="featured-image__link" href="{{ button_link }}"></a>
-  {%- endif -%}
-</div>
+                          {%- if button_text != blank -%}
+                            <div class="featured-image__buttons main-buttons">
+                              <div class="main-buttons__item"{% if animations_enabled %} data-aos="fade-up" data-aos-anchor="{{ animation_anchor }}" data-aos-delay="{{ animation_delay }}"{% endif %}>
+                                <a class="btn btn--{{ button_style }} call-to-action" href="{{ button_link }}">{{ button_text | escape }}</a>
+                              </div>
+                            </div>
+                          {%- endif -%}
+                        </div>
+
+                        {%- if button_text == blank and button_link != '#!' -%}
+                          <a class="featured-image__link" href="{{ button_link }}"></a>
+                        {%- endif -%}
+                      </div>
                     </div>
 
                   {%- when 'text' -%}
@@ -464,6 +477,11 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Mobile Image"
           },
           {
             "type": "select",

@@ -113,6 +113,12 @@ h2.right-heading {
     text-transform: uppercase;
     text-decoration: underline;
 }
+.featured-image__bg {
+    display: block;
+}
+.mobile_featured-image__bg {
+    display: none;
+}
 @media screen and (min-width:1024px) {
     .collection__filters-wrapper {
         padding-top: 0% !important;
@@ -225,5 +231,11 @@ h2.right-heading {
     .accordion__item__title__text {
         font-size: 18px;
         font-weight: normal;
+    }
+    .featured-image__bg {
+        display: none;
+    }
+    .mobile_featured-image__bg {
+        display: block;
     }
 }
