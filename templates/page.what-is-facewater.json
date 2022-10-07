@@ -42,8 +42,8 @@
             "heading_font_size_desktop": 50,
             "heading_font_size_mobile": 26,
             "heading_weight": "heading-normal",
-            "text": "WATER-FORM serums, cleansers, toners, moisturizers and more...\n<p>100% PLANT BASED MOISTURE\n<br>for visibly clearer & healthier skin<\/p>",
-            "text_font_size_desktop": 28,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+            "text_font_size_desktop": 20,
             "text_font_size_mobile": 14,
             "text_weight": "text-normal",
             "button_text": "shop facewater",
@@ -63,9 +63,305 @@
       "settings": {
         "height": "four-fifty-height",
         "add_spacing": false,
+        "in_collection": false,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": "{\npadding-top: 0;\npadding-bottom: 60px;\n}"
+      }
+    },
+    "16637753231bdf1b92": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "0b5a72ba-23b3-4e55-b7aa-950101eb01f9": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "PORE-LIBERATING <br> 100% PLANT BASED <br> MOISTURE",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "bg_color": "#fafafa",
+            "mobile_order": "default"
+          }
+        },
+        "3f94f6bc-e595-4c7b-8bfe-48e6a9215699": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FW_SQ.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": true,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "166377532317321324-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/skin_illustration-01.png",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": true,
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "0b5a72ba-23b3-4e55-b7aa-950101eb01f9",
+        "3f94f6bc-e595-4c7b-8bfe-48e6a9215699",
+        "166377532317321324-0"
+      ],
+      "settings": {
+        "height": "550",
+        "min_tablet_height": 255,
+        "min_mobile_height": 275,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 40,
+        "heading_mobile_font_size": 28,
+        "heading_font_weight": "400",
+        "heading_color": "#000000",
+        "text_font_size": 16,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "400",
+        "text_color": "#000000",
+        "button_style": "secondary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": false
+      }
+    },
+    "cb5ae9e5-2df5-4ddb-a368-dca72796c1c3": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "template--15879765393597__cb5ae9e5-2df5-4ddb-a368-dca72796c1c3-1665148088db52154b-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "PORE-LIBERATING <br> 100% PLANT BASED MOISTURE",
+            "heading_font_size_desktop": 42,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        },
+        "template--15879765393597__cb5ae9e5-2df5-4ddb-a368-dca72796c1c3-1665148088db52154b-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/skin_illustration-01_34f8b5ec-1531-4591-a34a-6378941e48eb.png",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 0,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879765393597__cb5ae9e5-2df5-4ddb-a368-dca72796c1c3-1665148088db52154b-1",
+        "template--15879765393597__cb5ae9e5-2df5-4ddb-a368-dca72796c1c3-1665148088db52154b-0"
+      ],
+      "settings": {
+        "height": "seven-fifty-height",
+        "add_spacing": true,
+        "in_collection": false,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "cac6fb06-1bf5-494d-98f5-a015c0df4f15": {
+      "type": "section-mosaic",
+      "disabled": true,
+      "blocks": {
+        "65d670af-890a-43fb-8257-221e025cffa3": {
+          "type": "text",
+          "settings": {
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "PORE-LIBERATING 100% PLANT BASED MOISTURE",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "bg_color": "#fafafa"
+          }
+        },
+        "template--15879765393597__cac6fb06-1bf5-494d-98f5-a015c0df4f15-1665148090a7e4210f-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/skin_illustration-01.png",
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark"
+          }
+        }
+      },
+      "block_order": [
+        "65d670af-890a-43fb-8257-221e025cffa3",
+        "template--15879765393597__cac6fb06-1bf5-494d-98f5-a015c0df4f15-1665148090a7e4210f-0"
+      ],
+      "settings": {
+        "height": "750",
+        "min_mobile_height": 215,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_size": 200,
+        "button_style": "primary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": true
+      }
+    },
+    "1658931444da7faacd": {
+      "type": "section-columns",
+      "disabled": true,
+      "blocks": {
+        "7a655677-1908-4287-ab91-da8a88d582bf": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fullstill-Recovered_2_816e414b-eecc-478e-aa77-976aab5f2857.jpg",
+            "image_link": "",
+            "bg_position": "center-bottom",
+            "title": "patent-pending process",
+            "text": "<p>many plants contain highly effective energetic compounds capable of working beauty wonders. to really perform, these delicate ingredients must be undamaged and present in ample quantities. our patent pending pre press and low heat vacuum distillation process starts with fresh, healthy plants and ends with a water-based solution that is loaded with whole phytonutrients.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16589314440c59287c-0": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "distilled to transform your skin",
+            "text": "<p>by removing bacteria, toxins, ions and minerals during distillation, the water is effectively purified. since water is polar it will seek out ions to bind with and in this \"stripped\" state, is able to bind to the plant actives more optimally and at a higher concentrations. <\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16589314440c59287c-1": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/phil-REV.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "highly absorbent water-form(ula)s",
+            "text": "<p>our distillation method preserves the quality, purity, and delivery of full spectrum plant actives. our water form(ulas) are super lightweight and the perfect vehicle to transport these delicate plant actives.  <\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16589314440c59287c-2": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shutterstock_185509019.jpg",
+            "image_link": "",
+            "bg_position": "right-center",
+            "title": "plant actives in motion",
+            "text": "<p>due to its proper molecular structure, the plant actives are able to be absorbed from the surface of the skin (epidermis) and travel into the lower layers of the skin’s cells<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "7a655677-1908-4287-ab91-da8a88d582bf",
+        "16589314440c59287c-0",
+        "16589314440c59287c-1",
+        "16589314440c59287c-2"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 2,
+        "heading_font_size": 20,
+        "bg_color": "#fafafa",
+        "align_text": "text-left",
+        "remove_text_spacing": true,
+        "text_width": 85,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.8,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": true
       }
     },
     "16636999280cd200e6": {
@@ -201,7 +497,9 @@
         "show_nav_dots": true,
         "show_nav_arrows": true,
         "show_arrow_down": false,
-        "arrow_dot_color": "",
+        "dot_color": "",
+        "next_prev_color": "",
+        "down_color": "",
         "autoplay": false,
         "duration": 4,
         "transition": "slide",
@@ -210,74 +508,28 @@
         "custom_css": ""
       }
     },
-    "16637753231bdf1b92": {
-      "type": "section-grid",
-      "disabled": true,
-      "blocks": {
-        "0b5a72ba-23b3-4e55-b7aa-950101eb01f9": {
-          "type": "text",
-          "settings": {
-            "text_position": "left",
-            "subheading": "",
-            "title": "THE INNOVATION",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-            "button_text": "",
-            "link": "",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "text_color": "text-dark",
-            "bg_color": "#fafafa",
-            "mobile_order": "default"
-          }
-        },
-        "166377532317321324-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/FW_SQ.png",
-            "bg_position": "center-center",
-            "mobile_image_position": "center",
-            "contain_image": false,
-            "overlay_opacity": 0,
-            "text_position": "center",
-            "subheading": "",
-            "title": "",
-            "text": "",
-            "button_text": "",
-            "link": "",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "text_color": "text-light",
-            "mobile_order": "default"
-          }
-        }
-      },
-      "block_order": [
-        "0b5a72ba-23b3-4e55-b7aa-950101eb01f9",
-        "166377532317321324-0"
-      ],
-      "settings": {
-        "height": "650",
-        "min_tablet_height": 255,
-        "min_mobile_height": 275,
-        "wrapper": "full",
-        "add_spacing": true,
-        "heading_font_size": 40,
-        "heading_mobile_font_size": 28,
-        "heading_font_weight": "400",
-        "heading_color": "#000000",
-        "text_font_size": 16,
-        "text_mobile_font_size": 18,
-        "text_font_weight": "400",
-        "text_color": "#000000",
-        "button_style": "secondary btn--small",
-        "secondary_button_style": "secondary btn--small",
-        "bg_color": "",
-        "enable_slider_mobile": false
-      }
-    },
     "16589399042ad7ead6": {
       "type": "section-custom-content",
       "blocks": {
+        "1658939904a3c3a247-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/FW_SQ.png",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
         "6a9a8dc4-46e6-47fd-b8b3-cbf595cee760": {
           "type": "text",
           "settings": {
@@ -304,127 +556,19 @@
             "secondary_button_style": "secondary",
             "bg_color": ""
           }
-        },
-        "1658939904a3c3a247-0": {
-          "type": "image",
-          "settings": {
-            "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/FW_SQ.png",
-            "image_position": "center-center",
-            "change_tablet_position": false,
-            "tablet_background_y_position": 50,
-            "tablet_background_x_position": 50,
-            "overlay_opacity": 0,
-            "text_color": "text-light",
-            "title": "",
-            "heading_size": 100,
-            "text": "",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "primary"
-          }
         }
       },
       "block_order": [
-        "6a9a8dc4-46e6-47fd-b8b3-cbf595cee760",
-        "1658939904a3c3a247-0"
+        "1658939904a3c3a247-0",
+        "6a9a8dc4-46e6-47fd-b8b3-cbf595cee760"
       ],
       "settings": {
         "height": "six-fifty-height",
         "add_spacing": true,
+        "in_collection": false,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": "{\npadding-top: 0;\n}"
-      }
-    },
-    "1658931444da7faacd": {
-      "type": "section-columns",
-      "disabled": true,
-      "blocks": {
-        "7a655677-1908-4287-ab91-da8a88d582bf": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/fullstill-Recovered_2_816e414b-eecc-478e-aa77-976aab5f2857.jpg",
-            "image_link": "",
-            "bg_position": "center-bottom",
-            "title": "patent-pending process",
-            "text": "<p>many plants contain highly effective energetic compounds capable of working beauty wonders. to really perform, these delicate ingredients must be undamaged and present in ample quantities. our patent pending pre press and low heat vacuum distillation process starts with fresh, healthy plants and ends with a water-based solution that is loaded with whole phytonutrients.<\/p>",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "text",
-            "show_video": false,
-            "play_btn_color": "#000000",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-          }
-        },
-        "16589314440c59287c-0": {
-          "type": "text_block",
-          "settings": {
-            "image_link": "",
-            "bg_position": "center-center",
-            "title": "distilled to transform your skin",
-            "text": "<p>by removing bacteria, toxins, ions and minerals during distillation, the water is effectively purified. since water is polar it will seek out ions to bind with and in this \"stripped\" state, is able to bind to the plant actives more optimally and at a higher concentrations. <\/p>",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "text",
-            "show_video": false,
-            "play_btn_color": "#000000",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-          }
-        },
-        "16589314440c59287c-1": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/phil-REV.jpg",
-            "image_link": "",
-            "bg_position": "center-center",
-            "title": "highly absorbent water-form(ula)s",
-            "text": "<p>our distillation method preserves the quality, purity, and delivery of full spectrum plant actives. our water form(ulas) are super lightweight and the perfect vehicle to transport these delicate plant actives.  <\/p>",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "text",
-            "show_video": false,
-            "play_btn_color": "#000000",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-          }
-        },
-        "16589314440c59287c-2": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/shutterstock_185509019.jpg",
-            "image_link": "",
-            "bg_position": "right-center",
-            "title": "plant actives in motion",
-            "text": "<p>due to its proper molecular structure, the plant actives are able to be absorbed from the surface of the skin (epidermis) and travel into the lower layers of the skin’s cells<\/p>",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "text",
-            "show_video": false,
-            "play_btn_color": "#000000",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-          }
-        }
-      },
-      "block_order": [
-        "7a655677-1908-4287-ab91-da8a88d582bf",
-        "16589314440c59287c-0",
-        "16589314440c59287c-1",
-        "16589314440c59287c-2"
-      ],
-      "settings": {
-        "title": "",
-        "wrapper": "full",
-        "columns": 4,
-        "heading_font_size": 20,
-        "bg_color": "#fafafa",
-        "align_text": "text-left",
-        "remove_text_spacing": false,
-        "text_width": 90,
-        "equalize_height": true,
-        "image_aspect_ratio": 0.8,
-        "show_images": false,
-        "disable_slider": true,
-        "remove_margin_bottom": true
       }
     },
     "1659973851484a9c0c": {
@@ -572,6 +716,7 @@
       "settings": {
         "height": "six-fifty-height",
         "add_spacing": true,
+        "in_collection": false,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": "{\npadding-top: 0;\n}"
@@ -816,6 +961,7 @@
       "settings": {
         "height": "six-fifty-height",
         "add_spacing": true,
+        "in_collection": false,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""
@@ -976,11 +1122,13 @@
   "order": [
     "main",
     "166377542505a92069",
+    "16637753231bdf1b92",
+    "cb5ae9e5-2df5-4ddb-a368-dca72796c1c3",
+    "cac6fb06-1bf5-494d-98f5-a015c0df4f15",
+    "1658931444da7faacd",
     "16636999280cd200e6",
     "166394226152d30617",
-    "16637753231bdf1b92",
     "16589399042ad7ead6",
-    "1658931444da7faacd",
     "1659973851484a9c0c",
     "1656436483c66822d1",
     "1660768547ca9e0c0f",
