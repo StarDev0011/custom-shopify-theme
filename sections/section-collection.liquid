@@ -79,7 +79,7 @@
 
   {%- if heading != blank and collection.handle != 'all' -%}
     <div class="featured-collection__title">
-      <div class="{% if section.settings.heading_alignment %}wrapper wrapper--narrow{% else %}wrapper wrapper--full{% endif %}" {% if section.settings.heading_alignment %}style="margin:0; padding-right: 0;"{% endif %}>
+      <div class="{% if section.settings.heading_alignment %}wrapper wrapper--narrow{% else %}wrapper wrapper--full{% endif %}" {% if section.settings.heading_alignment %}style="margin:0;"{% endif %}>
         <h2 class="section__heading" {% if section.settings.heading_alignment or section.settings.show_description %}style="{{ inline_styles }}"{% endif %}><div style="letter-spacing: {{spacing_range}}px">{{ heading | escape }}</div></h2>
         <div class="section_desc" style="{{ inline_styles }}"> {{description }}</div>
         {%- if section.settings.show_collection_button -%}

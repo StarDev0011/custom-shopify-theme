@@ -145,6 +145,9 @@ h2.right-heading {
         opacity: 1;
         transform: translateY(0);
     }
+    .featured-collection--carousel .featured-collection__title .wrapper {
+        padding-right: 0%;
+    }
 }
 
 @media screen and (max-width:767px) {
