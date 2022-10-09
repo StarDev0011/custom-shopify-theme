@@ -110,7 +110,7 @@
           "type": "video",
           "settings": {
             "text_position": "middle-center",
-            "hero_video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "hero_video_link": "https:\/\/youtu.be\/Hu165KLRdqY",
             "video_enable_sound": false,
             "overlay_opacity": 0,
             "text_color": "text-light",
@@ -131,6 +131,7 @@
         "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": true,
+        "mobile_height": 350,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""

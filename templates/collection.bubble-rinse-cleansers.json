@@ -68,6 +68,7 @@
         "height": "six-fifty-height",
         "add_spacing": true,
         "in_collection": false,
+        "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""
@@ -141,6 +142,7 @@
           "settings": {
             "text_position": "middle-center",
             "image": "shopify:\/\/shop_images\/MG_2315.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/MG_2315_19e599e5-fbe7-4d24-8c33-bc0ea3292f7e.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -181,6 +183,7 @@
         "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": true,
+        "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": "{\npadding-top: 0;\n}"

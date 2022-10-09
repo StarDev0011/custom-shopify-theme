@@ -20,6 +20,7 @@
           "settings": {
             "text_position": "middle-center",
             "image": "shopify:\/\/shop_images\/9556v6_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/rosewater_COLLECTION-2-mirror_11cb1d39-e267-4519-8ad9-e4f15b7edb03.jpg",
             "image_position": "left-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -59,6 +60,7 @@
         "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": true,
+        "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""
@@ -125,8 +127,9 @@
         "show_nav_dots": false,
         "show_nav_arrows": false,
         "show_arrow_down": false,
-        "arrow_dot_color": "",
+        "dot_color": "",
         "next_prev_color": "",
+        "down_color": "",
         "autoplay": false,
         "duration": 4,
         "transition": "slide",
