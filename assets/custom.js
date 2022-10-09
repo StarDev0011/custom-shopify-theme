@@ -1,11 +1,11 @@
 jQuery(document).ready(function($) {
     if(window.location.href.split('/')[4] == 'what-is-facewater') {
         $(".column__item__text").each(function(){
-            console.log('text')
-            var outrheight = $(this).outerHeight()
+            var outerheight = $(this).outerHeight()
             var scrollheight = $(this).prop("scrollHeight")
-            if(outrheight < scrollheight) {
-                console.log("show")
+            console.log(outerheight)
+            console.log(scrollheight)
+            if(outerheight <= scrollheight) {
                 $(this).css("margin-bottom", "5px")
                 $(this).parent().children(".read_more").show()
                 $(this).parent().parent().css("margin-bottom", "30px")

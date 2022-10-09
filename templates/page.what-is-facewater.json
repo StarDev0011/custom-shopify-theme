@@ -64,6 +64,7 @@
         "height": "four-fifty-height",
         "add_spacing": false,
         "in_collection": false,
+        "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": "{\npadding-top: 0;\npadding-bottom: 60px;\n}"
@@ -214,6 +215,7 @@
         "height": "seven-fifty-height",
         "add_spacing": true,
         "in_collection": false,
+        "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""
@@ -566,6 +568,7 @@
         "height": "six-fifty-height",
         "add_spacing": true,
         "in_collection": false,
+        "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": "{\npadding-top: 0;\n}"
@@ -717,6 +720,7 @@
         "height": "six-fifty-height",
         "add_spacing": true,
         "in_collection": false,
+        "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": "{\npadding-top: 0;\n}"
@@ -840,7 +844,7 @@
             "image_link": "",
             "bg_position": "center-center",
             "title": "WAY BEYOND CLEAN",
-            "text": "<p>100% plant based formula<\/p><p>no glycols <\/p><p>no petrochemicals <\/p><p>no synthetic fragrance <\/p><p>no added dye or color <\/p><p>vegan* and cruelty-free <\/p><p>made by us <br\/><\/p><p>*all of our products are vegan with<br\/>the exception of those containing honey.<\/p>",
+            "text": "<p>100% plant based formula <br\/><\/p><p>no glycolsa<br\/><\/p><p>no petrochemicals<br\/><\/p><p>no synthetic fragrance<br\/><\/p><p>no added dye or color<br\/><\/p><p>vegan* and cruelty-free<br\/><\/p><p>made by us <br\/><\/p><p>*all of our products are vegan with<br\/>the exception of those containing honey.<\/p>",
             "button_text": "",
             "button_link": "",
             "button_style": "text",
@@ -962,6 +966,7 @@
         "height": "six-fifty-height",
         "add_spacing": true,
         "in_collection": false,
+        "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""

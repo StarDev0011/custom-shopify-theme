@@ -107,6 +107,9 @@ h2.right-heading {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
 }
+.column__item__text.rte p {
+    display: inline;
+}
 .read_more, .read_less {
     display: none;
     cursor: pointer;
@@ -147,6 +150,10 @@ h2.right-heading {
     }
     .featured-collection--carousel .featured-collection__title .wrapper {
         padding-right: 0%;
+    }
+    sup {
+        font-size: 30px;
+        margin-left: 3px;
     }
 }
 
