@@ -123,6 +123,10 @@ h2.right-heading {
     display: none;
 }
 @media screen and (min-width:1024px) {
+    .four-fifty-height {
+        height: 100%;
+        min-height: 450px;
+    }
     .collection__filters-wrapper {
         padding-top: 0% !important;
     }
