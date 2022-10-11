@@ -252,4 +252,32 @@ h2.right-heading {
     .mobile_featured-image__bg {
         display: block;
     }
+    .mobile--center {
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile--left {
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .mobile--right {
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .mobile--bottom-left {
+        justify-content: end;
+        align-items: flex-start;
+    }
+    .mobile--bottom-right {
+        justify-content: end;
+        align-items: flex-end;
+    }
+    .mobile--top-left {
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .mobile--top-right {
+        justify-content: start;
+        align-items: flex-end;
+    }
 }

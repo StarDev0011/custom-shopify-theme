@@ -13,7 +13,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/7243v3_2.jpg",
+            "image": "shopify:\/\/shop_images\/9758v6.jpg",
             "image_position": "center-top",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -61,7 +61,7 @@
         "1663775424740a93d7-1"
       ],
       "settings": {
-        "height": "four-fifty-height",
+        "height": "six-fifty-height",
         "add_spacing": false,
         "in_collection": false,
         "mobile_height": 250,

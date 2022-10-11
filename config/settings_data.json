@@ -43,11 +43,13 @@
     "show_payment_button": true,
     "show_product_gray_bg": false,
     "enable_video_looping": true,
+    "show_newsletter": true,
+    "text_newsletter": "<p>notify me when this product is available:<\/p>",
     "cart_type": "drawer",
     "enable_cart_animation": true,
     "enable_cart_notes": false,
     "enable_additional_buttons": true,
-    "show_empty_cart_buttons": false,
+    "show_empty_cart_buttons": true,
     "empty_cart_buttons": "main-menu",
     "show_continue_shopping": true,
     "continue_shopping_link": "",
@@ -189,7 +191,7 @@
               "target_referrer": "",
               "target_device_enabled": false,
               "target_device": "mobile",
-              "bg_color": "#fff",
+              "bg_color": "#ffffff",
               "text_color": "text-dark"
             }
           }

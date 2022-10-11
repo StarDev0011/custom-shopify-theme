@@ -111,6 +111,7 @@
           {%- liquid
             assign image = ''
             assign text_position = block.settings.text_position
+            assign mobile_text_position = block.settings.mobile_text_position
             assign subheading = block.settings.subheading
             assign heading = block.settings.title
             assign show_description = block.settings.show_description
@@ -249,7 +250,7 @@
                 {{ item_image }}
               {%- endif -%}
 
-              <div class="mosaic__item__content mosaic__item__content--{{ text_position }}{% if link == blank %} mosaic__item__content--nolink{% endif %}">
+              <div class="mosaic__item__content mosaic__item__content--{{ text_position }} mobile--{{mobile_text_position}} {% if link == blank %} mosaic__item__content--nolink{% endif %}">
 
                 {%- if subheading != blank -%}
                   <p class="mosaic__item__subheading subheading-text">{{ subheading }}</p>
