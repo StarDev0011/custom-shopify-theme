@@ -26,6 +26,21 @@ jQuery(document).ready(function($) {
             })
         })
     }
+    $(window).scroll(function(){
+        var headerHeight = $(".site-header").height();
+        var announcementHeight = $("#shopify-section-announcement-bar").height();
+        var pageOffset = headerHeight + announcementHeight;
+        var currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if(currentScrollTop > pageOffset) {
+            $("#oilwaters #shopify-section-header").addClass("header--sticky")
+            $("#oilwaters").addClass("has-scrolled")
+        }
+        else {
+            $("#oilwaters #shopify-section-header").removeClass("header--sticky")
+            $("#oilwaters").removeClass("has-scrolled")
+        }
+    })
+
 })
 function splide_slider () {
     if($("#ImageAccordions").length>1) {

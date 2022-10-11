@@ -125,7 +125,7 @@ h2.right-heading {
 @media screen and (min-width:1024px) {
     .four-fifty-height {
         height: 100%;
-        min-height: 450px;
+        min-height: 450px !important;
     }
     .collection__filters-wrapper {
         padding-top: 0% !important;
