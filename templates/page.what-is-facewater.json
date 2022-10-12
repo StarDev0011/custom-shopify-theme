@@ -61,7 +61,7 @@
         "1663775424740a93d7-1"
       ],
       "settings": {
-        "height": "six-fifty-height",
+        "height": "seven-fifty-height",
         "add_spacing": false,
         "in_collection": false,
         "mobile_height": 250,
@@ -99,6 +99,7 @@
             "contain_image": true,
             "overlay_opacity": 0,
             "text_position": "center",
+            "mobile_text_position": "center",
             "subheading": "",
             "title": "",
             "text": "",
@@ -119,6 +120,7 @@
             "contain_image": true,
             "overlay_opacity": 0,
             "text_position": "center",
+            "mobile_text_position": "center",
             "subheading": "",
             "title": "",
             "text": "",
@@ -372,7 +374,7 @@
         "166369992871b6e4ad-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fullstill-Recovered_1_2ea5f117-9e14-4444-a3a3-4f4941451e9b.jpg",
+            "image": "shopify:\/\/shop_images\/MG_1056.jpg",
             "image_link": "",
             "bg_position": "left-center",
             "title": "THE INVENTION - PATENT-PENDING DISTILLATION PROCESS",
@@ -388,7 +390,7 @@
         "166369992871b6e4ad-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3069v4.jpg",
+            "image": "shopify:\/\/shop_images\/0738v2.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "WATER-FORM IS BETTER FOR YOUR SKIN",
@@ -404,7 +406,7 @@
         "166369992871b6e4ad-2": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/plant_2_COLLECTION.jpg",
+            "image": "shopify:\/\/shop_images\/MG_0923_1.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "100% PLANT BASED IS DIFFERENT FROM \"NATURAL\"",
@@ -756,6 +758,7 @@
             "contain_image": false,
             "overlay_opacity": 0,
             "text_position": "top-left",
+            "mobile_text_position": "center",
             "subheading": "",
             "title": "<strong> way beyond clean <\/strong> <br> <br>100% plant based formula <br> no glycols <br>  no petrochemicals <br>  no synthetic fragrance <br> no added dye or color <br> vegan* and cruelty-free <br> made by us <br>",
             "text": "*all of our products are vegan <br> with the exception of those <br> containing honey",
@@ -776,6 +779,7 @@
             "contain_image": true,
             "overlay_opacity": 0,
             "text_position": "center",
+            "mobile_text_position": "center",
             "subheading": "",
             "title": "",
             "text": "",
@@ -796,6 +800,7 @@
             "contain_image": true,
             "overlay_opacity": 0,
             "text_position": "center",
+            "mobile_text_position": "center",
             "subheading": "",
             "title": "",
             "text": "",
@@ -840,7 +845,7 @@
         "1663779252838b7eb3-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_45.png",
+            "image": "shopify:\/\/shop_images\/MG_1663.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "WAY BEYOND CLEAN",
@@ -1044,6 +1049,7 @@
             "contain_image": true,
             "overlay_opacity": 0,
             "text_position": "left",
+            "mobile_text_position": "center",
             "subheading": "",
             "title": "100% recyclable packaging",
             "text": "PET or PETE is the most widely recycled plastic in the world. <br> It is a strong and inert material that is extremely lightweight, <br> making it efficient to transport (less carbon emissions during <br> shipping compared to glass). PET can be picked up through <br> most curbside recycling programs - just make sure to rinse out any remaining product before recycling. <h3 style=\"color:black;\"><strong> <br> <br>why we use plastic instead of <br>glass bottles<\/strong><\/h3> glass may be a sturdier material but only has a lower <br>environmental impact if reused. it also requires more <br>materials and is much heavier, leading to higher emissions, <br>especially from shipping. we chose PET plastic because <br> it is 100% recyclable, super lightweight, and produces <br> significantly less carbon emissions during transport <br> compared to glass bottles.",

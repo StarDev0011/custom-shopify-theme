@@ -91,7 +91,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/0425v6_509f7557-0298-4471-ad7d-30bc7b0a6ae0.jpg",
+            "image": "shopify:\/\/shop_images\/0425v8_7d4852a6-056d-46b8-85a3-b07ca7f607e9.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -128,7 +128,7 @@
         "df75975a-dfcd-4476-86d2-469cba173fdd"
       ],
       "settings": {
-        "height": "four-fifty-height",
+        "height": "five-fifty-height",
         "add_spacing": true,
         "in_collection": true,
         "mobile_height": 350,

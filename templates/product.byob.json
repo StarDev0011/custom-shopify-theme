@@ -35,6 +35,8 @@
         "tick_icon_color": "#008000",
         "button_color": "#ffffff",
         "button_text_color": "#000000",
+        "button_hover_bg_color": "#000000",
+        "button_hover_color": "#fafafa",
         "disable_product_link": true,
         "enable_quickview": true,
         "show_product_price": false,

@@ -141,8 +141,8 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/MG_2315.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/MG_2315_19e599e5-fbe7-4d24-8c33-bc0ea3292f7e.jpg",
+            "image": "shopify:\/\/shop_images\/2315.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/2315.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -180,7 +180,7 @@
         "1d43692d-ef12-4b90-8e19-fc07bc4feef6"
       ],
       "settings": {
-        "height": "four-fifty-height",
+        "height": "five-fifty-height",
         "add_spacing": true,
         "in_collection": true,
         "mobile_height": 250,

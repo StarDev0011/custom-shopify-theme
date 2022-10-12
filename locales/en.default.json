@@ -447,13 +447,13 @@
         "other": "{{ count }} products"
       },
       "see_all": "See All",
-      "upsell_out_of_stock": "Out of stock",
+      "upsell_out_of_stock": "comin soon",
       "upsell_error_info": "Select one in Upsell block setting",
       "upsell_error_no_product": "No upsell product selected",
       "pair_products": "Buy It With"
     },
     "product": {
-      "sold_out": "Sold Out",
+      "sold_out": "coming soon",
       "sale": "Sale",
       "preorder": "Pre-Order",
       "one_time_purchase": "One-time purchase",
@@ -464,7 +464,7 @@
       "add_to_cart": "Add to Cart",
       "buy_it_now": "Buy it now",
       "in_stock": "Item is in stock",
-      "out_of_stock": "Item is out of stock",
+      "out_of_stock": "coming soon",
       "item_unavailable": "Item is unavailable",
       "remaining_html": "Only {{ inventory }} left in stock",
       "on_sale": "Sale",
@@ -526,6 +526,13 @@
   "shopify": {
     "links": {
       "powered_by_shopify": " "
+    },
+    "checkout": {
+      "shipping_errors": {
+        "shipping_method_not_available_generic": {
+          "one": "To get free shipping, we require a minimum of 2 items for checkout. Please add at least 1 more item to your cart for free Fedex shipping."
+        }
+      }
     }
   },
   "sections": {

@@ -176,9 +176,8 @@ select:focus { /* remove select focus style in card */
     margin-bottom: 20px;
 }
 .btn-add-to-bundle:not([disabled]):hover, .btn-add-to-bundle:focus, .btn-add-to-cart:not([disabled]):hover, .btn-add-to-cart:focus {
-  background-color: {{ section.settings.button_color }};
-  color: {{ section.settings.button_text_color }};
-  filter: brightness(90%);
+  background-color: {{ section.settings.button_hover_bg_color }};
+  color: {{ section.settings.button_hover_color }};
 }
 .grid-collection {
   display: grid;
@@ -1730,6 +1729,18 @@ document.addEventListener('shopify:section:select', themeEventHandler);
         "type": "color",
         "id": "button_text_color",
         "label": "Button text color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "button_hover_bg_color",
+        "label": "Button hover background color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "button_hover_color",
+        "label": "Button hover color",
         "default": "#fff"
       },
 	  {
