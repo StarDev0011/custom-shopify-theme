@@ -114,10 +114,31 @@
         "bg_color": "",
         "enable_slider_mobile": false
       }
+    },
+    "266331ec-3b1b-47b9-a284-7178be1628d7": {
+      "type": "section-collection",
+      "settings": {
+        "collection": "all-products",
+        "title": "",
+        "description": "",
+        "spacing_range": 0,
+        "heading_alignment": false,
+        "show_description": false,
+        "products_rows": 11,
+        "products_layout": "grid",
+        "show_collection_button": false,
+        "show_collection": "",
+        "button_style": "text",
+        "bg_color": "",
+        "enable_slider_mobile": true,
+        "remove_top_padding": false,
+        "remove_margin_bottom": false
+      }
     }
   },
   "order": [
     "main",
-    "16563374560bce2809"
+    "16563374560bce2809",
+    "266331ec-3b1b-47b9-a284-7178be1628d7"
   ]
 }

@@ -78,15 +78,25 @@
         "8b467ef2-624c-4d5d-a336-d5c951335093": {
           "type": "heading",
           "settings": {
-            "text": "<p>pore-liberating 100% PLANT BASED MOISTURE - <\/p><p>for visibly clearer & healthier skin<\/p>",
+            "text": "<p>pore-liberating 100% PLANT BASED MOISTURE - <\/p><p>for visibly clearer* & healthier skin<\/p>",
             "size": 300,
             "font_weight": "400",
             "letter_spacing": -1
           }
+        },
+        "bcb127bc-e350-4645-80ed-eb1872267a73": {
+          "type": "text",
+          "settings": {
+            "text": "<p>*82% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater<\/p>",
+            "size": 105,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
         }
       },
       "block_order": [
-        "8b467ef2-624c-4d5d-a336-d5c951335093"
+        "8b467ef2-624c-4d5d-a336-d5c951335093",
+        "bcb127bc-e350-4645-80ed-eb1872267a73"
       ],
       "settings": {
         "image_link": "",
@@ -96,7 +106,7 @@
         "padding": "standard-padding",
         "bg_color": "",
         "text_color": "text-dark",
-        "remove_margin_bottom": false
+        "remove_margin_bottom": true
       }
     },
     "grid-0": {
@@ -860,12 +870,12 @@
         "0e536494-f118-4b58-9f30-b55c5439baa9": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/7243v3_1_f10e34aa-faf5-4c42-80a3-628410c59740.jpg",
-            "bg_position": "left-center",
+            "image": "shopify:\/\/shop_images\/0279v3_1.jpg",
+            "bg_position": "right-center",
             "mobile_image_position": "center",
             "contain_image": false,
             "overlay_opacity": 0,
-            "text_position": "top-left",
+            "text_position": "top-right",
             "mobile_text_position": "top-left",
             "subheading": "",
             "title": "SEE RESULTS LIKE NEVER BEFORE",
@@ -874,19 +884,19 @@
             "link": "shopify:\/\/pages\/results",
             "secondary_button_text": "",
             "secondary_button_link": "",
-            "text_color": "text-dark",
+            "text_color": "text-light",
             "mobile_order": "default"
           }
         },
         "076a2344-1cbf-4a4d-9f4b-28e34800ddca": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fullstill-Recovered.jpg",
-            "bg_position": "center-bottom",
+            "image": "shopify:\/\/shop_images\/MG_1473.jpg",
+            "bg_position": "left-center",
             "mobile_image_position": "center",
             "contain_image": false,
-            "overlay_opacity": 0,
-            "text_position": "top-left",
+            "overlay_opacity": 25,
+            "text_position": "bottom-right",
             "mobile_text_position": "top-left",
             "subheading": "",
             "title": "PATENT-PENDING <br>DISTILLATION PROCESS",
@@ -895,7 +905,7 @@
             "link": "shopify:\/\/pages\/what-is-facewater",
             "secondary_button_text": "",
             "secondary_button_link": "",
-            "text_color": "text-dark",
+            "text_color": "text-light",
             "mobile_order": "default"
           }
         },
@@ -929,14 +939,14 @@
         "min_mobile_height": 215,
         "wrapper": "full",
         "add_spacing": true,
-        "heading_font_size": 24,
-        "heading_mobile_font_size": 16,
+        "heading_font_size": 20,
+        "heading_mobile_font_size": 24,
         "heading_font_weight": "400",
-        "heading_color": "#000000",
+        "heading_color": "#ffffff",
         "text_font_size": 24,
         "text_mobile_font_size": 12,
         "text_font_weight": "400",
-        "text_color": "#000000",
+        "text_color": "#ffffff",
         "button_style": "text",
         "secondary_button_style": "secondary btn--small",
         "bg_color": "",

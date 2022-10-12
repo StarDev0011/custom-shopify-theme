@@ -575,5 +575,11 @@
       "itemAddedAlert": "The subscription items have been added to the cart!",
       "optionMissedAlert": "Please select your subscription option!"
     }
+  },
+  "discount_ninja": {
+    "from": "From",
+    "here": "here",
+    "free": "FREE",
+    "sold_out": "Sold out"
   }
 }

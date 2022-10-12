@@ -12,10 +12,10 @@
         "165823700972b8bb06-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/berry-bubbles_a477f9_dbec1d9a-4f8f-4bcb-822f-290638d0cbb4.jpg",
+            "image": "shopify:\/\/shop_images\/2315.jpg",
             "image_link": "shopify:\/\/collections\/bubble-rinse-cleansers",
             "bg_position": "center-center",
-            "title": "bubble rinse cleansers",
+            "title": "BUBBLE RINSE CLEANSERS",
             "text": "<p>This new type of water-form cleanser is lightweight, gentle, non-stripping and ultra-healthy for your skin. Bubble Rinse Cleanser will not leave your skin feeling tight or dry like conventional cleansers with harsh surfactants that remove your skin’s naturally beneficial oils. This moisture preserving formula removes NON-waterproof makeup, oil, dirt, and impurities easily. Leaves skin feeling soft, clean and refreshed.<\/p>",
             "button_text": "SHOP ALL",
             "button_link": "shopify:\/\/collections\/bubble-rinse-cleansers",
@@ -31,7 +31,7 @@
             "image": "shopify:\/\/shop_images\/makeup-mash_BOTTLE-Sq-FW.jpg",
             "image_link": "shopify:\/\/collections\/make-up-removers",
             "bg_position": "center-bottom",
-            "title": "makeup removers",
+            "title": "MAKEUP REMOVERS",
             "text": "<p>A refreshingly skin healthy, lightweight, no-rinse, no-sting, silicone-free formula that makes taking off makeup easy and effortless - without any tugging or pulling. Our nourishing makeup removers melt away the toughest longwear and waterproof makeup – and never leave behind a greasy and harmful residue.<\/p>",
             "button_text": "SHOP ALL",
             "button_link": "shopify:\/\/collections\/make-up-removers",
@@ -68,6 +68,7 @@
         "title": "",
         "wrapper": "full",
         "columns": 2,
+        "heading_font_size": 24,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,
@@ -85,10 +86,10 @@
         "ba1fe2b9-7cb0-418b-86fa-69f7859b7144": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9901v5.jpg",
+            "image": "shopify:\/\/shop_images\/0732v5_1.jpg",
             "image_link": "shopify:\/\/collections\/micellar-waters",
             "bg_position": "center-center",
-            "title": "micellar waters",
+            "title": "MICELLAR WATERS",
             "text": "<p>The first of its kind 100% plant based, distilled - moisture replenishing micellar water that is completely healthy for your skin. This ultra gentle, lightweight, no-rinse, silicone-free formula effectively dissolves NON-waterproof makeup, impurities, dirt and oil - and never leaves behind a harmful and greasy residue.<\/p>",
             "button_text": "SHOP ALL",
             "button_link": "shopify:\/\/collections\/micellar-waters",
@@ -101,10 +102,10 @@
         "16582390126b0485f4-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/shroom_moisture_boom_1.jpg",
+            "image": "shopify:\/\/shop_images\/0425v8_7d4852a6-056d-46b8-85a3-b07ca7f607e9.jpg",
             "image_link": "shopify:\/\/collections\/moisture-waters",
             "bg_position": "center-center",
-            "title": "moisture waters",
+            "title": "MOISTURE WATERS",
             "text": "<p>a new type of liquid moisturizer that deeply penetrates to hydrate from within, instead of merely laying on the top surface of your skin like traditional moisturizers. moisture waters are a, super lightweight creamy fluid that rapidly absorbs upon contact, leaving the skin soft, supple, and dewy.<\/p>",
             "button_text": "SHOP ALL",
             "button_link": "shopify:\/\/collections\/moisture-waters",
@@ -159,6 +160,7 @@
         "title": "",
         "wrapper": "full",
         "columns": 2,
+        "heading_font_size": 24,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,
@@ -176,10 +178,10 @@
         "5f69be83-df89-4acc-951d-db58c61c0e4f": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_0278.jpg",
+            "image": "shopify:\/\/shop_images\/9556v6_1.jpg",
             "image_link": "shopify:\/\/collections\/oilwaters",
             "bg_position": "left-center",
-            "title": "oilwaters",
+            "title": "OILWATERS",
             "text": "<p>This innovative, weightless advancement of conventional facial oil melts right into your skin - without ever feeling greasy or tacky. Pore healthy Oilwater rapidly absorbs upon contact for sumptuously soft skin and long-lasting luminous glow – a superhealthy addition to any skincare routine.<\/p>",
             "button_text": "SHOP ALL",
             "button_link": "shopify:\/\/collections\/oilwaters",
@@ -195,7 +197,7 @@
             "image": "shopify:\/\/shop_images\/MG_0026.jpg",
             "image_link": "shopify:\/\/collections\/rosewaters",
             "bg_position": "center-center",
-            "title": "rosewaters",
+            "title": "ROSEWATERS",
             "text": "<p>We distill at least one hundred rose petals rich in phenols and gallic acid for every liter of rosewater we make - for an unmatched amount of youth preserving, skin soothing and calming results. 100 petal rosewater reveals remarkably luminous, well-rested skin. <\/p>",
             "button_text": "SHOP ALL",
             "button_link": "shopify:\/\/collections\/rosewaters",
@@ -268,6 +270,7 @@
         "title": "",
         "wrapper": "full",
         "columns": 2,
+        "heading_font_size": 24,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,
@@ -288,7 +291,7 @@
             "image": "shopify:\/\/shop_images\/MG_8070.jpg",
             "image_link": "shopify:\/\/collections\/serum-waters",
             "bg_position": "center-bottom",
-            "title": "serum waters",
+            "title": "SERUM WATERS",
             "text": "<p>This one-of-a-kind water-form serum is an ultra-lightweight and wonder working leave-on treatment that instantly absorbs without ever pilling (even under makeup). Skin healthy Serum Water contains highly concentrated energetic plant actives that deeply penetrate the lowerlayers of your skin and deliver incredibly transformative radiance-rich results.<\/p>",
             "button_text": "shop all",
             "button_link": "shopify:\/\/collections\/serum-waters",
@@ -301,10 +304,10 @@
         "1663165100715ae078-3": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/7207v2_ac9c8aa9-74a4-4019-9ace-5aed0160cb15.jpg",
+            "image": "shopify:\/\/shop_images\/2227.png",
             "image_link": "shopify:\/\/collections\/toners",
             "bg_position": "center-center",
-            "title": "toners",
+            "title": "TONERS",
             "text": "<p>Facewater toners are super healthy antioxidant rich elixirs that effectively cleanse, balance, clarify, and purify - without ever drying your skin. Our moisture replenishing, 100% plant based toners are completely free of harmful synthetic ingredients. <\/p>",
             "button_text": "SHOP ALL",
             "button_link": "shopify:\/\/collections\/toners",
@@ -323,6 +326,7 @@
         "title": "",
         "wrapper": "full",
         "columns": 2,
+        "heading_font_size": 24,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,
@@ -330,7 +334,7 @@
         "equalize_height": true,
         "image_aspect_ratio": 0.8,
         "show_images": true,
-        "disable_slider": false,
+        "disable_slider": true,
         "remove_margin_bottom": false
       }
     },
@@ -343,25 +347,9 @@
             "image": "shopify:\/\/shop_images\/flower-hazel-chamomile_BOTTLE-sq-FW.jpg",
             "image_link": "shopify:\/\/collections\/witch-hazel",
             "bg_position": "center-bottom",
-            "title": "witch hazels",
+            "title": "WITCH HAZELS",
             "text": "<p>Our witch hazel products are made from freshly extracted and distilled witch hazel plants and contain unmatched quantities of plant actives at peak potency. They effectively clarify, tone, calm, and balance your skin without high levels of alcohol or petroleum derived compounds. We let the witch hazel plant do what it does best - see what which hazel can really do for your skin!<\/p>",
             "button_text": "shop all",
-            "button_link": "",
-            "button_style": "text",
-            "show_video": false,
-            "play_btn_color": "#000000",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-          }
-        },
-        "16631651163e283367-3": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_43.png",
-            "image_link": "",
-            "bg_position": "center-center",
-            "title": "astringents",
-            "text": "<p>coming soon...<\/p>",
-            "button_text": "",
             "button_link": "",
             "button_style": "text",
             "show_video": false,
@@ -371,13 +359,13 @@
         }
       },
       "block_order": [
-        "16631651163e283367-1",
-        "16631651163e283367-3"
+        "16631651163e283367-1"
       ],
       "settings": {
         "title": "",
         "wrapper": "full",
         "columns": 2,
+        "heading_font_size": 24,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,

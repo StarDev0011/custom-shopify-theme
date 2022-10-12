@@ -519,5 +519,11 @@
     "previous": "Anterior",
     "next": "Siguiente",
     "scroll_down": "Desplaza hacia abajo"
+  },
+  "discount_ninja": {
+    "from": "A partir de",
+    "here": "aqui",
+    "free": "GRÁTIS",
+    "sold_out": "Agotado"
   }
 }
