@@ -21,40 +21,40 @@ Do not modify or remove this snippet, this snippet can be overwritten when the a
   {%- endif -%} 
 
   {%- comment -%}If we are on a product page, get information about the product and its variants{%- endcomment -%}   
-  {%- if product and discountninjaproduct == nil -%}{%- assign discountninjaproduct = product -%}{%- endif -%}
-  {%- if discountninjaproduct -%}
-      {%- if discountninjaproduct.selected_or_first_available_variant.id -%}
-          {%- assign variantid = discountninjaproduct.selected_or_first_available_variant.id -%}
+  {%- if product and discountNinjaProduct == nil -%}{%- assign discountNinjaProduct = product -%}{%- endif -%}
+  {%- if discountNinjaProduct -%}
+      {%- if discountNinjaProduct.selected_or_first_available_variant.id -%}
+          {%- assign variantid = discountNinjaProduct.selected_or_first_available_variant.id -%}
       {%- else -%}
           {%- assign variantid = 'null' -%}
       {%- endif -%}
 
       {%- comment -%}If we are on a product page, add the id and first or selected variantid{%- endcomment -%}
       window.discountNinjaContext.Product = {};
-      window.discountNinjaContext.Product.Id = {{ discountninjaproduct.id | default: 0 }};
+      window.discountNinjaContext.Product.Id = {{ discountNinjaProduct.id | default: 0 }};
       window.discountNinjaContext.Product.VariantId = {{ variantid }};
-      window.discountNinjaContext.Product.Tags = '{{ discountninjaproduct.tags | join: ", " | escape | default: '[[--NONE--]]' }}';
-      window.discountNinjaContext.Product.Available = {{ discountninjaproduct.available }};
+      window.discountNinjaContext.Product.Tags = '{{ discountNinjaProduct.tags | join: ", " | escape | default: '[[--NONE--]]' }}';
+      window.discountNinjaContext.Product.Available = {{ discountNinjaProduct.available }};
      
       {%- comment -%}If we are on a product page, add the collection info and the featured image{%- endcomment -%}
-      window.discountNinjaContext.Product.Collections = '{{ discountninjaproduct.collections | map: 'handle' | join: ',' | escape | default: '[[--NONE--]]' }}';
-      window.discountNinjaContext.Product.CollectionIds = '{{ discountninjaproduct.collections | map: 'id' | join: ',' | default: '[[--NONE--]]' }}';
-      window.discountNinjaContext.Product.FeaturedImage = '{{ discountninjaproduct.featured_image | img_url: '500x' | escape }}';
+      window.discountNinjaContext.Product.Collections = '{{ discountNinjaProduct.collections | map: 'handle' | join: ',' | escape | default: '[[--NONE--]]' }}';
+      window.discountNinjaContext.Product.CollectionIds = '{{ discountNinjaProduct.collections | map: 'id' | join: ',' | default: '[[--NONE--]]' }}';
+      window.discountNinjaContext.Product.FeaturedImage = '{{ discountNinjaProduct.featured_image | img_url: '500x' | escape }}';
 
       {%- comment -%}If we are on a product page, initialize the list of product variants{%- endcomment -%}
       window.discountNinjaContext.ProductVariants = [];
 
       {%- comment -%}Loop through each variant of the product (maximum 200) {%- endcomment -%}
-      {%- for discountninjaProductVariant in discountninjaproduct.variants limit: 200 -%}
+      {%- for discountNinjaProductVariant in discountNinjaProduct.variants limit: 200 -%}
           {%- comment -%}Add inventory quantity if it is tracked{%- endcomment -%}
-          {%- assign inventory_quantity = discountninjaProductVariant.inventory_quantity -%}
+          {%- assign inventory_quantity = discountNinjaProductVariant.inventory_quantity -%}
 		  {%- assign inventory_available = true -%}
           {%- if inventory_quantity == nil or inventory_quantity <= 0 -%}
               {%- assign inventory_quantity_below_zero = 1 -%}
           {%- else -%}
               {%- assign inventory_quantity_below_zero = 0 -%}
           {%- endif -%}
-          {%- if discountninjaProductVariant.inventory_management and discountninjaProductVariant.inventory_policy == 'deny' -%}
+          {%- if discountNinjaProductVariant.inventory_management and discountNinjaProductVariant.inventory_policy == 'deny' -%}
               {%- assign inventory_quantity_apply = 1 -%}
           {%- else -%}
               {%- assign inventory_quantity_apply = 0 -%}
@@ -64,8 +64,8 @@ Do not modify or remove this snippet, this snippet can be overwritten when the a
           {%- endif -%}      
        
           {%- comment -%}Get price and compare at price of the variant{%- endcomment -%}
-          {%- assign discountninja_variant_price = discountninjaProductVariant.price -%}
-          {%- assign discountninja_compare_at_or_product_price = discountninjaProductVariant.compare_at_price -%}   
+          {%- assign discountninja_variant_price = discountNinjaProductVariant.price -%}
+          {%- assign discountninja_compare_at_or_product_price = discountNinjaProductVariant.compare_at_price -%}   
       
           {%- comment -%}If compare at price if not available, default to price{%- endcomment -%}
           {%- if discountninja_compare_at_or_product_price == nil or discountninja_compare_at_or_product_price < discountninja_variant_price -%}
@@ -73,7 +73,7 @@ Do not modify or remove this snippet, this snippet can be overwritten when the a
           {%- endif -%}
       
           {%- comment -%}Add to array{%- endcomment -%}
-          window.discountNinjaContext.ProductVariants.push({ VariantId: {{ discountninjaProductVariant.id | default: 0 }}, Price: {{ discountninja_variant_price | default: 0 }}, CompareAtPrice: {{ discountninja_compare_at_or_product_price | default: 0 }}, Inventory: {{ inventory_quantity | default: 0 }}, Available: {{ inventory_available }} });                                                               
+          window.discountNinjaContext.ProductVariants.push({ VariantId: {{ discountNinjaProductVariant.id | default: 0 }}, Price: {{ discountninja_variant_price | default: 0 }}, CompareAtPrice: {{ discountninja_compare_at_or_product_price | default: 0 }}, Inventory: {{ inventory_quantity | default: 0 }}, Available: {{ inventory_available }} });                                                               
       {%- endfor -%}
   {%- endif -%}
 </script>

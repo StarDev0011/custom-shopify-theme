@@ -102,7 +102,7 @@
         "1656534534c2268bce-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GL-Wall-Plant-Industries-Logo_f86a3642-7fd0-421f-bfd6-136ddcb69754.jpg",
+            "image": "shopify:\/\/shop_images\/GL-Wall-Plant-Industries-wallbrick-2.jpg",
             "image_link": "",
             "bg_position": "left-center",
             "title": "who we are",
@@ -167,6 +167,77 @@
         "show_images": true,
         "disable_slider": true,
         "remove_margin_bottom": false
+      }
+    },
+    "92ba8d4c-e2f8-464f-9b92-7e356b184632": {
+      "type": "section-slideshow",
+      "blocks": {
+        "template--15879764934845__92ba8d4c-e2f8-464f-9b92-7e356b184632-1665671165e23357d6-1": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/MG_1678.jpg",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 32,
+            "heading_mobile_font_size": 32,
+            "heading_font_weight": "400",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 20,
+            "text_mobile_font_size": 16,
+            "text_font_weight": "400",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "bottom-left",
+            "override_mobile_text_position": false,
+            "mobile_text_position_y": 50,
+            "mobile_text_position_x": "center",
+            "title": "ZERO CARBON PROPERTY",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+            "slide_btn_text": "LEARN MORE",
+            "slide_btn_link": "shopify:\/\/pages\/cosmetic-farm",
+            "slide_btn_style": "text",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#000000",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "text",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764934845__92ba8d4c-e2f8-464f-9b92-7e356b184632-1665671165e23357d6-1"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "seven-fifty-height",
+        "show_nav_dots": false,
+        "show_nav_arrows": false,
+        "show_arrow_down": false,
+        "dot_color": "",
+        "next_prev_color": "",
+        "down_color": "",
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": true,
+        "heading_size": 120,
+        "custom_css": ""
       }
     },
     "165894937329255a58": {
@@ -1207,77 +1278,6 @@
         "enable_slider_mobile": false
       }
     },
-    "165972470404b42066": {
-      "type": "section-slideshow",
-      "blocks": {
-        "1659724704efde531a-0": {
-          "type": "image",
-          "settings": {
-            "wrapper": "full",
-            "slide_bg_color": "#fafafa",
-            "image": "shopify:\/\/shop_images\/appletree1_copy.jpg",
-            "image_vertical": 50,
-            "image_horizontal": 50,
-            "image_contain": false,
-            "mobile_image_vertical": 50,
-            "mobile_image_horizontal": 50,
-            "bg_position": "center-center",
-            "overlay_opacity": 0,
-            "heading_font_size": 32,
-            "heading_mobile_font_size": 22,
-            "heading_font_weight": "400",
-            "heading_letter_spacing": 0,
-            "heading_color": "#000000",
-            "mobile_heading_color": "#000000",
-            "text_font_size": 20,
-            "text_mobile_font_size": 16,
-            "text_font_weight": "400",
-            "text_letter_spacing": 0,
-            "text_color": "#000000",
-            "mobile_text_color": "#000000",
-            "text_width": "narrow",
-            "text_position": "left",
-            "override_mobile_text_position": true,
-            "mobile_text_position_y": 0,
-            "mobile_text_position_x": "left",
-            "title": "zero carbon property \nwithout offsets",
-            "override_title_font_weight": false,
-            "override_text_number": 1,
-            "override_font_weight": "400",
-            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem",
-            "slide_btn_text": "",
-            "slide_btn_link": "shopify:\/\/collections\/all",
-            "slide_btn_style": "primary",
-            "button_color": "#ffffff",
-            "mobile_button_color": "#ffffff",
-            "slide_btn_text_2": "",
-            "slide_btn_link_2": "",
-            "slide_btn_style_2": "secondary",
-            "video_btn_text": "",
-            "video_btn_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1659724704efde531a-0"
-      ],
-      "settings": {
-        "wrapper": "wide",
-        "slide_height": "five-fifty-height",
-        "show_nav_dots": false,
-        "show_nav_arrows": false,
-        "show_arrow_down": false,
-        "dot_color": "",
-        "next_prev_color": "",
-        "down_color": "",
-        "autoplay": false,
-        "duration": 4,
-        "transition": "slide",
-        "enable_zoom_animation": true,
-        "heading_size": 120,
-        "custom_css": ""
-      }
-    },
     "16566001452be09e9e": {
       "type": "section-text",
       "blocks": {
@@ -1584,6 +1584,7 @@
     "main",
     "165910557130231305",
     "1656534534e35b4f23",
+    "92ba8d4c-e2f8-464f-9b92-7e356b184632",
     "165894937329255a58",
     "16565350202bec56bc",
     "1657214918eb62c5a7",
@@ -1599,7 +1600,6 @@
     "16565345370a8c335a",
     "16564363675b001ced",
     "1656600858a89babcb",
-    "165972470404b42066",
     "16566001452be09e9e",
     "1660660152de5cbf46",
     "1659725178e4148e2c",

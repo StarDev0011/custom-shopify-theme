@@ -188,7 +188,6 @@
   }
 }
 </style>
-
 <script type="text/x-template" id="byob-quickview-template">
   <teleport to="body">
     <transition name="modal">
@@ -217,6 +216,9 @@
                   <!--<div class="byob-quickview-price">[[ displayPrice(price) ]]</div>-->
                   <div v-if="show_html_product_description" class="byob-quickview-desc" v-html="product.html_description"></div>
                   <div v-else class="byob-quickview-desc">[[ product.description ]]</div>
+                  
+                  {%- assign product_handle = '[[product.handle]]' -%}
+                  {% assign how_to_use = all_products["{{product_handle}}"].metafields.my_fields.how_to_use %}
                   {% if section.settings.show_view_more %}
                   <div><a :href="productLink" class="grid-product-text" target="_blank">{{ 'sections.byob-quickview.viewMore' | t }}</a></div>
                   {% endif %}

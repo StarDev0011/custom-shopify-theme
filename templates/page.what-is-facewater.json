@@ -374,7 +374,7 @@
         "166369992871b6e4ad-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_1056.jpg",
+            "image": "shopify:\/\/shop_images\/MG_1466.jpg",
             "image_link": "",
             "bg_position": "left-center",
             "title": "THE INVENTION - PATENT-PENDING DISTILLATION PROCESS",
@@ -406,7 +406,7 @@
         "166369992871b6e4ad-2": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_0923_1.jpg",
+            "image": "shopify:\/\/shop_images\/MG_1699_46455920-0db6-4cb4-adb7-cf70675f8488.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "100% PLANT BASED IS DIFFERENT FROM \"NATURAL\"",
@@ -435,7 +435,7 @@
         "remove_text_spacing": false,
         "text_width": 85,
         "equalize_height": true,
-        "image_aspect_ratio": 1.1,
+        "image_aspect_ratio": 0.7,
         "show_images": true,
         "disable_slider": true,
         "remove_margin_bottom": true

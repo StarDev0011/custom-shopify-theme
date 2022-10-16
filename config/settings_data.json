@@ -4,7 +4,7 @@
     "color_headings": "#000000",
     "color_body_text": "#000000",
     "color_accent": "#adadad",
-    "color_borders_and_lines": "#ffffff",
+    "color_borders_and_lines": "#7a7a7a",
     "color_custom_badge": "#7a7a7a",
     "color_saving_badge": "#eedaea",
     "color_button_primary": "#000000",
@@ -258,11 +258,6 @@
       },
       "672c476f-6ab7-42d1-b871-82fae11cec8f": {
         "type": "shopify:\/\/apps\/instagram-feed-story-tiktok\/blocks\/social-widget\/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
-        "disabled": false,
-        "settings": {}
-      },
-      "942670587456160541": {
-        "type": "shopify:\/\/apps\/discount-ninja\/blocks\/discountninja-app-embed-stable\/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
         "disabled": false,
         "settings": {}
       }

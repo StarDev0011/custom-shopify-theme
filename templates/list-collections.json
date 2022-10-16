@@ -49,6 +49,21 @@
             "text_color": "text-dark"
           }
         },
+        "0827f398-632c-49d0-a357-364b4a5cc04c": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "build your custom travel size bundle",
+            "text": "choose 3 travel size mini products",
+            "button_text": "",
+            "link": "shopify:\/\/collections\/same-travel",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#7a7a7a"
+          }
+        },
         "3f5ae3c6-4c2f-4cc2-b07c-7d4a98c8afe9": {
           "type": "text",
           "settings": {
@@ -99,6 +114,7 @@
       },
       "block_order": [
         "1656337456cd304120-0",
+        "0827f398-632c-49d0-a357-364b4a5cc04c",
         "3f5ae3c6-4c2f-4cc2-b07c-7d4a98c8afe9",
         "3b0465b8-dfb4-418d-a77f-83c17e05eb8d",
         "1656337456cd304120-2"

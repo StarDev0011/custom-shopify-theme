@@ -21,7 +21,7 @@
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/100_petal_roses_collection_shot_incomplete_624fc314-3faa-4c61-a16a-b95e019ec780.jpg",
+            "image": "shopify:\/\/shop_images\/MG_4627_e1f96cd1-fc97-4b1a-8f5a-6e56c19922d6.jpg",
             "image_vertical": 50,
             "image_horizontal": 50,
             "image_contain": true,
@@ -42,7 +42,7 @@
             "text_color": "#ffffff",
             "mobile_text_color": "#000000",
             "text_width": "narrow",
-            "text_position": "left",
+            "text_position": "top-right",
             "override_mobile_text_position": false,
             "mobile_text_position_y": 50,
             "mobile_text_position_x": "center",

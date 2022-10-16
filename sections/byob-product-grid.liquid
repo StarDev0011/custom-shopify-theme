@@ -60,8 +60,8 @@ var buildrule;
           description: {{ product.description | strip_html | truncatewords: 65  | json }},
           html_description: {{ product.description  | json }},
           images: {{ product.images | slice: 0, 4 | json }},
-          has_only_default_variant: {{ product.has_only_default_variant }},
           {%- endif %}
+          has_only_default_variant: {{ product.has_only_default_variant }},
           variants: {{ product.variants | json }},
           options: {{ product.options_with_values | json }},
           available: {{ product.available }},
@@ -74,29 +74,58 @@ var buildrule;
       ];
       buildrule.paginate = {{ paginate | json }};
       {% endpaginate %}
-    {% elsif buildrule.type == 'P' -%}
+    {% elsif buildrule.type == 'P' %}
       json_products = [
       {%- for br_product in buildrule.products -%}
         {%- assign cur_product = all_products[br_product.handle] -%}
         {%- unless cur_product == empty -%}{%- comment -%}check if product is not published on web channel{%- endcomment %}
-        {
-          id: {{ cur_product.id }},
-          title: {{ cur_product.title | strip_newlines | json }},
-          featured_image: "{{ cur_product.featured_image.src | img_url: '480x' }}",
-          {%- if section.settings.enable_quickview %}
-          description: {{ cur_product.description | strip_html | truncatewords: 65  | json }},
-          html_description: {{ cur_product.description  | json }},
-          images: {{ cur_product.images | slice: 0, 4 | json }},
-          has_only_default_variant: {{ cur_product.has_only_default_variant }},
-          {%- endif %}
-          variants: {{ cur_product.variants | json }},
-          options: {{ cur_product.options_with_values | json }},
-          available: {{ cur_product.available }},
-          handle: "{{ cur_product.handle }}",
-          product_class:  "line_item",
-          vendor: "{{ cur_product.vendor | escape }}",
-          type: "{{ cur_product.type | escape }}",
-        },
+          {%- unless br_product.variants and br_product.variants.size > 0 -%}
+          {
+            id: {{ cur_product.id }},
+            title: {{ cur_product.title | strip_newlines | json }},
+            featured_image: "{{ cur_product.featured_image.src | img_url: '480x' }}",
+            {%- if section.settings.enable_quickview %}
+            description: {{ cur_product.description | strip_html | truncatewords: 65  | json }},
+            html_description: {{ cur_product.description  | json }},
+            images: {{ cur_product.images | slice: 0, 4 | json }},
+            {%- endif %}
+            has_only_default_variant: {{ cur_product.has_only_default_variant }},
+            variants: {{ cur_product.variants | json }},
+            options: {{ cur_product.options_with_values | json }},
+            available: {{ cur_product.available }},
+            handle: "{{ cur_product.handle }}",
+            product_class:  "line_item",
+            vendor: "{{ cur_product.vendor | escape }}",
+            type: "{{ cur_product.type | escape }}",
+          },
+          {%- else -%}{%- comment -%}variant cards. Each card is a variant{%- endcomment %}
+            {%- assign cur_variants = cur_product.variants -%}
+            {%- assign variant_ids = br_product.variants | map: "id" -%}
+            {% for variant in cur_variants %}
+              {% assign variant_id = variant.id | append: "" %}
+              {% if variant_ids contains variant_id %}
+                {
+                  id: {{ cur_product.id }},
+                  title: {{ cur_product.title | strip_newlines | json }},
+                  featured_image: "{{ variant.featured_image.src | img_url: '480x' }}",
+                  {%- if section.settings.enable_quickview %}
+                  description: {{ cur_product.description | strip_html | truncatewords: 65  | json }},
+                  html_description: {{ cur_product.description  | json }},
+                  images: {{ cur_product.images | slice: 0, 4 | json }},
+                  {%- endif %}
+                  has_only_default_variant: true,
+                  variants: [{{ variant | json }}],
+                  options: {{ cur_product.options_with_values | json }},
+                  available: {{ cur_product.available }},
+                  handle: "{{ cur_product.handle }}",
+                  product_class:  "line_item",
+                  vendor: "{{ cur_product.vendor | escape }}",
+                  type: "{{ cur_product.type | escape }}",
+                  is_variant: true
+                },              
+              {% endif %}
+            {% endfor %}
+          {%- endunless -%}
         {%- endunless -%}
       {%- endfor -%}
       ];
@@ -176,8 +205,9 @@ select:focus { /* remove select focus style in card */
     margin-bottom: 20px;
 }
 .btn-add-to-bundle:not([disabled]):hover, .btn-add-to-bundle:focus, .btn-add-to-cart:not([disabled]):hover, .btn-add-to-cart:focus {
-  background-color: {{ section.settings.button_hover_bg_color }};
-  color: {{ section.settings.button_hover_color }};
+  background-color: {{ section.settings.button_color }};
+  color: {{ section.settings.button_text_color }};
+  filter: brightness(90%);
 }
 .grid-collection {
   display: grid;
@@ -690,7 +720,7 @@ document.addEventListener('shopify:section:select', themeEventHandler);
       },
       removeVariant(index) {
         // variant remove from bundle, quantity increase by 1
-        this.increaseVariantQuantity(this.selectedVariants[index])
+        // this.increaseVariantQuantity(this.selectedVariants[index])
         this.selectedVariants.splice(index, 1);
         this.updateBuildrulesCompleted();
         // save selected items to tab session
@@ -706,12 +736,12 @@ document.addEventListener('shopify:section:select', themeEventHandler);
         let product = buildrule.json_products.find(product => product.id == selectedVariant.productID);
         return product.variants.find(variant => variant.id == selectedVariant.id)
       },
-      increaseVariantQuantity(selectedVariant) {  // increase variant quantity in json (data source)
-        this.getJsonVariant(selectedVariant).inventory_quantity++;
-      },
-      decreaseVariantQuantity(selectedVariant) {  // decrease variant quantity in json (data source)
-        this.getJsonVariant(selectedVariant).inventory_quantity--;
-      },
+      // increaseVariantQuantity(selectedVariant) {  // increase variant quantity in json (data source)
+      //   this.getJsonVariant(selectedVariant).inventory_quantity++;
+      // }, 
+      // decreaseVariantQuantity(selectedVariant) {  // decrease variant quantity in json (data source)
+      //   this.getJsonVariant(selectedVariant).inventory_quantity--;
+      // },
       canOnlySelectedOnce(pickedVariant) {
         let buildrule = this.buildrules[pickedVariant.buildrulesIndex]
         return buildrule.item_selected_once && this.selectedVariants.includes(pickedVariant)
@@ -733,7 +763,7 @@ document.addEventListener('shopify:section:select', themeEventHandler);
           return
         }
         this.selectedVariants.push(pickedVariant);
-        this.decreaseVariantQuantity(pickedVariant);
+        // this.decreaseVariantQuantity(pickedVariant);
         this.updateBuildrulesCompleted();
         let vm = this;
         // need timeout to scroll to last card, otherwise, cannot get it
@@ -1307,10 +1337,16 @@ document.addEventListener('shopify:section:select', themeEventHandler);
 				<span class="byob-product-type" v-if="product.type != ''"> - [[ product.type ]]</span>
   			</a>
 
-            <template class="" v-if="product.variants.length >= 1 && product.options[0] != 'Title' && product.variants[0].option1 != 'Default Title'">
-			  <div :class="'byob-product-option' + (index+1)" v-for="(option, index) in product.options">
-            	<label class="inline-block" style="padding-right:2px" v-if="option.name != 'default'">
-            		[[ option.name ]]:
+            <div>
+              <label class="inline-block" v-if="product.is_variant">
+            	[[ product.variants[0].title ]]
+              </label>
+            </div>
+            
+            <template class="" v-if="product.variants.length >= 1 && !product.has_only_default_variant">
+			        <div :class="'byob-product-option' + (index+1)" v-for="(option, index) in product.options">
+            	  <label class="inline-block" style="padding-right:2px" v-if="option.name != 'default'">
+            		  [[ option.name ]]:
                 </label>
 
                 <select class="byob-max-w-full" v-model="selectedOptionValues[index]" @change="selectVariant">
@@ -1321,9 +1357,9 @@ document.addEventListener('shopify:section:select', themeEventHandler);
                 </select>
               </div>
 
-			  <div class="byob-product-vendor" v-if="product.vendor != ''">
-            	<label class="inline-block" style="padding-right:2px">
-            		Vendor: [[ product.vendor ]]
+			        <div class="byob-product-vendor" v-if="product.vendor != ''">
+            	  <label class="inline-block" style="padding-right:2px">
+            		  Vendor: [[ product.vendor ]]
                 </label>
               </div>
 			</template>
@@ -1729,18 +1765,6 @@ document.addEventListener('shopify:section:select', themeEventHandler);
         "type": "color",
         "id": "button_text_color",
         "label": "Button text color",
-        "default": "#fff"
-      },
-      {
-        "type": "color",
-        "id": "button_hover_bg_color",
-        "label": "Button hover background color",
-        "default": "#000"
-      },
-      {
-        "type": "color",
-        "id": "button_hover_color",
-        "label": "Button hover color",
         "default": "#fff"
       },
 	  {
