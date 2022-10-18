@@ -217,8 +217,16 @@
                   <div v-if="show_html_product_description" class="byob-quickview-desc" v-html="product.html_description"></div>
                   <div v-else class="byob-quickview-desc">[[ product.description ]]</div>
                   
-                  {%- assign product_handle = '[[product.handle]]' -%}
-                  {% assign how_to_use = all_products["{{product_handle}}"].metafields.my_fields.how_to_use %}
+                  {%- assign product_handle = '[[ product.handle ]]' -%}
+                  
+                  {% capture my_variable %}
+                  {{all_products[product_handle].metafields.my_fields.how_to_use}}
+                  {% endcapture %}
+                  {{ my_variable }}
+
+                  
+                  {% assign how_to_use = 'oilwater-replenish-nourish-rosehip-mini' %}
+                  {% assign how_to_use = all_products[product_handle].metafields.my_fields.how_to_use %}
                   {% if section.settings.show_view_more %}
                   <div><a :href="productLink" class="grid-product-text" target="_blank">{{ 'sections.byob-quickview.viewMore' | t }}</a></div>
                   {% endif %}
@@ -275,6 +283,7 @@
     },
     mounted() {
       console.log('product in qvm', this.product);
+      console.log('Metafields')
       console.log('selectedOptionValues', this.selectedOptionValues);
     },
     data() {

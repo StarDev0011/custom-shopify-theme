@@ -118,9 +118,9 @@
         "def8c325-bfa0-4c90-a785-27407ca7d632": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Finished_Sign_1.jpg",
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-10-18_at_9.30.41_AM.png",
             "image_link": "",
-            "bg_position": "center-center",
+            "bg_position": "left-center",
             "title": "the distillery",
             "text": "<p>the distillery is located on Cosmetic Farm™. each and every drop of hydrosol for our products is produced at our distillery using our patent pending dual phase distillation process.<\/p>",
             "button_text": "",
@@ -134,7 +134,7 @@
         "1656534534c2268bce-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_1054.jpg",
+            "image": "shopify:\/\/shop_images\/1055.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "a new patent-pending breakthrough",
@@ -161,9 +161,9 @@
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": true,
-        "text_width": 90,
+        "text_width": 85,
         "equalize_height": true,
-        "image_aspect_ratio": 0.8,
+        "image_aspect_ratio": 0.7,
         "show_images": true,
         "disable_slider": true,
         "remove_margin_bottom": false
@@ -177,7 +177,7 @@
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/MG_1678.jpg",
+            "image": "shopify:\/\/shop_images\/1678.jpg",
             "image_vertical": 50,
             "image_horizontal": 50,
             "image_contain": false,

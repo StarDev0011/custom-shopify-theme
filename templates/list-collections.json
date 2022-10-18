@@ -35,7 +35,7 @@
         "1656337456cd304120-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FLUFFMEDIA-_1.jpg",
+            "image": "shopify:\/\/shop_images\/2290.jpg",
             "bg_position": "center-center",
             "overlay_opacity": 0,
             "text_position": "top-left",
@@ -97,8 +97,8 @@
         "1656337456cd304120-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FLUFFMEDIA--4.jpg",
-            "bg_position": "center-bottom",
+            "image": "shopify:\/\/shop_images\/0312v4_1.jpg",
+            "bg_position": "center-center",
             "overlay_opacity": 0,
             "text_position": "top-left",
             "subheading": "",
@@ -108,7 +108,7 @@
             "link": "shopify:\/\/pages\/by-concern",
             "secondary_button_text": "",
             "secondary_button_link": "",
-            "text_color": "text-dark"
+            "text_color": "text-light"
           }
         }
       },
@@ -120,8 +120,8 @@
         "1656337456cd304120-2"
       ],
       "settings": {
-        "height": "750",
-        "min_mobile_height": 250,
+        "height": "fullscreen",
+        "min_mobile_height": 200,
         "wrapper": "full",
         "add_spacing": true,
         "heading_size": 100,

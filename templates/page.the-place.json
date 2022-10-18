@@ -15,7 +15,7 @@
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/drone_aerial_12254c48-8b56-432c-a332-da3bd4cc57a6.jpg",
+            "image": "shopify:\/\/shop_images\/DJI_0015.jpg",
             "image_vertical": 30,
             "image_horizontal": 50,
             "image_contain": true,
@@ -62,7 +62,7 @@
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/MG_0892.jpg",
+            "image": "shopify:\/\/shop_images\/0892.jpg",
             "image_vertical": 50,
             "image_horizontal": 50,
             "image_contain": false,
@@ -109,7 +109,7 @@
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/MG_0870.jpg",
+            "image": "shopify:\/\/shop_images\/0870.jpg",
             "image_vertical": 50,
             "image_horizontal": 50,
             "image_contain": true,
