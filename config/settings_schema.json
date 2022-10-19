@@ -274,6 +274,108 @@
         "max": 200,
         "unit": "%",
         "step": 25
+      },
+      {
+        "type": "header",
+        "content": "Product Title"
+      },
+      {
+        "type": "range",
+        "id": "product_title_desktop",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Desktop size",
+        "default": 18
+      },
+      {
+        "type": "range",
+        "id": "product_title_tablet",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Tablet size",
+        "default": 18
+      },
+      {
+        "type": "range",
+        "id": "product_title_mobile",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Mobile size",
+        "default": 18
+      },
+      {
+        "type": "header",
+        "content": "Product Pricing"
+      },
+      {
+        "type": "range",
+        "id": "product_pricing_desktop",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Desktop size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "product_pricing_tablet",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Tablet size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "product_pricing_mobile",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Mobile size",
+        "default": 16
+      },
+      {
+        "type": "header",
+        "content": "Product Description"
+      },
+      {
+        "type": "range",
+        "id": "product_description_desktop",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Desktop size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "product_description_tablet",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Tablet size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "product_description_mobile",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Mobile size",
+        "default": 16
       }
     ]
   },

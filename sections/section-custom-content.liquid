@@ -128,7 +128,7 @@
 
                           {%- unless image == blank -%}
                             <div
-                              class="featured-image__bg {{ image_bg_pos }} lazyload"
+                              class="featured-image__bg {%unless mobile_image == blank%} hide_desk{%- endunless -%} {{ image_bg_pos }} lazyload"
                               data-bgset="{% render 'bgset', image: image %}"
                               data-sizes="auto"
                               data-parent-fit="cover"

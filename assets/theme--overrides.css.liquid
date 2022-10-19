@@ -415,7 +415,7 @@ a.btn.btn--text {
     .featured-collection .product-grid-item a.product-grid-item__title {
       color: #000;
       font-weight: 400;
-      font-size: 18px;
+      font-size: var(--product_title_desktop);
       text-transform: uppercase; 
     }
 	
@@ -423,7 +423,10 @@ a.btn.btn--text {
     .featured-collection .product-grid-item a.product-grid-item__price {
       color: #000;
       font-weight: 400;
-      font-size: 16px;
+      font-size: var(--product_pricing_desktop);
+    }
+    .featured-collection .product-meta {
+      font-size: var(--product_description_desktop);
     }
 
 /** Related Products **/
@@ -431,7 +434,7 @@ a.btn.btn--text {
     .related-products .product-grid-item a.product-grid-item__title {
       color: #000;
       font-weight: 400;
-      font-size: 18px;
+      font-size: var(--product_title_desktop);
       text-transform: lowercase; 
     }
 	
@@ -439,7 +442,10 @@ a.btn.btn--text {
     .related-products .product-grid-item a.product-grid-item__price {
       color: #000;
       font-weight: 400;
-      font-size: 16px;
+      font-size: var(--product_pricing_desktop);
+    }
+    .product-meta {
+      font-size: var(--product_description_desktop);
     }
 
 
@@ -544,16 +550,18 @@ a.btn.btn--text {
 	.template-collection a.product-grid-item__title {
       color: #000;
       text-transform: uppercase;
-      font-size: 18px;
+      font-size: var(--product_title_desktop);
       font-weight: 400;
     }
 	/*////// PRODUCT PRICE //////*/
 	.template-collection a.product-grid-item__price.price {
       color: #000;
-      font-size: 16px; 
+      font-size: var(--product_pricing_desktop); 
       font-weight: 400;
     }
-
+  .template-collection .product-meta {
+      font-size: var(--product_description_desktop);
+    }
     .collection-section {
       padding-top: 0;
     }
@@ -617,5 +625,28 @@ a.btn.btn--text {
       
 .remove-margin-bottom {
   margin-bottom: 0 !important;
+}
+
+@media only screen and (max-width: 900px) {
+  a.product-grid-item__title {
+    font-size: var(--product_title_tablet);
+  }
+  a.product-grid-item__price {
+    font-size: var(--product_pricing_tablet); 
+  }
+  .product-meta {
+    font-size: var(--product_description_tablet);
+  }
+}
+@media only screen and (max-width: 465px) {
+  a.product-grid-item__title {
+    font-size: var(--product_title_mobile);
+  }
+  a.product-grid-item__price {
+    font-size: var(--product_pricing_mobile); 
+  }
+  .product-meta {
+    font-size: var(--product_description_mobile);
+  }
 }
 

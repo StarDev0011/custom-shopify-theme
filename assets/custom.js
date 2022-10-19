@@ -1,4 +1,31 @@
+function splide_slider () {
+    if($("#ImageAccordions").length>0) {
+        if($(window).width()<500){
+            $("#ImageAccordions").addClass("splide");
+            $("#ImageAccordions .wrapper").addClass("splide__track");
+            $("#ImageAccordions .wrapper .image-accordions").addClass("splide__list");
+            $("#ImageAccordions .wrapper .image-accordions .image-accordion").addClass("splide__slide");
+            var splide = new Splide('.splide', {
+                direction: 'ttb',
+                height: '80vh',
+            });
+            
+            splide.mount();
+        }
+        else{
+            $("#ImageAccordions").removeClass("splide");
+            $("#ImageAccordions .wrapper").removeClass("splide__track");
+            $("#ImageAccordions .wrapper .image-accordions").removeClass("splide__list");
+            $("#ImageAccordions .wrapper .image-accordions .image-accordion").removeClass("splide__slide");
+        }
+    }   
+}
+
 jQuery(document).ready(function($) {
+    splide_slider();
+    $(window).resize(function(){
+        splide_slider();
+    })
     if(window.location.href.split('/')[4] == 'what-is-facewater') {
         $(".column__item__text").each(function(){
             var outerheight = $(this).outerHeight()
@@ -42,32 +69,4 @@ jQuery(document).ready(function($) {
     })
 
 })
-function splide_slider () {
-    if($("#ImageAccordions").length>1) {
-        if($(window).width()<500){
-            $("#ImageAccordions").addClass("splide");
-            $("#ImageAccordions .wrapper").addClass("splide__track");
-            $("#ImageAccordions .wrapper .image-accordions").addClass("splide__list");
-            $("#ImageAccordions .wrapper .image-accordions .image-accordion").addClass("splide__slide");
-            var splide = new Splide('.splide', {
-                direction: 'ttb',
-                height: '80vh',
-            });
-            
-            splide.mount();
-        }
-        else{
-            $("#ImageAccordions").removeClass("splide");
-            $("#ImageAccordions .wrapper").removeClass("splide__track");
-            $("#ImageAccordions .wrapper .image-accordions").removeClass("splide__list");
-            $("#ImageAccordions .wrapper .image-accordions .image-accordion").removeClass("splide__slide");
-        }
-    }   
-}
-splide_slider();
-jQuery(document).ready(function ($) {
-    $(window).resize(function(){
-        splide_slider();
-    })
-});
 
