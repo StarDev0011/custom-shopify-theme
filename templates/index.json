@@ -33,7 +33,7 @@
             "override_mobile_text_position": true,
             "mobile_text_position_y": 0,
             "mobile_text_position_x": "left",
-            "title": "FREE YOUR FACE<sup>™<\/sup>",
+            "title": "FREE YOUR FACE\n<span><sup>™<\/sup><\/span>",
             "override_title_font_weight": false,
             "override_text_number": 1,
             "override_font_weight": "700",
@@ -367,7 +367,7 @@
         "adf1fd54-a74a-4dcd-ba57-f6be3fd8233c": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PBD_sign.png",
+            "image": "shopify:\/\/shop_images\/PBD-sign-retouch.jpg",
             "bg_position": "center-center",
             "mobile_image_position": "center",
             "contain_image": false,

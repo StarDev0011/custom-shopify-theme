@@ -909,11 +909,21 @@
       },
       {
         "type": "header",
-        "content": "Message"
+        "content": "Message 1"
       },
       {
         "type": "richtext",
-        "id": "cart_custom_message_text",
+        "id": "cart_custom_message_text_1",
+        "label": "Text",
+        "default": "<p>New customers save 10% with code <strong>WELCOME10<\/strong><\/p>"
+      },
+      {
+        "type": "header",
+        "content": "Message 2"
+      },
+      {
+        "type": "richtext",
+        "id": "cart_custom_message_text_2",
         "label": "Text",
         "default": "<p>New customers save 10% with code <strong>WELCOME10<\/strong><\/p>"
       },

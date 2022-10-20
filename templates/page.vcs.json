@@ -240,7 +240,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/5352v5.jpg",
+            "image": "shopify:\/\/shop_images\/5352v5_1.jpg",
             "image_position": "center-top",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -288,7 +288,7 @@
         "1658947564c479ddf2-1"
       ],
       "settings": {
-        "height": "five-fifty-height",
+        "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": false,
         "mobile_height": 250,
