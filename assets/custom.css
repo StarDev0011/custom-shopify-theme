@@ -312,3 +312,6 @@ h2.right-heading {
         align-items: flex-end;
     }
 }
+#cart-drawer [docapp-data-cart-item] .cart__item__image a {
+   height: auto;
+}

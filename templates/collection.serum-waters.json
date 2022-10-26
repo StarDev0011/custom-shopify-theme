@@ -19,8 +19,8 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/7715v3_2a16dcc9-bcc5-4e0f-8c1d-f3e4eb80eca2.jpg",
-            "image_position": "center-center",
+            "image": "shopify:\/\/shop_images\/5652v4.jpg",
+            "image_position": "center-bottom",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
             "tablet_background_x_position": 50,
@@ -59,7 +59,7 @@
         "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": true,
-        "mobile_height": 250,
+        "mobile_height": 280,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""

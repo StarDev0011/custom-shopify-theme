@@ -157,7 +157,7 @@
         "title": "",
         "wrapper": "full",
         "columns": 3,
-        "heading_font_size": 32,
+        "heading_font_size": 26,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": true,
@@ -186,7 +186,7 @@
             "bg_position": "center-center",
             "overlay_opacity": 0,
             "heading_font_size": 32,
-            "heading_mobile_font_size": 32,
+            "heading_mobile_font_size": 26,
             "heading_font_weight": "400",
             "heading_letter_spacing": 0,
             "heading_color": "#ffffff",
@@ -225,7 +225,7 @@
       ],
       "settings": {
         "wrapper": "wide",
-        "slide_height": "seven-fifty-height",
+        "slide_height": "original-height",
         "show_nav_dots": false,
         "show_nav_arrows": false,
         "show_arrow_down": false,
@@ -1285,7 +1285,7 @@
           "type": "subheading",
           "settings": {
             "text": "<p>100% RECYCLABLE PACKAGING<\/p>",
-            "subheading_size": 32,
+            "subheading_size": 26,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -1549,7 +1549,7 @@
             "subheading_weight": "sub-normal",
             "title": "MADE BY US",
             "heading_font_size_desktop": 32,
-            "heading_font_size_mobile": 30,
+            "heading_font_size_mobile": 26,
             "heading_weight": "heading-normal",
             "text": "<p>unlike most beauty brands, all of our products are entirely made by us from start to finish. we independently do our own research and development, manufacturing, fulfillment, and distribution. Because of this, we are able to control every aspect of the quality and integrity of our products.<\/p><p>After distillation, the final step of production (finishing, bottling and labeling) takes place at our Greenleaf facility, owned by our parent company, Plant Industries. Greenleaf is located in Allentown, PA and about 20 minutes away from the Distillery.<\/p>",
             "text_font_size_desktop": 20,

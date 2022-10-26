@@ -2,26 +2,118 @@
   "sections": {
     "hero": {
       "type": "collection-image-with-title",
-      "disabled": true,
       "settings": {
         "banner_height": "one-fifty-height",
         "text_position": "middle-left",
         "show_image": false,
         "text_color": "text-light",
         "overlay_opacity": 0,
-        "banner_bg_color": "#ffffff",
+        "banner_bg_color": "#fafafa",
         "remove_margin_bottom": true
+      }
+    },
+    "49432af4-efde-4476-ba84-2235645992ae": {
+      "type": "section-custom-content",
+      "blocks": {
+        "template--15879764443325__49432af4-efde-4476-ba84-2235645992ae-166620170648108130-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/5518v7_0c396160-b011-4b4c-81fa-29803d71c1dc.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "0644978b-b133-41e1-8979-9afca0d19bdf": {
+          "type": "video",
+          "settings": {
+            "text_position": "middle-center",
+            "hero_video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "video_enable_sound": false,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "text": "",
+            "heading_size": 100,
+            "button_text": "",
+            "button_link": "",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764443325__49432af4-efde-4476-ba84-2235645992ae-166620170648108130-0",
+        "0644978b-b133-41e1-8979-9afca0d19bdf"
+      ],
+      "settings": {
+        "height": "five-fifty-height",
+        "add_spacing": true,
+        "in_collection": true,
+        "mobile_height": 250,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "39986443-cc9e-42ef-b91c-6e1ce9ce4eab": {
+      "type": "section-split-images",
+      "disabled": true,
+      "blocks": {
+        "template--15879764443325__39986443-cc9e-42ef-b91c-6e1ce9ce4eab-166620092830696de3-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5518v7_0c396160-b011-4b4c-81fa-29803d71c1dc.jpg",
+            "image_position": "center-center",
+            "show_image_mobile": true
+          }
+        },
+        "template--15879764443325__39986443-cc9e-42ef-b91c-6e1ce9ce4eab-166620092830696de3-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5352v5.jpg",
+            "image_position": "center-center",
+            "show_image_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764443325__39986443-cc9e-42ef-b91c-6e1ce9ce4eab-166620092830696de3-0",
+        "template--15879764443325__39986443-cc9e-42ef-b91c-6e1ce9ce4eab-166620092830696de3-1"
+      ],
+      "settings": {
+        "image_height": "six-fifty-height",
+        "mobile_layout": "stacked",
+        "text_position": "middle-center",
+        "overlay_opacity": 0,
+        "text_color": "text-light",
+        "title": "",
+        "heading_size": 120,
+        "text": "",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary"
       }
     },
     "166126845347e449ad": {
       "type": "section-slideshow",
+      "disabled": true,
       "blocks": {
         "16612684534f495eeb-0": {
           "type": "image",
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/7501v3_617aad64-67da-43a5-b6a4-5d1d5dd9a714.jpg",
+            "image": "shopify:\/\/shop_images\/5518v7.jpg",
             "image_vertical": 50,
             "image_horizontal": 50,
             "image_contain": true,
@@ -108,6 +200,8 @@
   },
   "order": [
     "hero",
+    "49432af4-efde-4476-ba84-2235645992ae",
+    "39986443-cc9e-42ef-b91c-6e1ce9ce4eab",
     "166126845347e449ad",
     "subcollections",
     "main"

@@ -3,7 +3,7 @@
   assign animations_enabled = settings.animations_enabled
   assign bg_color = section.settings.bg_color
   assign height = section.settings.height
-  assign mobile_height = section.settings.mobile_height
+  assign mobile_heights = section.settings.mobile_height
   assign wrapper = section.settings.wrapper
   assign add_spacing = section.settings.add_spacing
   assign in_collection = section.settings.in_collection
@@ -43,8 +43,8 @@
     }
   {%- endif -%}
   @media only screen and (max-width: 479px) {
-    .brick__block__inner {
-      height: {{mobile_height}}px;
+    #brick-section--{{ section.id }} .brick__block__inner {
+      height: {{mobile_heights}}px;
     }
   }
 {% endstyle %}

@@ -2,19 +2,74 @@
   "sections": {
     "hero": {
       "type": "collection-image-with-title",
-      "disabled": true,
       "settings": {
         "banner_height": "one-fifty-height",
         "text_position": "middle-left",
         "show_image": true,
         "text_color": "text-light",
         "overlay_opacity": 0,
-        "banner_bg_color": "#ffffff",
-        "remove_margin_bottom": false
+        "banner_bg_color": "#fafafa",
+        "remove_margin_bottom": true
+      }
+    },
+    "c6009a14-e534-431e-b72e-63aaddf9fece": {
+      "type": "section-custom-content",
+      "blocks": {
+        "template--15879764017341__c6009a14-e534-431e-b72e-63aaddf9fece-166619814802b03c8e-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/hazel-COLLECTION-mirror-2.jpg",
+            "image_position": "left-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "ea4e972a-1dd8-460d-84ab-31d2f60e1735": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 10,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764017341__c6009a14-e534-431e-b72e-63aaddf9fece-166619814802b03c8e-0",
+        "ea4e972a-1dd8-460d-84ab-31d2f60e1735"
+      ],
+      "settings": {
+        "height": "five-fifty-height",
+        "add_spacing": true,
+        "in_collection": true,
+        "mobile_height": 250,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
       }
     },
     "16617883720c731516": {
       "type": "section-slideshow",
+      "disabled": true,
       "blocks": {
         "1661788372e8d8f2fe-1": {
           "type": "image",
@@ -108,6 +163,7 @@
   },
   "order": [
     "hero",
+    "c6009a14-e534-431e-b72e-63aaddf9fece",
     "16617883720c731516",
     "subcollections",
     "main"

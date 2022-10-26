@@ -467,6 +467,9 @@
                     assign columns = settings.products_per_row_on_desktop | plus: 0
 
                     for product in collection.products
+if product.handle contains "docapp-free-gift-"
+continue
+endif
                       assign index = forloop.index
                       assign animation_delay = forloop.index0 | modulo: columns | times: 1
                       render 'product-grid-item', product: product, animation_delay: animation_delay

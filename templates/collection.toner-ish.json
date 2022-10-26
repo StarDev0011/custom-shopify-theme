@@ -2,19 +2,74 @@
   "sections": {
     "hero": {
       "type": "collection-image-with-title",
-      "disabled": true,
       "settings": {
         "banner_height": "one-fifty-height",
         "text_position": "middle-left",
         "show_image": true,
         "text_color": "text-light",
         "overlay_opacity": 0,
-        "banner_bg_color": "#ffffff",
-        "remove_margin_bottom": false
+        "banner_bg_color": "#fafafa",
+        "remove_margin_bottom": true
+      }
+    },
+    "9602765b-2bd6-4950-aafc-1ca7bef9d9ad": {
+      "type": "section-custom-content",
+      "blocks": {
+        "template--15879764476093__9602765b-2bd6-4950-aafc-1ca7bef9d9ad-1666198770a3c3998d-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/MG_5772.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "dd016769-d827-4520-ba28-44435b28b652": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764476093__9602765b-2bd6-4950-aafc-1ca7bef9d9ad-1666198770a3c3998d-0",
+        "dd016769-d827-4520-ba28-44435b28b652"
+      ],
+      "settings": {
+        "height": "four-fifty-height",
+        "add_spacing": true,
+        "in_collection": true,
+        "mobile_height": 250,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
       }
     },
     "166126888810d8f026": {
       "type": "section-slideshow",
+      "disabled": true,
       "blocks": {
         "1661268888a164c083-0": {
           "type": "image",
@@ -108,6 +163,7 @@
   },
   "order": [
     "hero",
+    "9602765b-2bd6-4950-aafc-1ca7bef9d9ad",
     "166126888810d8f026",
     "subcollections",
     "main"

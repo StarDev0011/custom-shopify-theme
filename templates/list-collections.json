@@ -35,12 +35,12 @@
         "1656337456cd304120-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FLUFFMEDIA-_1_898e6fba-aeed-441a-bc3d-c5d032b5bead.jpg",
+            "image": "shopify:\/\/shop_images\/5462v4.jpg",
             "bg_position": "center-center",
             "overlay_opacity": 0,
             "text_position": "top-left",
             "subheading": "",
-            "title": "shop by category",
+            "title": "shop by <br> category",
             "text": "",
             "button_text": "",
             "link": "shopify:\/\/pages\/by-category",

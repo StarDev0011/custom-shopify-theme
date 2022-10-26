@@ -58,6 +58,12 @@
           "settings": {
             "text": "Share"
           }
+        },
+        "535d03a5-a3e2-4512-97f7-e008570fc480": {
+          "type": "upsell",
+          "settings": {
+            "product": "{{ product.metafields.theme.upsell.value }}"
+          }
         }
       },
       "block_order": [
@@ -66,14 +72,105 @@
         "description",
         "1630242e-abee-42f7-b45e-9410804cec2e",
         "product_accordions",
-        "share-button"
+        "share-button",
+        "535d03a5-a3e2-4512-97f7-e008570fc480"
       ],
       "settings": {
         "wrapper": "full",
         "image_size": "small",
         "enable_zoom": false,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "bg_color": ""
+      }
+    },
+    "a9c5618d-26ed-4bb4-840f-607ea4a5ff1c": {
+      "type": "section-columns",
+      "blocks": {
+        "template--15879765491901__a9c5618d-26ed-4bb4-840f-607ea4a5ff1c-166619895745012aa3-0": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1475.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "WHAT IS FACEWATER",
+            "text": "<p>Facewater is a range of patent pending, pore-healthy 100% plant based, distilled water-form serums, cleansers, toners, moisturizers and more - that work to deliver visibly clearer and healthier skin with noticeable radiance and long-term youth preserving effects.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879765491901__a9c5618d-26ed-4bb4-840f-607ea4a5ff1c-166619895745012aa3-1": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_0830.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "THE RESULTS",
+            "text": "<p>noticeable skin clearing*<\/p><p>visible radiance<\/p><p>long term youth preserving effects<\/p><p>immediate lasting moisture<\/p><p><\/p><p>*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater. 80% of consumer testers say that Facewater works better than the product they normally use<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879765491901__a9c5618d-26ed-4bb4-840f-607ea4a5ff1c-166619895745012aa3-3": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shutterstock_2073756287.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "WAY BEYOND CLEAN",
+            "text": "<p>100% plant based formulas<\/p><p>no glycols: glycols are derived from petroleum and known to cause irritation<\/p><p>no petrochemicals<\/p><p>no synthetic fragrance<\/p><p>no added dye or color<\/p><p>vegan* and cruelty-free<\/p><p>made by us<\/p><p>no parabens<\/p><p>no phthalates<\/p><p>*all of our products are vegan with the exception of those containing honey<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879765491901__a9c5618d-26ed-4bb4-840f-607ea4a5ff1c-166619895745012aa3-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FLUFFMEDIA--4_da91e193-3707-41e6-a4d7-b24f4ec97918.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "100% PLANT BASED VS. \"NATURAL\"",
+            "text": "<p>when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants. vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them! natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and paraffin wax.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879765491901__a9c5618d-26ed-4bb4-840f-607ea4a5ff1c-166619895745012aa3-0",
+        "template--15879765491901__a9c5618d-26ed-4bb4-840f-607ea4a5ff1c-166619895745012aa3-1",
+        "template--15879765491901__a9c5618d-26ed-4bb4-840f-607ea4a5ff1c-166619895745012aa3-3",
+        "template--15879765491901__a9c5618d-26ed-4bb4-840f-607ea4a5ff1c-166619895745012aa3-2"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 4,
+        "heading_font_size": 24,
+        "bg_color": "#fafafa",
+        "align_text": "text-left",
+        "remove_text_spacing": true,
+        "text_width": 90,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.7,
+        "show_images": true,
+        "disable_slider": false,
+        "remove_margin_bottom": false
       }
     },
     "1658771597795d8bc2": {
@@ -136,7 +233,9 @@
         "show_nav_dots": true,
         "show_nav_arrows": true,
         "show_arrow_down": false,
-        "arrow_dot_color": "",
+        "dot_color": "",
+        "next_prev_color": "",
+        "down_color": "",
         "autoplay": false,
         "duration": 4,
         "transition": "slide",
@@ -174,6 +273,7 @@
             "contain_image": false,
             "overlay_opacity": 0,
             "text_position": "center",
+            "mobile_text_position": "center",
             "subheading": "",
             "title": "",
             "text": "",
@@ -210,6 +310,7 @@
             "contain_image": false,
             "overlay_opacity": 0,
             "text_position": "center",
+            "mobile_text_position": "center",
             "subheading": "",
             "title": "",
             "text": "",
@@ -381,6 +482,7 @@
     },
     "16602274001103a154": {
       "type": "section-image-accordions",
+      "disabled": true,
       "blocks": {
         "1660227400437ba85e-0": {
           "type": "image",
@@ -530,6 +632,8 @@
       "settings": {
         "height": "six-fifty-height",
         "add_spacing": false,
+        "in_collection": false,
+        "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "#f1f1f1",
         "custom_css": ""
@@ -542,7 +646,7 @@
           "type": "subheading",
           "settings": {
             "text": "<p>100% RECYCLABLE PACKAGING<\/p>",
-            "subheading_size": 32,
+            "subheading_size": 24,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -560,7 +664,7 @@
           "type": "subheading",
           "settings": {
             "text": "<p>why we use plastic instead of glass bottles<\/p>",
-            "subheading_size": 32,
+            "subheading_size": 24,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -606,6 +710,7 @@
             "contain_image": true,
             "overlay_opacity": 0,
             "text_position": "top-left",
+            "mobile_text_position": "center",
             "subheading": "",
             "title": "100% recyclable packaging",
             "text": "PET or PETE is the most widely recycled plastic  in the world.  It is a strong and inert material  that is extremely lightweight, making it efficient to transport (less carbon emissions during shipping compared to glass). PET can be  picked up through   most curbside recycling programs - just make sure to rinse  out any remaining product before recycling.     why we use plastic instead of glass bottles  glass may be a sturdier feeling material but only has a lower  environmental impact if reused. it also requires more materials and is much heavier, leading to higher emissions, especially from shipping. we chose PET plastic because it is  100% recyclable, super lightweight, and produces  significantly less carbon emissions during transport  compared to glass bottles.",
@@ -703,7 +808,9 @@
         "show_nav_dots": false,
         "show_nav_arrows": false,
         "show_arrow_down": false,
-        "arrow_dot_color": "",
+        "dot_color": "",
+        "next_prev_color": "",
+        "down_color": "",
         "autoplay": false,
         "duration": 4,
         "transition": "slide",
@@ -775,7 +882,7 @@
       "settings": {
         "wrapper": "full",
         "limit": 4,
-        "product_recommendations_heading": "you may also like",
+        "product_recommendations_heading": "YOU MAY ALSO LIKE",
         "bg_color": ""
       }
     },
@@ -790,6 +897,7 @@
   },
   "order": [
     "main",
+    "a9c5618d-26ed-4bb4-840f-607ea4a5ff1c",
     "1658771597795d8bc2",
     "1658854693403e7212",
     "1658849052c0376c9e",

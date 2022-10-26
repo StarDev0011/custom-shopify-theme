@@ -2,19 +2,75 @@
   "sections": {
     "hero": {
       "type": "collection-image-with-title",
-      "disabled": true,
       "settings": {
         "banner_height": "one-fifty-height",
         "text_position": "middle-left",
         "show_image": false,
         "text_color": "text-light",
         "overlay_opacity": 0,
-        "banner_bg_color": "#ffffff",
-        "remove_margin_bottom": false
+        "banner_bg_color": "#fafafa",
+        "remove_margin_bottom": true
+      }
+    },
+    "3e182bad-cdfe-4b0c-aba2-ec45171d1811": {
+      "type": "section-custom-content",
+      "blocks": {
+        "template--15879763886269__3e182bad-cdfe-4b0c-aba2-ec45171d1811-1666197967a1fce296-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/4317v4_1.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "23d091cc-ee4c-4c09-91af-c015a327716c": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/4724v2.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879763886269__3e182bad-cdfe-4b0c-aba2-ec45171d1811-1666197967a1fce296-0",
+        "23d091cc-ee4c-4c09-91af-c015a327716c"
+      ],
+      "settings": {
+        "height": "five-fifty-height",
+        "add_spacing": true,
+        "in_collection": true,
+        "mobile_height": 250,
+        "wrapper": "full",
+        "bg_color": "#fafafa",
+        "custom_css": ""
       }
     },
     "1661266579eb81d16c": {
       "type": "section-slideshow",
+      "disabled": true,
       "blocks": {
         "1661266578627e13b8-0": {
           "type": "image",
@@ -108,6 +164,7 @@
   },
   "order": [
     "hero",
+    "3e182bad-cdfe-4b0c-aba2-ec45171d1811",
     "1661266579eb81d16c",
     "subcollections",
     "main"
