@@ -154,7 +154,7 @@
         "1658236006ed6113d2-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/7844v4.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9921.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "dark spots",
@@ -244,6 +244,7 @@
         "title": "",
         "wrapper": "full",
         "columns": 2,
+        "heading_font_size": 20,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,
@@ -316,6 +317,7 @@
         "title": "",
         "wrapper": "full",
         "columns": 2,
+        "heading_font_size": 20,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,
@@ -333,7 +335,7 @@
         "1663163385e91d05be-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9625v2.jpg",
+            "image": "shopify:\/\/shop_images\/9797v2.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "pores",
@@ -371,6 +373,7 @@
         "title": "",
         "wrapper": "full",
         "columns": 2,
+        "heading_font_size": 20,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,

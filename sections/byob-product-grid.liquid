@@ -122,7 +122,7 @@ var buildrule;
                   vendor: "{{ cur_product.vendor | escape }}",
                   type: "{{ cur_product.type | escape }}",
                   is_variant: true
-                },              
+                },
               {% endif %}
             {% endfor %}
           {%- endunless -%}
@@ -218,6 +218,7 @@ select:focus { /* remove select focus style in card */
 }
 .footer-image{
   max-height: 150px;
+  width: auto;
 }
 .flex-item-right {
   align-items: baseline;
@@ -314,6 +315,9 @@ select:focus { /* remove select focus style in card */
 #byob-beacon>svg {
   width: 28px;
   height: 30px;
+}
+.byob-product-image-container > img { /* set max card image size */
+  max-height: {{ section.settings.max_image_height }}vh;  
 }
 @media screen and (max-width: 1280px) {
   .byob-wrapper {
@@ -738,7 +742,7 @@ document.addEventListener('shopify:section:select', themeEventHandler);
       },
       // increaseVariantQuantity(selectedVariant) {  // increase variant quantity in json (data source)
       //   this.getJsonVariant(selectedVariant).inventory_quantity++;
-      // }, 
+      // },
       // decreaseVariantQuantity(selectedVariant) {  // decrease variant quantity in json (data source)
       //   this.getJsonVariant(selectedVariant).inventory_quantity--;
       // },
@@ -786,7 +790,8 @@ document.addEventListener('shopify:section:select', themeEventHandler);
       },
       formatProductsData(products) { // fixed Shopify API not consistent for ajax call
         for (product of products) {
-          product.featured_image = product.images[0].src + '&width=480';
+          if (product.images && product.images.length > 0)
+            product.featured_image = product.images[0].src + '&width=480';
           // images & desc are for qv
           product.images.splice(4);  // only show 4 images
           product.images.forEach((image, i) => {
@@ -1342,7 +1347,7 @@ document.addEventListener('shopify:section:select', themeEventHandler);
             	[[ product.variants[0].title ]]
               </label>
             </div>
-            
+
             <template class="" v-if="product.variants.length >= 1 && !product.has_only_default_variant">
 			        <div :class="'byob-product-option' + (index+1)" v-for="(option, index) in product.options">
             	  <label class="inline-block" style="padding-right:2px" v-if="option.name != 'default'">
@@ -1510,7 +1515,7 @@ document.addEventListener('shopify:section:select', themeEventHandler);
           else if (discount.type == 'DC') {
             if (discount.display_discount_type && discount.display_discount_value) {
               discount.display_discount = {
-                type: discount.display_discount_type,                
+                type: discount.display_discount_type,
                 value: discount.display_discount_value
               }
             }
@@ -1699,7 +1704,7 @@ document.addEventListener('shopify:section:select', themeEventHandler);
 
   YETT_WHITELIST = [
       /unpkg\.com/, /myshopify\.com/, /shopify\.com/, /www\.google-analytics\.com/, /use\.fontawesome\.com/, /cdn\.jsdelivr\.net/, /ajax\.googleapis\.com/, /www\.googletagmanager\.com/, /static\.klaviyo\.com/,
-  	/www\.youtube\.com/, /cdnjs\.cloudflare\.com/, /cdn\.lr-ingest\.io/, /cdn\.judge\.me/
+  	/www\.youtube\.com/, /cdnjs\.cloudflare\.com/, /cdn\.lr-ingest\.io/, /cdn\.judge\.me/, /cdn\.rebuyengine\.com/
   ]
 </script>
 <script src="https://unpkg.com/yett"></script>
@@ -1766,6 +1771,16 @@ document.addEventListener('shopify:section:select', themeEventHandler);
         "id": "button_text_color",
         "label": "Button text color",
         "default": "#fff"
+      },
+      {
+          "type": "range",
+          "id": "max_image_height",
+          "label": "Set max image height (to % of screen)",
+          "info": "If your product images' height varies a lot, use this option to standardize image heights",
+          "min": 40,
+          "max": 80,
+          "step": 10,
+          "default": 80
       },
 	  {
         "type": "checkbox",

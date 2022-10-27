@@ -231,7 +231,7 @@ input[type="radio"] {
                       	[[ group.name ]]
   					  </label>
 
-                      <label style="margin-left: auto">[[ currencySymbol ]][[ discountedPrice ]]</label>
+                      <label v-if="selected_group_name !== 'single'" style="margin-left: auto">[[ currencySymbol ]][[ discountedPrice ]]</label>
 
                       <template v-if="selected_group_name !== 'single' && selected_group_name == group.name">
                         <div class="byob-group-options" v-for="(option, index) in group.options">

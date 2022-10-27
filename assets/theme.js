@@ -1840,6 +1840,9 @@ PaloAlto.CartDrawer = (function() {
         .then(this.handleErrors)
         .then((response) => response.json())
         .then((response) => {
+document.querySelectorAll('[data-cart-items-qty]').forEach(el => {
+el.innerHTML = el.innerHTML.replace(/\d+/g, response.item_count);
+});
           this.newTotalItems = response.items.length;
 
           this.buildTotalPrice(response);

@@ -69,6 +69,9 @@
   flex-direction: column;
   gap: 10px;
 }
+#byob-product-options1 { /* show 2 options select box to switch order */
+  display: none;
+}
 .byob-product-option {
   display: grid;
   grid-template-columns: 75px 65%;
@@ -78,8 +81,8 @@
   margin-bottom: auto;
 }
 .byob-quickview-quantity {
-  display: flex;
-  /* grid-template-columns: 75px 18% 45%; */
+  display: grid;
+  grid-template-columns: 75px 18% 45%; 
 }
 #btn-quickview-add {
   border: none;
@@ -152,6 +155,7 @@
 }
 #byob-quickview-input {
   {% unless section.settings.show_quantity_input %}visibility: hidden;{% endunless %}
+  width: auto;
 }
 @media screen and (max-width: 768px) {
   .byob-quickview-container {
@@ -188,6 +192,7 @@
   }
 }
 </style>
+
 <script type="text/x-template" id="byob-quickview-template">
   <teleport to="body">
     <transition name="modal">
@@ -213,26 +218,47 @@
                   <div class="byob-quickview-title">[[ product.title ]]</div>
                   <!-- <div class="byob-quickview-price">[[ currencySymbol ]][[ price ]]</div>
                   <div class="byob-quickview-price">[[ priceWithCurrency(price) ]]</div> -->
-                  <!--<div class="byob-quickview-price">[[ displayPrice(price) ]]</div>-->
+                  <div class="byob-quickview-price">[[ displayPrice(price) ]]</div>
+
+                  <div class="byob-product-options" id="byob-product-options1">
+                  <!-- product options -->
+                    <template v-if="!product.has_only_default_variant">
+                      <div class="byob-product-option" v-for="(option, index) in product.options">
+                        <label class="byob-product-option-label">
+                            [[ option.name ]]:
+                        </label>
+  
+                        <select v-model="myOptionValues[index]" @change="selectOption(option, index)">
+                          <option v-for="value in option.values" :selected="myOptionValues[index] == value" :value="value">
+                            [[ value ]]
+                          </option>
+                        </select>
+                      </div>
+                    </template>
+  
+                    <div class="byob-quickview-quantity">
+                      <label id="byob-quickview-label">Quantity</label>
+  
+                      <input id="byob-quickview-input" v-model.number="quantity" min="1" :max="maxQuantity" type="number" name="quantity" :disabled="!available || disableAdd">
+  
+                      <button type="button" id="btn-quickview-add" class="btn-add-to-bundle" @click="addVariantToBundle" :disabled="!available || disableAdd || isTopTier">
+                        <span class="AddToBundleText">
+                          [[ buttonText ]]
+                        </span>
+                      </button>
+                    </div>
+  
+                    <div v-if="itemAdded"><p>{{ 'sections.byob-quickview.itemAdded' | t }}</p></div>
+                  </div>
+  
                   <div v-if="show_html_product_description" class="byob-quickview-desc" v-html="product.html_description"></div>
                   <div v-else class="byob-quickview-desc">[[ product.description ]]</div>
-                  
-                  {%- assign product_handle = '[[ product.handle ]]' -%}
-                  
-                  {% capture my_variable %}
-                  {{all_products[product_handle].metafields.my_fields.how_to_use}}
-                  {% endcapture %}
-                  {{ my_variable }}
-
-                  
-                  {% assign how_to_use = 'oilwater-replenish-nourish-rosehip-mini' %}
-                  {% assign how_to_use = all_products[product_handle].metafields.my_fields.how_to_use %}
                   {% if section.settings.show_view_more %}
                   <div><a :href="productLink" class="grid-product-text" target="_blank">{{ 'sections.byob-quickview.viewMore' | t }}</a></div>
                   {% endif %}
                 </div>
 
-                <div class="byob-product-options">
+                <div class="byob-product-options" id="byob-product-options2">
                   <!-- product options -->
                   <template v-if="!product.has_only_default_variant">
                     <div class="byob-product-option" v-for="(option, index) in product.options">
@@ -283,7 +309,6 @@
     },
     mounted() {
       console.log('product in qvm', this.product);
-      console.log('Metafields')
       console.log('selectedOptionValues', this.selectedOptionValues);
     },
     data() {

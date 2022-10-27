@@ -35,6 +35,7 @@
         "tick_icon_color": "#008000",
         "button_color": "#ffffff",
         "button_text_color": "#000000",
+        "max_image_height": 80,
         "disable_product_link": false,
         "enable_quickview": true,
         "show_product_price": true,
@@ -68,6 +69,27 @@
         "hide_sku_on_cart": false,
         "show_quantity_in_line_items": false
       }
+    },
+    "4054800e-3c2e-4a88-b088-dac59882bd9f": {
+      "type": "section-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "same-travel",
+        "title": "travel size minis",
+        "description": "<p>bundle items to save <\/p>",
+        "spacing_range": 0,
+        "heading_alignment": true,
+        "show_description": false,
+        "products_rows": 2,
+        "products_layout": "grid",
+        "show_collection_button": false,
+        "show_collection": "View Collection",
+        "button_style": "text",
+        "bg_color": "",
+        "enable_slider_mobile": true,
+        "remove_top_padding": false,
+        "remove_margin_bottom": false
+      }
     }
   },
   "order": [
@@ -75,6 +97,7 @@
     "byob-bundle-info",
     "byob-product-grid",
     "byob-footer",
-    "byob-confirm-modal"
+    "byob-confirm-modal",
+    "4054800e-3c2e-4a88-b088-dac59882bd9f"
   ]
 }

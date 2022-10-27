@@ -19,7 +19,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/hazel-COLLECTION-mirror-2.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9665.jpg",
             "image_position": "left-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -58,7 +58,7 @@
         "ea4e972a-1dd8-460d-84ab-31d2f60e1735"
       ],
       "settings": {
-        "height": "five-fifty-height",
+        "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": true,
         "mobile_height": 250,

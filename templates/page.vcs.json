@@ -233,6 +233,46 @@
         "enable_slider_mobile": false
       }
     },
+    "5cf39c15-3e1f-4212-9f17-961463d5897e": {
+      "type": "section-text",
+      "disabled": true,
+      "blocks": {
+        "template--15879765360829__5cf39c15-3e1f-4212-9f17-961463d5897e-1666887457fc9b3f3f-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "<p>*92% of consumer testers would purchase Facewater after trying it for only 2 weeks.<\/p><p>*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater.<\/p>",
+            "size": 185,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        },
+        "template--15879765360829__5cf39c15-3e1f-4212-9f17-961463d5897e-1666887457fc9b3f3f-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>NOTICEABLE SKIN CLEARING*<\/p><p><\/p>",
+            "size": 110,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--15879765360829__5cf39c15-3e1f-4212-9f17-961463d5897e-1666887457fc9b3f3f-1",
+        "template--15879765360829__5cf39c15-3e1f-4212-9f17-961463d5897e-1666887457fc9b3f3f-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/5352v5_1.jpg",
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "narrow",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    },
     "165894756411f7e648": {
       "type": "section-custom-content",
       "blocks": {
@@ -269,7 +309,7 @@
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
             "heading_weight": "heading-normal",
-            "text": "<p> <\/p><h3>*92% of consumer testers would purchase Facewater after trying it for only 2 weeks.  <\/h3>\n<p> <\/p><h3>*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater.  <\/h3>\n<br>\n<p><\/p><h3>NOTICEABLE SKIN CLEARING*<\/h3><p>\n\n<\/p><p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<\/p><p><\/p><h3>VISIBLE RADIANCE<\/h3><p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<\/p><p><\/p><h3>LONG-TERM YOUTH PRESERVATION<\/h3><p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <\/p>\n <p><\/p><p><\/p><p><\/p>\n<p> <\/p><h3> IMMEDIATE LASTING MOISTURE<\/h3>\n<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<\/p>",
+            "text": "<p> <\/p><h3>*92% of consumer testers would purchase Facewater after trying it for only 2 weeks.  <\/h3>\n<p> <\/p><h3>*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater.  <\/h3>\n<br>\n<p><\/p><h3>NOTICEABLE SKIN CLEARING*<\/h3><p>\n\n<\/p><p>The results speak for themselves. Healthy pores free from occlusive chemicals allow the skin to breathe and naturally purge toxins. Many so called “natural” products or products that have plants in them also contain silicones or petroleum derived chemicals – unlike Facewater which is 100% plant based. FREE YOUR FACE with Facewater and watch over time as your skin responds with more resilience to environmental stressors. <\/p><p><\/p><h3>VISIBLE RADIANCE<\/h3><p>Radiance can’t be faked. Like your skin, plants are living things and are bursting with nutrient rich energy. Our patent pending distillation process captures more skin healthy and energetic actives from fresh plant matter (many of which we grow ourselves) compared to the diluted factory-made extracts common in other products. The only way to have truly radiant skin is to have healthy, fully and deeply moisturized skin. <\/p><p><\/p><h3>LONG-TERM YOUTH PRESERVATION<\/h3><p>Like the rest of your body, premature skin aging is the result of diet, stress, sun damage, toxins and genetics. We can’t control genetics - but Facewater will make a big difference. All Facewater products are Way Beyond Clean™ and 100% Plant Based. We believe the best things you can do to keep your skin looking younger are continual healthy moisturization with antioxidant rich products and only using super clean, 100% plant-based products. There is no better regimen than Facewater. <\/p>\n <p><\/p><p><\/p><p><\/p>\n<p> <\/p><h3> IMMEDIATE LASTING MOISTURE<\/h3>\n<p>Moisture is essential for healthy, clear, radiant, youthful looking skin. That’s basic. But all moisture is not created equally. Facewater moisture is skin healthy and bursting with 100% plant-based energy. Water-form, ultra-absorbing and deeply hydrating – Facewater is the best moisture rich solution for your skin.<\/p>",
             "text_font_size_desktop": 20,
             "text_font_size_mobile": 14,
             "text_weight": "text-normal",
@@ -719,6 +759,7 @@
     "165972216369178eca",
     "16597220042231bb5d",
     "16566059652cdd0f1f",
+    "5cf39c15-3e1f-4212-9f17-961463d5897e",
     "165894756411f7e648",
     "16565094318a91cca5",
     "1656347496387be255",
