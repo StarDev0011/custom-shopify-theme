@@ -134,6 +134,13 @@ h2.right-heading {
 #flower-hazel .wrapper.wrapper--full.vertical-padding.slider.slider--slide.original-height {
     margin-bottom: 0;
 }
+.byob-quickview-title {
+    text-transform: capitalize;
+}
+.carousel--inactive {
+    text-align: left;
+    justify-content: start;
+}
 @media screen and (min-width:1024px) {
     .four-fifty-height {
         height: 100%;
@@ -148,7 +155,7 @@ h2.right-heading {
         right: -25px;
     }
     sup {
-        font-size: 60%;
+        font-size: 55%;
         line-height: 1;
     }
     .collection__filters-wrapper {

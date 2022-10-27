@@ -154,9 +154,11 @@
                   {%- endif -%}
 
                   {%- if block.settings.button_text != '' -%}
-                    <a href="{{ block.settings.button_link }}" class="column__item__button btn btn--{{ block.settings.button_style }}">
-                      {{- block.settings.button_text -}}
-                    </a>
+                    <div>
+                      <a href="{{ block.settings.button_link }}" class="column__item__button btn btn--{{ block.settings.button_style }}">
+                        {{- block.settings.button_text -}}
+                      </a>
+                    </div>
                   {%- endif -%}
                 </div>
               </div>

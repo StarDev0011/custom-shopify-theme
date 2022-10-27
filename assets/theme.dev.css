@@ -9840,7 +9840,6 @@ button.mfp-close {
 @media only screen and (min-width: 768px) {
   .column__item:first-child:last-child {
     width: calc(var(--wrapper-width) / 2);
-    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 767px) {
