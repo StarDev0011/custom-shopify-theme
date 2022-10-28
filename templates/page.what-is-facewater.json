@@ -67,7 +67,7 @@
         "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
-        "custom_css": "{\npadding-top: 0;\npadding-bottom: 60px;\n}"
+        "custom_css": "{\npadding-top: 0;\npadding-bottom: 30px;\n}"
       }
     },
     "16637753231bdf1b92": {

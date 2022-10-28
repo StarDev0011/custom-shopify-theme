@@ -43,8 +43,11 @@
     }
   {%- endif -%}
   @media only screen and (max-width: 479px) {
-    #brick-section--{{ section.id }} .brick__block__inner {
+    #brick-section--{{ section.id }} .brick__block__inner .brick__image {
       height: {{mobile_heights}}px;
+    }
+    .brick__block.brick__block--text {
+      margin-top: 30px;
     }
   }
 {% endstyle %}

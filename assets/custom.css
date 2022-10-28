@@ -98,13 +98,13 @@ h2.right-heading {
     margin-top: auto;
     margin-bottom: auto;
 }
-.column__item__text.rte {
+#what-is-facewater .column__item__text.rte {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
 }
-.column__item__text.rte p {
+#what-is-facewater .column__item__text.rte p {
     display: inline;
 }
 .read_more, .read_less {
@@ -196,6 +196,12 @@ h2.right-heading {
 }
 
 @media screen and (max-width:767px) {
+    .slider .flickity-prev-next-button {
+        display: block;
+    }
+    .text-section .wrapper .text__wrapper .text__content {
+        margin-bottom: 0px;
+    }
     h1.slide__heading.main-heading {
         display: flex;
         justify-content: flex-start;
@@ -254,6 +260,9 @@ h2.right-heading {
     }
     .featured-collection--carousel .featured-collection__title, .featured-collection--carousel .wrapper.wrapper--full {
         width: 100%;
+    }
+    .featured-collection--carousel .featured-collection__title {
+        margin-bottom: 30px;
     }
     .best-seller-collection-section {
         padding-top: 30px;
