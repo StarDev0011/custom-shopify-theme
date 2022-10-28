@@ -1155,6 +1155,7 @@
     },
     "16558220053c689ae2": {
       "type": "section-columns",
+      "disabled": true,
       "blocks": {
         "16558220046f7d824f-3": {
           "type": "text_block",
@@ -1234,7 +1235,7 @@
         "heading_font_size": 20,
         "bg_color": "#fafafa",
         "align_text": "text-left",
-        "remove_text_spacing": true,
+        "remove_text_spacing": false,
         "text_width": 88,
         "equalize_height": true,
         "image_aspect_ratio": 1.3,
