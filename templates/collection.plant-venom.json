@@ -19,7 +19,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/9930v8.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9930_1_a053a548-3a36-472b-9f26-e08b0ef13987.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -59,10 +59,10 @@
         "cdb41817-d8ac-46b3-884c-b99d3c688972"
       ],
       "settings": {
-        "height": "five-fifty-height",
+        "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": true,
-        "mobile_height": 250,
+        "mobile_height": 275,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""

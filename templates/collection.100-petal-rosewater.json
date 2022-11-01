@@ -19,8 +19,8 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/4317v4_1.jpg",
-            "image_position": "center-center",
+            "image": "shopify:\/\/shop_images\/MG_4317-2_1_6be767fc-443b-4bd8-bf97-3321ceb98171.jpg",
+            "image_position": "left-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
             "tablet_background_x_position": 50,
@@ -59,7 +59,7 @@
         "23d091cc-ee4c-4c09-91af-c015a327716c"
       ],
       "settings": {
-        "height": "five-fifty-height",
+        "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": true,
         "mobile_height": 250,

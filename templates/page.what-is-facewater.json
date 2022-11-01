@@ -393,8 +393,8 @@
             "image": "shopify:\/\/shop_images\/0738v2.jpg",
             "image_link": "",
             "bg_position": "center-center",
-            "title": "WATER-FORM IS BETTER FOR YOUR SKIN",
-            "text": "<p>our distillation method preserves the quality, purity, and delivery of full spectrum plant actives. our water form(ulas) are super lightweight and the perfect vehicle to transport delicate plant actives. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla <\/p>",
+            "title": "THE POWER OF WATER",
+            "text": "<p>Water is the ‘elixir of life.’ All life forms depend on the miracle of water. All skin moisturization is a measure of water retention.<\/p><p>It only makes sense that the most effective skin care be water based. more absorbing water is moisture skin compatible. distilled water is the purest form of water and attracts toxins from your skin. Distilled water is mineral free. Hard water – and a lot of tap water - which is contains abundant minerals, is very drying to your skin. <\/p>",
             "button_text": "",
             "button_link": "",
             "button_style": "text",
@@ -439,6 +439,24 @@
         "show_images": true,
         "disable_slider": true,
         "remove_margin_bottom": true
+      }
+    },
+    "0b51006f-3683-4ca8-b75b-340c33b7ed45": {
+      "type": "section-video",
+      "disabled": true,
+      "settings": {
+        "video_height": "five-fifty-height",
+        "text_position": "top-left",
+        "hero_video_link": "https:\/\/youtu.be\/0rp47cUXBDM",
+        "video_enable_sound": false,
+        "overlay_opacity": 0,
+        "text_color": "text-dark",
+        "title": "FACEWATER IS BETTER",
+        "text": "",
+        "heading_size": 100,
+        "button_text": "",
+        "button_link": "",
+        "button_style": "secondary"
       }
     },
     "a3e0983d-c50a-4b8f-a84c-b265aec970e9": {
@@ -554,16 +572,15 @@
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/A2048_750_banner_4.gif",
+            "image": "shopify:\/\/shop_images\/2.gif",
             "image_vertical": 50,
             "image_horizontal": 50,
             "image_contain": true,
-            "image_mobile": "shopify:\/\/shop_images\/2048_750_banner-01_19_copy.png",
             "mobile_image_vertical": 50,
             "mobile_image_horizontal": 50,
             "bg_position": "center-center",
             "overlay_opacity": 0,
-            "heading_font_size": 50,
+            "heading_font_size": 42,
             "heading_mobile_font_size": 26,
             "heading_font_weight": "400",
             "heading_letter_spacing": 0,
@@ -1018,24 +1035,6 @@
         "enable_slider_mobile": true
       }
     },
-    "0b51006f-3683-4ca8-b75b-340c33b7ed45": {
-      "type": "section-video",
-      "disabled": true,
-      "settings": {
-        "video_height": "five-fifty-height",
-        "text_position": "bottom-left",
-        "hero_video_link": "https:\/\/youtu.be\/oY5zf9a5dHE",
-        "video_enable_sound": false,
-        "overlay_opacity": 0,
-        "text_color": "text-dark",
-        "title": "FACEWATER IS BETTER",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-        "heading_size": 100,
-        "button_text": "",
-        "button_link": "",
-        "button_style": "secondary"
-      }
-    },
     "16637792522013ab25": {
       "type": "section-columns",
       "blocks": {
@@ -1335,6 +1334,7 @@
     "cac6fb06-1bf5-494d-98f5-a015c0df4f15",
     "1658931444da7faacd",
     "16636999280cd200e6",
+    "0b51006f-3683-4ca8-b75b-340c33b7ed45",
     "a3e0983d-c50a-4b8f-a84c-b265aec970e9",
     "fb203cb9-2e66-4586-a120-ad692aafd016",
     "f7652bd3-7708-463f-8165-00832a00abb2",
@@ -1343,7 +1343,6 @@
     "1659973851484a9c0c",
     "1656436483c66822d1",
     "1660768547ca9e0c0f",
-    "0b51006f-3683-4ca8-b75b-340c33b7ed45",
     "16637792522013ab25",
     "1663764846d4901551",
     "1658930827cfb47491",

@@ -1,5 +1,30 @@
 {
   "sections": {
+    "166326827019c9f3af": {
+      "type": "section-collection",
+      "settings": {
+        "collection": "water-form-serums-cleansers-moisturizers-and-more",
+        "title": "water-form is better than",
+        "description": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit<\/p>",
+        "spacing_range": -0.5,
+        "heading_alignment": true,
+        "show_description": true,
+        "products_rows": 2,
+        "products_layout": "carousel",
+        "show_collection_button": true,
+        "button_style": "text",
+        "bg_color": "#fafafa",
+        "enable_slider_mobile": true,
+        "remove_top_padding": true,
+        "remove_margin_bottom": false,
+        "enable_color_change": true,
+        "color_1_bg": "#e2b2cc",
+        "color_2_bg": "#9ad795",
+        "color_3_bg": "#adadad",
+        "color_4_bg": "#d7c3a8",
+        "color_5_bg": "#e6da1e"
+      }
+    },
     "1655905158580e2c4f": {
       "type": "section-slideshow",
       "blocks": {
@@ -18,13 +43,13 @@
             "bg_position": "center-center",
             "overlay_opacity": 0,
             "heading_font_size": 54,
-            "heading_mobile_font_size": 36,
+            "heading_mobile_font_size": 38,
             "heading_font_weight": "400",
             "heading_letter_spacing": -1,
             "heading_color": "#ffffff",
             "mobile_heading_color": "#000000",
             "text_font_size": 30,
-            "text_mobile_font_size": 20,
+            "text_mobile_font_size": 30,
             "text_font_weight": "400",
             "text_letter_spacing": 0,
             "text_color": "#ffffff",
@@ -176,7 +201,7 @@
         "8b467ef2-624c-4d5d-a336-d5c951335093": {
           "type": "heading",
           "settings": {
-            "text": "<p>a new patent-pending beauty breakthrough - <\/p><p>FOR VISIBLY CLEARER & HEALTHIER SKIN*<\/p>",
+            "text": "<p>a patent-pending breakthrough - <\/p><p>FOR VISIBLY CLEARER & HEALTHIER SKIN*<\/p>",
             "size": 300,
             "font_weight": "400",
             "letter_spacing": 0
@@ -186,7 +211,7 @@
           "type": "text",
           "settings": {
             "text": "<p>*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater<\/p><p>*92% of consumer testers would purchase Facewater after trying it for 2 weeks or less<\/p>",
-            "size": 90,
+            "size": 95,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -282,7 +307,7 @@
             "subheading": "",
             "title": "",
             "text": "POWERFUL MOISTURE MAGNET",
-            "button_text": "SHROOM MOSITURE BOOM",
+            "button_text": "SHROOM MOIsTURE BOOM",
             "link": "shopify:\/\/products\/serumato",
             "secondary_button_text": "",
             "secondary_button_link": "",
@@ -356,26 +381,6 @@
         "secondary_button_style": "secondary btn--small",
         "bg_color": "",
         "enable_slider_mobile": false
-      }
-    },
-    "166326827019c9f3af": {
-      "type": "section-collection",
-      "settings": {
-        "collection": "serum-waters",
-        "title": "serum waters",
-        "description": "",
-        "spacing_range": -0.5,
-        "heading_alignment": true,
-        "show_description": false,
-        "products_rows": 2,
-        "products_layout": "carousel",
-        "show_collection_button": false,
-        "show_collection": "",
-        "button_style": "text",
-        "bg_color": "",
-        "enable_slider_mobile": true,
-        "remove_top_padding": false,
-        "remove_margin_bottom": false
       }
     },
     "166326105196ff14f4": {
@@ -599,7 +604,7 @@
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/4317v4_1.jpg",
+            "image": "shopify:\/\/shop_images\/MG_4317-2_1.jpg",
             "image_vertical": 50,
             "image_horizontal": 50,
             "image_contain": true,
@@ -633,7 +638,7 @@
             "slide_btn_text": "SHOP 100 Petal rosewater",
             "slide_btn_link": "shopify:\/\/collections\/100-petal-rosewater",
             "slide_btn_style": "text",
-            "button_color": "#ffffff",
+            "button_color": "#000000",
             "mobile_button_color": "#000000",
             "slide_btn_text_2": "",
             "slide_btn_link_2": "",
@@ -919,7 +924,7 @@
             "text": "<p>100% PLANT BASED... way beyond clean™<\/p>",
             "size": 300,
             "font_weight": "400",
-            "letter_spacing": 0
+            "letter_spacing": -1
           }
         }
       },
@@ -940,8 +945,65 @@
         "remove_margin_bottom": false
       }
     },
+    "c7296a52-09c6-42b2-9668-e3af348a1742": {
+      "type": "section-columns",
+      "blocks": {
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0732v6_3.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "THE POWER OF WATER",
+            "text": "<p>Water is the ‘elixir of life.’ All life forms depend on the miracle of water. All skin moisturization is a measure of water retention. It only makes sense that the most effective skin care be water based. More absorbing - water is moisture - skin compatible. Distilled water is the purest form of water and attracts toxins from your skin. Distilled water is mineral free. Hard water – and a lot of tap water - which is contains abundant minerals, is very drying to your skin<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-3": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1475.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "PATENT-PENDING DISTILLATION PROCESS",
+            "text": "<p>our patent-pending distillation method captures whole, undamaged plant actives, resulting in a hydrosol – a water saturated with plant actives at peak potency and effectiveness.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-2",
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 2,
+        "heading_font_size": 32,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 85,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.6,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": false
+      }
+    },
     "16565284797bfc6776": {
       "type": "section-grid",
+      "disabled": true,
       "blocks": {
         "1656528479d198cf8b-1": {
           "type": "image",
@@ -968,7 +1030,7 @@
         "0e536494-f118-4b58-9f30-b55c5439baa9": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_0732_1.jpg",
+            "image": "shopify:\/\/shop_images\/0732v6_3.jpg",
             "bg_position": "right-center",
             "mobile_image_position": "center",
             "contain_image": false,
@@ -1252,7 +1314,7 @@
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/9930v9_1.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9930_1.jpg",
             "image_vertical": 35,
             "image_horizontal": 50,
             "image_contain": true,
@@ -1640,10 +1702,10 @@
     }
   },
   "order": [
+    "166326827019c9f3af",
     "1655905158580e2c4f",
     "16638774042f6239ae",
     "grid-0",
-    "166326827019c9f3af",
     "166326105196ff14f4",
     "1656533036d527d1da",
     "16564295094c18a1f2",
@@ -1651,6 +1713,7 @@
     "1655820298867db805",
     "16637392042c67527c",
     "1658853987e12cad3f",
+    "c7296a52-09c6-42b2-9668-e3af348a1742",
     "16565284797bfc6776",
     "1663268646cef71652",
     "16632634038e2dad11",

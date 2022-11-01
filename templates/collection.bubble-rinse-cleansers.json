@@ -2,6 +2,7 @@
   "sections": {
     "hero": {
       "type": "collection-image-with-title",
+      "disabled": true,
       "settings": {
         "banner_height": "one-fifty-height",
         "text_position": "middle-left",
@@ -157,27 +158,37 @@
             "button_style": "primary"
           }
         },
-        "1d43692d-ef12-4b90-8e19-fc07bc4feef6": {
-          "type": "video",
+        "4a34f19b-5b3b-403a-b780-800da7693468": {
+          "type": "text",
           "settings": {
-            "text_position": "middle-center",
-            "hero_video_link": "https:\/\/youtu.be\/b379XL2hzEo",
-            "video_enable_sound": false,
-            "image": "shopify:\/\/shop_images\/MG_2317.jpg",
-            "overlay_opacity": 0,
-            "text_color": "text-light",
-            "title": "",
-            "text": "",
-            "heading_size": 100,
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "bubble rinse cleansers",
+            "heading_font_size_desktop": 42,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "This new type of water-form cleanser is effective yet gentle, non-stripping and ultra-healthy for your skin. BUBBLE RINSE CLEANSER will not leave your skin feeling tight or dry like many conventional cleansers with harsh surfactants that can remove your skin’s naturally beneficial oils. This moisture preserving formula removes NON-waterproof makeup, oil, dirt, and impurities easily. Leaves skin feeling soft, clean and refreshed.",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
             "button_text": "",
             "button_link": "",
-            "button_style": "secondary"
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
           }
         }
       },
       "block_order": [
         "16636828042dabfb96-0",
-        "1d43692d-ef12-4b90-8e19-fc07bc4feef6"
+        "4a34f19b-5b3b-403a-b780-800da7693468"
       ],
       "settings": {
         "height": "four-fifty-height",

@@ -13,6 +13,7 @@
   assign bg_color = section.settings.bg_color
   assign spacing_range = section.settings.spacing_range
   assign show_collection = section.settings.show_collection
+  assign color_change = section.settings.enable_color_change
 
   assign carousel = false
   if layout == 'carousel'
@@ -75,7 +76,12 @@
   class="featured-collection featured-collection--{{ layout }} {% if section.settings.remove_margin_bottom %}remove-margin-bottom{% endif %}"
   data-section-id="{{ section.id }}"
   data-section-type="featured-collection"
-  data-columns="{{ columns }}">
+  data-columns="{% if color_change %}2{% else %}{{ columns }}{% endif %}"">
+  
+  {%  comment %}Background change effect from Featured collection sections{%  endcomment %}
+  {%- if color_change -%}
+    <div class='circle'></div>
+  {%- endif -%}
 
   {%- if heading != blank and collection.handle != 'all' -%}
     <div class="featured-collection__title">
@@ -99,7 +105,7 @@
 
   <div class="wrapper wrapper--full">
     <div class="featured-collection__container {% if carousel %}carousel__container{% else %}grid__container{% endif %}">
-      <div class="{% if carousel %}carousel{% else %}grid{% endif %}{{ mobile_class }}{% if products.size == 0 %} featured-collection--empty{% endif %}"{% if carousel %} data-slider data-slider-id="slider--{{ section.id }}"{% endif %}>
+      <div id="Carousel-{{ section.id }}" class="{% if carousel %}carousel{% else %}grid{% endif %}{{ mobile_class }}{% if products.size == 0 %} featured-collection--empty{% endif %}"{% if carousel %} data-slider data-slider-id="slider--{{ section.id }}"{% endif %}>
         {%- if collection -%}
           {% comment %} Check if there are any products in the collection {% endcomment %}
           {%- if products.size > 0 -%}
@@ -133,6 +139,270 @@
     </div>
   </div>
 </section>
+
+{% if color_change %}
+  <script> 
+    window.addEventListener('load', function() {
+  
+      const newShade = (hexColor, magnitude) => {
+        hexColor = hexColor.replace(`#`, ``);
+        if (hexColor.length === 6) {
+            const decimalColor = parseInt(hexColor, 16);
+            let r = (decimalColor >> 16) + magnitude;
+            r > 255 && (r = 255);
+            r < 0 && (r = 0);
+            let g = (decimalColor & 0x0000ff) + magnitude;
+            g > 255 && (g = 255);
+            g < 0 && (g = 0);
+            let b = ((decimalColor >> 8) & 0x00ff) + magnitude;
+            b > 255 && (b = 255);
+            b < 0 && (b = 0);
+            return `#${(g | (b << 8) | (r << 16)).toString(16)}`;
+        } else {
+            return hexColor;
+        }
+      };
+
+      const doc = document.documentElement
+      const container = document.getElementById('FeaturedCollection--{{ section.id }}')
+      const circle = document.querySelector('.circle')
+  
+      const flkty = Flickity.data('#Carousel-{{ section.id }}');
+      flkty.on('select', function(e){
+  
+        let colorBg, colorText, colorBorder;
+    
+        switch (flkty.selectedIndex) {
+          case 1:
+            colorBg = '{{ section.settings.color_1_bg }}';
+            {%- assign contrast = section.settings.color_1_bg | color_contrast: '#000000' -%}
+            {%- if contrast < 4.5 -%}
+              colorText = '#ffffff';
+              colorBorder = newShade(colorBg, 30);
+            {%- else -%}
+              colorText = '#000000';
+              colorBorder = newShade(colorBg, -30);
+            {%- endif -%}
+            break;
+          case 2:
+            colorBg = '{{ section.settings.color_2_bg }}';
+            {%- assign contrast = section.settings.color_2_bg | color_contrast: '#000000' -%}
+            {%- if contrast < 4.5 -%}
+              colorText = '#ffffff';
+              colorBorder = newShade(colorBg, 30);
+            {%- else -%}
+              colorText = '#000000';
+              colorBorder = newShade(colorBg, -30);
+            {%- endif -%}
+            break;
+          case 3:
+            colorBg = '{{ section.settings.color_3_bg }}';
+            {%- assign contrast = section.settings.color_3_bg | color_contrast: '#000000' -%}
+            {%- if contrast < 4.5 -%}
+              colorText = '#ffffff';
+              colorBorder = newShade(colorBg, 30);
+            {%- else -%}
+              colorText = '#000000';
+              colorBorder = newShade(colorBg, -30);
+            {%- endif -%}
+            break;
+          case 4:
+            colorBg = '{{ section.settings.color_4_bg }}';
+            {%- assign contrast = section.settings.color_4_bg | color_contrast: '#000000' -%}
+            {%- if contrast < 4.5 -%}
+              colorText = '#ffffff';
+              colorBorder = newShade(colorBg, 30);
+            {%- else -%}
+              colorText = '#000000';
+              colorBorder = newShade(colorBg, -30);
+            {%- endif -%}
+            break;
+          case 5:
+            colorBg = '{{ section.settings.color_5_bg }}';
+            {%- assign contrast = section.settings.color_5_bg | color_contrast: '#000' -%}
+            {%- if contrast < 4.5 -%}
+              colorText = '#ffffff';
+              colorBorder = newShade(colorBg, 30);
+            {%- else -%}
+              colorText = '#000000';
+              colorBorder = newShade(colorBg, -30);
+            {%- endif -%}
+            break;
+          default:
+            colorBg = '{{ bg_color }}';
+            {%- assign contrast = bg_color | color_contrast: '#000' -%}
+            {%- if contrast < 4.5 -%}
+              colorText = '#ffffff';
+              colorBorder = newShade(colorBg, 30);
+            {%- else -%}
+              colorText = '#000000';
+              colorBorder = newShade(colorBg, -30);
+            {%- endif -%}
+        }
+    
+        circle.style.background = colorBg;
+        circle.classList.add("transform");
+
+        circle.addEventListener('animationend', function() {
+    
+          doc.style.setProperty('--dynamic-bg', colorBg);
+          doc.style.setProperty('--dynamic-text', colorText);
+          doc.style.setProperty('--dynamic-border', colorBorder);
+  
+          /*
+          container.style.setProperty('--button-primary-bg', colorBg);
+          container.style.setProperty('--button-primary-text', colorText);
+          container.style.setProperty('--button-secondary-bg', colorBg);
+          container.style.setProperty('--button-secondary-text', colorText);
+          */
+  
+          circle.style.background = 'none';
+          circle.classList.remove("transform");
+        })
+      })
+    })
+  </script>
+    
+  {% style %}
+    :root {
+      --dynamic-bg: {{ bg_color }};
+      --dynamic-text: #000000;
+      --dynamic-border: {{ bg_color | color_darken: 30 }};
+    }
+    
+    @-webkit-keyframes expand {
+      form {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        border-radius: 100%;       
+      }
+      to {
+        -webkit-transform: scale(1);
+                transform: scale(1) 
+        border-radius: 0%;
+      }
+    }
+    @keyframes expand {
+      form {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        border-radius: 100%;       
+      }
+      to {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        border-radius: 0%;
+      }
+    }
+    
+    .site-header,
+    #FeaturedCollection--{{ section.id }} {
+      background-color: var(--dynamic-bg);
+      color: var(--dynamic-text);
+      transition: border,color 400ms ease 0ms;
+    }
+
+    .site-header {
+      transition: background 200ms ease 0ms, color 200ms ease 0ms;
+    }
+
+    #FeaturedCollection--{{ section.id }} {
+      margin-top: calc(-1 * var(--first-section-padding));
+      transition: border 200ms ease 0ms, color 200ms ease 0ms;
+    }
+
+    #FeaturedCollection--{{ section.id }} :is(h1,h2,h3,h4,h5,h6,p,a,.button) {     
+      color: var(--dynamic-text);
+    }
+
+    #FeaturedCollection--{{ section.id }} .circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 100%;
+      width: 200%;
+      height: calc(100% + 12rem);
+      transform: scale(0);
+      transition: all 2000ms ease 0ms;
+      transform-origin: bottom;
+      will-change: transform;
+    }
+    
+    #FeaturedCollection--{{ section.id }} .circle.transform {
+      animation-name: expand;
+      animation-duration: 2s;
+    }
+    
+    #FeaturedCollection--{{ section.id }} .featured-collection__title {
+      background: transparent;
+    }
+  
+    #FeaturedCollection--{{ section.id }} .btn--secondary {
+      background: none;
+    }
+  
+    @media only screen and (min-width: 768px) {  
+      #FeaturedCollection--{{ section.id }} {
+        --grid-gutter: 0;
+        border-top: 1px solid var(--dynamic-border);
+        border-bottom: 1px solid var(--dynamic-border);
+      }
+      
+      #FeaturedCollection--{{ section.id }} .featured-collection__title {
+        background: none;
+        width: 50%;
+      }
+      
+      #FeaturedCollection--{{ section.id }} .wrapper.wrapper--full {
+        border-left: 1px solid var(--dynamic-border);  
+        overflow: hidden;
+        padding: 0;
+        width: 50%;
+        transition: border 200ms ease 0ms;
+      }
+
+      #FeaturedCollection--{{ section.id }} .flickity-slider {
+        height: 100%;
+      }
+
+      #FeaturedCollection--{{ section.id }} .carousel__item {
+        border-right: 1px solid var(--dynamic-border);
+        display: flex;
+        align-items: stretch;
+        min-height: 100%;
+        width: 60%;
+        transition: border 2000ms ease 0ms;
+      }
+      
+      #FeaturedCollection--{{ section.id }} .product-grid-item__inner {
+        width: 100%;
+      }
+  
+      #FeaturedCollection--{{ section.id }} .product-grid-item__info {
+        padding: 0 calc(var(--gutter) / 2);
+      }
+  
+      #FeaturedCollection--{{ section.id }} .product-grid-item__image,
+      #FeaturedCollection--{{ section.id }} .product__media__container {
+        border-radius: 0;
+      }
+
+      #FeaturedCollection--{{ section.id }} .carousel > .flickity-prev-next-button {
+        transition: background 200ms ease 0ms;
+      }
+    
+      #FeaturedCollection--{{ section.id }} .carousel > .flickity-prev-next-button.previous {
+        display: none;
+      }
+    
+      #FeaturedCollection--{{ section.id }} .carousel > .flickity-prev-next-button.next {    
+        opacity: 1;
+        right: 39%;
+        visibility: visible;
+      }
+    }
+  {% endstyle %}
+{%  endif %}
 
 {% schema %}
 {
@@ -256,6 +526,41 @@
       "id": "remove_margin_bottom",
       "label": "Remove margin bottom",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Background Color Change"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_color_change",
+      "label": "Enable color change",
+      "default": false
+    } ,
+      {
+      "type": "color",
+      "id": "color_1_bg",
+      "label": "Background Color 1"
+    },
+     {
+      "type": "color",
+      "id": "color_2_bg",
+      "label": "Background Color 2"
+    },
+     {
+      "type": "color",
+      "id": "color_3_bg",
+      "label": "Background Color 3"
+    },
+     {
+      "type": "color",
+      "id": "color_4_bg",
+      "label": "Background Color 4"
+    },
+     {
+      "type": "color",
+      "id": "color_5_bg",
+      "label": "Background Color 5"
     }
   ],
   "presets": [
