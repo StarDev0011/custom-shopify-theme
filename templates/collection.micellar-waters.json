@@ -110,9 +110,9 @@
           "type": "video",
           "settings": {
             "text_position": "middle-center",
-            "hero_video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "hero_video_link": "https:\/\/youtu.be\/KSHHPjCjnU8",
             "video_enable_sound": false,
-            "overlay_opacity": 10,
+            "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
             "text": "",
@@ -128,7 +128,7 @@
         "9e3abf61-7464-43ed-8a99-debb91c69037"
       ],
       "settings": {
-        "height": "five-fifty-height",
+        "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": true,
         "mobile_height": 250,

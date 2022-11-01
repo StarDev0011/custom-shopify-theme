@@ -373,5 +373,10 @@ template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
 
 {% render 'special-offers' %}
 
+  <!-- PickyStory snippet "main_widget_script", do not modify. Safe to remove after the app is uninstalled -->
+  {% if content_for_header contains 'pickystory' %}
+    <script defer src="https://cdn.pickystory.com/widget/dist/latest/pickystory-widget.min.js"></script>
+  {% endif %}
+  <!-- PickyStory end snippet "main_widget_script" -->
 </body>
 </html>

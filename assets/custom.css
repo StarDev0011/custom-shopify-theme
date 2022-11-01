@@ -98,13 +98,13 @@ h2.right-heading {
     margin-top: auto;
     margin-bottom: auto;
 }
-#what-is-facewater .column__item__text.rte {
+.column__item__text.rte {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
 }
-#what-is-facewater .column__item__text.rte p {
+.column__item__text.rte p {
     display: inline;
 }
 .read_more, .read_less {
@@ -200,7 +200,10 @@ h2.right-heading {
         display: block;
     }
     .text-section .wrapper .text__wrapper .text__content {
-        margin-bottom: 0px;
+        margin-bottom: 30px;
+    }
+    span.mosaic__item__btn.btn.btn--text {
+        margin-top: 0;
     }
     h1.slide__heading.main-heading {
         display: flex;

@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
     $(window).resize(function(){
         splide_slider();
     })
-    if(window.location.href.split('/')[4] == 'what-is-facewater') {
+    if(window.location.href.split('/')[4] == 'what-is-facewater' || window.location.href.split('/')[3] == 'products') {
         $(".column__item__text").each(function(){
             var outerheight = $(this).outerHeight()
             var scrollheight = $(this).prop("scrollHeight")
@@ -51,6 +51,11 @@ jQuery(document).ready(function($) {
                 $(this).hide()
                 $(this).parent().children(".read_more").show()
             })
+        })
+    }
+    else {
+        $(".column__item__text.rte").each(function() {
+            $(this).css("-webkit-line-clamp","initial")
         })
     }
     $(window).scroll(function(){
