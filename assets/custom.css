@@ -196,8 +196,11 @@ h2.right-heading {
 }
 
 @media screen and (max-width:767px) {
-    .slider .flickity-prev-next-button {
-        display: block;
+    .flickity-page-dots {
+        width: calc(100% - 40px);
+    }
+    .flickity-page-dots .dot {
+        border: solid 2px #000 !important;
     }
     .text-section .wrapper .text__wrapper .text__content {
         margin-bottom: 30px;
