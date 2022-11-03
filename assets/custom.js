@@ -73,5 +73,9 @@ jQuery(document).ready(function($) {
         }
     })
 
+    $(".breaking p").each(function() {
+        $(this).append("<br>");
+    })
+
 })
 

@@ -43,20 +43,11 @@
             assign text = block.settings.text
             assign subheading_size = block.settings.subheading_size
             assign text_size = block.settings.size | times: 0.01
-            assign text_size_mobile = text_size
+            assign mobile_size = block.settings.mobile_size
+            assign heading_size = block.settings.desk_size
             assign font_weight = block.settings.font_weight | times: 1
             assign font_weight_right = block.settings.font_weight_right | times: 1
             assign letter_spacing = block.settings.letter_spacing
-
-            if text_size > 1.5
-              assign text_size_mobile = text_size | times: 0.85
-            endif
-            if text_size > 2
-              assign text_size_mobile = text_size | times: 0.7
-            endif
-            if text_size > 2.5
-              assign text_size_mobile = text_size | times: 0.55
-            endif
           -%}
 
           {%- case block.type -%}
@@ -83,16 +74,14 @@
               {%- style -%}
                 #Text--{{ unique }} .text__heading,
                 #Text--{{ unique }} .text__heading p { 
-                  --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ text_size_mobile }}rem);
-                  font-size: var(--adjust-heading);
+                  font-size: {{mobile_size}}px;
                   font-weight: {{ font_weight }};
                   letter-spacing: {{ letter_spacing }}px;
                 }
                 @media screen and (min-width: 1024px) {
                   #Text--{{ unique }} .text__heading,
                   #Text--{{ unique }} .text__heading p { 
-                    --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ text_size }}rem);
-                    font-size: var(--adjust-heading);
+                    font-size: {{heading_size}}px;
                   }
                 }
               {%- endstyle -%}
@@ -110,8 +99,7 @@
             {%- when 'text' -%}
               {%- style -%}
                 #Text--{{ unique }} .text__content { 
-                  --adjust-body: calc(var(--FONT-ADJUST-BODY) * {{ text_size_mobile }}rem);
-                  font-size: var(--adjust-body);
+                  font-size: {{mobile_size}};
                   font-weight: {{ font_weight }};
                   letter-spacing: {{ letter_spacing }}px;
                 }
@@ -476,13 +464,23 @@
         },
         {
           "type": "range",
-          "id": "size",
-          "label": "Size",
-          "min": 50,
-          "max": 300,
-          "default": 100,
-          "step": 5,
-          "unit": "%"
+          "id": "desk_size",
+          "label": "Desktop Size",
+          "min": 30,
+          "max": 50,
+          "default": 40,
+          "step": 2,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "mobile_size",
+          "label": "Mobile Size",
+          "min": 14,
+          "max": 30,
+          "default": 22,
+          "step": 2,
+          "unit": "px"
         },
         {
           "type": "select",
