@@ -24,7 +24,13 @@
         "bg_color": "",
         "enable_slider_mobile": true,
         "remove_top_padding": false,
-        "remove_margin_bottom": false
+        "remove_margin_bottom": false,
+        "enable_color_change": false,
+        "color_1_bg": "",
+        "color_2_bg": "",
+        "color_3_bg": "",
+        "color_4_bg": "",
+        "color_5_bg": ""
       }
     },
     "165633574370458095": {
@@ -45,7 +51,13 @@
         "bg_color": "",
         "enable_slider_mobile": true,
         "remove_top_padding": true,
-        "remove_margin_bottom": false
+        "remove_margin_bottom": false,
+        "enable_color_change": false,
+        "color_1_bg": "",
+        "color_2_bg": "",
+        "color_3_bg": "",
+        "color_4_bg": "",
+        "color_5_bg": ""
       }
     },
     "16563358060221749a": {
@@ -66,7 +78,13 @@
         "bg_color": "",
         "enable_slider_mobile": true,
         "remove_top_padding": true,
-        "remove_margin_bottom": false
+        "remove_margin_bottom": false,
+        "enable_color_change": false,
+        "color_1_bg": "",
+        "color_2_bg": "",
+        "color_3_bg": "",
+        "color_4_bg": "",
+        "color_5_bg": ""
       }
     },
     "1656338386313fb5f7": {
@@ -87,7 +105,13 @@
         "bg_color": "",
         "enable_slider_mobile": true,
         "remove_top_padding": true,
-        "remove_margin_bottom": false
+        "remove_margin_bottom": false,
+        "enable_color_change": false,
+        "color_1_bg": "",
+        "color_2_bg": "",
+        "color_3_bg": "",
+        "color_4_bg": "",
+        "color_5_bg": ""
       }
     },
     "1656338472680c2f57": {
@@ -108,7 +132,13 @@
         "bg_color": "",
         "enable_slider_mobile": true,
         "remove_top_padding": true,
-        "remove_margin_bottom": false
+        "remove_margin_bottom": false,
+        "enable_color_change": false,
+        "color_1_bg": "",
+        "color_2_bg": "",
+        "color_3_bg": "",
+        "color_4_bg": "",
+        "color_5_bg": ""
       }
     },
     "1656338511aceb3666": {
@@ -129,7 +159,13 @@
         "bg_color": "",
         "enable_slider_mobile": true,
         "remove_top_padding": true,
-        "remove_margin_bottom": false
+        "remove_margin_bottom": false,
+        "enable_color_change": false,
+        "color_1_bg": "",
+        "color_2_bg": "",
+        "color_3_bg": "",
+        "color_4_bg": "",
+        "color_5_bg": ""
       }
     },
     "1658236006bee1f312": {
@@ -138,10 +174,10 @@
         "1658236006ed6113d2-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pore_purge_potion_branch.jpg",
+            "image": "shopify:\/\/shop_images\/0252.jpg",
             "image_link": "",
             "bg_position": "center-center",
-            "title": "acne & blemishes",
+            "title": "ACNE & BLEMISHES",
             "text": "",
             "button_text": "SHOP ALL",
             "button_link": "shopify:\/\/collections\/acne-and-blemishes",
@@ -154,10 +190,10 @@
         "1658236006ed6113d2-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_9921.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9918_sq_1_2072b9ee-ed00-4a40-86a8-b3670ac1a903.jpg",
             "image_link": "",
             "bg_position": "center-center",
-            "title": "dark spots",
+            "title": "DARK SPOTS",
             "text": "",
             "button_text": "SHOP ALL",
             "button_link": "shopify:\/\/collections\/dark-spots",
@@ -244,13 +280,13 @@
         "title": "",
         "wrapper": "full",
         "columns": 2,
-        "heading_font_size": 20,
+        "heading_font_size": 36,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,
         "text_width": 100,
         "equalize_height": true,
-        "image_aspect_ratio": 0.8,
+        "image_aspect_ratio": 0.9,
         "show_images": true,
         "disable_slider": false,
         "remove_margin_bottom": false
@@ -262,10 +298,10 @@
         "1658236822ca5c9005-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/7243v3_1_f10e34aa-faf5-4c42-80a3-628410c59740.jpg",
+            "image": "shopify:\/\/shop_images\/MG_0402.jpg",
             "image_link": "",
             "bg_position": "center-center",
-            "title": "dryness",
+            "title": "DRYNESS",
             "text": "",
             "button_text": "SHOP ALL",
             "button_link": "shopify:\/\/collections\/dryness",
@@ -278,10 +314,10 @@
         "1658236822ca5c9005-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9068vvv6.jpg",
+            "image": "shopify:\/\/shop_images\/0304v4.jpg",
             "image_link": "",
             "bg_position": "center-center",
-            "title": "fine lines & wrinkles",
+            "title": "FINE LINES & WRINKLES",
             "text": "",
             "button_text": "SHOP ALL",
             "button_link": "shopify:\/\/collections\/fine-lines-and-wrinkles",
@@ -323,7 +359,7 @@
         "remove_text_spacing": false,
         "text_width": 100,
         "equalize_height": true,
-        "image_aspect_ratio": 0.8,
+        "image_aspect_ratio": 0.9,
         "show_images": true,
         "disable_slider": false,
         "remove_margin_bottom": false
@@ -351,7 +387,7 @@
         "1663163385e91d05be-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hazel-COLLECTION-mirror_4028c8bb-c2a6-4ff8-bdd1-840b77776dc5.jpg",
+            "image": "shopify:\/\/shop_images\/MG_0138.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "redness",
@@ -379,7 +415,7 @@
         "remove_text_spacing": false,
         "text_width": 100,
         "equalize_height": true,
-        "image_aspect_ratio": 0.8,
+        "image_aspect_ratio": 0.9,
         "show_images": true,
         "disable_slider": false,
         "remove_margin_bottom": false

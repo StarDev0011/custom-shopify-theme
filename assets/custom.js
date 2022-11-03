@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
     $(window).resize(function(){
         splide_slider();
     })
-    if(window.location.href.split('/')[4] == 'what-is-facewater' || window.location.href.split('/')[3] == 'products') {
+    if(window.location.href.split('/')[4] == 'what-is-facewater' || window.location.href.split('/')[3] == 'products' || window.location.href.split('/')[5] == 'products') {
         $(".column__item__text").each(function(){
             var outerheight = $(this).outerHeight()
             var scrollheight = $(this).prop("scrollHeight")

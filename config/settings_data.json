@@ -42,7 +42,7 @@
     "image_size": "cover",
     "image_aspect_ratio": 1.5,
     "show_gray_bg": false,
-    "product_grid_hover": "slideshow",
+    "product_grid_hover": "none",
     "product_grid_hover_animation": "slide-in",
     "show_sold_badge": false,
     "enable_color_swatches_collection": false,
@@ -148,24 +148,15 @@
           "footer-block-1": {
             "type": "text",
             "settings": {
-              "title": "THE SKIN TRANSFORMING 100% PLANT BASED MOISTURE - FOR YOUR FACE",
-              "footer_text": "<p>fresh, energetic and highly absorbing water-form serums, cleansers, toners, moisturizers and more... with immediately visible radiance - noticeable skin clearing and long-term youth preserving effects<\/p>"
-            }
-          },
-          "1e331471-deb5-4057-929d-72cdbee52818": {
-            "type": "link",
-            "disabled": true,
-            "settings": {
-              "menu": "footer-about",
-              "show_title": true
+              "title": "free your face™",
+              "footer_text": "<p>Facewater is a range of patent pending, pore-healthy 100% plant based, distilled water-form serums, cleansers, toners, moisturizers and more - that work to deliver visibly clearer and healthier skin with noticeable radiance and long-term youth preserving effects.<\/p>"
             }
           }
         },
         "block_order": [
           "footer-block-2",
           "footer-block-0",
-          "footer-block-1",
-          "1e331471-deb5-4057-929d-72cdbee52818"
+          "footer-block-1"
         ],
         "settings": {
           "show_footer_wave": false,
@@ -267,6 +258,11 @@
       },
       "672c476f-6ab7-42d1-b871-82fae11cec8f": {
         "type": "shopify:\/\/apps\/instagram-feed-story-tiktok\/blocks\/social-widget\/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
+        "disabled": false,
+        "settings": {}
+      },
+      "4976956323059611866": {
+        "type": "shopify:\/\/apps\/gander\/blocks\/klara-embed\/2d6f3159-26a8-4be2-b18c-b80e0bf6c6b7",
         "disabled": false,
         "settings": {}
       }

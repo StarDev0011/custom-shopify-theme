@@ -91,7 +91,7 @@
                           assign aspect_ratio = 1 | divided_by: image.aspect_ratio
                         endif
                       -%}
-						{%- if block.settings.image_link != nil -%}
+						        {%- if block.settings.image_link != nil -%}
                           <a href="{{ block.settings.image_link }}" class="column__item__image lazy-image" style="padding-top: {{ aspect_ratio | times: 100 }}%; background-image: url('{{ image | img_url: '1x1' }}');">
                     	{%- else -%}
                           <div class="column__item__image lazy-image" style="padding-top: {{ aspect_ratio | times: 100 }}%; background-image: url('{{ image | img_url: '1x1' }}');">

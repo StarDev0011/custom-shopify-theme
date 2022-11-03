@@ -9,36 +9,35 @@
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/makeup_remover-COLLECTION-mirror.png",
             "image_vertical": 50,
             "image_horizontal": 50,
-            "image_contain": true,
+            "image_contain": false,
             "mobile_image_vertical": 50,
             "mobile_image_horizontal": 50,
             "bg_position": "center-center",
-            "overlay_opacity": 0,
+            "overlay_opacity": 10,
             "heading_font_size": 26,
             "heading_mobile_font_size": 20,
             "heading_font_weight": "700",
             "heading_letter_spacing": 0,
-            "heading_color": "#000000",
+            "heading_color": "#ffffff",
             "mobile_heading_color": "#000000",
             "text_font_size": 20,
             "text_mobile_font_size": 16,
             "text_font_weight": "200",
             "text_letter_spacing": 0,
-            "text_color": "#000000",
+            "text_color": "#ffffff",
             "mobile_text_color": "#000000",
             "text_width": "narrow",
-            "text_position": "right",
+            "text_position": "left",
             "override_mobile_text_position": false,
             "mobile_text_position_y": 50,
             "mobile_text_position_x": "center",
-            "title": "MAKEUP REMOVERS",
+            "title": "bubble rinse cleansers",
             "override_title_font_weight": false,
             "override_text_number": 1,
             "override_font_weight": "200",
-            "text": "A super skin healthy, lightweight, no-rinse, no-sting, silicone-free formula that makes taking off makeup easy and effortless - without any tugging or pulling. Our nourishing makeup removers melt away the toughest longwear and waterproof makeup – and never leave behind a greasy and harmful residue like conventional makeup removers.",
+            "text": "This new type of water-form cleanser is a super lightweight, gentle, non-stripping formulation that adds skin barrier strengthening moisture and removes NON-waterproof makeup, oil, dirt, and impurities. Bubble Rinse Cleanser will not leave your skin feeling tight or dry like conventional cleansers with harsh surfactants that remove your skin’s naturally beneficial oils.",
             "slide_btn_text": "",
             "slide_btn_link": "",
             "slide_btn_style": "primary",
@@ -72,27 +71,14 @@
         "custom_css": ""
       }
     },
-    "hero": {
-      "type": "collection-image-with-title",
-      "disabled": true,
-      "settings": {
-        "banner_height": "one-fifty-height",
-        "text_position": "middle-left",
-        "show_image": false,
-        "text_color": "text-light",
-        "overlay_opacity": 0,
-        "banner_bg_color": "#fafafa",
-        "remove_margin_bottom": true
-      }
-    },
-    "16643835347fdae7e7": {
+    "1fc767e6-8f84-4e3b-a11d-29d1571204c0": {
       "type": "section-custom-content",
       "blocks": {
-        "1664383533cf3b2298-0": {
+        "template--15879764082877__1fc767e6-8f84-4e3b-a11d-29d1571204c0-1667327556f6cfda56-0": {
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/MG_0113_2.jpg",
+            "image": "shopify:\/\/shop_images\/0252.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -107,7 +93,7 @@
             "button_style": "primary"
           }
         },
-        "e1064cbf-9994-4fec-bb99-6a082bb8740c": {
+        "template--15879764082877__1fc767e6-8f84-4e3b-a11d-29d1571204c0-1667327556f6cfda56-1": {
           "type": "text",
           "settings": {
             "text_position": "left",
@@ -117,11 +103,11 @@
             "subheading_font_size_desktop": 10,
             "subheading_font_size_mobile": 10,
             "subheading_weight": "sub-normal",
-            "title": "makeup removers",
+            "title": "acne & blemishes",
             "heading_font_size_desktop": 42,
             "heading_font_size_mobile": 14,
             "heading_weight": "heading-normal",
-            "text": "A refreshingly skin healthy, lightweight, no-rinse, no-sting, silicone-free formula that makes removing makeup easy and effortless - without tugging or pulling. Our nourishing MAKEUP REMOVERS melt away the toughest longwear and waterproof makeup – and never leave behind a greasy and harmful residue which can clog pores.",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliq",
             "text_font_size_desktop": 20,
             "text_font_size_mobile": 14,
             "text_weight": "text-normal",
@@ -136,17 +122,30 @@
         }
       },
       "block_order": [
-        "1664383533cf3b2298-0",
-        "e1064cbf-9994-4fec-bb99-6a082bb8740c"
+        "template--15879764082877__1fc767e6-8f84-4e3b-a11d-29d1571204c0-1667327556f6cfda56-0",
+        "template--15879764082877__1fc767e6-8f84-4e3b-a11d-29d1571204c0-1667327556f6cfda56-1"
       ],
       "settings": {
         "height": "five-fifty-height",
         "add_spacing": true,
         "in_collection": true,
-        "mobile_height": 300,
+        "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""
+      }
+    },
+    "hero": {
+      "type": "collection-image-with-title",
+      "disabled": true,
+      "settings": {
+        "banner_height": "one-fifty-height",
+        "text_position": "middle-left",
+        "show_image": false,
+        "text_color": "text-light",
+        "overlay_opacity": 0,
+        "banner_bg_color": "#fafafa",
+        "remove_margin_bottom": true
       }
     },
     "subcollections": {
@@ -173,8 +172,8 @@
   },
   "order": [
     "16620564589d3d3d70",
+    "1fc767e6-8f84-4e3b-a11d-29d1571204c0",
     "hero",
-    "16643835347fdae7e7",
     "subcollections",
     "main"
   ]
