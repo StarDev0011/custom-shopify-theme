@@ -283,7 +283,8 @@
           "settings": {
             "text_position": "middle-center",
             "image": "shopify:\/\/shop_images\/MG_5352_2.jpg",
-            "image_position": "center-top",
+            "mobile_image": "shopify:\/\/shop_images\/MG_5352_2_c34af234-e733-4541-a487-e0df97766f90.jpg",
+            "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
             "tablet_background_x_position": 50,

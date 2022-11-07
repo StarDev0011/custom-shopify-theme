@@ -36,16 +36,16 @@
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
             "image": "shopify:\/\/shop_images\/MG_9630_1.jpg",
-            "image_vertical": 35,
+            "image_vertical": 50,
             "image_horizontal": 50,
             "image_contain": true,
-            "image_mobile": "shopify:\/\/shop_images\/MG_9630_2.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MG_9630_3.jpg",
             "mobile_image_vertical": 50,
             "mobile_image_horizontal": 50,
             "bg_position": "center-center",
             "overlay_opacity": 0,
             "heading_font_size": 48,
-            "heading_mobile_font_size": 38,
+            "heading_mobile_font_size": 36,
             "heading_font_weight": "400",
             "heading_letter_spacing": -1,
             "heading_color": "#ffffff",
@@ -205,7 +205,7 @@
           "settings": {
             "text": "<p>a patent-pending breakthrough - <\/p><p>FOR VISIBLY CLEARER & HEALTHIER SKIN*<\/p>",
             "desk_size": 42,
-            "mobile_size": 30,
+            "mobile_size": 24,
             "font_weight": "400",
             "letter_spacing": 0
           }

@@ -45,6 +45,8 @@
             assign text_size = block.settings.size | times: 0.01
             assign mobile_size = block.settings.mobile_size
             assign heading_size = block.settings.desk_size
+            assign text_mobile_size = block.settings.text_mobile_size
+            assign text_desk_size = block.settings.text_desk_size
             assign font_weight = block.settings.font_weight | times: 1
             assign font_weight_right = block.settings.font_weight_right | times: 1
             assign letter_spacing = block.settings.letter_spacing
@@ -99,14 +101,13 @@
             {%- when 'text' -%}
               {%- style -%}
                 #Text--{{ unique }} .text__content { 
-                  font-size: {{mobile_size}};
+                  font-size: {{text_mobile_size}}px;
                   font-weight: {{ font_weight }};
                   letter-spacing: {{ letter_spacing }}px;
                 }
                 @media screen and (min-width: 1024px) {
-                  #Text--{{ unique }} .text__content { 
-                    --adjust-body: calc(var(--FONT-ADJUST-BODY) * {{ text_size }}rem); 
-                    font-size: var(--adjust-body);
+                  #Text--{{ unique }} .text__content {
+                    font-size: {{text_desk_size}}px;
                   }
                 }
               {%- endstyle -%}
@@ -517,13 +518,23 @@
         },
         {
           "type": "range",
-          "id": "size",
-          "label": "Size",
-          "min": 50,
-          "max": 300,
-          "default": 100,
-          "step": 5,
-          "unit": "%"
+          "id": "text_desk_size",
+          "label": "Desktop Size",
+          "min": 16,
+          "max": 24,
+          "default": 18,
+          "step": 2,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "text_mobile_size",
+          "label": "Mobile Size",
+          "min": 16,
+          "max": 24,
+          "default": 18,
+          "step": 2,
+          "unit": "px"
         },
         {
           "type": "select",
