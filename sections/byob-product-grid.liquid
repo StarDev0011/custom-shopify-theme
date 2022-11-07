@@ -317,7 +317,7 @@ select:focus { /* remove select focus style in card */
   height: 30px;
 }
 .byob-product-image-container > img { /* set max card image size */
-  max-height: {{ section.settings.max_image_height }}vh;  
+  max-height: {{ section.settings.max_image_height }}vh;
 }
 @media screen and (max-width: 1280px) {
   .byob-wrapper {
@@ -515,6 +515,8 @@ input.byob-quantity-input{
 #byobCustomNote {
   width: 90%;
   margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 .mt-10-px {margin-bottom: 10px;}
 .disabled {cursor: default}
@@ -557,7 +559,7 @@ iframe#ShopifyChat {display: none;}
   <modal v-if="showModal" @close="showModal = false">
     <!-- use custom content here to overwrite default content -->
     <template v-slot:body>
-      <p>[[ $t('message.bundleAddedToCart') ]]</p>
+      <p class="byob-modal-message">[[ $t('message.bundleAddedToCart') ]]</p>
     </template>
   </modal>
 
@@ -1234,7 +1236,7 @@ document.addEventListener('shopify:section:select', themeEventHandler);
       },
       methods: {
         toReadablePrice(price) {
-        	return (price / 100.0).toFixed(2)
+        	return (price / 100.0).toFixed((typeof customDecimalPlace === 'undefined')? 2 : customDecimalPlace)
         },
         applyToAll() {
 //           console.log('BYOB: In applyToAll method')

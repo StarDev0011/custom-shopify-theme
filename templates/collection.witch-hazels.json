@@ -74,6 +74,7 @@
     },
     "hero": {
       "type": "collection-image-with-title",
+      "disabled": true,
       "settings": {
         "banner_height": "one-fifty-height",
         "text_position": "middle-left",
@@ -106,26 +107,37 @@
             "button_style": "primary"
           }
         },
-        "72977b18-b018-4479-b08a-2940b0aa5419": {
-          "type": "video",
+        "599842c3-95e2-4e80-9203-609ad240bb0a": {
+          "type": "text",
           "settings": {
-            "text_position": "middle-center",
-            "hero_video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-            "video_enable_sound": false,
-            "overlay_opacity": 0,
-            "text_color": "text-light",
-            "title": "",
-            "text": "",
-            "heading_size": 100,
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 10,
+            "subheading_font_size_mobile": 10,
+            "subheading_weight": "sub-normal",
+            "title": "witch hazels",
+            "heading_font_size_desktop": 42,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "Our witch hazel products are made from freshly distilled WITCH HAZEL plants and contain unmatched quantities of plant actives at peak potency. They effectively clarify, tone, calm and balance your skin without high levels of alcohol or any petroleum derived compounds. We let the witch hazel plant do what it does best - see what which hazel can really do for you skin!",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
             "button_text": "",
             "button_link": "",
-            "button_style": "secondary"
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
           }
         }
       },
       "block_order": [
         "16643851525bacb856-0",
-        "72977b18-b018-4479-b08a-2940b0aa5419"
+        "599842c3-95e2-4e80-9203-609ad240bb0a"
       ],
       "settings": {
         "height": "four-fifty-height",

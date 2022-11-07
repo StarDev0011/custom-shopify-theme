@@ -27,10 +27,9 @@
 
 
 {%- style -%}
-  .column__item__heading {
-    font-size: {{heading_font_size}}px;
-  }
+
   #SectionColumns--{{ section.id }} .column__item__heading { 
+    font-size: {{heading_font_size}}px;
     {% if remove_text_spacing %}
       margin-bottom: 0;
     {% endif %}

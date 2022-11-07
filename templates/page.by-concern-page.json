@@ -280,7 +280,7 @@
         "title": "",
         "wrapper": "full",
         "columns": 2,
-        "heading_font_size": 36,
+        "heading_font_size": 26,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,
@@ -288,7 +288,7 @@
         "equalize_height": true,
         "image_aspect_ratio": 0.9,
         "show_images": true,
-        "disable_slider": false,
+        "disable_slider": true,
         "remove_margin_bottom": false
       }
     },
@@ -314,7 +314,7 @@
         "1658236822ca5c9005-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0304v4.jpg",
+            "image": "shopify:\/\/shop_images\/MG_1044.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "FINE LINES & WRINKLES",
@@ -353,7 +353,7 @@
         "title": "",
         "wrapper": "full",
         "columns": 2,
-        "heading_font_size": 20,
+        "heading_font_size": 26,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,
@@ -361,7 +361,7 @@
         "equalize_height": true,
         "image_aspect_ratio": 0.9,
         "show_images": true,
-        "disable_slider": false,
+        "disable_slider": true,
         "remove_margin_bottom": false
       }
     },
@@ -371,10 +371,10 @@
         "1663163385e91d05be-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9797v2.jpg",
+            "image": "shopify:\/\/shop_images\/0515v4.jpg",
             "image_link": "",
             "bg_position": "center-center",
-            "title": "pores",
+            "title": "PORES",
             "text": "",
             "button_text": "shop all",
             "button_link": "shopify:\/\/collections\/pores",
@@ -387,10 +387,10 @@
         "1663163385e91d05be-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_0138.jpg",
+            "image": "shopify:\/\/shop_images\/MG_1457.jpg",
             "image_link": "",
-            "bg_position": "center-center",
-            "title": "redness",
+            "bg_position": "center-bottom",
+            "title": "REDNESS",
             "text": "",
             "button_text": "shop all",
             "button_link": "shopify:\/\/collections\/redness",
@@ -409,7 +409,7 @@
         "title": "",
         "wrapper": "full",
         "columns": 2,
-        "heading_font_size": 20,
+        "heading_font_size": 26,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,
@@ -417,7 +417,7 @@
         "equalize_height": true,
         "image_aspect_ratio": 0.9,
         "show_images": true,
-        "disable_slider": false,
+        "disable_slider": true,
         "remove_margin_bottom": false
       }
     }

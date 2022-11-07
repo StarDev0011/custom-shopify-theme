@@ -18,7 +18,8 @@
           "type": "heading",
           "settings": {
             "text": "<p>what is facewater<\/p>",
-            "size": 225,
+            "desk_size": 40,
+            "mobile_size": 22,
             "font_weight": "700",
             "letter_spacing": 0
           }
@@ -242,7 +243,8 @@
           "disabled": true,
           "settings": {
             "text": "<p>*92% of consumer testers would purchase Facewater after trying it for only 2 weeks.<\/p><p>*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater.<\/p>",
-            "size": 185,
+            "desk_size": 40,
+            "mobile_size": 22,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -280,7 +282,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/5352v5_1.jpg",
+            "image": "shopify:\/\/shop_images\/MG_5352_2.jpg",
             "image_position": "center-top",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -445,6 +447,7 @@
     },
     "1660146585907386f8": {
       "type": "section-columns",
+      "disabled": true,
       "blocks": {
         "1660146585e025bd3b-0": {
           "type": "text_block",
@@ -514,12 +517,6 @@
         "show_images": true,
         "disable_slider": true,
         "remove_margin_bottom": false
-      }
-    },
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "show_page_title": false
       }
     },
     "1656527315c187537d": {
@@ -610,7 +607,8 @@
           "type": "heading",
           "settings": {
             "text": "<p><strong>noticeable skin clearing or your money back*<\/strong><\/p>",
-            "size": 110,
+            "desk_size": 40,
+            "mobile_size": 22,
             "font_weight": "700",
             "letter_spacing": 0
           }
@@ -737,6 +735,12 @@
         "remove_margin_bottom": false
       }
     },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_page_title": false
+      }
+    },
     "1657895652cf87b92e": {
       "type": "apps",
       "blocks": {
@@ -764,10 +768,10 @@
     "16565094318a91cca5",
     "1656347496387be255",
     "1660146585907386f8",
-    "main",
     "1656527315c187537d",
     "165635138168780ca9",
     "1656437962f86c6eea",
+    "main",
     "1657895652cf87b92e"
   ]
 }

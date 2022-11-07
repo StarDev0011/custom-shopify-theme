@@ -231,7 +231,7 @@ input[type="radio"] {
                       	[[ group.name ]]
   					  </label>
 
-                      <label v-if="selected_group_name !== 'single'" style="margin-left: auto">[[ currencySymbol ]][[ discountedPrice ]]</label>
+                      <label style="margin-left: auto">[[ currencySymbol ]][[ discountedPrice ]]</label>
 
                       <template v-if="selected_group_name !== 'single' && selected_group_name == group.name">
                         <div class="byob-group-options" v-for="(option, index) in group.options">
@@ -293,6 +293,8 @@ input[type="radio"] {
           this.subscription_app = 'appstle'
         else if (group.app_id == 'SKIO')
           this.subscription_app = 'skio'
+        else if (group.app_id == 'Seal Subscriptions')
+          this.subscription_app = 'seal'
 
         if (typeof initSubscriptionModal === 'function') initSubscriptionModal(this)
       }
@@ -349,11 +351,20 @@ input[type="radio"] {
             if (this.subscriptionDataNotFound)
                 return "N/A"
 
-            let total = this.variants.reduce((a, variant) => {
-                return a + variant.selling_plan_allocations[this.selected_plan_index].per_delivery_price
-              }, 0
-            )  / 100.0;
-            return Math.floor(total * 100) / 100  // round down to 2dp
+            if (this.subscription_app !== 'seal') {
+              let total = this.variants.reduce((a, variant) => {
+                  return a + variant.selling_plan_allocations[this.selected_plan_index].per_delivery_price
+                }, 0
+              )  / 100.0;
+              return Math.floor(total * 100) / 100  // round down to 2dp
+            }
+            else {
+              let discount_value = pa.value
+              console.log('seal total', this.totalPrice)
+              let discounted_price = (this.totalPrice - this.totalPrice * (discount_value / 100.0));
+              console.log('seal discounted_price', discounted_price)
+              return Math.floor(discounted_price * 100) / 100
+            }
           }
           else if (pa.value_type == 'fixed_amount')
             return (this.totalPrice - pa.value).toFixed(2)

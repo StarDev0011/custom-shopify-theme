@@ -35,16 +35,16 @@
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/MG_9629_1_4677981d-da17-4101-b770-4fcb2bf4beb6.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9630_1.jpg",
             "image_vertical": 35,
             "image_horizontal": 50,
             "image_contain": true,
-            "image_mobile": "shopify:\/\/shop_images\/5352v5_1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MG_9630_2.jpg",
             "mobile_image_vertical": 50,
             "mobile_image_horizontal": 50,
             "bg_position": "center-center",
             "overlay_opacity": 0,
-            "heading_font_size": 54,
+            "heading_font_size": 48,
             "heading_mobile_font_size": 38,
             "heading_font_weight": "400",
             "heading_letter_spacing": -1,
@@ -204,7 +204,8 @@
           "type": "heading",
           "settings": {
             "text": "<p>a patent-pending breakthrough - <\/p><p>FOR VISIBLY CLEARER & HEALTHIER SKIN*<\/p>",
-            "size": 300,
+            "desk_size": 42,
+            "mobile_size": 30,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -467,8 +468,62 @@
         "remove_margin_bottom": false
       }
     },
+    "b6f5bf47-69a1-4992-8c11-554ebaeaa86d": {
+      "type": "section-custom-content",
+      "blocks": {
+        "template--15879764869309__b6f5bf47-69a1-4992-8c11-554ebaeaa86d-1667572821f3804255-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "bottom-left",
+            "image": "shopify:\/\/shop_images\/MG_1000_2.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "MADE BY US",
+            "button_text": "ZERO CARBON DISTILLERY",
+            "button_link": "",
+            "button_style": "text"
+          }
+        },
+        "523e98e4-07db-46c4-9a20-b27fc6cb0b66": {
+          "type": "video",
+          "settings": {
+            "text_position": "bottom-right",
+            "hero_video_link": "https:\/\/youtu.be\/cWQRN3d8IHk",
+            "video_enable_sound": false,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "text": "WE GROW BEAUTY",
+            "heading_size": 100,
+            "button_text": "cosmetic farm",
+            "button_link": "",
+            "button_style": "text"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__b6f5bf47-69a1-4992-8c11-554ebaeaa86d-1667572821f3804255-0",
+        "523e98e4-07db-46c4-9a20-b27fc6cb0b66"
+      ],
+      "settings": {
+        "height": "four-fifty-height",
+        "add_spacing": true,
+        "in_collection": false,
+        "mobile_height": 250,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
     "1656533036d527d1da": {
       "type": "section-grid",
+      "disabled": true,
       "blocks": {
         "adf1fd54-a74a-4dcd-ba57-f6be3fd8233c": {
           "type": "image",
@@ -558,6 +613,62 @@
         "secondary_button_style": "text",
         "bg_color": "",
         "enable_slider_mobile": false
+      }
+    },
+    "cbd82a58-bdb3-4660-903a-1072daa5844e": {
+      "type": "section-columns",
+      "disabled": true,
+      "blocks": {
+        "template--15879764869309__cbd82a58-bdb3-4660-903a-1072daa5844e-1667572832fcee2b56-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_1000_2.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "MADE BY US",
+            "text": "",
+            "button_text": "zero carbon distillery",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879764869309__cbd82a58-bdb3-4660-903a-1072daa5844e-1667572832fcee2b56-3": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "we grow beauty",
+            "text": "<p>Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": true,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/youtu.be\/Ik_clCOFX1c"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__cbd82a58-bdb3-4660-903a-1072daa5844e-1667572832fcee2b56-2",
+        "template--15879764869309__cbd82a58-bdb3-4660-903a-1072daa5844e-1667572832fcee2b56-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 2,
+        "heading_font_size": 20,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 100,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.5,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": false
       }
     },
     "16564295094c18a1f2": {
@@ -905,7 +1016,8 @@
           "disabled": true,
           "settings": {
             "text": "<p>in time, with facewater - everything changes<\/p><p><\/p>",
-            "size": 220,
+            "desk_size": 40,
+            "mobile_size": 22,
             "font_weight": "200",
             "letter_spacing": 0
           }
@@ -915,7 +1027,8 @@
           "disabled": true,
           "settings": {
             "text": "<p>a new patent-pending breakthrough<strong> <\/strong>for <strong>visibly clearer & healthier skin<\/strong><\/p>",
-            "size": 220,
+            "desk_size": 40,
+            "mobile_size": 22,
             "font_weight": "200",
             "letter_spacing": -1
           }
@@ -924,7 +1037,8 @@
           "type": "heading",
           "settings": {
             "text": "<p>100% PLANT BASED... way beyond clean™<\/p>",
-            "size": 300,
+            "desk_size": 40,
+            "mobile_size": 22,
             "font_weight": "400",
             "letter_spacing": -1
           }
@@ -957,7 +1071,7 @@
             "image_link": "",
             "bg_position": "center-center",
             "title": "THE POWER OF WATER",
-            "text": "<p>Water is the ‘elixir of life.’ All life forms depend on the miracle of water. All skin moisturization is a measure of water retention. It only makes sense that the most effective skin care be water based. More absorbing - water is moisture - skin compatible. Distilled water is the purest form of water and attracts toxins from your skin. Distilled water is mineral free. Hard water – and a lot of tap water - which is contains abundant minerals, is very drying to your skin<\/p>",
+            "text": "<p>Water is the ‘elixir of life.’ All life forms depend on the miracle of water. All skin moisturization is a measure of water retention.  It only makes sense that the most effective skin care be water based. <\/p><p>more absorbing<\/p><p>water is moisture<\/p><p>skin compatible. <\/p><p>Distilled water is the purest form of water and attracts toxins from your skin. Distilled water is mineral free. Hard water – and a lot of tap water - which is contains abundant minerals, is very drying to your skin<\/p>",
             "button_text": "",
             "button_link": "",
             "button_style": "text",
@@ -1727,7 +1841,9 @@
     "16638774042f6239ae",
     "grid-0",
     "166326105196ff14f4",
+    "b6f5bf47-69a1-4992-8c11-554ebaeaa86d",
     "1656533036d527d1da",
+    "cbd82a58-bdb3-4660-903a-1072daa5844e",
     "16564295094c18a1f2",
     "1660056626d521ddbc",
     "1655820298867db805",

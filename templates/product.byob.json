@@ -74,7 +74,7 @@
       "type": "section-collection",
       "disabled": true,
       "settings": {
-        "collection": "same-travel",
+        "collection": "travel-size-minis",
         "title": "travel size minis",
         "description": "<p>bundle items to save <\/p>",
         "spacing_range": 0,

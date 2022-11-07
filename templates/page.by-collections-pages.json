@@ -100,7 +100,7 @@
         "166082719907fb7ac2-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_9665.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9665_2.jpg",
             "image_link": "",
             "bg_position": "center-bottom",
             "title": "FLOWER HAZEL",
@@ -196,9 +196,9 @@
         "16608304018526f2db-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/5518v7_0c396160-b011-4b4c-81fa-29803d71c1dc.jpg",
+            "image": "shopify:\/\/shop_images\/MG_5518_1_b335a131-2104-49e7-bde4-04561a734a7f.jpg",
             "image_link": "",
-            "bg_position": "center-center",
+            "bg_position": "center-top",
             "title": "SPECIAL FORMULAS",
             "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur<\/p>",
             "button_text": "SHOP COLLECTION",
@@ -212,7 +212,7 @@
         "4f84748f-fe74-4c6d-a096-c70dc9544c68": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_5772.jpg",
+            "image": "shopify:\/\/shop_images\/MG_5772_2_af580944-acc3-4a3d-a591-35a86b27ab49.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "TONER-ISH",

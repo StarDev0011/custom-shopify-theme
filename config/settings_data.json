@@ -63,7 +63,7 @@
     "empty_cart_buttons": "main-menu",
     "show_continue_shopping": true,
     "continue_shopping_link": "",
-    "show_free_shipping_message": true,
+    "show_free_shipping_message": false,
     "message": "free shipping when you buy any 2 item or more - excluding sample sizes",
     "free_shipping_limit": "",
     "cart_custom_message_text_1": "<p>need to change<\/p>",
