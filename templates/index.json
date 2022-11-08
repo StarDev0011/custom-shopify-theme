@@ -207,16 +207,17 @@
             "desk_size": 42,
             "mobile_size": 24,
             "font_weight": "400",
-            "letter_spacing": 0
+            "letter_spacing": -1
           }
         },
         "bcb127bc-e350-4645-80ed-eb1872267a73": {
           "type": "text",
           "settings": {
             "text": "<p>*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater<\/p><p>*92% of consumer testers would purchase Facewater after trying it for 2 weeks or less<\/p>",
-            "size": 95,
+            "text_desk_size": 18,
+            "text_mobile_size": 16,
             "font_weight": "400",
-            "letter_spacing": 0
+            "letter_spacing": -1
           }
         }
       },
@@ -955,7 +956,8 @@
           "type": "text",
           "settings": {
             "text": "<p>noticeable skin clearing<\/p><p>visible radiance<\/p><p>long-term youth<\/p><p>preserving effects<\/p><p>immediate lasting moisture<\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "200",
             "letter_spacing": 0
           }
@@ -973,7 +975,8 @@
           "disabled": true,
           "settings": {
             "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "700",
             "letter_spacing": 0
           }
@@ -1006,7 +1009,8 @@
           "disabled": true,
           "settings": {
             "text": "<p>immediatey visible radiance | noticeable skin clearing | lomg-term youth preserving effects<\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "700",
             "letter_spacing": 0
           }
@@ -1037,8 +1041,8 @@
           "type": "heading",
           "settings": {
             "text": "<p>100% PLANT BASED... way beyond clean™<\/p>",
-            "desk_size": 40,
-            "mobile_size": 22,
+            "desk_size": 42,
+            "mobile_size": 24,
             "font_weight": "400",
             "letter_spacing": -1
           }

@@ -141,6 +141,9 @@ h2.right-heading {
     text-align: left;
     justify-content: start;
 }
+.text__heading.h2 {
+    margin-bottom: 16px;
+}
 @media screen and (min-width:1024px) {
     .four-fifty-height {
         height: 100%;
@@ -196,6 +199,15 @@ h2.right-heading {
 }
 
 @media screen and (max-width:767px) {
+    .align--bottom-right .main-buttons {
+        justify-content: right;
+    }
+    .align--bottom-right .main-buttons a {
+        text-align: right;
+    }
+    .align--bottom-left .main-buttons a {
+        text-align: left;
+    }
     .flickity-page-dots {
         width: calc(100% - 40px);
     }
