@@ -197,6 +197,42 @@
         "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}"
       }
     },
+    "27bf8fca-3420-413e-8c59-aee945aab2bf": {
+      "type": "section-mosaic",
+      "blocks": {
+        "template--15879764869309__27bf8fca-3420-413e-8c59-aee945aab2bf-166784512252d52759-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_1699_46455920-0db6-4cb4-adb7-cf70675f8488.jpg",
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__27bf8fca-3420-413e-8c59-aee945aab2bf-166784512252d52759-2"
+      ],
+      "settings": {
+        "height": "350",
+        "min_mobile_height": 200,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_size": 100,
+        "button_style": "primary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": true
+      }
+    },
     "16638774042f6239ae": {
       "type": "section-text",
       "blocks": {
@@ -226,6 +262,7 @@
         "bcb127bc-e350-4645-80ed-eb1872267a73"
       ],
       "settings": {
+        "mobile_image": "shopify:\/\/shop_images\/MG_5352_2_c34af234-e733-4541-a487-e0df97766f90.jpg",
         "image_link": "",
         "text_position": "left",
         "img_position": "right",
@@ -387,6 +424,100 @@
         "enable_slider_mobile": false
       }
     },
+    "1656533036d527d1da": {
+      "type": "section-grid",
+      "disabled": true,
+      "blocks": {
+        "adf1fd54-a74a-4dcd-ba57-f6be3fd8233c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_1000_2.jpg",
+            "bg_position": "center-top",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "bottom-left",
+            "mobile_text_position": "bottom-left",
+            "subheading": "",
+            "title": "",
+            "text": "MADE BY US",
+            "button_text": "zero carbon distillery",
+            "link": "shopify:\/\/pages\/about",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1656533036091a7b95-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PBD4-Comp-1_00000_b5a5e9f5-0d62-467a-846a-29a6096adf10.gif",
+            "bg_position": "center-center",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "bottom-right",
+            "mobile_text_position": "bottom-right",
+            "subheading": "",
+            "title": "",
+            "text": "WE GROW BEAUTY",
+            "button_text": "cosmetic farm",
+            "link": "shopify:\/\/pages\/cosmetic-farm",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        },
+        "1656533036091a7b95-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TOMA_july25.jpg",
+            "bg_position": "center-top",
+            "mobile_image_position": "center",
+            "contain_image": false,
+            "overlay_opacity": 0,
+            "text_position": "left",
+            "mobile_text_position": "center",
+            "subheading": "",
+            "title": "fresh, energetic and <br> highly absorbing",
+            "text": "water-form serums, toners, <br> cleansers, moisturizers <br> and more...",
+            "button_text": "",
+            "link": "shopify:\/\/products\/serumato",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "mobile_order": "default"
+          }
+        }
+      },
+      "block_order": [
+        "adf1fd54-a74a-4dcd-ba57-f6be3fd8233c",
+        "1656533036091a7b95-0",
+        "1656533036091a7b95-1"
+      ],
+      "settings": {
+        "height": "450",
+        "min_tablet_height": 370,
+        "min_mobile_height": 350,
+        "wrapper": "full",
+        "add_spacing": true,
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 16,
+        "heading_font_weight": "400",
+        "heading_color": "#ffffff",
+        "text_font_size": 16,
+        "text_mobile_font_size": 12,
+        "text_font_weight": "400",
+        "text_color": "#ffffff",
+        "button_style": "text",
+        "secondary_button_style": "text",
+        "bg_color": "",
+        "enable_slider_mobile": false
+      }
+    },
     "166326105196ff14f4": {
       "type": "section-custom-products-list",
       "disabled": true,
@@ -494,7 +625,7 @@
         "523e98e4-07db-46c4-9a20-b27fc6cb0b66": {
           "type": "video",
           "settings": {
-            "text_position": "bottom-right",
+            "text_position": "bottom-left",
             "hero_video_link": "https:\/\/youtu.be\/cWQRN3d8IHk",
             "video_enable_sound": false,
             "overlay_opacity": 0,
@@ -520,100 +651,6 @@
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""
-      }
-    },
-    "1656533036d527d1da": {
-      "type": "section-grid",
-      "disabled": true,
-      "blocks": {
-        "adf1fd54-a74a-4dcd-ba57-f6be3fd8233c": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/MG_1000_2.jpg",
-            "bg_position": "center-top",
-            "mobile_image_position": "center",
-            "contain_image": false,
-            "overlay_opacity": 0,
-            "text_position": "bottom-left",
-            "mobile_text_position": "bottom-left",
-            "subheading": "",
-            "title": "",
-            "text": "MADE BY US",
-            "button_text": "zero carbon distillery",
-            "link": "shopify:\/\/pages\/about",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "text_color": "text-light",
-            "mobile_order": "default"
-          }
-        },
-        "1656533036091a7b95-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/PBD4-Comp-1_00000_b5a5e9f5-0d62-467a-846a-29a6096adf10.gif",
-            "bg_position": "center-center",
-            "mobile_image_position": "center",
-            "contain_image": false,
-            "overlay_opacity": 0,
-            "text_position": "bottom-right",
-            "mobile_text_position": "bottom-right",
-            "subheading": "",
-            "title": "",
-            "text": "WE GROW BEAUTY",
-            "button_text": "cosmetic farm",
-            "link": "shopify:\/\/pages\/cosmetic-farm",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "text_color": "text-light",
-            "mobile_order": "default"
-          }
-        },
-        "1656533036091a7b95-1": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/TOMA_july25.jpg",
-            "bg_position": "center-top",
-            "mobile_image_position": "center",
-            "contain_image": false,
-            "overlay_opacity": 0,
-            "text_position": "left",
-            "mobile_text_position": "center",
-            "subheading": "",
-            "title": "fresh, energetic and <br> highly absorbing",
-            "text": "water-form serums, toners, <br> cleansers, moisturizers <br> and more...",
-            "button_text": "",
-            "link": "shopify:\/\/products\/serumato",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "text_color": "text-light",
-            "mobile_order": "default"
-          }
-        }
-      },
-      "block_order": [
-        "adf1fd54-a74a-4dcd-ba57-f6be3fd8233c",
-        "1656533036091a7b95-0",
-        "1656533036091a7b95-1"
-      ],
-      "settings": {
-        "height": "450",
-        "min_tablet_height": 370,
-        "min_mobile_height": 350,
-        "wrapper": "full",
-        "add_spacing": true,
-        "heading_font_size": 26,
-        "heading_mobile_font_size": 16,
-        "heading_font_weight": "400",
-        "heading_color": "#ffffff",
-        "text_font_size": 16,
-        "text_mobile_font_size": 12,
-        "text_font_weight": "400",
-        "text_color": "#ffffff",
-        "button_style": "text",
-        "secondary_button_style": "text",
-        "bg_color": "",
-        "enable_slider_mobile": false
       }
     },
     "cbd82a58-bdb3-4660-903a-1072daa5844e": {
@@ -1842,11 +1879,12 @@
   "order": [
     "166326827019c9f3af",
     "1655905158580e2c4f",
+    "27bf8fca-3420-413e-8c59-aee945aab2bf",
     "16638774042f6239ae",
     "grid-0",
+    "1656533036d527d1da",
     "166326105196ff14f4",
     "b6f5bf47-69a1-4992-8c11-554ebaeaa86d",
-    "1656533036d527d1da",
     "cbd82a58-bdb3-4660-903a-1072daa5844e",
     "16564295094c18a1f2",
     "1660056626d521ddbc",

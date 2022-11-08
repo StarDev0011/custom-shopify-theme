@@ -265,6 +265,11 @@
         "type": "shopify:\/\/apps\/gander\/blocks\/klara-embed\/2d6f3159-26a8-4be2-b18c-b80e0bf6c6b7",
         "disabled": false,
         "settings": {}
+      },
+      "16773383461306776119": {
+        "type": "shopify:\/\/apps\/showday\/blocks\/app-embed\/3138db88-a3a6-4f9d-bcc6-b9a691790bca",
+        "disabled": true,
+        "settings": {}
       }
     }
   },
