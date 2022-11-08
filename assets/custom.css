@@ -190,7 +190,9 @@ h2.right-heading {
         padding-right: 0%;
     }
 }
-
+.show_only_mobile {
+    display: none;
+}
 @media screen and (max-width: 1024px) {
     h1.slide__heading.main-heading {
         display: flex;
@@ -344,6 +346,12 @@ h2.right-heading {
     .mobile--top-right {
         justify-content: start;
         align-items: flex-end;
+    }
+    .show_only_mobile {
+        display: block;
+    }
+    .main-buttons__item {
+        margin: 10px 0 0;
     }
 }
 #cart-drawer [docapp-data-cart-item] .cart__item__image a {

@@ -2,6 +2,7 @@
   assign items_modifier = items_modifier | default: ''
   assign bg_color = section.settings.bg_color
   assign heading_size = section.settings.heading_font_size
+  assign show_only_mobile = section.settings.show_only_mobile
   assign heading_mobile_size = section.settings.heading_mobile_font_size
   assign heading_font_weight = section.settings.heading_font_weight | times: 1
   assign heading_color = section.settings.heading_color
@@ -85,7 +86,7 @@
 {%- endstyle -%}
 
 <section id="SectionMosaic--{{ section.id }}"
-  class="mosaic{% unless cover %} vertical-padding{% endunless %} mosaic--{% if add_spacing %}spacing{% else %}no-spacing{% endif %}"
+  class="mosaic{% unless cover %} vertical-padding{% endunless %} mosaic--{% if add_spacing %}spacing{% else %}no-spacing{% endif %} {%if show_only_mobile %}show_only_mobile{%endif%}"
   data-section-id="{{ section.id }}"
   data-section-type="mosaic">
   <div class="{{ wrapper_class }}">
