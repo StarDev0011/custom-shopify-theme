@@ -144,6 +144,12 @@ h2.right-heading {
 .text__heading.h2 {
     margin-bottom: 16px;
 }
+.main-buttons__item {
+    margin: 10px 0 0;
+}
+span.cart-drawer__item-qty.hidden {
+    display: none;
+}
 @media screen and (min-width:1024px) {
     .four-fifty-height {
         height: 100%;
@@ -349,9 +355,6 @@ h2.right-heading {
     }
     .show_only_mobile {
         display: block;
-    }
-    .main-buttons__item {
-        margin: 10px 0 0;
     }
 }
 #cart-drawer [docapp-data-cart-item] .cart__item__image a {

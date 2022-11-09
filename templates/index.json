@@ -203,7 +203,7 @@
         "template--15879764869309__27bf8fca-3420-413e-8c59-aee945aab2bf-166784512252d52759-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_1699_46455920-0db6-4cb4-adb7-cf70675f8488.jpg",
+            "image": "shopify:\/\/shop_images\/MG_0113_2.jpg",
             "bg_position": "center-center",
             "overlay_opacity": 0,
             "text_position": "top-left",
@@ -222,10 +222,11 @@
         "template--15879764869309__27bf8fca-3420-413e-8c59-aee945aab2bf-166784512252d52759-2"
       ],
       "settings": {
-        "height": "350",
-        "min_mobile_height": 200,
+        "height": "auto",
+        "min_mobile_height": 300,
         "wrapper": "full",
         "add_spacing": true,
+        "show_only_mobile": true,
         "heading_size": 100,
         "button_style": "primary btn--small",
         "secondary_button_style": "secondary btn--small",
