@@ -18,10 +18,19 @@
     {% assign count = cart.item_count %}
     {% if settings.cart_custom_message_text_1 != blank %}
       <div class="cart__message cart__message--custom {{ settings.cart_custom_message_color }}" data-cart-bar>
+        {%- for item in cart.items -%}
+          {%- for collection in item.product.collections -%}
+            {% if collection.handle == "travel-size-minis" %}
+              {% assign count = count | minus: item.quantity %}
+            {% endif %}
+          {%- endfor -%}
+        {%- endfor -%}
         {%- if count > 1 -%}
           {{ settings.cart_custom_message_text_2 }}
         {%- elsif count == 1 -%}
           {{ settings.cart_custom_message_text_1 }}
+        {%- elsif count == 0 -%}
+          FREE SHIPPING WHEN YOU ORDER ANY 2 FULL SIZE ITEMS
         {%- endif -%}     
       </div>
     {% endif %}
