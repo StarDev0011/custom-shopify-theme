@@ -28,7 +28,8 @@
           "type": "text",
           "settings": {
             "text": "<p>getting the most from plants is essential if effective products are going to be made exclusively from plant-based ingredients.our patent-pending distillation method captures whole, undamaged plant actives. we soak and then press our plants before beginning distillation  and then separate the solid and liquid plant components into different parts of our specially designed stills. the still is then placed under vacuum pressure to significantly reduce the amount of heat required for distillation. (heat can damage or change plant extracts by essentially “cooking’ them.) during distillation, the solid and liquid components are reunited to form a hydrosol – a water saturated with plant actives at peak potency and effectiveness.<\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -253,7 +254,8 @@
           "type": "text",
           "settings": {
             "text": "<p>NOTICEABLE SKIN CLEARING*<\/p><p><\/p>",
-            "size": 110,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -646,7 +648,8 @@
           "disabled": true,
           "settings": {
             "text": "<p>have you ever seen your skin on a plant based diet? EXTENSIVE testing proves that the use of skin healthy Plant Beauty Distillery products consistently produces clearer skin that appears more youthful and radiant.<\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "700",
             "letter_spacing": 0
           }
@@ -656,7 +659,8 @@
           "disabled": true,
           "settings": {
             "text": "<p><strong>100% plant based is different from \"natural\"<\/strong><\/p><p>when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants <\/p><p>vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them!<\/p><p>natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and parrafin wax<\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "700",
             "letter_spacing": 0
           }
@@ -736,6 +740,23 @@
         "remove_margin_bottom": false
       }
     },
+    "1667931125b4abc206": {
+      "type": "apps",
+      "blocks": {
+        "ca3ecc96-4856-4f23-97c1-4a5600f86d58": {
+          "type": "shopify:\/\/apps\/tolstoy-product-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "q4k3ls12355dd"
+          }
+        }
+      },
+      "block_order": [
+        "ca3ecc96-4856-4f23-97c1-4a5600f86d58"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -772,6 +793,7 @@
     "1656527315c187537d",
     "165635138168780ca9",
     "1656437962f86c6eea",
+    "1667931125b4abc206",
     "main",
     "1657895652cf87b92e"
   ]
