@@ -2,6 +2,7 @@
   "sections": {
     "hero": {
       "type": "collection-image-with-title",
+      "disabled": true,
       "settings": {
         "banner_height": "one-fifty-height",
         "text_position": "middle-left",
@@ -34,29 +35,37 @@
             "button_style": "primary"
           }
         },
-        "cdb41817-d8ac-46b3-884c-b99d3c688972": {
-          "type": "image",
+        "2378fe14-ad2a-4d99-b045-cb24cd8f062d": {
+          "type": "text",
           "settings": {
-            "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/9851v2_1.jpg",
-            "image_position": "center-center",
-            "change_tablet_position": false,
-            "tablet_background_y_position": 50,
-            "tablet_background_x_position": 50,
-            "overlay_opacity": 0,
-            "text_color": "text-light",
-            "title": "",
-            "heading_size": 100,
-            "text": "",
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 10,
+            "subheading_font_size_mobile": 10,
+            "subheading_weight": "sub-normal",
+            "title": "plant venom",
+            "heading_font_size_desktop": 42,
+            "heading_font_size_mobile": 30,
+            "heading_weight": "heading-normal",
+            "text": "This youth preserving nighttime serum water is a lightweight, fast-absorbing and targeted leave-on treatment. PLANT VENOM accelerates and enhances your skin’s natural regenerative process. See overnight results and reveal wonderfully youthful, well-rested skin.",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 16,
+            "text_weight": "text-normal",
             "button_text": "",
             "button_link": "",
-            "button_style": "primary"
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
           }
         }
       },
       "block_order": [
         "template--15879764312253__125d1bbe-71db-40ab-a03b-94b3f3e945f0-1666198297d28621f4-0",
-        "cdb41817-d8ac-46b3-884c-b99d3c688972"
+        "2378fe14-ad2a-4d99-b045-cb24cd8f062d"
       ],
       "settings": {
         "height": "four-fifty-height",

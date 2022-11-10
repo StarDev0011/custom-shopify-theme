@@ -1,0 +1,536 @@
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "subheading": "breadcrumbs",
+            "show_rating": true,
+            "show_rating_count": false
+          }
+        },
+        "cdea67ff-1bba-4925-a035-5ab949a46afc": {
+          "type": "text",
+          "settings": {
+            "title": "<p>{{ product.metafields.my_fields.fluid_o.value }}<\/p>",
+            "text_alignment": "left"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "1630242e-abee-42f7-b45e-9410804cec2e": {
+          "type": "form",
+          "settings": {
+            "info_page": "",
+            "info_page_title_override": "",
+            "show_labels": false,
+            "show_quantity": true,
+            "show_payment_button": true,
+            "enable_subscriptions_selectors": true
+          }
+        },
+        "product_accordions": {
+          "type": "product_accordions",
+          "settings": {
+            "accordion_heading_1": "ingredients",
+            "accordion_text_1": "<p>{{ product.metafields.my_fields.ingredients | metafield_tag }}<\/p>",
+            "accordion_page_1": "",
+            "accordion_heading_2": "how to use",
+            "accordion_text_2": "<p>{{ product.metafields.my_fields.how_to_use | metafield_tag }}<\/p>",
+            "accordion_page_2": "",
+            "accordion_heading_3": "",
+            "accordion_text_3": "",
+            "accordion_page_3": "",
+            "accordion_heading_4": "",
+            "accordion_text_4": "",
+            "accordion_page_4": "",
+            "accordion_heading_5": "",
+            "accordion_text_5": "",
+            "accordion_page_5": ""
+          }
+        },
+        "share-button": {
+          "type": "share-button",
+          "settings": {
+            "text": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "cdea67ff-1bba-4925-a035-5ab949a46afc",
+        "description",
+        "1630242e-abee-42f7-b45e-9410804cec2e",
+        "product_accordions",
+        "share-button"
+      ],
+      "settings": {
+        "wrapper": "full",
+        "image_size": "small",
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "bg_color": ""
+      }
+    },
+    "1658855652adf57ee7": {
+      "type": "section-mosaic",
+      "blocks": {
+        "165885565296ef9884-0": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light"
+          }
+        },
+        "09b752cf-1486-4a4f-84e7-55cd7be4b100": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_position": "left",
+            "subheading": "",
+            "title": "100% plant based is different from \"natural\"",
+            "text": "when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants. vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them! natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and paraffin wax.",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "bg_color": "rgba(0,0,0,0)"
+          }
+        },
+        "7466b570-5273-4cba-999c-ad8a8b6b66ed": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "way beyond clean",
+            "text": "no glycols: glycols are derived from petroleum and known to cause irritation  no petrochemicals  no synthetic fragrance  no added dye or color  vegan* and cruelty-free  no parabens  no phthalates  made by us   *all of our products are vegan with the exception of products containing honey",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light",
+            "bg_color": "#7a7a7a"
+          }
+        },
+        "72e7e0c5-ee8d-4436-ac6e-f76b96fd3605": {
+          "type": "text",
+          "settings": {
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "KEY INGREDIENTS",
+            "text": "<p>ULTRAFINE WHITE KAOLINITE CLAY <br>   ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  <\/p> DISTILLED WHOLE GRAIN OAT <p>  <br> ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia<\/p>",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-dark",
+            "bg_color": "rgba(0,0,0,0)"
+          }
+        },
+        "d59fd36b-532f-4771-ac9c-7f4320ccabcd": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light"
+          }
+        },
+        "150a0259-76dd-4330-aead-696820cef42c": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "text_position": "top-left",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_text": "",
+            "link": "",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "text_color": "text-light"
+          }
+        }
+      },
+      "block_order": [
+        "165885565296ef9884-0",
+        "09b752cf-1486-4a4f-84e7-55cd7be4b100",
+        "7466b570-5273-4cba-999c-ad8a8b6b66ed",
+        "72e7e0c5-ee8d-4436-ac6e-f76b96fd3605",
+        "d59fd36b-532f-4771-ac9c-7f4320ccabcd",
+        "150a0259-76dd-4330-aead-696820cef42c"
+      ],
+      "settings": {
+        "height": "auto",
+        "min_mobile_height": 215,
+        "wrapper": "full",
+        "add_spacing": true,
+        "show_only_mobile": false,
+        "heading_size": 150,
+        "button_style": "primary btn--small",
+        "secondary_button_style": "secondary btn--small",
+        "bg_color": "",
+        "enable_slider_mobile": false
+      }
+    },
+    "1658856643d7a2f031": {
+      "type": "section-columns",
+      "disabled": true,
+      "blocks": {
+        "16588566434b4c8876-1": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shutterstock_2073756287.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "100% plant based is different from \"natural\"",
+            "text": "<p>when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants. vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them! <\/p><p>natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and paraffin wax.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16588566434b4c8876-0": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/berry-bubbles_a477f9_dbec1d9a-4f8f-4bcb-822f-290638d0cbb4.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "what is facewater",
+            "text": "<p>many plants contain highly effective energetic compounds capable of working beauty wonders. to really perform, these delicate ingredients must be undamaged and present in ample quantities. <\/p><p>patent pending pre press and low heat vacuum distillation process starts with fresh, healthy plants and ends with a water-based solution that is loaded with whole phytonutrients.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16588566434b4c8876-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shutterstock_1430648684.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "way beyond clean",
+            "text": "<p>all of our products are 100% plant based and contain no glycols - no petrochemicals  - no synthetic fragrance  - no added dye or color  - vegan* and cruelty-free - no parabens  - no phthalates  - made by us  <\/p><p>*all of our products are vegan with the exception of products containing honey<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16588566434b4c8876-3": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "Add a title or tagline",
+            "text": "<p>Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "16588566434b4c8876-1",
+        "16588566434b4c8876-0",
+        "16588566434b4c8876-2",
+        "16588566434b4c8876-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 3,
+        "heading_font_size": 20,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": true,
+        "text_width": 80,
+        "equalize_height": true,
+        "image_aspect_ratio": 1,
+        "show_images": true,
+        "disable_slider": false,
+        "remove_margin_bottom": false
+      }
+    },
+    "1658845070ad98dcd0": {
+      "type": "section-custom-content",
+      "blocks": {
+        "16588450709c093d31-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/MG_0519.jpg",
+            "image_position": "left-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size": 100,
+            "text": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "16588450709c093d31-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 10,
+            "subheading_font_size_mobile": 10,
+            "subheading_weight": "sub-normal",
+            "title": "100% plant based is different from natural",
+            "heading_font_size_desktop": 30,
+            "heading_font_size_mobile": 14,
+            "heading_weight": "heading-normal",
+            "text": "<p>100% plant based formula: when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants.<\/p><p>vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them!<\/p><p>natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and parrafin wax.<\/p>",
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16588450709c093d31-0",
+        "16588450709c093d31-1"
+      ],
+      "settings": {
+        "height": "seven-fifty-height",
+        "add_spacing": true,
+        "in_collection": false,
+        "mobile_height": 250,
+        "wrapper": "full",
+        "bg_color": "",
+        "custom_css": ""
+      }
+    },
+    "165877132578da3fb4": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "five-fifty-height",
+        "text_position": "right",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/shutterstock_2073756287.jpg",
+        "image_background": false,
+        "bg_position": "center-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#7a7a7a",
+        "border_width": 2,
+        "textbox_background_color": "#7a7a7a",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "",
+        "heading": "way beyond clean",
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 32,
+        "heading_font_weight": "700",
+        "text": "<p>no glycols: <em>glycols are derived from petroleum and known to cause irritation<\/em><\/p><p>no petrochemicals<\/p><p>no synthetic fragrance<\/p><p>no added dye or color<\/p><p>vegan* and cruelty-free<\/p><p>no parabens<\/p><p>no phthalates<\/p><p>made by us<\/p><p>*all of our products are vegan with the exception of products containing honey<\/p>",
+        "text_font_size": 20,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "text",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "16588451982e59d23b": {
+      "type": "section-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_height": "five-fifty-height",
+        "text_position": "left",
+        "wrapper": "full",
+        "image": "shopify:\/\/shop_images\/shutterstock_1430648684.jpg",
+        "image_background": false,
+        "bg_position": "center-center",
+        "change_tablet_position": false,
+        "tablet_background_y_position": 50,
+        "tablet_background_x_position": 50,
+        "change_mobile_position": false,
+        "mobile_background_y_position": 50,
+        "mobile_background_x_position": 50,
+        "border_color": "#7a7a7a",
+        "border_width": 2,
+        "textbox_background_color": "#7a7a7a",
+        "text_color": "#ffffff",
+        "text_alignment": "left",
+        "subheading": "",
+        "heading": "100% plant based is different from natural",
+        "heading_font_size": 26,
+        "heading_mobile_font_size": 18,
+        "heading_font_weight": "700",
+        "text": "<p>100% plant based formula: when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants.<\/p><p>vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them!<\/p><p>natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and paraffin wax.<\/p>",
+        "text_font_size": 20,
+        "text_mobile_font_size": 18,
+        "text_font_weight": "200",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "primary",
+        "video_url": "",
+        "bg_color": "",
+        "remove_margin_bottom": false
+      }
+    },
+    "166801919299e417a4": {
+      "type": "apps",
+      "blocks": {
+        "c1a086b6-442a-4184-9242-2ee6d7a7c01d": {
+          "type": "shopify:\/\/apps\/tolstoy-product-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "tucdn99z8vy0d"
+          }
+        }
+      },
+      "block_order": [
+        "c1a086b6-442a-4184-9242-2ee6d7a7c01d"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "165635106766c71bb8": {
+      "type": "apps",
+      "blocks": {
+        "27d2e36e-dd94-4cff-83a8-5f8b4ebc06c8": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "27d2e36e-dd94-4cff-83a8-5f8b4ebc06c8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "icons": {
+      "type": "section-icons-row",
+      "disabled": true,
+      "blocks": {
+        "icon-0": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "title": "Free Shipping",
+            "text": "<p>on all order over $99<\/p>"
+          }
+        },
+        "icon-1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "refresh-cw",
+            "title": "Free Returns",
+            "text": "<p>within 30 days of purchase<\/p>"
+          }
+        },
+        "icon-2": {
+          "type": "text",
+          "settings": {
+            "icon_name": "heart",
+            "title": "1% Donated Annually",
+            "text": "<p>to forest conservation<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon-0",
+        "icon-1",
+        "icon-2"
+      ],
+      "settings": {
+        "alignment": "center",
+        "columns": 3,
+        "icons_width": 30,
+        "bg_color": "#fafafa",
+        "box_color": "",
+        "text_color": "#333333"
+      }
+    },
+    "related": {
+      "type": "related-products",
+      "settings": {
+        "wrapper": "full",
+        "limit": 4,
+        "product_recommendations_heading": "you may also like",
+        "bg_color": ""
+      }
+    },
+    "social_widget_product": {
+      "type": "social-widget",
+      "settings": {
+        "social_widget_id": "none",
+        "social_product_id": "none",
+        "social_widget_type": "product"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1658855652adf57ee7",
+    "1658856643d7a2f031",
+    "1658845070ad98dcd0",
+    "165877132578da3fb4",
+    "16588451982e59d23b",
+    "166801919299e417a4",
+    "165635106766c71bb8",
+    "icons",
+    "related",
+    "social_widget_product"
+  ]
+}

@@ -58,12 +58,6 @@
           "settings": {
             "text": "Share"
           }
-        },
-        "535d03a5-a3e2-4512-97f7-e008570fc480": {
-          "type": "upsell",
-          "settings": {
-            "product": "{{ product.metafields.theme.upsell.value }}"
-          }
         }
       },
       "block_order": [
@@ -72,8 +66,7 @@
         "description",
         "1630242e-abee-42f7-b45e-9410804cec2e",
         "product_accordions",
-        "share-button",
-        "535d03a5-a3e2-4512-97f7-e008570fc480"
+        "share-button"
       ],
       "settings": {
         "wrapper": "full",
@@ -655,7 +648,8 @@
           "type": "text",
           "settings": {
             "text": "<p>PET or PETE is the most widely recycled plastic in the world. It is a strong and inert material  that is extremely lightweight, making it efficient to transport (less carbon emissions during shipping compared to glass). PET can be  picked up through most curbside recycling programs - just make sure to rinse out any remaining product before recycling. <\/p><p><\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -673,7 +667,8 @@
           "type": "text",
           "settings": {
             "text": "<p>glass may be a sturdier feeling material but only has a lower environmental impact if reused. it also requires more materials and is much heavier, leading to higher emissions, especially from shipping. we chose PET plastic because it is  100% recyclable, super lightweight, and produces  significantly less carbon emissions during transport  compared to glass bottles.<\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "400",
             "letter_spacing": 0
           }

@@ -93,7 +93,8 @@
           "type": "heading",
           "settings": {
             "text": "<p>bubble rinse cleansers<\/p>",
-            "size": 300,
+            "desk_size": 40,
+            "mobile_size": 22,
             "font_weight": "200",
             "letter_spacing": 0
           }
@@ -103,7 +104,8 @@
           "disabled": true,
           "settings": {
             "text": "<p>This new type of water-form cleanser is lightweight, gentle, non-stripping and ultra-healthy for<br\/>your skin. Bubble Rinse Cleanser will not leave your skin feeling tight or dry<br\/>like conventional cleansers with harsh surfactants that remove your skin’s<br\/>naturally beneficial oils. This moisture preserving formula removes<br\/>NON-waterproof makeup, oil, dirt, and impurities easily. Leaves skin feeling<br\/>soft, clean and refreshed.<\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "200",
             "letter_spacing": 0
           }
@@ -170,11 +172,11 @@
             "subheading_weight": "sub-normal",
             "title": "bubble rinse cleansers",
             "heading_font_size_desktop": 42,
-            "heading_font_size_mobile": 14,
+            "heading_font_size_mobile": 30,
             "heading_weight": "heading-normal",
             "text": "This new type of water-form cleanser is effective yet gentle, non-stripping and ultra-healthy for your skin. BUBBLE RINSE CLEANSER will not leave your skin feeling tight or dry like many conventional cleansers with harsh surfactants that can remove your skin’s naturally beneficial oils. This moisture preserving formula removes NON-waterproof makeup, oil, dirt, and impurities easily. Leaves skin feeling soft, clean and refreshed.",
             "text_font_size_desktop": 20,
-            "text_font_size_mobile": 14,
+            "text_font_size_mobile": 16,
             "text_weight": "text-normal",
             "button_text": "",
             "button_link": "",
@@ -219,7 +221,8 @@
           "disabled": true,
           "settings": {
             "text": "<p>Our Story<\/p>",
-            "size": 100,
+            "desk_size": 40,
+            "mobile_size": 22,
             "font_weight": "700",
             "letter_spacing": 0
           }
@@ -228,7 +231,8 @@
           "type": "text",
           "settings": {
             "text": "<p>This new type of water-form cleanser is lightweight, gentle, non-stripping and <\/p><p>ultra-healthy for your skin. Bubble Rinse Cleanser will not leave your skin feeling<\/p><p>tight or dry like conventional cleansers with harsh surfactants that remove your <\/p><p>skin’s naturally beneficial oils. This moisture preserving formula removes<br\/>NON-waterproof makeup, oil, dirt, and impurities easily. Leaves skin feeling soft, <\/p><p>clean and refreshed.<\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "400",
             "letter_spacing": 0
           }

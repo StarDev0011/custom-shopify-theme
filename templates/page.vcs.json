@@ -754,7 +754,7 @@
         "ca3ecc96-4856-4f23-97c1-4a5600f86d58"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": false
       }
     },
     "main": {

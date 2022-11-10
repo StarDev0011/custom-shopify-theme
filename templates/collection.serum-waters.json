@@ -2,6 +2,7 @@
   "sections": {
     "hero": {
       "type": "collection-image-with-title",
+      "disabled": true,
       "settings": {
         "banner_height": "one-fifty-height",
         "text_position": "middle-left",
@@ -34,26 +35,37 @@
             "button_style": "primary"
           }
         },
-        "0176fa4a-eff0-4ed4-b7a5-1666723f3452": {
-          "type": "video",
+        "c2ef1234-4a46-4971-8498-5a3895d671b6": {
+          "type": "text",
           "settings": {
-            "text_position": "middle-center",
-            "hero_video_link": "https:\/\/youtu.be\/MW6f5S6aXGM",
-            "video_enable_sound": false,
-            "overlay_opacity": 0,
-            "text_color": "text-light",
-            "title": "",
-            "text": "",
-            "heading_size": 100,
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 10,
+            "subheading_font_size_mobile": 10,
+            "subheading_weight": "sub-normal",
+            "title": "serum waters",
+            "heading_font_size_desktop": 42,
+            "heading_font_size_mobile": 30,
+            "heading_weight": "heading-normal",
+            "text": "This one-of-a-kind water-form serum is an ultra-lightweight and wonder-working leave-on treatment that instantly absorbs without ever pilling (even under makeup). Skin healthy SERUM WATER contains highly concentrated energetic plant actives that work deeply to deliver transformative radiance-rich results.",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 16,
+            "text_weight": "text-normal",
             "button_text": "",
             "button_link": "",
-            "button_style": "secondary"
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
           }
         }
       },
       "block_order": [
         "166438491880a39bd7-0",
-        "0176fa4a-eff0-4ed4-b7a5-1666723f3452"
+        "c2ef1234-4a46-4971-8498-5a3895d671b6"
       ],
       "settings": {
         "height": "four-fifty-height",

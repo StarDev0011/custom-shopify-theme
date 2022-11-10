@@ -2,6 +2,7 @@
   "sections": {
     "hero": {
       "type": "collection-image-with-title",
+      "disabled": true,
       "settings": {
         "banner_height": "one-fifty-height",
         "text_position": "middle-left",
@@ -19,7 +20,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/MG_9665.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9665_2.jpg",
             "image_position": "left-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -34,28 +35,37 @@
             "button_style": "primary"
           }
         },
-        "ea4e972a-1dd8-460d-84ab-31d2f60e1735": {
-          "type": "image",
+        "a6b80c1e-642f-43cf-9855-6960546edf4f": {
+          "type": "text",
           "settings": {
-            "text_position": "middle-center",
-            "image_position": "center-center",
-            "change_tablet_position": false,
-            "tablet_background_y_position": 50,
-            "tablet_background_x_position": 50,
-            "overlay_opacity": 10,
-            "text_color": "text-light",
-            "title": "",
-            "heading_size": 100,
-            "text": "",
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 10,
+            "subheading_font_size_mobile": 10,
+            "subheading_weight": "sub-normal",
+            "title": "flower hazel",
+            "heading_font_size_desktop": 42,
+            "heading_font_size_mobile": 30,
+            "heading_weight": "heading-normal",
+            "text": "Fresh witch hazel plants and skin beneficial flowers with high levels of antioxidants, phenols, and flavonoids are co-distilled to activate and intensify the potency or FLOWER HAZEL. Calms, soothes, and reveals vibrant, noticeably clearer skin.",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 16,
+            "text_weight": "text-normal",
             "button_text": "",
             "button_link": "",
-            "button_style": "primary"
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
           }
         }
       },
       "block_order": [
         "template--15879764017341__c6009a14-e534-431e-b72e-63aaddf9fece-166619814802b03c8e-0",
-        "ea4e972a-1dd8-460d-84ab-31d2f60e1735"
+        "a6b80c1e-642f-43cf-9855-6960546edf4f"
       ],
       "settings": {
         "height": "four-fifty-height",
@@ -64,78 +74,6 @@
         "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
-        "custom_css": ""
-      }
-    },
-    "16617883720c731516": {
-      "type": "section-slideshow",
-      "disabled": true,
-      "blocks": {
-        "1661788372e8d8f2fe-1": {
-          "type": "image",
-          "settings": {
-            "wrapper": "full",
-            "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/hazel-COLLECTION-mirror-2.jpg",
-            "image_vertical": 50,
-            "image_horizontal": 50,
-            "image_contain": true,
-            "mobile_image_vertical": 50,
-            "mobile_image_horizontal": 50,
-            "bg_position": "center-center",
-            "overlay_opacity": 0,
-            "heading_font_size": 42,
-            "heading_mobile_font_size": 20,
-            "heading_font_weight": "400",
-            "heading_letter_spacing": 0,
-            "heading_color": "#ffffff",
-            "mobile_heading_color": "#000000",
-            "text_font_size": 20,
-            "text_mobile_font_size": 16,
-            "text_font_weight": "400",
-            "text_letter_spacing": 0,
-            "text_color": "#ffffff",
-            "mobile_text_color": "#000000",
-            "text_width": "narrow",
-            "text_position": "right",
-            "override_mobile_text_position": false,
-            "mobile_text_position_y": 50,
-            "mobile_text_position_x": "center",
-            "title": "FLOWER HAZEL",
-            "override_title_font_weight": false,
-            "override_text_number": 1,
-            "override_font_weight": "200",
-            "text": "fresh witch hazel plants and skin beneficial flowers with high levels of antioxidants, phenols, and flavonoids are co-distilled to activate and intensify the potency or FLOWER HAZEL. calms, soothes and reveals vibrant, noticeably clearer skin.",
-            "slide_btn_text": "",
-            "slide_btn_link": "",
-            "slide_btn_style": "primary",
-            "button_color": "#ffffff",
-            "mobile_button_color": "#ffffff",
-            "slide_btn_text_2": "",
-            "slide_btn_link_2": "",
-            "slide_btn_style_2": "secondary",
-            "video_btn_text": "",
-            "video_btn_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1661788372e8d8f2fe-1"
-      ],
-      "settings": {
-        "wrapper": "wide",
-        "slide_height": "original-height",
-        "show_nav_dots": false,
-        "show_nav_arrows": false,
-        "show_arrow_down": false,
-        "dot_color": "",
-        "next_prev_color": "",
-        "down_color": "",
-        "autoplay": false,
-        "duration": 4,
-        "transition": "slide",
-        "enable_zoom_animation": false,
-        "heading_size": 120,
         "custom_css": ""
       }
     },
@@ -164,7 +102,6 @@
   "order": [
     "hero",
     "c6009a14-e534-431e-b72e-63aaddf9fece",
-    "16617883720c731516",
     "subcollections",
     "main"
   ]
