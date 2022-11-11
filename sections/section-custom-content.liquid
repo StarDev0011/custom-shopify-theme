@@ -47,7 +47,7 @@
       height: {{mobile_heights}}px;
     }
     .brick__block.brick__block--text {
-      margin-top: 30px;
+      margin-top: 20px;
     }
   }
 {% endstyle %}
@@ -78,7 +78,7 @@
             assign bg_color = block.settings.bg_color | default: ''
             assign title = block.settings.title
             assign text = block.settings.text
-            assign heading_size = block.settings.heading_size | times: 0.01
+            assign heading_size = block.settings.heading_size
             assign text_size = block.settings.text_size | times: 0.01
             assign subheading = block.settings.subheading
             assign text_position = block.settings.text_position
@@ -112,7 +112,7 @@
 
                       {%- style -%}
                         #FeaturedImage--{{ section.id }}--{{ block.id }} { --overlay-opacity: {{ overlay_opacity }}; }
-                        #FeaturedImage--{{ section.id }}--{{ block.id }} .main-heading { --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ heading_size }}) }
+                        #FeaturedImage--{{ section.id }}--{{ block.id }} .main-heading { font-size: {{ heading_size }}px}
                         {%- if block.settings.change_tablet_position -%}
                           @media only screen and (min-width: 480px) and (max-width: 767px) {
                             #FeaturedImage--{{ section.id }}--{{ block.id }} .featured-image__bg {
@@ -425,6 +425,26 @@
       "type": "textarea",
       "id": "custom_css",
       "label": "Custom CSS"
+    },
+    {
+      "type": "range",
+      "id": "heading_size1",
+      "label": "Heading size for Desktop",
+      "default": 24,
+      "min": 24,
+      "max": 36,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile1",
+      "label": "Heading size for Mobile",
+      "default": 14,
+      "min": 14,
+      "max": 28,
+      "step": 2,
+      "unit": "px"
     }
   ],
   "blocks": [
@@ -565,12 +585,22 @@
           {
             "type": "range",
             "id": "heading_size",
-            "label": "Heading size",
-            "default": 100,
-            "min": 100,
-            "max": 200,
-            "step": 10,
-            "unit": "%"
+            "label": "Heading size for Desktop",
+            "default": 24,
+            "min": 24,
+            "max": 36,
+            "step": 2,
+            "unit": "px"
+          },
+          {
+            "type": "range",
+            "id": "heading_size_mobile",
+            "label": "Heading size for Mobile",
+            "default": 14,
+            "min": 14,
+            "max": 28,
+            "step": 2,
+            "unit": "px"
           },
           {
             "type": "textarea",

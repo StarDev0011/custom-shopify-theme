@@ -28,7 +28,8 @@
             "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
-            "heading_size": 100,
+            "heading_size": 28,
+            "heading_size_mobile": 14,
             "text": "",
             "button_text": "",
             "button_link": "",
@@ -69,12 +70,14 @@
       ],
       "settings": {
         "height": "four-fifty-height",
-        "add_spacing": true,
+        "add_spacing": false,
         "in_collection": true,
         "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
-        "custom_css": ""
+        "custom_css": "",
+        "heading_size1": 24,
+        "heading_size_mobile1": 14
       }
     },
     "166126888810d8f026": {
