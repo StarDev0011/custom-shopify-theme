@@ -50,7 +50,7 @@
             "heading_letter_spacing": -1,
             "heading_color": "#ffffff",
             "mobile_heading_color": "#000000",
-            "text_font_size": 30,
+            "text_font_size": 28,
             "text_mobile_font_size": 30,
             "text_font_weight": "400",
             "text_letter_spacing": 0,
@@ -302,7 +302,7 @@
             "mobile_image_position": "left",
             "contain_image": false,
             "overlay_opacity": 0,
-            "text_position": "bottom-right",
+            "text_position": "top-left",
             "mobile_text_position": "top-left",
             "subheading": "",
             "title": "",
@@ -318,18 +318,18 @@
         "ad02ba3d-7df8-484c-b3cf-e693631890d9": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9851v2_1.jpg",
+            "image": "shopify:\/\/shop_images\/9686v4_2.jpg",
             "bg_position": "center-center",
             "mobile_image_position": "center",
             "contain_image": false,
             "overlay_opacity": 0,
-            "text_position": "bottom-left",
+            "text_position": "top-left",
             "mobile_text_position": "bottom-left",
             "subheading": "",
             "title": "",
-            "text": "AGE-DEFYING SERUM WATER",
-            "button_text": "PLANT VENOM CERAMIDES",
-            "link": "shopify:\/\/products\/plant-venom-ceramides",
+            "text": "PORE HEALTHY OILWATER",
+            "button_text": "REPLENISH NOURISH ROSEHIP",
+            "link": "shopify:\/\/products\/oilwater-replenish-nourish-rosehip",
             "secondary_button_text": "",
             "secondary_button_link": "",
             "text_color": "text-light",
@@ -340,7 +340,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/0312v4_1_f1f21909-6dbb-4327-b203-45bf4504bca7.jpg",
-            "bg_position": "left-center",
+            "bg_position": "center-center",
             "mobile_image_position": "center",
             "contain_image": false,
             "overlay_opacity": 0,
@@ -476,163 +476,9 @@
         "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
-        "custom_css": ""
-      }
-    },
-    "1660056626d521ddbc": {
-      "type": "section-slideshow",
-      "blocks": {
-        "16600566253ed9345b-0": {
-          "type": "image",
-          "settings": {
-            "wrapper": "full",
-            "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/MG_4317-3.jpg",
-            "image_vertical": 50,
-            "image_horizontal": 50,
-            "image_contain": false,
-            "image_mobile": "shopify:\/\/shop_images\/4727v2_1.jpg",
-            "mobile_image_vertical": 50,
-            "mobile_image_horizontal": 50,
-            "bg_position": "center-center",
-            "overlay_opacity": 0,
-            "heading_font_size": 42,
-            "heading_mobile_font_size": 22,
-            "heading_font_weight": "400",
-            "heading_letter_spacing": 0,
-            "heading_color": "#fafafa",
-            "mobile_heading_color": "#000000",
-            "text_font_size": 20,
-            "text_mobile_font_size": 22,
-            "text_font_weight": "200",
-            "text_letter_spacing": 0,
-            "text_color": "#ffffff",
-            "mobile_text_color": "#000000",
-            "text_width": "narrow",
-            "text_position": "left",
-            "override_mobile_text_position": true,
-            "mobile_text_position_y": 0,
-            "mobile_text_position_x": "left",
-            "title": "",
-            "override_title_font_weight": false,
-            "override_text_number": 1,
-            "override_font_weight": "200",
-            "text": "",
-            "slide_btn_text": "SHOP 100 Petal rosewater",
-            "slide_btn_link": "shopify:\/\/collections\/100-petal-rosewater",
-            "slide_btn_style": "text",
-            "button_color": "#000000",
-            "mobile_button_color": "#000000",
-            "slide_btn_text_2": "",
-            "slide_btn_link_2": "",
-            "slide_btn_style_2": "secondary",
-            "video_btn_text": "",
-            "video_btn_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "16600566253ed9345b-0"
-      ],
-      "settings": {
-        "wrapper": "wide",
-        "slide_height": "original-height",
-        "show_nav_dots": false,
-        "show_nav_arrows": false,
-        "show_arrow_down": false,
-        "dot_color": "",
-        "next_prev_color": "",
-        "down_color": "",
-        "autoplay": false,
-        "duration": 4,
-        "transition": "slide",
-        "enable_zoom_animation": false,
-        "heading_size": 120,
-        "custom_css": ""
-      }
-    },
-    "1658853987e12cad3f": {
-      "type": "section-text",
-      "blocks": {
-        "d56d390e-4748-4e4d-a124-45d378181b58": {
-          "type": "heading",
-          "settings": {
-            "text": "<p>100% PLANT BASED... way beyond clean™<\/p>",
-            "desk_size": 42,
-            "mobile_size": 24,
-            "font_weight": "400",
-            "letter_spacing": -1
-          }
-        }
-      },
-      "block_order": [
-        "d56d390e-4748-4e4d-a124-45d378181b58"
-      ],
-      "settings": {
-        "image_link": "",
-        "text_position": "left",
-        "img_position": "right",
-        "wrapper": "full",
-        "padding": "standard-padding",
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "text-dark",
-        "remove_margin_bottom": false
-      }
-    },
-    "c7296a52-09c6-42b2-9668-e3af348a1742": {
-      "type": "section-columns",
-      "blocks": {
-        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-2": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0732v6_3.jpg",
-            "image_link": "",
-            "bg_position": "center-center",
-            "title": "THE POWER OF WATER",
-            "text": "<p>Water is the ‘elixir of life.’ All life forms depend on the miracle of water. All skin moisturization is a measure of water retention.  It only makes sense that the most effective skin care be water based. <\/p><p>more absorbing<\/p><p>water is moisture<\/p><p>skin compatible. <\/p><p>Distilled water is the purest form of water and attracts toxins from your skin. Distilled water is mineral free. Hard water – and a lot of tap water - which is contains abundant minerals, is very drying to your skin<\/p>",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "text",
-            "show_video": false,
-            "play_btn_color": "#000000",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-          }
-        },
-        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-3": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1475.jpg",
-            "image_link": "",
-            "bg_position": "center-center",
-            "title": "PATENT-PENDING DISTILLATION PROCESS",
-            "text": "<p>our patent-pending distillation method captures whole, undamaged plant actives, resulting in a hydrosol – a water saturated with plant actives at peak potency and effectiveness.<\/p>",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "text",
-            "show_video": false,
-            "play_btn_color": "#000000",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-          }
-        }
-      },
-      "block_order": [
-        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-2",
-        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-3"
-      ],
-      "settings": {
-        "title": "",
-        "wrapper": "full",
-        "columns": 2,
-        "heading_font_size": 32,
-        "bg_color": "",
-        "align_text": "text-left",
-        "remove_text_spacing": false,
-        "text_width": 90,
-        "equalize_height": true,
-        "image_aspect_ratio": 0.6,
-        "show_images": true,
-        "disable_slider": true,
-        "remove_margin_bottom": false
+        "custom_css": "",
+        "heading_size1": 24,
+        "heading_size_mobile1": 14
       }
     },
     "1663268646cef71652": {
@@ -641,7 +487,7 @@
         "collection": "bubble-rinse-cleansers",
         "title": "bubble rinse cleansers",
         "description": "",
-        "spacing_range": -0.5,
+        "spacing_range": -1,
         "heading_alignment": true,
         "show_description": false,
         "products_rows": 2,
@@ -733,13 +579,97 @@
         "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}"
       }
     },
-    "166326884264b65728": {
+    "1658853987e12cad3f": {
+      "type": "section-text",
+      "blocks": {
+        "d56d390e-4748-4e4d-a124-45d378181b58": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>100% PLANT BASED... way beyond clean™<\/p>",
+            "desk_size": 42,
+            "mobile_size": 24,
+            "font_weight": "400",
+            "letter_spacing": -1
+          }
+        }
+      },
+      "block_order": [
+        "d56d390e-4748-4e4d-a124-45d378181b58"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "full",
+        "padding": "standard-padding",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    },
+    "c7296a52-09c6-42b2-9668-e3af348a1742": {
+      "type": "section-columns",
+      "blocks": {
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0732v6_3.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "THE POWER OF WATER",
+            "text": "<p>Water is the ‘elixir of life.’ All life forms depend on the miracle of water. All skin moisturization is a measure of water retention.  It only makes sense that the most effective skin care be water based. <\/p><p>more absorbing<\/p><p>water is moisture<\/p><p>skin compatible. <\/p><p>Distilled water is the purest form of water and attracts toxins from your skin. Distilled water is mineral free. Hard water – and a lot of tap water - which is contains abundant minerals, is very drying to your skin<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-3": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1475.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "PATENT-PENDING DISTILLATION PROCESS",
+            "text": "<p>our patent-pending distillation method captures whole, undamaged plant actives, resulting in a hydrosol – a water saturated with plant actives at peak potency and effectiveness.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-2",
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 2,
+        "heading_font_size": 32,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 90,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.6,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": false
+      }
+    },
+    "16632641343e60bbea": {
       "type": "section-collection",
       "settings": {
-        "collection": "toners",
-        "title": "toners",
+        "collection": "oilwaters",
+        "title": "oilwaters",
         "description": "",
-        "spacing_range": -0.5,
+        "spacing_range": -1,
         "heading_alignment": true,
         "show_description": false,
         "products_rows": 2,
@@ -757,6 +687,78 @@
         "color_3_bg": "",
         "color_4_bg": "",
         "color_5_bg": ""
+      }
+    },
+    "1660056626d521ddbc": {
+      "type": "section-slideshow",
+      "blocks": {
+        "16600566253ed9345b-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/MG_4317-3.jpg",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "image_mobile": "shopify:\/\/shop_images\/4727v2_1.jpg",
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 42,
+            "heading_mobile_font_size": 22,
+            "heading_font_weight": "400",
+            "heading_letter_spacing": 0,
+            "heading_color": "#fafafa",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 20,
+            "text_mobile_font_size": 22,
+            "text_font_weight": "200",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "left",
+            "override_mobile_text_position": true,
+            "mobile_text_position_y": 0,
+            "mobile_text_position_x": "left",
+            "title": "",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "",
+            "slide_btn_text": "SHOP 100 Petal rosewater",
+            "slide_btn_link": "shopify:\/\/collections\/100-petal-rosewater",
+            "slide_btn_style": "text",
+            "button_color": "#000000",
+            "mobile_button_color": "#000000",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16600566253ed9345b-0"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "original-height",
+        "show_nav_dots": false,
+        "show_nav_arrows": false,
+        "show_arrow_down": false,
+        "dot_color": "",
+        "next_prev_color": "",
+        "down_color": "",
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": false,
+        "heading_size": 120,
+        "custom_css": ""
       }
     },
     "testimonials": {
@@ -868,13 +870,13 @@
         "border_width": 2
       }
     },
-    "16632641343e60bbea": {
+    "166326884264b65728": {
       "type": "section-collection",
       "settings": {
-        "collection": "oilwaters",
-        "title": "oilwaters",
+        "collection": "toners",
+        "title": "toners",
         "description": "",
-        "spacing_range": -0.5,
+        "spacing_range": -1,
         "heading_alignment": true,
         "show_description": false,
         "products_rows": 2,
@@ -902,13 +904,13 @@
     "16638774042f6239ae",
     "grid-0",
     "b6f5bf47-69a1-4992-8c11-554ebaeaa86d",
-    "1660056626d521ddbc",
-    "1658853987e12cad3f",
-    "c7296a52-09c6-42b2-9668-e3af348a1742",
     "1663268646cef71652",
     "166005705070be2216",
-    "166326884264b65728",
+    "1658853987e12cad3f",
+    "c7296a52-09c6-42b2-9668-e3af348a1742",
+    "16632641343e60bbea",
+    "1660056626d521ddbc",
     "testimonials",
-    "16632641343e60bbea"
+    "166326884264b65728"
   ]
 }
