@@ -144,8 +144,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/2315.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/2315.jpg",
+            "image": "shopify:\/\/shop_images\/MG_2315_1.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,

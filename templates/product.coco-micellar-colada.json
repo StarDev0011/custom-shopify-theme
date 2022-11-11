@@ -188,7 +188,7 @@
       ],
       "settings": {
         "height": "250",
-        "min_mobile_height": 215,
+        "min_mobile_height": 250,
         "wrapper": "full",
         "add_spacing": true,
         "show_only_mobile": false,
@@ -237,7 +237,7 @@
             "heading_weight": "heading-normal",
             "text": "<p>Facewater is a range of patent pending, pore-healthy 100% plant based, distilled water-form serums, cleansers, toners, moisturizers and more - that work to deliver visibly clearer and healthier skin with noticeable radiance and long-term youth preserving effects. <\/p>\n\n<p><\/p><h2> the results<\/h2>\nnoticeable skin clearing* <br>\nvisible radiance<br>\nlong term youth preserving effects<br>\nimmediate lasting moisture <br>\n<br>\n*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater <br>\n\n*92% of consumer testers would purchase Facewater after trying it for 2 weeks or less",
             "text_font_size_desktop": 20,
-            "text_font_size_mobile": 14,
+            "text_font_size_mobile": 16,
             "text_weight": "text-normal",
             "button_text": "",
             "button_link": "",
@@ -263,6 +263,66 @@
         "custom_css": ""
       }
     },
+    "1c9519ff-3aab-46f0-b1e1-0c7f12daf71d": {
+      "type": "section-text",
+      "blocks": {
+        "8a9258c8-4cfb-452d-8944-e5f85a4f7146": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>100% RECYCLABLE PACKAGING<\/p>",
+            "subheading_size": 24,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        },
+        "template--16002457895101__1c9519ff-3aab-46f0-b1e1-0c7f12daf71d-16681107467c504c6b-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PET or PETE is the most widely recycled plastic in the world. It is a strong and inert material that is extremely lightweight, making it efficient to transport (less carbon emissions during shipping compared to glass). PET can be picked up through most curbside recycling programs - just make sure to rinse out any remaining product before recycling.<\/p>",
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        },
+        "4b68e9b9-0287-466b-b620-77f48dd12cff": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>why we use plastic instead of glass bottles<\/p>",
+            "subheading_size": 24,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        },
+        "217809b7-5f7a-4612-81e3-5145820f39eb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>glass may be a sturdier feeling material but only has a lower environmental impact if reused. it also requires more materials and is much heavier, leading to higher emissions, especially from shipping. we chose PET plastic because it is 100% recyclable, super lightweight, and produces significantly less carbon emissions during transport compared to glass bottles.<\/p>",
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "8a9258c8-4cfb-452d-8944-e5f85a4f7146",
+        "template--16002457895101__1c9519ff-3aab-46f0-b1e1-0c7f12daf71d-16681107467c504c6b-2",
+        "4b68e9b9-0287-466b-b620-77f48dd12cff",
+        "217809b7-5f7a-4612-81e3-5145820f39eb"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/recyF-Nov1.jpg",
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "narrow",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    },
     "1658845070ad98dcd0": {
       "type": "section-custom-content",
       "blocks": {
@@ -270,7 +330,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/MG_0474.jpg",
+            "image": "shopify:\/\/shop_images\/3189.jpg",
             "image_position": "left-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -297,7 +357,7 @@
             "subheading_weight": "sub-normal",
             "title": "100% plant based is different from natural",
             "heading_font_size_desktop": 30,
-            "heading_font_size_mobile": 14,
+            "heading_font_size_mobile": 24,
             "heading_weight": "heading-normal",
             "text": "<p>100% plant based formula: when a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants.<\/p><p>vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them!<\/p><p>natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and parrafin wax.<\/p>",
             "text_font_size_desktop": 16,
@@ -325,46 +385,6 @@
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""
-      }
-    },
-    "1c9519ff-3aab-46f0-b1e1-0c7f12daf71d": {
-      "type": "section-text",
-      "blocks": {
-        "6045a4be-e098-469d-9f95-320b5840b2f5": {
-          "type": "text",
-          "settings": {
-            "text": "<p>100% RECYCLABLE PACKAGING <\/p>",
-            "text_desk_size": 24,
-            "text_mobile_size": 18,
-            "font_weight": "700",
-            "letter_spacing": 0
-          }
-        },
-        "template--16002457895101__1c9519ff-3aab-46f0-b1e1-0c7f12daf71d-16681107467c504c6b-2": {
-          "type": "text",
-          "settings": {
-            "text": "<p>PET or PETE is the most widely recycled plastic in the world. It is a strong and inert material that is extremely lightweight, making it efficient to transport (less carbon emissions during shipping compared to glass). PET can be picked up through most curbside recycling programs - just make sure to rinse out any remaining product before recycling.<\/p>",
-            "text_desk_size": 18,
-            "text_mobile_size": 18,
-            "font_weight": "400",
-            "letter_spacing": 0
-          }
-        }
-      },
-      "block_order": [
-        "6045a4be-e098-469d-9f95-320b5840b2f5",
-        "template--16002457895101__1c9519ff-3aab-46f0-b1e1-0c7f12daf71d-16681107467c504c6b-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/recyF-Nov1.jpg",
-        "image_link": "",
-        "text_position": "left",
-        "img_position": "right",
-        "wrapper": "narrow",
-        "padding": "standard-padding",
-        "bg_color": "",
-        "text_color": "text-dark",
-        "remove_margin_bottom": false
       }
     },
     "1668012544949ba79a": {
@@ -421,8 +441,8 @@
     "main",
     "1658855652adf57ee7",
     "ff813953-0bdf-42e9-9c5e-b14629f49f4d",
-    "1658845070ad98dcd0",
     "1c9519ff-3aab-46f0-b1e1-0c7f12daf71d",
+    "1658845070ad98dcd0",
     "1668012544949ba79a",
     "165635106766c71bb8",
     "related",
