@@ -153,6 +153,7 @@ span.cart-drawer__item-qty.hidden {
 #travel-size-minis .product__media__outer {
     padding-top: 100%;
 }
+
 @media screen and (min-width:1024px) {
     .four-fifty-height {
         height: 100%;
@@ -210,6 +211,19 @@ span.cart-drawer__item-qty.hidden {
 }
 
 @media screen and (max-width:767px) {
+    div#SectionColumns--template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742,
+    section#brick-section--template--15879764869309__b6f5bf47-69a1-4992-8c11-554ebaeaa86d {
+        margin-bottom: 0;
+    }
+    section#brick-section--template--15879764869309__b6f5bf47-69a1-4992-8c11-554ebaeaa86d .vertical-padding {
+        padding-bottom: 0%;
+    }
+    div#SectionColumns--template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742 .section-columns__wrapper.no-carousel-mobile .column__item {
+        margin-bottom: 0;
+    }
+    div#shopify-section-template--15879764869309__16632641343e60bbea {
+        padding-top: 10px;
+    }
     .align--bottom-right .main-buttons {
         justify-content: right;
     }
