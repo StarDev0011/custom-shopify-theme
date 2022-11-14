@@ -180,7 +180,7 @@
                 {%- assign gift_note_attribute = 'cart.general.gift_note_attribute' | t -%}
                 <label for="gift-note">{{ 'cart.general.note' | t }}</label>
 
-                <textarea id="gift-note" name="attributes[{{ gift_note_attribute }}]" class="cart__field cart__field--textarea" aria-label="{{ 'cart.general.note' | t }}">{{ cart.attributes[gift_note_attribute] }}</textarea>
+                <textarea id="gift-note" name="attributes[{{ gift_note_attribute | default: 'Gift note' }}]" class="cart__field cart__field--textarea" aria-label="{{ 'cart.general.note' | t }}">{{ cart.attributes[gift_note_attribute] }}</textarea>
               </div>
             </div>
           </div>

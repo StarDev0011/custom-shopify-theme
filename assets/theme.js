@@ -2514,7 +2514,7 @@ el.innerHTML = el.innerHTML.replace(/\d+/g, response.item_count);
         if (itemsQty) {
           this.cartItemsQty.textContent = itemsQty === 1 ? `${itemsQty} ${oneItemText}` : `${itemsQty} ${manyItemsText}`;
         } else {
-          document.querySelectorAll(selectors.cartItemQty).forEach(element => {
+          document.querySelector(selectors.cartDrawerBody).querySelectorAll(selectors.cartItemQty).forEach(element => {
             allItemsQty += Number(element.value);
           });
 
