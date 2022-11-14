@@ -79,6 +79,10 @@
             assign title = block.settings.title
             assign text = block.settings.text
             assign heading_size = block.settings.heading_size
+            assign heading_size_img = block.settings.heading_size_img
+            assign text_size_img = block.settings.text_size_img
+            assign heading_size_mobile_img = block.settings.heading_size_mobile_img
+            assign text_size_mobile_img = block.settings.text_size_mobile_img
             assign text_size = block.settings.text_size | times: 0.01
             assign subheading = block.settings.subheading
             assign text_position = block.settings.text_position
@@ -112,12 +116,15 @@
 
                       {%- style -%}
                         #FeaturedImage--{{ section.id }}--{{ block.id }} { --overlay-opacity: {{ overlay_opacity }}; }
-                        #FeaturedImage--{{ section.id }}--{{ block.id }} .main-heading { font-size: {{ heading_size }}px}
+                        #FeaturedImage--{{ section.id }}--{{ block.id }} .main-heading { font-size: {{ heading_size_img }}px}
+                        #FeaturedImage--{{ section.id }}--{{ block.id }} .main-text { font-size: {{ text_size_img }}px}
                         {%- if block.settings.change_tablet_position -%}
                           @media only screen and (min-width: 480px) and (max-width: 767px) {
                             #FeaturedImage--{{ section.id }}--{{ block.id }} .featured-image__bg {
                               background-position: {{ block.settings.tablet_background_x_position }}% {{ block.settings.tablet_background_y_position }}% !important;
                             }
+                            #FeaturedImage--{{ section.id }}--{{ block.id }} .main-heading { font-size: {{ heading_size_mobile_img }}px}
+                            #FeaturedImage--{{ section.id }}--{{ block.id }} .main-text { font-size: {{ text_size_mobile_img }}px}
                           }
                         {%- endif -%}
                       {%- endstyle -%}
@@ -425,26 +432,6 @@
       "type": "textarea",
       "id": "custom_css",
       "label": "Custom CSS"
-    },
-    {
-      "type": "range",
-      "id": "heading_size1",
-      "label": "Heading size for Desktop",
-      "default": 24,
-      "min": 24,
-      "max": 36,
-      "step": 2,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "heading_size_mobile1",
-      "label": "Heading size for Mobile",
-      "default": 14,
-      "min": 14,
-      "max": 28,
-      "step": 2,
-      "unit": "px"
     }
   ],
   "blocks": [
@@ -584,7 +571,7 @@
           },
           {
             "type": "range",
-            "id": "heading_size",
+            "id": "heading_size_img",
             "label": "Heading size for Desktop",
             "default": 24,
             "min": 24,
@@ -594,7 +581,7 @@
           },
           {
             "type": "range",
-            "id": "heading_size_mobile",
+            "id": "heading_size_mobile_img",
             "label": "Heading size for Mobile",
             "default": 14,
             "min": 14,
@@ -607,6 +594,26 @@
             "id": "text",
             "label": "Text",
             "default": "Describe in a few words your special products, collection, or brand."
+          },
+          {
+            "type": "range",
+            "id": "text_size_img",
+            "label": "Text size for Desktop",
+            "default": 24,
+            "min": 24,
+            "max": 36,
+            "step": 2,
+            "unit": "px"
+          },
+          {
+            "type": "range",
+            "id": "text_size_mobile_img",
+            "label": "Text size for Mobile",
+            "default": 14,
+            "min": 14,
+            "max": 28,
+            "step": 2,
+            "unit": "px"
           },
           {
             "type": "header",

@@ -150,6 +150,9 @@ h2.right-heading {
 span.cart-drawer__item-qty.hidden {
     display: none;
 }
+#travel-size-minis .product__media__outer {
+    padding-top: 100%;
+}
 @media screen and (min-width:1024px) {
     .four-fifty-height {
         height: 100%;
