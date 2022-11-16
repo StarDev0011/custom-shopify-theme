@@ -155,6 +155,9 @@ span.cart-drawer__item-qty.hidden {
 }
 
 @media screen and (min-width:1024px) {
+    div#Slideshow--template--15879764934845__92ba8d4c-e2f8-464f-9b92-7e356b184632, div#SectionColumns--template--15879764934845__1656534534e35b4f23 {
+        margin-bottom: 0;
+    }
     .four-fifty-height {
         height: 100%;
         min-height: 450px !important;
@@ -372,6 +375,12 @@ span.cart-drawer__item-qty.hidden {
     }
     .show_only_mobile {
         display: block;
+    }
+    p.lb-price-wrapper {
+        display: none;
+    }
+    .btn-add-to-bundle {
+        line-height: 1;
     }
 }
 #cart-drawer [docapp-data-cart-item] .cart__item__image a {

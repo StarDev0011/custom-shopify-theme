@@ -53,7 +53,7 @@
   }
 {%- endstyle -%}
 
-<div class="{{ wrapper_class }} vertical-padding slider slider--{{ transition }}{% if section.settings.show_arrow_down %} slider--has-arrow{% endif %}{% if section.settings.show_nav_dots %} slider--has-dots{% endif %} {{ slide_height }}"
+<div class="{{ wrapper_class }} vertical-padding slider slider--{{ transition }}{% if section.settings.show_arrow_down %} slider--has-arrow{% endif %}{% if section.settings.show_nav_dots %} slider--has-dots{% endif %} {{ slide_height }} {% if section.settings.text_overlay_on_mobile %}text_overlay_on_mobile{% endif %}"
   id="Slideshow--{{ section.id }}"
   data-slider
   data-section-type="slider"
@@ -470,6 +470,12 @@
       "type": "textarea",
       "id": "custom_css",
       "label": "Custom CSS"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_overlay_on_mobile",
+      "label": "Text Overlay on Image on Mobile",
+      "default": true
     }
   ],
   "blocks": [
