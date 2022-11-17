@@ -28,9 +28,11 @@
             "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
-            "heading_size": 28,
-            "heading_size_mobile": 14,
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
             "text": "",
+            "text_size_img": 24,
+            "text_size_mobile_img": 12,
             "button_text": "",
             "button_link": "",
             "button_style": "primary"
@@ -69,15 +71,13 @@
         "84c95e20-a991-4933-90fb-1790c7ffece2"
       ],
       "settings": {
-        "height": "four-fifty-height",
-        "add_spacing": false,
+        "height": "five-fifty-height",
+        "add_spacing": true,
         "in_collection": true,
         "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
-        "custom_css": "",
-        "heading_size1": 24,
-        "heading_size_mobile1": 14
+        "custom_css": ""
       }
     },
     "166126888810d8f026": {
@@ -149,7 +149,8 @@
         "transition": "slide",
         "enable_zoom_animation": false,
         "heading_size": 120,
-        "custom_css": ""
+        "custom_css": "",
+        "text_overlay_on_mobile": true
       }
     },
     "subcollections": {

@@ -1,5 +1,34 @@
 {
   "sections": {
+    "3d622867-f6c3-46a5-93bf-627e4dce5913": {
+      "type": "section-text",
+      "disabled": true,
+      "blocks": {
+        "22c9ab9f-16ce-485b-b97e-f26e333fe66f": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>FREQUENTLY ASKED QUESTIONS<\/p>",
+            "desk_size": 40,
+            "mobile_size": 22,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "22c9ab9f-16ce-485b-b97e-f26e333fe66f"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "narrow",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -36,17 +65,25 @@
             "title": "what does way beyond clean mean",
             "text": "<p>100% plant based formula<br\/><\/p><p>no glycols: glycols are derived from petroleum and known to cause irritation<br\/><\/p><p>no petrochemicals<br\/><\/p><p>no synthetic fragrance<br\/><\/p><p>no added dye or color<br\/><\/p><p>vegan* and cruelty-free<br\/><\/p><p>made by us<br\/><\/p><p>no parabens<br\/><\/p><p>no phthalates<br\/><\/p><p>*all of our products are vegan with the exception of those containing honey.<\/p>"
           }
+        },
+        "8d75a69a-5bab-4fe5-883d-ad1acdbd4e51": {
+          "type": "text",
+          "settings": {
+            "title": "why water-form is better?",
+            "text": "<p>Water is called the ‘elixir of life’ because all life forms depend on the miracle of water. It only makes sense that the most effective skin care be water based. Skin moisturization is a measure of water retention because water is moisture.<br\/><\/p><p>Facewater is extremely absorbing and skin compatible – and because Facewater is distilled - the purest form of water – it attracts toxins from your skin FREEING your pores and allowing beautiful clear skin to flourish.<\/p>"
+          }
         }
       },
       "block_order": [
         "166179592435ceef64-0",
         "166179592435ceef64-1",
         "166179592435ceef64-2",
-        "45f66840-ac64-41d4-8aa5-ccc83123ad82"
+        "45f66840-ac64-41d4-8aa5-ccc83123ad82",
+        "8d75a69a-5bab-4fe5-883d-ad1acdbd4e51"
       ],
       "settings": {
         "wrapper": "normal",
-        "title": "products",
+        "title": "PRODUCTS",
         "text_position": "left",
         "subheading": "",
         "text": "",
@@ -97,7 +134,7 @@
       ],
       "settings": {
         "wrapper": "normal",
-        "title": "shipping & delivery",
+        "title": "SHIPPING & DELIVERY",
         "text_position": "left",
         "subheading": "",
         "text": "",
@@ -200,7 +237,7 @@
       ],
       "settings": {
         "wrapper": "normal",
-        "title": "returns & refunds",
+        "title": "RETURNS & REFUNDS",
         "text_position": "left",
         "subheading": "",
         "text": "",
@@ -251,7 +288,7 @@
       ],
       "settings": {
         "wrapper": "normal",
-        "title": "payments & safety",
+        "title": "PAYMENTS & SAFETY",
         "text_position": "left",
         "subheading": "",
         "text": "",
@@ -264,6 +301,7 @@
     }
   },
   "order": [
+    "3d622867-f6c3-46a5-93bf-627e4dce5913",
     "main",
     "166179592470a39ea7",
     "accordion-section-2",

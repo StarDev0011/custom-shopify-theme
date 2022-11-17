@@ -539,7 +539,7 @@
     "byob-bundle-info": {
       "addMore": "add 1 more item | Add {quantity} more items!",
       "addMoreFrom": "add 1 more from {title}",
-      "addToBundle": "ADD TO CART OR BUNDLE",
+      "addToBundle": "ADD TO BUNDLE",
       "addBundleToCart": "ADD TO CART",
       "alertSoldOut": "this item has sold out! please select another one.",
       "bundleAddedToCart": "your bundle has been added to cart!",

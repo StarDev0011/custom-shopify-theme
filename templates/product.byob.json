@@ -19,8 +19,8 @@
         "image_header_padding": 0,
         "byob_section_wrapper": true,
         "align_text": "left",
-        "title_size": "h1",
-        "description_font_size": 17,
+        "title_size": "h2",
+        "description_font_size": 18,
         "custom_css": ""
       }
     },
@@ -28,6 +28,7 @@
       "type": "byob-product-grid",
       "settings": {
         "items_per_row": 3,
+        "open_all_tabs": false,
         "byob_section_wrapper": true,
         "card_background": "#ffffff",
         "tab_color": "#eeeeee",
@@ -36,9 +37,9 @@
         "button_color": "#ffffff",
         "button_text_color": "#000000",
         "max_image_height": 80,
-        "disable_product_link": false,
+        "disable_product_link": true,
         "enable_quickview": true,
-        "show_product_price": true,
+        "show_product_price": false,
         "show_currency_code": false,
         "show_product_type": false,
         "show_product_vendor": false,
@@ -64,7 +65,7 @@
         "button_color": "#000000",
         "button_text_color": "#ffffff",
         "show_view_cart_button": true,
-        "show_create_another_button": false,
+        "show_create_another_button": true,
         "direct_checkout": false,
         "hide_sku_on_cart": false,
         "show_quantity_in_line_items": false

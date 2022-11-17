@@ -79,6 +79,10 @@
             assign title = block.settings.title
             assign text = block.settings.text
             assign heading_size = block.settings.heading_size
+            assign video_heading_size_desktop = block.settings.video_heading_size_desktop
+            assign video_heading_size_mobile = block.settings.video_heading_size_mobile
+            assign video_text_size_desktop = block.settings.video_text_size_desktop
+            assign video_text_size_mobile = block.settings.video_text_size_mobile
             assign heading_size_img = block.settings.heading_size_img
             assign text_size_img = block.settings.text_size_img
             assign heading_size_mobile_img = block.settings.heading_size_mobile_img
@@ -118,15 +122,14 @@
                         #FeaturedImage--{{ section.id }}--{{ block.id }} { --overlay-opacity: {{ overlay_opacity }}; }
                         #FeaturedImage--{{ section.id }}--{{ block.id }} .main-heading { font-size: {{ heading_size_img }}px}
                         #FeaturedImage--{{ section.id }}--{{ block.id }} .main-text { font-size: {{ text_size_img }}px}
-                        {%- if block.settings.change_tablet_position -%}
-                          @media only screen and (min-width: 480px) and (max-width: 767px) {
+                        
+                          @media only screen and (max-width: 767px) {
                             #FeaturedImage--{{ section.id }}--{{ block.id }} .featured-image__bg {
                               background-position: {{ block.settings.tablet_background_x_position }}% {{ block.settings.tablet_background_y_position }}% !important;
                             }
                             #FeaturedImage--{{ section.id }}--{{ block.id }} .main-heading { font-size: {{ heading_size_mobile_img }}px}
                             #FeaturedImage--{{ section.id }}--{{ block.id }} .main-text { font-size: {{ text_size_mobile_img }}px}
                           }
-                        {%- endif -%}
                       {%- endstyle -%}
 
                       <div class="featured-image__pane">
@@ -311,7 +314,10 @@
                           video_id: video_id,
                           overlay_opacity: overlay_opacity,
                           title: title,
-                          heading_size: heading_size,
+                          heading_size: video_heading_size_desktop,
+                          video_heading_size_mobile: video_heading_size_mobile,
+                          video_text_size_desktop:video_text_size_desktop,
+                          video_text_size_mobile:video_text_size_mobile,
                           text: text,
                           image: image,
                           button_text: button_text,
@@ -1161,13 +1167,43 @@
         },
         {
           "type": "range",
-          "id": "heading_size",
-          "label": "Heading size",
-          "default": 100,
-          "min": 100,
-          "max": 200,
-          "step": 10,
-          "unit": "%"
+          "id": "video_heading_size_desktop",
+          "label": "Desktop Heading size",
+          "default": 24,
+          "min": 24,
+          "max": 36,
+          "step": 2,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "video_heading_size_mobile",
+          "label": "Mobile Heading size",
+          "default": 14,
+          "min": 14,
+          "max": 28,
+          "step": 2,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "video_text_size_desktop",
+          "label": "Desktop Text size",
+          "default": 12,
+          "min": 12,
+          "max": 30,
+          "step": 2,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "video_text_size_mobile",
+          "label": "Mobile Text size",
+          "default": 12,
+          "min": 12,
+          "max": 20,
+          "step": 2,
+          "unit": "px"
         },
         {
           "type": "header",

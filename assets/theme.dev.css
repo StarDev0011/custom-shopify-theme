@@ -928,11 +928,7 @@ input[disabled] {
     min-width: 120px;
   }
 }
-@media only screen and (min-width: 1440px) {
-  .btn, .shopify-payment-button__button--unbranded {
-    min-width: 180px;
-  }
-}
+
 @media only screen and (max-width: 479px) {
   .btn, .shopify-payment-button__button--unbranded {
     width: 100%;

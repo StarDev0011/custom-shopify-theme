@@ -194,7 +194,8 @@
         "transition": "slide",
         "enable_zoom_animation": false,
         "heading_size": 100,
-        "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}"
+        "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}",
+        "text_overlay_on_mobile": true
       }
     },
     "27bf8fca-3420-413e-8c59-aee945aab2bf": {
@@ -297,7 +298,7 @@
         "image-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/5652v4.jpg",
+            "image": "shopify:\/\/shop_images\/MG_5644.jpg",
             "bg_position": "center-center",
             "mobile_image_position": "left",
             "contain_image": false,
@@ -318,13 +319,13 @@
         "ad02ba3d-7df8-484c-b3cf-e693631890d9": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9686v4_2.jpg",
+            "image": "shopify:\/\/shop_images\/oilwater_f2.jpg",
             "bg_position": "center-center",
-            "mobile_image_position": "center",
+            "mobile_image_position": "top",
             "contain_image": false,
             "overlay_opacity": 0,
             "text_position": "top-left",
-            "mobile_text_position": "bottom-left",
+            "mobile_text_position": "top-left",
             "subheading": "",
             "title": "",
             "text": "PORE HEALTHY OILWATER",
@@ -339,7 +340,7 @@
         "f392cba7-e83b-4a50-8def-5fbda75c7372": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0312v4_1_f1f21909-6dbb-4327-b203-45bf4504bca7.jpg",
+            "image": "shopify:\/\/shop_images\/MG_0312_1_6ad5d5e7-dee2-456b-aacc-f5d2513cde8d.jpg",
             "bg_position": "center-center",
             "mobile_image_position": "center",
             "contain_image": false,
@@ -415,7 +416,7 @@
         "heading_mobile_font_size": 16,
         "heading_font_weight": "400",
         "heading_color": "#ffffff",
-        "text_font_size": 16,
+        "text_font_size": 12,
         "text_mobile_font_size": 12,
         "text_font_weight": "400",
         "text_color": "#ffffff",
@@ -440,9 +441,11 @@
             "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
-            "heading_size": 28,
-            "heading_size_mobile": 14,
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
             "text": "MADE BY US",
+            "text_size_img": 16,
+            "text_size_mobile_img": 12,
             "button_text": "ZERO CARBON DISTILLERY",
             "button_link": "",
             "button_style": "text"
@@ -452,13 +455,16 @@
           "type": "video",
           "settings": {
             "text_position": "bottom-left",
-            "hero_video_link": "https:\/\/youtu.be\/cWQRN3d8IHk",
+            "hero_video_link": "https:\/\/youtu.be\/fzaTx3ziSb8",
             "video_enable_sound": false,
             "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
             "text": "WE GROW BEAUTY",
-            "heading_size": 100,
+            "video_heading_size_desktop": 24,
+            "video_heading_size_mobile": 14,
+            "video_text_size_desktop": 16,
+            "video_text_size_mobile": 12,
             "button_text": "cosmetic farm",
             "button_link": "",
             "button_style": "text"
@@ -476,9 +482,91 @@
         "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
-        "custom_css": "",
-        "heading_size1": 24,
-        "heading_size_mobile1": 14
+        "custom_css": ""
+      }
+    },
+    "1658853987e12cad3f": {
+      "type": "section-text",
+      "blocks": {
+        "d56d390e-4748-4e4d-a124-45d378181b58": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>100% PLANT BASED... way beyond clean™<\/p>",
+            "desk_size": 42,
+            "mobile_size": 24,
+            "font_weight": "400",
+            "letter_spacing": -1
+          }
+        }
+      },
+      "block_order": [
+        "d56d390e-4748-4e4d-a124-45d378181b58"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "full",
+        "padding": "standard-padding",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "text-dark",
+        "remove_margin_bottom": false
+      }
+    },
+    "c7296a52-09c6-42b2-9668-e3af348a1742": {
+      "type": "section-columns",
+      "blocks": {
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_0732_1_copy.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "THE POWER OF WATER",
+            "text": "<p>Water is called the ‘elixir of life’ because all life forms depend on the miracle of water. It only makes sense that the most effective skincare be water based. Skin moisturization is a measure of water retention because water is moisture. <\/p><p><\/p><p>Facewater is extremely absorbing and skin compatible – and because Facewater is distilled - the purest form of water – it attracts toxins from your skin FREEING your pores and allowing beautiful clear skin to flourish.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-3": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1475.jpg",
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "PATENT-PENDING DISTILLATION PROCESS",
+            "text": "<p>our patent-pending distillation method captures whole, undamaged plant actives, resulting in a hydrosol – a water saturated with plant actives at peak potency and effectiveness.<\/p>",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-2",
+        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 2,
+        "heading_font_size": 32,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 90,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.7,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": false
       }
     },
     "1663268646cef71652": {
@@ -519,7 +607,7 @@
             "image_vertical": 35,
             "image_horizontal": 50,
             "image_contain": true,
-            "image_mobile": "shopify:\/\/shop_images\/9851v2_1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MG_9851.jpg",
             "mobile_image_vertical": 100,
             "mobile_image_horizontal": 50,
             "bg_position": "center-center",
@@ -576,91 +664,8 @@
         "transition": "slide",
         "enable_zoom_animation": false,
         "heading_size": 120,
-        "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}"
-      }
-    },
-    "1658853987e12cad3f": {
-      "type": "section-text",
-      "blocks": {
-        "d56d390e-4748-4e4d-a124-45d378181b58": {
-          "type": "heading",
-          "settings": {
-            "text": "<p>100% PLANT BASED... way beyond clean™<\/p>",
-            "desk_size": 42,
-            "mobile_size": 24,
-            "font_weight": "400",
-            "letter_spacing": -1
-          }
-        }
-      },
-      "block_order": [
-        "d56d390e-4748-4e4d-a124-45d378181b58"
-      ],
-      "settings": {
-        "image_link": "",
-        "text_position": "left",
-        "img_position": "right",
-        "wrapper": "full",
-        "padding": "standard-padding",
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "text-dark",
-        "remove_margin_bottom": false
-      }
-    },
-    "c7296a52-09c6-42b2-9668-e3af348a1742": {
-      "type": "section-columns",
-      "blocks": {
-        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-2": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0732v6_3.jpg",
-            "image_link": "",
-            "bg_position": "center-center",
-            "title": "THE POWER OF WATER",
-            "text": "<p>Water is the ‘elixir of life.’ All life forms depend on the miracle of water. All skin moisturization is a measure of water retention.  It only makes sense that the most effective skin care be water based. <\/p><p>more absorbing<\/p><p>water is moisture<\/p><p>skin compatible. <\/p><p>Distilled water is the purest form of water and attracts toxins from your skin. Distilled water is mineral free. Hard water – and a lot of tap water - which is contains abundant minerals, is very drying to your skin<\/p>",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "text",
-            "show_video": false,
-            "play_btn_color": "#000000",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-          }
-        },
-        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-3": {
-          "type": "text_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1475.jpg",
-            "image_link": "",
-            "bg_position": "center-center",
-            "title": "PATENT-PENDING DISTILLATION PROCESS",
-            "text": "<p>our patent-pending distillation method captures whole, undamaged plant actives, resulting in a hydrosol – a water saturated with plant actives at peak potency and effectiveness.<\/p>",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "text",
-            "show_video": false,
-            "play_btn_color": "#000000",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-          }
-        }
-      },
-      "block_order": [
-        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-2",
-        "template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742-1667242175d9a075f7-3"
-      ],
-      "settings": {
-        "title": "",
-        "wrapper": "full",
-        "columns": 2,
-        "heading_font_size": 32,
-        "bg_color": "",
-        "align_text": "text-left",
-        "remove_text_spacing": false,
-        "text_width": 90,
-        "equalize_height": true,
-        "image_aspect_ratio": 0.6,
-        "show_images": true,
-        "disable_slider": true,
-        "remove_margin_bottom": false
+        "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}",
+        "text_overlay_on_mobile": true
       }
     },
     "16632641343e60bbea": {
@@ -701,7 +706,7 @@
             "image_vertical": 50,
             "image_horizontal": 50,
             "image_contain": false,
-            "image_mobile": "shopify:\/\/shop_images\/4727v2_1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MG_4724_dfaea2c1-c5a1-4c0f-8c19-e5726d6bd912.jpg",
             "mobile_image_vertical": 50,
             "mobile_image_horizontal": 50,
             "bg_position": "center-center",
@@ -758,7 +763,8 @@
         "transition": "slide",
         "enable_zoom_animation": false,
         "heading_size": 120,
-        "custom_css": ""
+        "custom_css": "",
+        "text_overlay_on_mobile": true
       }
     },
     "testimonials": {
@@ -904,10 +910,10 @@
     "16638774042f6239ae",
     "grid-0",
     "b6f5bf47-69a1-4992-8c11-554ebaeaa86d",
-    "1663268646cef71652",
-    "166005705070be2216",
     "1658853987e12cad3f",
     "c7296a52-09c6-42b2-9668-e3af348a1742",
+    "1663268646cef71652",
+    "166005705070be2216",
     "16632641343e60bbea",
     "1660056626d521ddbc",
     "testimonials",

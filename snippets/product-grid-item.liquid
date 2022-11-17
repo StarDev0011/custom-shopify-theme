@@ -327,7 +327,7 @@
         {%- endif -%}
 
         {%- if product.price_varies -%}
-          {{ product_price }}
+          {{ product.price_max | money }}
         {%- else -%}
           {%- if on_sale -%}
             {{ product_price }}

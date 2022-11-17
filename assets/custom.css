@@ -206,6 +206,9 @@ span.cart-drawer__item-qty.hidden {
 .show_only_mobile {
     display: none;
 }
+.btn-add-to-bundle {
+    min-width: 120px;
+}
 @media screen and (max-width: 1024px) {
     h1.slide__heading.main-heading {
         display: flex;
@@ -381,6 +384,9 @@ span.cart-drawer__item-qty.hidden {
     }
     .btn-add-to-bundle {
         line-height: 1;
+    }
+    section#Text--template--15879764869309__1658853987e12cad3f {
+        margin-top: 30px;
     }
 }
 #cart-drawer [docapp-data-cart-item] .cart__item__image a {

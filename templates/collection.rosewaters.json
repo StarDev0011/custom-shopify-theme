@@ -20,17 +20,19 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/4724v2.jpg",
-            "image_position": "left-center",
+            "image": "shopify:\/\/shop_images\/MG_4724_5ea0500e-08c9-4c2b-ad20-24868e603ad4.jpg",
+            "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
             "tablet_background_x_position": 50,
             "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
-            "heading_size": 28,
-            "heading_size_mobile": 14,
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
             "text": "",
+            "text_size_img": 24,
+            "text_size_mobile_img": 12,
             "button_text": "",
             "button_link": "",
             "button_style": "primary"
@@ -69,15 +71,13 @@
         "8231a8a7-c8b2-4160-97f6-d463deb37202"
       ],
       "settings": {
-        "height": "four-fifty-height",
-        "add_spacing": false,
+        "height": "five-fifty-height",
+        "add_spacing": true,
         "in_collection": true,
         "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
-        "custom_css": "",
-        "heading_size1": 24,
-        "heading_size_mobile1": 14
+        "custom_css": ""
       }
     },
     "subcollections": {

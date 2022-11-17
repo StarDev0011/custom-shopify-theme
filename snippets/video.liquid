@@ -26,6 +26,20 @@
   <div class="overlay video__overlay" style="--overlay-opacity: {{ overlay_opacity }};"></div>
 </div>
 
+{% style %}
+.video-text-wrapper .main-text {
+  font-size: {{video_text_size_desktop}}px;
+}
+  @media only screen and (max-width: 479px) {
+    .video-text-wrapper .main-text {
+      font-size: {{video_text_size_mobile}}px;
+    }
+    .video-text-wrapper .main-heading {
+      font-size: {{video_heading_size_mobile}}px;
+    }
+  }
+{% endstyle %}
+
 <div class="align--{{ text_position }} {{ text_color }} text-inside">
   {% comment %} Text {% endcomment %}
   <div class="video-text-wrapper wrapper wrapper--narrow{% if show_text_shadow %} backdrop--radial{% endif %}" data-overflow-content>
@@ -36,7 +50,7 @@
           data-aos-anchor="{{ animation_anchor }}"
           data-aos-delay="{{ animation_delay }}"
         {% endif %}
-        style="font-size: calc({{ heading_size }} * 3rem * var(--FONT-ADJUST-HEADING))">
+        style="font-size: {{ heading_size}}px">
         {{- title | escape -}}
       </h1>
 

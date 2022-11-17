@@ -31,6 +31,7 @@ const discount = {% if discount.type == 'json' %}{{ discount }}{% else %}{{ disc
 var currencySymbol = (typeof customCurrencySymbol === 'undefined')? "{{ cart.currency.symbol }}": customCurrencySymbol;
 var currencyCode = "{{ cart.currency.iso_code }}";
 var itemsPerRow = {{ section.settings.items_per_row }};
+var openAllTabs = {{ section.settings.open_all_tabs }};
 var icon_type = "{{ section.settings.icon_type }}";
 var beacon_color = "{{ section.settings.button_color }}";
 var footer_show_total_compare_at_price = {{ section.settings.footer_show_total_compare_at_price }};
@@ -645,6 +646,8 @@ document.addEventListener('shopify:section:select', themeEventHandler);
       let vm = this;
       // set the 1st buildrule collection as the default active tab
       vm.buildrules[0].isActiveTab = true
+      if (openAllTabs)
+        vm.buildrules.forEach(buildrule => buildrule.isActiveTab = true);
       this.$nextTick(function () {
         if (vm.buildrules[0].infinite_scrolling) {
           // setTimeout, wait for card image to load
@@ -949,6 +952,35 @@ document.addEventListener('shopify:section:select', themeEventHandler);
             });
           }, 500);
       },
+      addVariantsToCart(variants) {
+        let purchasedItems = this.groupVariantsByQuantity(variants)
+        console.log('purchasedItems', purchasedItems)
+        let items = [];
+        for (let item of purchasedItems)
+          items.push({
+            'id': parseInt(item.id),
+            'quantity': item.quantity,
+          })
+        let formData = {'items': items};
+
+        fetch(window.Shopify.routes.root + 'cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Adding variant to cart for cart permalink:', data);
+          // if (data.status != 422) {
+          //   this.checkCartReady(variants, variant_id)
+          // }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+      },
       addNewVariantToCart(variants, variant_id) {
         let formData = {
            'items': [{
@@ -977,8 +1009,8 @@ document.addEventListener('shopify:section:select', themeEventHandler);
           console.error('Error:', error);
         });
       },
-      getCheckoutLink(variants) { // group variants quantity with id
-        const reducedArr = variants.reduce((acc, cur) => {
+      groupVariantsByQuantity(variants) {
+        let reducedArr = variants.reduce((acc, cur) => {
           if (acc[cur.id])
             acc[cur.id].quantity++
           else {
@@ -987,8 +1019,11 @@ document.addEventListener('shopify:section:select', themeEventHandler);
           }
           return acc;
         }, {});
-		console.log('reducedArr', reducedArr);
-        variants = Object.values(reducedArr);
+        console.log('reducedArr', reducedArr);
+        return Object.values(reducedArr);
+      },
+      getCheckoutLink(variants) { // group variants quantity with id
+        variants = this.groupVariantsByQuantity(variants);
         return (Array.from(variants, variant => variant.id + ':' + variant.quantity)).toString()
       },
       redirectToCheckout(variants, discount_code) {
@@ -997,8 +1032,10 @@ document.addEventListener('shopify:section:select', themeEventHandler);
           let noteHeader = this.$i18n.t('message.noteHeader')
           link += `&note=${encodeURIComponent(noteHeader + ' - ' + this.customNote)}`
         }
-        link += `&ref=BYOB${bundleID}&attributes[where-from]=BYOB-${byob_handle}` // order tracking
+        if (window.location.hostname != "coolinastore.com")
+          link += `&ref=BYOB${bundleID}&attributes[where-from]=BYOB-${byob_handle}` // order tracking
         // alert('link = ' + link)
+        setTimeout(this.addVariantsToCart(variants));  // put to async
         window.location.href = link
       },
       addToCart() {
@@ -1105,9 +1142,9 @@ document.addEventListener('shopify:section:select', themeEventHandler);
       },
     },
     methods: {
-      hasNoProduct() {  // show warning in theme editor if no products shown
-        if (Shopify.designMode && this.buildrule.json_products.length === 0)
-          alert('No product is available under the ' + this.buildrule.title + ' collection. These products may not be published on the online store channel or they are not active.')
+      hasNoProduct() {  // show warning if no products shown
+        if (this.buildrule.json_products.length === 0)
+          alert('No product is available under the ' + this.buildrule.title + ' tab. Please make sure: \n- The products must be published on the online store channel and set to active.\n -If you edit the product URL handle, you have to remove the product and add it to the bundle condition again. Otherwise, the template is stilling using the old one\n- If the product\'s vendor is BYOB, it is hidden from the template to prevent BYOB bundles from stacking on top. Please change the product from BYOB to another one.\n\nIf you are a customer, please report the issue to the store admin')
       }
     },
     template: `
@@ -1722,6 +1759,12 @@ document.addEventListener('shopify:section:select', themeEventHandler);
           "max": 10,
           "step": 1,
           "default": 4
+      },
+      {
+        "type": "checkbox",
+        "id": "open_all_tabs",
+        "label": "Open all tabs when page opens",
+        "default": false
       },
 	  {
         "type": "checkbox",

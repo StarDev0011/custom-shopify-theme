@@ -49,10 +49,57 @@
             "video_btn_text": "",
             "video_btn_link": ""
           }
+        },
+        "df2a734f-8435-4e80-a940-e9c69a4726dd": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image_vertical": 50,
+            "image_horizontal": 50,
+            "image_contain": false,
+            "mobile_image_vertical": 50,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 10,
+            "heading_font_size": 32,
+            "heading_mobile_font_size": 32,
+            "heading_font_weight": "700",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 32,
+            "text_mobile_font_size": 32,
+            "text_font_weight": "200",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "normal",
+            "text_position": "center",
+            "override_mobile_text_position": false,
+            "mobile_text_position_y": 50,
+            "mobile_text_position_x": "center",
+            "title": "Welcome to Palo Alto",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "Add more info or delete this text",
+            "slide_btn_text": "Shop All",
+            "slide_btn_link": "shopify:\/\/collections\/all",
+            "slide_btn_style": "primary",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#ffffff",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
         }
       },
       "block_order": [
-        "16620564582a9fcffe-1"
+        "16620564582a9fcffe-1",
+        "df2a734f-8435-4e80-a940-e9c69a4726dd"
       ],
       "settings": {
         "wrapper": "wide",
@@ -68,7 +115,8 @@
         "transition": "slide",
         "enable_zoom_animation": true,
         "heading_size": 120,
-        "custom_css": ""
+        "custom_css": "",
+        "text_overlay_on_mobile": true
       }
     },
     "1fc767e6-8f84-4e3b-a11d-29d1571204c0": {
@@ -78,7 +126,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/MG_0402.jpg",
+            "image": "shopify:\/\/shop_images\/MG_0430.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -86,9 +134,11 @@
             "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
-            "heading_size": 28,
-            "heading_size_mobile": 14,
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
             "text": "",
+            "text_size_img": 24,
+            "text_size_mobile_img": 12,
             "button_text": "",
             "button_link": "",
             "button_style": "primary"
@@ -128,14 +178,12 @@
       ],
       "settings": {
         "height": "five-fifty-height",
-        "add_spacing": false,
+        "add_spacing": true,
         "in_collection": true,
         "mobile_height": 250,
         "wrapper": "full",
         "bg_color": "",
-        "custom_css": "",
-        "heading_size1": 24,
-        "heading_size_mobile1": 14
+        "custom_css": ""
       }
     },
     "hero": {

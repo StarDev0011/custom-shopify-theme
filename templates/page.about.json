@@ -102,11 +102,11 @@
         "1656534534c2268bce-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GL-Wall-Plant-Industries-wallbrick-2.jpg",
+            "image": "shopify:\/\/shop_images\/new_copy4.png",
             "image_link": "",
             "bg_position": "left-center",
             "title": "who we are",
-            "text": "<p>Plant Beauty Distillery is a division of Plant Industries, which produces a diverse range of plant based products. Plant Industries is a vertically integrated manufacturer and grower with multiple facilities in the Northeastern, United States.<\/p>",
+            "text": "<p>Plant Beauty Distillery is a division of Plant Industries, which produces a diverse range of plant based products. Plant Industries is a vertically integrated manufacturer and grower with multiple facilities in the Northeastern, United States.<\/p><p><\/p>",
             "button_text": "",
             "button_link": "",
             "button_style": "text",
@@ -118,7 +118,7 @@
         "def8c325-bfa0-4c90-a785-27407ca7d632": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PBD-Sign-angle.jpg",
+            "image": "shopify:\/\/shop_images\/MG_1000_2.jpg",
             "image_link": "",
             "bg_position": "left-center",
             "title": "the distillery",
@@ -160,8 +160,8 @@
         "heading_font_size": 26,
         "bg_color": "",
         "align_text": "text-left",
-        "remove_text_spacing": true,
-        "text_width": 85,
+        "remove_text_spacing": false,
+        "text_width": 95,
         "equalize_height": true,
         "image_aspect_ratio": 0.7,
         "show_images": true,
@@ -206,7 +206,7 @@
             "override_title_font_weight": false,
             "override_text_number": 1,
             "override_font_weight": "200",
-            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur",
             "slide_btn_text": "LEARN MORE",
             "slide_btn_link": "shopify:\/\/pages\/cosmetic-farm",
             "slide_btn_style": "text",
@@ -235,8 +235,76 @@
         "autoplay": false,
         "duration": 4,
         "transition": "slide",
-        "enable_zoom_animation": true,
+        "enable_zoom_animation": false,
         "heading_size": 120,
+        "custom_css": "",
+        "text_overlay_on_mobile": true
+      }
+    },
+    "1656436483c66822d1": {
+      "type": "section-custom-content",
+      "blocks": {
+        "16564364836fdd50e0-0": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle-center",
+            "image": "shopify:\/\/shop_images\/yusovmodel1_copy_1_9dbcbaf6-3cc9-49af-8d06-9c881ab85e04.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 0,
+            "text_color": "text-light",
+            "title": "",
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
+            "text": "",
+            "text_size_img": 24,
+            "text_size_mobile_img": 14,
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "16564364836fdd50e0-1": {
+          "type": "text",
+          "settings": {
+            "text_position": "left",
+            "top_image_width": 100,
+            "text_color": "text-dark",
+            "subheading": "",
+            "subheading_font_size_desktop": 14,
+            "subheading_font_size_mobile": 14,
+            "subheading_weight": "sub-normal",
+            "title": "MADE BY US",
+            "heading_font_size_desktop": 32,
+            "heading_font_size_mobile": 26,
+            "heading_weight": "heading-normal",
+            "text": "<p>unlike most beauty brands, all of our products are entirely made by us from start to finish. we independently do our own research and development, manufacturing, fulfillment, and distribution. Because of this, we are able to control every aspect of the quality and integrity of our products.<\/p><p>After distillation, the final step of production (finishing, bottling and labeling) takes place at our Greenleaf facility, owned by our parent company, Plant Industries. Greenleaf is located in Allentown, PA and about 20 minutes away from the Distillery.<\/p>",
+            "text_font_size_desktop": 20,
+            "text_font_size_mobile": 15,
+            "text_weight": "text-normal",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "primary",
+            "secondary_button_text": "",
+            "secondary_button_link": "",
+            "secondary_button_style": "secondary",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16564364836fdd50e0-0",
+        "16564364836fdd50e0-1"
+      ],
+      "settings": {
+        "height": "four-fifty-height",
+        "add_spacing": true,
+        "in_collection": false,
+        "mobile_height": 250,
+        "wrapper": "full",
+        "bg_color": "",
         "custom_css": ""
       }
     },
@@ -428,7 +496,8 @@
           "type": "heading",
           "settings": {
             "text": "<p>why facewater works?<\/p>",
-            "size": 180,
+            "desk_size": 40,
+            "mobile_size": 22,
             "font_weight": "700",
             "letter_spacing": 0
           }
@@ -438,7 +507,8 @@
           "disabled": true,
           "settings": {
             "text": "<p>why cosmetic water works?<\/p>",
-            "size": 170,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "700",
             "letter_spacing": 0
           }
@@ -447,7 +517,8 @@
           "type": "text",
           "settings": {
             "text": "",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "700",
             "letter_spacing": 0
           }
@@ -620,8 +691,11 @@
             "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
-            "heading_size": 100,
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
             "text": "",
+            "text_size_img": 24,
+            "text_size_mobile_img": 14,
             "button_text": "",
             "button_link": "",
             "button_style": "primary"
@@ -639,8 +713,11 @@
             "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
-            "heading_size": 100,
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
             "text": "",
+            "text_size_img": 24,
+            "text_size_mobile_img": 14,
             "button_text": "",
             "button_link": "",
             "button_style": "primary"
@@ -984,7 +1061,8 @@
         "transition": "slide",
         "enable_zoom_animation": true,
         "heading_size": 120,
-        "custom_css": ""
+        "custom_css": "",
+        "text_overlay_on_mobile": true
       }
     },
     "16565345370a8c335a": {
@@ -1280,6 +1358,7 @@
     },
     "16566001452be09e9e": {
       "type": "section-text",
+      "disabled": true,
       "blocks": {
         "461fac03-7984-4778-9b47-4607800ac870": {
           "type": "subheading",
@@ -1294,7 +1373,8 @@
           "type": "text",
           "settings": {
             "text": "<p>PET or PETE is the most widely recycled plastic in the world. It is a strong and inert material that is extremely lightweight, making it efficient to  transport (less carbon emissions during shipping compared to glass). PET can be  picked up through most curbside recycling programs - just make sure to rinse out any remaining product before recycling.<\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -1312,7 +1392,8 @@
           "type": "text",
           "settings": {
             "text": "<p>glass may be a sturdier material but only has a lower environmental impact if reused. it also requires more materials and is much heavier, leading to higher emissions, especially from shipping. we chose PET plastic because it is 100% recyclable,  super lightweight, and produces significantly less carbon emissions during transport compared to glass bottles.<\/p>",
-            "size": 100,
+            "text_desk_size": 18,
+            "text_mobile_size": 18,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -1401,8 +1482,11 @@
             "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
-            "heading_size": 100,
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
             "text": "",
+            "text_size_img": 24,
+            "text_size_mobile_img": 14,
             "button_text": "",
             "button_link": "",
             "button_style": "primary"
@@ -1466,8 +1550,11 @@
             "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
-            "heading_size": 100,
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
             "text": "",
+            "text_size_img": 24,
+            "text_size_mobile_img": 14,
             "button_text": "",
             "button_link": "",
             "button_style": "primary"
@@ -1514,70 +1601,6 @@
         "bg_color": "",
         "custom_css": ""
       }
-    },
-    "1656436483c66822d1": {
-      "type": "section-custom-content",
-      "blocks": {
-        "16564364836fdd50e0-0": {
-          "type": "image",
-          "settings": {
-            "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/yusovmodel1_copy_1_9dbcbaf6-3cc9-49af-8d06-9c881ab85e04.jpg",
-            "image_position": "center-center",
-            "change_tablet_position": false,
-            "tablet_background_y_position": 50,
-            "tablet_background_x_position": 50,
-            "overlay_opacity": 0,
-            "text_color": "text-light",
-            "title": "",
-            "heading_size": 100,
-            "text": "",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "primary"
-          }
-        },
-        "16564364836fdd50e0-1": {
-          "type": "text",
-          "settings": {
-            "text_position": "left",
-            "top_image_width": 100,
-            "text_color": "text-dark",
-            "subheading": "",
-            "subheading_font_size_desktop": 14,
-            "subheading_font_size_mobile": 14,
-            "subheading_weight": "sub-normal",
-            "title": "MADE BY US",
-            "heading_font_size_desktop": 32,
-            "heading_font_size_mobile": 26,
-            "heading_weight": "heading-normal",
-            "text": "<p>unlike most beauty brands, all of our products are entirely made by us from start to finish. we independently do our own research and development, manufacturing, fulfillment, and distribution. Because of this, we are able to control every aspect of the quality and integrity of our products.<\/p><p>After distillation, the final step of production (finishing, bottling and labeling) takes place at our Greenleaf facility, owned by our parent company, Plant Industries. Greenleaf is located in Allentown, PA and about 20 minutes away from the Distillery.<\/p>",
-            "text_font_size_desktop": 20,
-            "text_font_size_mobile": 18,
-            "text_weight": "text-normal",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "primary",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "secondary_button_style": "secondary",
-            "bg_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "16564364836fdd50e0-0",
-        "16564364836fdd50e0-1"
-      ],
-      "settings": {
-        "height": "four-fifty-height",
-        "add_spacing": true,
-        "in_collection": false,
-        "mobile_height": 250,
-        "wrapper": "full",
-        "bg_color": "",
-        "custom_css": ""
-      }
     }
   },
   "order": [
@@ -1585,6 +1608,7 @@
     "165910557130231305",
     "1656534534e35b4f23",
     "92ba8d4c-e2f8-464f-9b92-7e356b184632",
+    "1656436483c66822d1",
     "165894937329255a58",
     "16565350202bec56bc",
     "1657214918eb62c5a7",
@@ -1603,7 +1627,6 @@
     "16566001452be09e9e",
     "1660660152de5cbf46",
     "1659725178e4148e2c",
-    "165972529292f82144",
-    "1656436483c66822d1"
+    "165972529292f82144"
   ]
 }

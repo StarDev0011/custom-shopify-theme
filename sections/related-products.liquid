@@ -43,7 +43,11 @@
           <div class="carousel__container">
             <div class="carousel carousel--inactive carousel--mobile" data-slider data-slider-id="slider--{{ section.id }}">
               {%- for product in recommendations.products -%}
-                {%- assign animation_delay = forloop.index0 -%}
+              {%- assign animation_delay = forloop.index0 -%}
+                {%- for collection in product.collections -%}
+                  {% if collection.handle != "travel-size-minis" %}
+                  {% endif %}
+                {%- endfor -%}                
                 {%- render 'product-grid-item', product: product, carousel: true, animation_delay: animation_delay -%}
               {%- endfor -%}
             </div>
