@@ -30,8 +30,6 @@ jQuery(document).ready(function($) {
         $(".column__item__text").each(function(){
             var outerheight = $(this).outerHeight()
             var scrollheight = $(this).prop("scrollHeight")
-            console.log(outerheight)
-            console.log(scrollheight)
             if(outerheight <= scrollheight) {
                 $(this).css("margin-bottom", "5px")
                 $(this).parent().children(".read_more").show()

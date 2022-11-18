@@ -207,6 +207,7 @@
                       assign subheading_font_size_mobile = block.settings.subheading_font_size_mobile
                       assign subheading_weight = block.settings.subheading_weight                      
                       assign heading_font_size_desktop = block.settings.heading_font_size_desktop
+                      assign heading_letter_spacing = block.settings.heading_letter_spacing
                       assign heading_font_size_mobile = block.settings.heading_font_size_mobile
                       assign heading_weight = block.settings.heading_weight
                       assign text_font_size_desktop = block.settings.text_font_size_desktop
@@ -227,6 +228,7 @@
                       heading: title,
                       heading_font_size_desktop: heading_font_size_desktop,
                       heading_font_size_mobile: heading_font_size_mobile,
+                      heading_letter_spacing: heading_letter_spacing,
                       heading_weight: heading_weight,
                       text: text,
                       text_font_size_desktop: text_font_size_desktop,
@@ -779,6 +781,16 @@
           "max": 30,
           "default": 14,
           "step": 1,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "heading_letter_spacing",
+          "label": "Letter Spacing",
+          "min": -1,
+          "max": 3,
+          "default": 0,
+          "step": 0.2,
           "unit": "px"
         },
         {

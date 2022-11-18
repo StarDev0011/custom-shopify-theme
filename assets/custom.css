@@ -104,6 +104,9 @@ h2.right-heading {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
 }
+div#SectionColumns--template--15879765393597__16637792522013ab25 .column__item__text.rte {
+    -webkit-line-clamp: initial;
+}
 .column__item__text.rte p {
     display: inline;
 }
@@ -112,6 +115,9 @@ h2.right-heading {
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: underline;
+}
+div#SectionColumns--template--15879765393597__16637792522013ab25 .read_more {
+    display: none !important;
 }
 .featured-image__bg {
     display: block;
