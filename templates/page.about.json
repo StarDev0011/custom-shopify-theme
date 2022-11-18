@@ -14,7 +14,7 @@
           "settings": {
             "text": "<p>who we are<\/p>",
             "desk_size": 34,
-            "mobile_size": 26,
+            "mobile_size": 30,
             "font_weight": "400",
             "letter_spacing": -1
           }
@@ -24,7 +24,7 @@
           "settings": {
             "text": "<p>Plant Beauty Distillery is a division of Plant Industries, which produces a diverse range of plant based products. <\/p><p>Plant Industries is a vertically integrated manufacturer and grower with multiple facilities in the Northeastern, United States.<\/p>",
             "text_desk_size": 20,
-            "text_mobile_size": 18,
+            "text_mobile_size": 20,
             "font_weight": "400",
             "letter_spacing": 0
           }
@@ -220,7 +220,7 @@
             "image": "shopify:\/\/shop_images\/1678.jpg",
             "image_vertical": 50,
             "image_horizontal": 50,
-            "image_contain": false,
+            "image_contain": true,
             "mobile_image_vertical": 50,
             "mobile_image_horizontal": 50,
             "bg_position": "center-center",
@@ -246,7 +246,7 @@
             "override_title_font_weight": false,
             "override_text_number": 1,
             "override_font_weight": "200",
-            "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur",
+            "text": "<p>unlike carbon neutrality, which seeks to \"balance out\" carbon emissions through questionable “offsets”, the distillery, Cosmetic Farm, produce zero carbon emissions during normal operations and distillation on site.<\/p><p>the entire property runs on electricity (powered by renewable energy sources - wind, solar, etc...).<\/p>",
             "slide_btn_text": "LEARN MORE",
             "slide_btn_link": "shopify:\/\/pages\/cosmetic-farm",
             "slide_btn_style": "text",
@@ -278,7 +278,7 @@
         "enable_zoom_animation": false,
         "heading_size": 120,
         "custom_css": "",
-        "text_overlay_on_mobile": true
+        "text_overlay_on_mobile": false
       }
     },
     "1656436483c66822d1": {
@@ -319,6 +319,7 @@
             "title": "MADE BY US",
             "heading_font_size_desktop": 32,
             "heading_font_size_mobile": 26,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>unlike most beauty brands, all of our products are entirely made by us from start to finish. we independently do our own research and development, manufacturing, fulfillment, and distribution. Because of this, we are able to control every aspect of the quality and integrity of our products.<\/p><p>After distillation, the final step of production (finishing, bottling and labeling) takes place at our Greenleaf facility, owned by our parent company, Plant Industries. Greenleaf is located in Allentown, PA and about 20 minutes away from the Distillery.<\/p>",
             "text_font_size_desktop": 20,
@@ -1122,6 +1123,7 @@
             "title": "for your mind, body and spirit",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit.lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.<\/p>",
             "text_font_size_desktop": 20,
@@ -1149,6 +1151,7 @@
             "title": "plant energetic and highly absorbing",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit.lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.<\/p>",
             "text_font_size_desktop": 20,
@@ -1195,6 +1198,7 @@
             "title": "why is water-form better",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco <\/p><p>laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.<\/p><p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit.<\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit. <\/p><p>Duis aute irure dolor in reprehenderit in voluptate velit.<\/p>",
             "text_font_size_desktop": 20,
@@ -1222,6 +1226,7 @@
             "title": "way beyond clean",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>healthy skin starts with eliminating questionable, harmful, and toxic chemicals. all of our products never have these harmful chemicals:<\/p><p>zero glycols: glycols are derived from petroleum and known to cause irritation<\/p><p>zero petrochemicals<\/p><p>zero synthetic fragrances<\/p><p>zero colorants or dyes<\/p><p>zero parabens<\/p><p>zero phthalates<\/p><p>100% recyclable packaging<\/p><p>cruelty-free and vegan*<\/p><p>*all of our products are vegan with the exception of products containing honey.<\/p>",
             "text_font_size_desktop": 20,
@@ -1545,6 +1550,7 @@
             "title": "<strong> why we use 100% recyclable plastic instead of glass bottles<\/strong>",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "glass may be a sturdier, \"luxe\" feeling material but only has a lower environmental impact if reused. it also requires more materials and is much heavier, leading to higher emissions, especially from shipping.\n\nwe chose PET plastic because it is 100% recyclable, super lightweight, and produces significantly less carbon emissions during transport compared to glass bottles.",
             "text_font_size_desktop": 20,
@@ -1613,6 +1619,7 @@
             "title": "<strong> long-term goals<\/strong>",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit",
             "text_font_size_desktop": 20,
