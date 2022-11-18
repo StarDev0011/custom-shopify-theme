@@ -140,9 +140,7 @@ div#SectionColumns--template--15879765393597__16637792522013ab25 .read_more {
 #flower-hazel .wrapper.wrapper--full.vertical-padding.slider.slider--slide.original-height {
     margin-bottom: 0;
 }
-.byob-quickview-title {
-    text-transform: capitalize;
-}
+
 .carousel--inactive {
     text-align: left;
     justify-content: start;
@@ -159,7 +157,15 @@ span.cart-drawer__item-qty.hidden {
 #travel-size-minis .product__media__outer {
     padding-top: 100%;
 }
-
+section#SectionMosaic--template--15879764869309__grid-0 {
+    margin-bottom: 0;
+}
+section#Text--template--15879764869309__1658853987e12cad3f .text__heading.h2 {
+    margin-bottom: 0px;
+}
+.grid-product-text, .byob-quickview-title {
+    text-transform: uppercase;
+}
 @media screen and (min-width:1024px) {
     div#Slideshow--template--15879764934845__92ba8d4c-e2f8-464f-9b92-7e356b184632, div#SectionColumns--template--15879764934845__1656534534e35b4f23 {
         margin-bottom: 0;
