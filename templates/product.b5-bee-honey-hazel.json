@@ -145,6 +145,7 @@
     },
     "1667941220fca5c0a3": {
       "type": "apps",
+      "disabled": true,
       "blocks": {
         "a8340a73-9c58-49ed-8fd3-45ac99bb373b": {
           "type": "shopify:\/\/apps\/tolstoy-product-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",

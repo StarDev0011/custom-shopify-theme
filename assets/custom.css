@@ -209,6 +209,9 @@ span.cart-drawer__item-qty.hidden {
 .btn-add-to-bundle {
     min-width: 120px;
 }
+section#Text--template--15879764934845__f5bf480d-0fd7-4062-8d43-74b034f78853 {
+    margin-top: 30px;
+}
 @media screen and (max-width: 1024px) {
     h1.slide__heading.main-heading {
         display: flex;
@@ -387,6 +390,9 @@ span.cart-drawer__item-qty.hidden {
     }
     section#Text--template--15879764869309__1658853987e12cad3f {
         margin-top: 30px;
+    }
+    section#Text--template--15879764934845__f5bf480d-0fd7-4062-8d43-74b034f78853 .text__content.aos-init.aos-animate p:first-child {
+        margin-bottom: 20px;
     }
 }
 #cart-drawer [docapp-data-cart-item] .cart__item__image a {

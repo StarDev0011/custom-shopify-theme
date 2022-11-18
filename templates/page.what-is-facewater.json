@@ -661,10 +661,10 @@
             "heading_letter_spacing": 0,
             "heading_color": "#000000",
             "mobile_heading_color": "#000000",
-            "text_font_size": 20,
+            "text_font_size": 22,
             "text_mobile_font_size": 16,
             "text_font_weight": "400",
-            "text_letter_spacing": 0,
+            "text_letter_spacing": -1,
             "text_color": "#000000",
             "mobile_text_color": "#000000",
             "text_width": "narrow",
@@ -676,7 +676,7 @@
             "override_title_font_weight": false,
             "override_text_number": 1,
             "override_font_weight": "200",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet",
+            "text": "Facewater is 100% plant based, water-form and distilled. Facewater works and is the healthiest and most effective choice for visibly clearer and healthier skin.",
             "slide_btn_text": "",
             "slide_btn_link": "",
             "slide_btn_style": "primary",
@@ -1178,7 +1178,7 @@
             "image_link": "",
             "bg_position": "center-center",
             "title": "100% RECYCLABLE PACKAGING",
-            "text": "<p>PET or PETE is the most widely recycled plastic in the world. It is a strong and inert material that is extremely lightweight, making it efficient to transport (less carbon emissions during shipping compared to glass). PET can be picked up through most curbside recycling programs - just make sure to rinse out any remaining product before recycling.<\/p><p>are able to control every aspect of the quality and integrity of our products.<br\/><br\/>WHY WE USE PLASTIC INSTEAD OF GLASS BOTTLES <br\/><br\/>glass may be a sturdier material but only has a lower environmental impact if reused. it also requires more materials and is much heavier, leading to higher emissions, especially from shipping. we chose PET plastic because it is 100% recyclable, super lightweight, and produces significantly less carbon emissions during transport  compared to glass bottles.<\/p><p><\/p>",
+            "text": "<p>PET or PETE is the most widely recycled plastic in the world. It is a strong and inert material that is extremely lightweight, making it efficient to transport (less carbon emissions during shipping compared to glass). PET can be picked up through most curbside recycling programs - just make sure to rinse out any remaining product before recycling.<\/p><p><\/p><p>WHY WE USE PLASTIC INSTEAD OF GLASS BOTTLES <br\/><br\/>glass has a lower environmental impact than plastic only if reused – which often does not happen. Glass is also much heavier, leading to higher emissions from shipping. we use PET plastic because it is 100% recyclable, very lightweight, does not break, and produces significantly less carbon emissions during transport.<\/p><p><\/p>",
             "button_text": "",
             "button_link": "",
             "button_style": "text",
@@ -1431,6 +1431,23 @@
         "tab_alignment": false,
         "remove_margin_bottom": false
       }
+    },
+    "1668709499395a3449": {
+      "type": "apps",
+      "blocks": {
+        "f9090ff7-702f-4a0f-8326-d62e2ddec9f5": {
+          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": ""
+          }
+        }
+      },
+      "block_order": [
+        "f9090ff7-702f-4a0f-8326-d62e2ddec9f5"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -1455,6 +1472,7 @@
     "1663764846d4901551",
     "1658930827cfb47491",
     "166076803891764da6",
-    "1658930751b45cc2f2"
+    "1658930751b45cc2f2",
+    "1668709499395a3449"
   ]
 }

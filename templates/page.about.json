@@ -6,6 +6,45 @@
         "show_page_title": false
       }
     },
+    "f5bf480d-0fd7-4062-8d43-74b034f78853": {
+      "type": "section-text",
+      "blocks": {
+        "template--15879764934845__f5bf480d-0fd7-4062-8d43-74b034f78853-166869913494803fbf-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>who we are<\/p>",
+            "desk_size": 34,
+            "mobile_size": 26,
+            "font_weight": "400",
+            "letter_spacing": -1
+          }
+        },
+        "template--15879764934845__f5bf480d-0fd7-4062-8d43-74b034f78853-166869913494803fbf-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Plant Beauty Distillery is a division of Plant Industries, which produces a diverse range of plant based products. <\/p><p>Plant Industries is a vertically integrated manufacturer and grower with multiple facilities in the Northeastern, United States.<\/p>",
+            "text_desk_size": 20,
+            "text_mobile_size": 18,
+            "font_weight": "400",
+            "letter_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764934845__f5bf480d-0fd7-4062-8d43-74b034f78853-166869913494803fbf-1",
+        "template--15879764934845__f5bf480d-0fd7-4062-8d43-74b034f78853-166869913494803fbf-2"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "normal",
+        "padding": "standard-padding",
+        "bg_color": "",
+        "text_color": "text-dark",
+        "remove_margin_bottom": true
+      }
+    },
     "165910557130231305": {
       "type": "section-grid",
       "disabled": true,
@@ -60,7 +99,7 @@
             "text_position": "center",
             "mobile_text_position": "center",
             "subheading": "",
-            "title": "Shop <br> Best Sellers",
+            "title": "Shop  Best Sellers",
             "text": "Add more info or delete this text",
             "button_text": "",
             "link": "",
@@ -101,6 +140,7 @@
       "blocks": {
         "1656534534c2268bce-0": {
           "type": "text_block",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/new_copy4.png",
             "image_link": "",
@@ -156,14 +196,14 @@
       "settings": {
         "title": "",
         "wrapper": "full",
-        "columns": 3,
+        "columns": 2,
         "heading_font_size": 26,
         "bg_color": "",
         "align_text": "text-left",
         "remove_text_spacing": false,
         "text_width": 95,
         "equalize_height": true,
-        "image_aspect_ratio": 0.7,
+        "image_aspect_ratio": 0.6,
         "show_images": true,
         "disable_slider": true,
         "remove_margin_bottom": false
@@ -1605,6 +1645,7 @@
   },
   "order": [
     "main",
+    "f5bf480d-0fd7-4062-8d43-74b034f78853",
     "165910557130231305",
     "1656534534e35b4f23",
     "92ba8d4c-e2f8-464f-9b92-7e356b184632",
