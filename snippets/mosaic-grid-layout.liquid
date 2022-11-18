@@ -3,7 +3,6 @@
   assign bg_color = section.settings.bg_color
   assign heading_size = section.settings.heading_font_size
   assign show_only_mobile = section.settings.show_only_mobile
-  assign heading_mobile_size = section.settings.heading_mobile_font_size
   assign heading_font_weight = section.settings.heading_font_weight | times: 1
   assign heading_color = section.settings.heading_color
   assign text_size = section.settings.text_font_size
@@ -78,10 +77,6 @@
     #SectionMosaic--{{ section.id }} .mosaic__item__text {
       font-size: {{ text_mobile_size }}px;
     }
-
-    #SectionMosaic--{{ section.id }} .mosaic__item__heading {
-      font-size: {{ heading_mobile_size }}px;
-    }
   } 
 {%- endstyle -%}
 
@@ -133,6 +128,12 @@
             assign has_image = true
             if block.type == 'text'
               assign has_image = false
+              assign heading_mobile_size = block.settings.heading_font_size_mobile
+              assign heading_font_size_desktop = block.settings.heading_font_size_desktop
+              assign subheading_font_size_mobile = block.settings.subheading_font_size_mobile
+              assign subheading_font_size_desktop = block.settings.subheading_font_size_desktop
+              assign text_font_size_desktop = block.settings.text_font_size_desktop
+              assign text_font_size_mobile = block.settings.text_font_size_mobile
             endif
 
             case block.type
@@ -171,6 +172,12 @@
 
               when 'image'
                 assign image = block.settings.image
+                assign heading_mobile_size = block.settings.heading_font_size_mobile
+                assign heading_font_size_desktop = block.settings.heading_font_size_desktop
+                assign subheading_font_size_mobile = block.settings.subheading_font_size_mobile
+                assign subheading_font_size_desktop = block.settings.subheading_font_size_desktop
+                assign text_font_size_desktop = block.settings.text_font_size_desktop
+                assign text_font_size_mobile = block.settings.text_font_size_mobile
             endcase
 
             if link != blank and secondary_button_text == blank
@@ -258,6 +265,28 @@
                 {%- endif -%}
 
                 {%- if heading != blank -%}
+                  {% style %}
+                    #SectionMosaic--{{ section.id }} .mosaic__item__heading {
+                      font-size: {{ heading_font_size_desktop }}px;
+                    }
+                    #SectionMosaic--{{ section.id }} .mosaic__item__subheading {
+                      font-size: {{subheading_font_size_desktop}}px;
+                    }
+                    #SectionMosaic--{{ section.id }} .mosaic__item__text {
+                      font-size: {{text_font_size_desktop}}px;
+                    }
+                    @media only screen and (max-width: 479px) {
+                      #SectionMosaic--{{ section.id }} .mosaic__item__heading {
+                        font-size: {{ heading_mobile_size }}px;
+                      }
+                      #SectionMosaic--{{ section.id }} .mosaic__item__subheading {
+                        font-size: {{subheading_font_size_mobile}}px;
+                      }
+                      #SectionMosaic--{{ section.id }} .mosaic__item__text {
+                        font-size: {{text_font_size_mobile}}px
+                      }
+                    }
+                  {% endstyle %}
                   <h3 class="mosaic__item__heading{% if has_block_link %} mosaic__item__heading--underline{% endif %} h2">{{ heading }}</h3>
                 {%- endif -%}
 
