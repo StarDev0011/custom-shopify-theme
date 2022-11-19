@@ -74,6 +74,29 @@ jQuery(document).ready(function($) {
     $(".breaking p").each(function() {
         $(this).append("<br>");
     })
-
+    setInterval(() => {
+        $.ajax({
+            type: "get",
+            url: "/cart.js",
+            dataType: "json",
+            success: function (response) {
+                var count = response.item_count
+                $('#cart-drawer .cart__item__info .cart_item_collections').each(function(){
+                    if($(this).text().indexOf("travel-size-minis") != -1) {
+                        count = count - $(this).parents(".cart__item__content").find("input").attr('value')
+                    }
+                })
+                if(count > 1){
+                    $("#cart-drawer .cart__message").text("congratulations! your order qualifies for free shipping")
+                }
+                else if(count == 1) {
+                    $("#cart-drawer .cart__message").text("you are 1 item away from free shipping")
+                }
+                else if(count == 0) {
+                    $("#cart-drawer .cart__message").text("FREE SHIPPING WHEN YOU ORDER ANY 2 FULL SIZE ITEMS")
+                }
+            }
+        });
+    }, 500);
 })
 

@@ -485,7 +485,7 @@
         "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": false,
-        "mobile_height": 350,
+        "mobile_height": 325,
         "wrapper": "full",
         "bg_color": "",
         "custom_css": ""

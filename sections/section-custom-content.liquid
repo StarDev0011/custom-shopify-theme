@@ -53,12 +53,12 @@
 {% endstyle %}
 
 <section id="brick-section--{{ section.id }}"
-  class="brick__section{% if cover %} brick__section--cover{% endif %} {{ section.settings.height }}"
+  class="section_custom_content brick__section{% if cover %} brick__section--cover{% endif %} {{ section.settings.height }}"
   data-overflow-wrapper
   data-section-id="{{ section.id }}"
   data-section-type="custom-content">
 
-  <div class="brick__section__wrapper wrapper {{ wrapper_class }}{% unless cover %} vertical-padding{% endunless %}" {% if in_collection %} style="padding-top: 20px; padding-bottom: 0px;" {% endif %}>
+  <div class="brick__section__wrapper wrapper {{ wrapper_class }}{% unless cover %} vertical-padding{% endunless %}" {% if in_collection %} style="padding-top: 0px; padding-bottom: 0px;" {% endif %}>
     <div class="brick__blocks__flex brick__blocks__flex--{% if add_spacing %}gap{% else %}stuck{% endif %}" data-overflow-frame>
       {%- if section.blocks.size > 0 -%}
         {%- for block in section.blocks -%}

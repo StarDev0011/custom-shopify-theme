@@ -27,6 +27,11 @@
     <div class="cart__item__content">
       <div class="cart__item__content-inner">
         <div class="cart__item__info">
+          <div class="cart_item_collections">
+            {%- for collection in line_item.product.collections -%}
+              {{collection.handle}}
+            {%- endfor -%}
+          </div>
           <p class="cart__item__title">
             <a href="{{- line_item.url -}}">
               {{- line_item.product.title | strip_html -}}

@@ -31,7 +31,7 @@
           {{ settings.cart_custom_message_text_1 }}
         {%- elsif count == 0 -%}
           FREE SHIPPING WHEN YOU ORDER ANY 2 FULL SIZE ITEMS
-        {%- endif -%}     
+        {%- endif -%}   
       </div>
     {% endif %}
     <div class="cart-drawer__head">
@@ -46,61 +46,61 @@
 
     <div class="cart-drawer__body" data-cart-drawer-body>
       {%- liquid
-  assign free_shipping_text = block.settings.message | default: settings.message
-  assign is_enable = false
+        assign free_shipping_text = block.settings.message | default: settings.message
+        assign is_enable = false
 
-  if block.settings.message != blank
-    assign is_enable = true
-  endif
+        if block.settings.message != blank
+          assign is_enable = true
+        endif
 
-  if settings.show_free_shipping_message and settings.free_shipping_limit != blank and free_shipping_text != blank
-    assign is_enable = true
-  endif
--%}
+        if settings.show_free_shipping_message and settings.free_shipping_limit != blank and free_shipping_text != blank
+          assign is_enable = true
+        endif
+      -%}
 
-{%- if is_enable -%}
-  {%- liquid
-    assign limit = settings.free_shipping_limit | plus: 0
-    assign limit_currency = limit | times: 100
-    assign subtotal_without_currency = cart.total_price | plus: 0 | divided_by: 100
-  -%}
+      {%- if is_enable -%}
+        {%- liquid
+          assign limit = settings.free_shipping_limit | plus: 0
+          assign limit_currency = limit | times: 100
+          assign subtotal_without_currency = cart.total_price | plus: 0 | divided_by: 100
+        -%}
 
-  {%- capture left_to_spend -%}
-    <span data-left-to-spend>{{ limit_currency | minus: cart.total_price | money_without_trailing_zeros }}</span>
-  {%- endcapture -%}
+        {%- capture left_to_spend -%}
+          <span data-left-to-spend>{{ limit_currency | minus: cart.total_price | money_without_trailing_zeros }}</span>
+        {%- endcapture -%}
 
-  {%- liquid
-    assign free_shipping_message = free_shipping_text | replace: '||amount||', left_to_spend
-    assign qualified_shipping_message = 'cart.general.qualified_shipping_message' | t
-    assign class_message = ''
+        {%- liquid
+          assign free_shipping_message = free_shipping_text | replace: '||amount||', left_to_spend
+          assign qualified_shipping_message = 'cart.general.qualified_shipping_message' | t
+          assign class_message = ''
 
-    if subtotal_without_currency >= limit
-      if qualified_shipping_message != blank
-        assign class_message = ' is-success'
-        assign is_default_message_hidden = ' is-hidden'
-      else
-        assign class_message = ' is-hidden'
-      endif
-    elsif subtotal_without_currency == 0
-      assign class_message = ' is-hidden'
-    endif
+          if subtotal_without_currency >= limit
+            if qualified_shipping_message != blank
+              assign class_message = ' is-success'
+              assign is_default_message_hidden = ' is-hidden'
+            else
+              assign class_message = ' is-hidden'
+            endif
+          elsif subtotal_without_currency == 0
+            assign class_message = ' is-hidden'
+          endif
 
-    assign percent = limit | minus: subtotal_without_currency | times: 100 | divided_by: limit
-    assign percent = 100 | minus: percent
-  -%}
+          assign percent = limit | minus: subtotal_without_currency | times: 100 | divided_by: limit
+          assign percent = 100 | minus: percent
+        -%}
 
-  <p class="{% unless template.name == 'cart' or section.id == 'announcement-bar' %}cart-drawer__message {% endunless %}cart__message{{ class_message }}" data-cart-message="{% if qualified_shipping_message != blank %}true{% else %}false{% endif %}" data-limit="{{ limit }}">
-    <span class="cart__message__default{{ is_default_message_hidden }}" data-message-default>{{ free_shipping_message }}</span>
+        <p class="{% unless template.name == 'cart' or section.id == 'announcement-bar' %}cart-drawer__message {% endunless %}cart__message{{ class_message }}" data-cart-message="{% if qualified_shipping_message != blank %}true{% else %}false{% endif %}" data-limit="{{ limit }}">
+          <span class="cart__message__default{{ is_default_message_hidden }}" data-message-default>{{ free_shipping_message }}</span>
 
-    {%- if qualified_shipping_message != blank -%}
-      <span class="cart__message__success">{{ qualified_shipping_message }}</span>
-    {%- endif -%}
+          {%- if qualified_shipping_message != blank -%}
+            <span class="cart__message__success">{{ qualified_shipping_message }}</span>
+          {%- endif -%}
 
-    {%- unless is_top -%}
-      <progress class="cart__message__progress" data-cart-message-progress value="{{ percent }}" max="100"></progress>
-    {%- endunless -%}
-  </p>
-{%- endif -%}
+          {%- unless is_top -%}
+            <progress class="cart__message__progress" data-cart-message-progress value="{{ percent }}" max="100"></progress>
+          {%- endunless -%}
+        </p>
+      {%- endif -%}
 
       <div class="cart__errors cart__errors-dropdown" data-cart-errors>
         <p class="cart__errors__heading">{{- 'cart.general.limit_error' | t -}}</p>

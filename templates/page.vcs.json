@@ -130,7 +130,8 @@
         "transition": "slide",
         "enable_zoom_animation": true,
         "heading_size": 120,
-        "custom_css": ""
+        "custom_css": "",
+        "text_overlay_on_mobile": true
       }
     },
     "16566059652cdd0f1f": {
@@ -293,8 +294,11 @@
             "overlay_opacity": 0,
             "text_color": "text-light",
             "title": "",
-            "heading_size": 100,
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
             "text": "",
+            "text_size_img": 24,
+            "text_size_mobile_img": 12,
             "button_text": "",
             "button_link": "",
             "button_style": "primary"
@@ -313,6 +317,7 @@
             "title": "",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p> <\/p><h3>*92% of consumer testers would purchase Facewater after trying it for only 2 weeks.  <\/h3>\n<p> <\/p><h3>*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater.  <\/h3>\n<br>\n<p><\/p><h3>NOTICEABLE SKIN CLEARING*<\/h3><p>\n\n<\/p><p>The results speak for themselves. Healthy pores free from occlusive chemicals allow the skin to breathe and naturally purge toxins. Many so called “natural” products or products that have plants in them also contain silicones or petroleum derived chemicals – unlike Facewater which is 100% plant based. FREE YOUR FACE with Facewater and watch over time as your skin responds with more resilience to environmental stressors. <\/p><p><\/p><h3>VISIBLE RADIANCE<\/h3><p>Radiance can’t be faked. Like your skin, plants are living things and are bursting with nutrient rich energy. Our patent pending distillation process captures more skin healthy and energetic actives from fresh plant matter (many of which we grow ourselves) compared to the diluted factory-made extracts common in other products. The only way to have truly radiant skin is to have healthy, fully and deeply moisturized skin. <\/p><p><\/p><h3>LONG-TERM YOUTH PRESERVATION<\/h3><p>Like the rest of your body, premature skin aging is the result of diet, stress, sun damage, toxins and genetics. We can’t control genetics - but Facewater will make a big difference. All Facewater products are Way Beyond Clean™ and 100% Plant Based. We believe the best things you can do to keep your skin looking younger are continual healthy moisturization with antioxidant rich products and only using super clean, 100% plant-based products. There is no better regimen than Facewater. <\/p>\n <p><\/p><p><\/p><p><\/p>\n<p> <\/p><h3> IMMEDIATE LASTING MOISTURE<\/h3>\n<p>Moisture is essential for healthy, clear, radiant, youthful looking skin. That’s basic. But all moisture is not created equally. Facewater moisture is skin healthy and bursting with 100% plant-based energy. Water-form, ultra-absorbing and deeply hydrating – Facewater is the best moisture rich solution for your skin.<\/p>",
             "text_font_size_desktop": 16,
@@ -333,7 +338,7 @@
         "1658947564c479ddf2-1"
       ],
       "settings": {
-        "height": "four-fifty-height",
+        "height": "five-fifty-height",
         "add_spacing": true,
         "in_collection": false,
         "mobile_height": 350,
@@ -427,7 +432,10 @@
             "text_color": "text-light",
             "title": "",
             "text": "what is facewater",
-            "heading_size": 100,
+            "video_heading_size_desktop": 24,
+            "video_heading_size_mobile": 14,
+            "video_text_size_desktop": 12,
+            "video_text_size_mobile": 12,
             "button_text": "",
             "button_link": "",
             "button_style": "secondary"
@@ -539,6 +547,7 @@
             "title": "noticeable skin clearing or your money back*",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.<\/p>",
             "text_font_size_desktop": 20,
@@ -566,6 +575,7 @@
             "title": "immediately visible radiance",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.<\/p>",
             "text_font_size_desktop": 20,
