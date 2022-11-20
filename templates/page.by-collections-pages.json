@@ -75,7 +75,8 @@
         "transition": "slide",
         "enable_zoom_animation": false,
         "heading_size": 120,
-        "custom_css": ""
+        "custom_css": "",
+        "text_overlay_on_mobile": true
       }
     },
     "1660827199e11d70e7": {
@@ -140,7 +141,7 @@
         "1660827834ec5095c0-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9556v6_1.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9567_6226ed9f-24e7-46c6-b5da-0a42b786416b.jpg",
             "image_link": "",
             "bg_position": "left-center",
             "title": "OILWATERS",

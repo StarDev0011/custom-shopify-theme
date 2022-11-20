@@ -12,7 +12,7 @@
         "165823700972b8bb06-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2315.jpg",
+            "image": "shopify:\/\/shop_images\/MG_2315_1.jpg",
             "image_link": "shopify:\/\/collections\/bubble-rinse-cleansers",
             "bg_position": "center-center",
             "title": "BUBBLE RINSE CLEANSERS",
@@ -86,7 +86,7 @@
         "ba1fe2b9-7cb0-418b-86fa-69f7859b7144": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0732v6_3.jpg",
+            "image": "shopify:\/\/shop_images\/MG_0732_1_copy.jpg",
             "image_link": "shopify:\/\/collections\/micellar-waters",
             "bg_position": "center-center",
             "title": "MICELLAR WATERS",
@@ -178,7 +178,7 @@
         "5f69be83-df89-4acc-951d-db58c61c0e4f": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9556v6_1.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9567_6226ed9f-24e7-46c6-b5da-0a42b786416b.jpg",
             "image_link": "shopify:\/\/collections\/oilwaters",
             "bg_position": "left-center",
             "title": "OILWATERS",
@@ -288,7 +288,7 @@
         "1663165100715ae078-2": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/5652v4.jpg",
+            "image": "shopify:\/\/shop_images\/MG_5644.jpg",
             "image_link": "shopify:\/\/collections\/serum-waters",
             "bg_position": "center-bottom",
             "title": "SERUM WATERS",
@@ -304,7 +304,7 @@
         "1663165100715ae078-3": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_5797_6.jpg",
+            "image": "shopify:\/\/shop_images\/MG_5797_7_84273d33-607b-4cf3-9f2f-a26bad6e41eb.jpg",
             "image_link": "shopify:\/\/collections\/toners",
             "bg_position": "center-center",
             "title": "TONERS",
@@ -344,13 +344,13 @@
         "16631651163e283367-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_9577.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9577_3.jpg",
             "image_link": "shopify:\/\/collections\/witch-hazels",
             "bg_position": "center-bottom",
             "title": "WITCH HAZELS",
             "text": "<p>Our witch hazel products are made from freshly extracted and distilled witch hazel plants and contain unmatched quantities of plant actives at peak potency. They effectively clarify, tone, calm, and balance your skin without high levels of alcohol or petroleum derived compounds. We let the witch hazel plant do what it does best - see what which hazel can really do for your skin!<\/p>",
             "button_text": "shop all",
-            "button_link": "",
+            "button_link": "shopify:\/\/collections\/witch-hazels",
             "button_style": "text",
             "show_video": false,
             "play_btn_color": "#000000",

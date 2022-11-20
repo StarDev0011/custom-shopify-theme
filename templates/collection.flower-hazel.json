@@ -21,7 +21,7 @@
           "settings": {
             "text_position": "middle-center",
             "image": "shopify:\/\/shop_images\/MG_9665_2.jpg",
-            "image_position": "left-center",
+            "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
             "tablet_background_x_position": 50,
@@ -51,6 +51,7 @@
             "title": "flower hazel",
             "heading_font_size_desktop": 42,
             "heading_font_size_mobile": 30,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "Fresh witch hazel plants and skin beneficial flowers with high levels of antioxidants, phenols, and flavonoids are co-distilled to activate and intensify the potency or FLOWER HAZEL. Calms, soothes, and reveals vibrant, noticeably clearer skin.",
             "text_font_size_desktop": 20,
