@@ -175,6 +175,10 @@ div#PageContainer {
 .cart__message {
     text-transform: lowercase;
 }
+div#shopify-section-footer {
+    position: absolute;
+    width: 100%;
+}
 @media screen and (min-width:1024px) {
     div#Slideshow--template--15879764934845__92ba8d4c-e2f8-464f-9b92-7e356b184632, div#SectionColumns--template--15879764934845__1656534534e35b4f23 {
         margin-bottom: 0;
