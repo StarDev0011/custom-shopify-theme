@@ -21,7 +21,7 @@
           "settings": {
             "text_position": "middle-center",
             "image": "shopify:\/\/shop_images\/MG_4317-2_1_6be767fc-443b-4bd8-bf97-3321ceb98171.jpg",
-            "image_position": "left-center",
+            "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
             "tablet_background_x_position": 50,
@@ -51,6 +51,7 @@
             "title": "100 petal rosewater",
             "heading_font_size_desktop": 42,
             "heading_font_size_mobile": 30,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "We distill at least one hundred rose petals rich in phenols and gallic acid for every liter of rosewater we make - for an unmatched amount of youth preserving, skin soothing and calming results. 100 PETAL ROSEWATER reveals luminous, well-rested skin and is a great source of healthy moisture.",
             "text_font_size_desktop": 20,
@@ -71,7 +72,7 @@
         "cfed3373-de6c-45e8-a47f-f0b7cb6d9481"
       ],
       "settings": {
-        "height": "five-fifty-height",
+        "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": true,
         "mobile_height": 250,

@@ -52,6 +52,7 @@
             "title": "plant venom",
             "heading_font_size_desktop": 42,
             "heading_font_size_mobile": 30,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "This youth preserving nighttime serum water is a lightweight, fast-absorbing and targeted leave-on treatment. PLANT VENOM accelerates and enhances your skin’s natural regenerative process. See overnight results and reveal wonderfully youthful, well-rested skin.",
             "text_font_size_desktop": 20,
@@ -72,7 +73,7 @@
         "2378fe14-ad2a-4d99-b045-cb24cd8f062d"
       ],
       "settings": {
-        "height": "five-fifty-height",
+        "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": true,
         "mobile_height": 275,
