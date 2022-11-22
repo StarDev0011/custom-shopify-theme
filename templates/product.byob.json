@@ -30,7 +30,7 @@
         "items_per_row": 3,
         "open_all_tabs": false,
         "byob_section_wrapper": true,
-        "card_background": "#ffffff",
+        "card_background": "#fafafa",
         "tab_color": "#eeeeee",
         "tab_text_color": "#444444",
         "tick_icon_color": "#008000",

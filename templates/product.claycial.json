@@ -92,6 +92,7 @@
             "title": "what is facewater",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>Facewater is a range of patent pending, pore-healthy 100% plant based, distilled water-form serums, cleansers, toners, moisturizers and more - that work to deliver visibly clearer and healthier skin with noticeable radiance and long-term youth preserving effects. <\/p>\n\n<p><\/p><h2> the results<\/h2>\nnoticeable skin clearing* <br>\nvisible radiance<br>\nlong term youth preserving effects<br>\nimmediate lasting moisture <br>\n<br>\n*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater <br>\n\n*92% of consumer testers would purchase Facewater after trying it for 2 weeks or less",
             "text_font_size_desktop": 16,
@@ -147,7 +148,7 @@
       "type": "apps",
       "blocks": {
         "a8340a73-9c58-49ed-8fd3-45ac99bb373b": {
-          "type": "shopify:\/\/apps\/tolstoy-product-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "tucdn99z8vy0d"
           }
@@ -198,6 +199,7 @@
             "title": "100% plant based vs. natural",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "100% PLANT BASED VS. \"NATURAL\"\nwhen a formula is 100% plant based it means simply that ALL of the ingredients are derived from plants. vegan on the other hand just means that there are no animal products. toxic chemicals are vegan – although we know that most vegans would not go near them! natural is another story: simply put, something “natural” occurs in nature – and is not synthesized in a factory or lab. there are MANY cosmetic ingredients that are considered “natural” but are not skin healthy such as mineral oil and paraffin wax.\n<p><\/p><h2> way beyond clean <\/h2>\n100% plant based formula <br>\nno glycols: glycols are derived from petroleum and known to cause irritation <br>\nno petrochemicals <br>\nno synthetic fragrance <br>\nno added dye or color <br>\nvegan* and cruelty-free <br>\nmade by us <br>\nno parabens <br>\nno phthalates <br> <br>\n*all of our products are vegan with the exception of those containing honey",
             "text_font_size_desktop": 16,
@@ -737,6 +739,7 @@
             "title": "100% recyclable packaging",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "PET or PETE is the most widely recycled plastic in the world.  It is a strong and inert material that is extremely lightweight, making it efficient to transport (less carbon emissions during  shipping compared to glass). PET can be  picked up through  most curbside recycling programs - just make sure to rinse  out any remaining product before recycling.  <h3><strong> <br>   <br> why we use plastic instead of glass bottles  <\/strong><\/h3>  glass may be a sturdier, \"luxe\" feeling material  but only has  a lower environmental impact if reused. it also requires more  materials and is much heavier, leading to higher emissions, especially from shipping. we chose PET plastic because it is  100% recyclable, super lightweight, and produces significantly  less carbon emissions during transport  compared to glass bottles.",
             "text_font_size_desktop": 20,
@@ -822,7 +825,7 @@
         "fb64abd7-69d5-4fe4-9819-70355727bbdd": {
           "type": "text",
           "settings": {
-            "text": "<p>glass may be a sturdier feeling material but only has a lower environmental impact if reused. it also requires more materials and is much heavier, leading to higher emissions, especially from shipping. we chose PET plastic because it is  100% recyclable, super lightweight, and produces  significantly less carbon emissions during transport  compared to glass bottles.<\/p>",
+            "text": "<p>{{ product.metafields.custom.why_we_use_plastic_instead_of_glass | metafield_tag }}<\/p>",
             "text_desk_size": 18,
             "text_mobile_size": 18,
             "font_weight": "400",
@@ -837,7 +840,7 @@
         "fb64abd7-69d5-4fe4-9819-70355727bbdd"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/recyF-Nov1.jpg",
+        "image": "shopify:\/\/shop_images\/recyF-Nov1.png",
         "image_link": "",
         "text_position": "left",
         "img_position": "left",
