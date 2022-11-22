@@ -22,6 +22,7 @@ function splide_slider () {
 }
 
 jQuery(document).ready(function($) {
+    console.log("Multi Brand")
     splide_slider();
     $(window).resize(function(){
         splide_slider();
