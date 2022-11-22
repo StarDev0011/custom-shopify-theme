@@ -183,6 +183,10 @@ div#shopify-section-footer {
     div#Slideshow--template--15879764934845__92ba8d4c-e2f8-464f-9b92-7e356b184632, div#SectionColumns--template--15879764934845__1656534534e35b4f23 {
         margin-bottom: 0;
     }
+    .default-height {
+        min-height: auto !important;
+        height: 100%;
+    }
     .four-fifty-height {
         height: 100%;
         min-height: 450px !important;
@@ -245,6 +249,16 @@ section#Text--template--15879764934845__f5bf480d-0fd7-4062-8d43-74b034f78853 {
 }
 
 @media screen and (max-width:767px) {
+    .text_overlay_on_mobile .slide__text__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
     div#SectionColumns--template--15879764869309__c7296a52-09c6-42b2-9668-e3af348a1742,
     section#brick-section--template--15879764869309__b6f5bf47-69a1-4992-8c11-554ebaeaa86d {
         margin-bottom: 0;
@@ -420,7 +434,7 @@ section#Text--template--15879764934845__f5bf480d-0fd7-4062-8d43-74b034f78853 {
         margin-bottom: 20px;
     }
     #SectionMosaic--template--15879764902077__16563374560bce2809 .mosaic__item.mosaic__item--2, #SectionMosaic--template--15879764902077__16563374560bce2809 .mosaic__item.mosaic__item--3, #SectionMosaic--template--15879764902077__16563374560bce2809 .mosaic__item.mosaic__item--4 {
-        height: 180px;
+        min-height: 180px;
     }
     section#SectionMosaic--template--15879764902077__16563374560bce2809 .mosaic__grid {
         display: block;
