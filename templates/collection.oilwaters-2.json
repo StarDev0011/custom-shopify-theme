@@ -20,7 +20,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/MG_9567_6226ed9f-24e7-46c6-b5da-0a42b786416b.jpg",
+            "image": "shopify:\/\/shop_images\/MG_9567_copy.jpg",
             "image_position": "center-bottom",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -51,6 +51,7 @@
             "title": "oilwaters",
             "heading_font_size_desktop": 42,
             "heading_font_size_mobile": 30,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "this innovative, weightless advancement of conventional facial oil melts right into your skin - without ever feeling greasy or tacky. pore healthy OILWATER is more skin compatible and rapidly absorbs upon contact for sumptuously soft skin and long-lasting luminous glow. a super healthy addition to any skincare routine.",
             "text_font_size_desktop": 20,

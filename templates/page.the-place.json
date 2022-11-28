@@ -174,7 +174,7 @@
         "enable_zoom_animation": false,
         "heading_size": 120,
         "custom_css": "",
-        "text_overlay_on_mobile": true
+        "text_overlay_on_mobile": false
       }
     },
     "16565303174e4346fe": {
@@ -232,6 +232,7 @@
             "title": "<strong> zero carbon property<\/strong>",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>unlike carbon neutrality, which seeks to \"balance out\" carbon emissions through questionable “offsets”, the distillery, Cosmetic Farm, produce zero carbon emissions during normal<br>operations and distillation on site.*<\/p><p>the entire property runs on electricity (powered by renewable energy sources - wind, solar, etc...).<\/p><p>*although we strive to minimize the carbon impact of our entire supply chain, the packaged product in its entirety cannot be considered “carbon free”. Also, there are certain repairs and improvements to the property carried out by contractors or others that from time to time may require carbon emitting tools or vehicles for a brief period of time.<\/p>",
             "text_font_size_desktop": 20,
@@ -376,6 +377,7 @@
             "title": "the distillery",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>the distillery is located on Cosmetic Farm™<\/p><p>each and every drop of hydrosol for our products is produced at our distillery using our patent pending dual phase distillation process.<\/p>",
             "text_font_size_desktop": 20,
@@ -597,6 +599,7 @@
             "title": "made by us",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>unlike most beauty brands, all of our products are entirely made by us from start to finish. we independently do our own research and development, manufacturing, fulfillment, and distribution.<\/p><p>Because of this, we are able to control every aspect of the quality and integrity of our products.<\/p><p>After distillation, the final step of production (finishing, bottling and labeling) takes place at our Greenleaf facility, owned by our parent company, Plant Industries. Greenleaf is located in Allentown, PA and about 20 minutes away from the Distillery.<\/p>",
             "text_font_size_desktop": 20,
@@ -643,6 +646,7 @@
             "title": "the invention: more plant power from dual phase distillation",
             "heading_font_size_desktop": 30,
             "heading_font_size_mobile": 14,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "<p>getting the most from plants is essential if effective products are going to be made exclusively from plant-based ingredients.<\/p><p>our patent-pending distillation method captures whole, undamaged plant actives.<\/p><p>we soak and then press our plants before beginning distillation - and then separate the solid and liquid plant components into different parts of our specially designed stills.<\/p><p>the still is then placed under vacuum pressure to significantly reduce the amount of heat required for distillation. (heat can damage or change plant extracts by essentially “cooking’ them.)<\/p><p>during distillation, the solid and liquid components are reunited to form a hydrosol – a water saturated with plant actives at peak potency and effectiveness.<\/p>",
             "text_font_size_desktop": 20,

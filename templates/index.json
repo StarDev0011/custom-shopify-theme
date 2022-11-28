@@ -1,5 +1,71 @@
 {
   "sections": {
+    "565687da-3b12-4146-a6ef-a3bab262ce6b": {
+      "type": "section-marquee",
+      "blocks": {
+        "template--15879764869309__565687da-3b12-4146-a6ef-a3bab262ce6b-166914523491f3e86d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>CYBER MONDAY<\/p>",
+            "icon_name": "none",
+            "icon_color": "",
+            "icon_width": 20,
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "153c7600-3838-453f-be7a-54244fd11c26": {
+          "type": "text",
+          "settings": {
+            "text": "<p>BUY 1 FULL SIZE ITEM & GET 1 FULL SIZE FOR FREE<\/p>",
+            "icon_name": "none",
+            "icon_color": "",
+            "icon_width": 20,
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "template--15879764869309__565687da-3b12-4146-a6ef-a3bab262ce6b-166914523491f3e86d-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>use code BOGO4U at checkout - limit 1 use per order<\/p>",
+            "icon_name": "none",
+            "icon_color": "",
+            "icon_width": 20,
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "527b3959-774a-4995-8794-652b6afb459c": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>limit 1 use per order<\/p>",
+            "icon_name": "none",
+            "icon_color": "",
+            "icon_width": 20,
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__565687da-3b12-4146-a6ef-a3bab262ce6b-166914523491f3e86d-1",
+        "153c7600-3838-453f-be7a-54244fd11c26",
+        "template--15879764869309__565687da-3b12-4146-a6ef-a3bab262ce6b-166914523491f3e86d-2",
+        "527b3959-774a-4995-8794-652b6afb459c"
+      ],
+      "settings": {
+        "bg_color": "#000000",
+        "color": "#ffffff",
+        "layout": "marquee",
+        "padding": 20,
+        "slider_speed": 7,
+        "marquee_speed": 100,
+        "text_size": 150,
+        "message_spacing": 25
+      }
+    },
     "166326827019c9f3af": {
       "type": "section-collection",
       "disabled": true,
@@ -195,7 +261,7 @@
         "enable_zoom_animation": false,
         "heading_size": 100,
         "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}",
-        "text_overlay_on_mobile": true
+        "text_overlay_on_mobile": false
       }
     },
     "27bf8fca-3420-413e-8c59-aee945aab2bf": {
@@ -633,7 +699,7 @@
             "text_width": "narrow",
             "text_position": "right",
             "override_mobile_text_position": true,
-            "mobile_text_position_y": 30,
+            "mobile_text_position_y": 20,
             "mobile_text_position_x": "left",
             "title": "",
             "override_title_font_weight": false,
@@ -671,7 +737,7 @@
         "enable_zoom_animation": false,
         "heading_size": 120,
         "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}",
-        "text_overlay_on_mobile": true
+        "text_overlay_on_mobile": false
       }
     },
     "16632641343e60bbea": {
@@ -770,7 +836,7 @@
         "enable_zoom_animation": false,
         "heading_size": 120,
         "custom_css": "",
-        "text_overlay_on_mobile": true
+        "text_overlay_on_mobile": false
       }
     },
     "testimonials": {
@@ -910,6 +976,7 @@
     }
   },
   "order": [
+    "565687da-3b12-4146-a6ef-a3bab262ce6b",
     "166326827019c9f3af",
     "1655905158580e2c4f",
     "27bf8fca-3420-413e-8c59-aee945aab2bf",

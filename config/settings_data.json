@@ -221,10 +221,27 @@
               "target_device_enabled": false,
               "target_device": "mobile"
             }
+          },
+          "f7a87a46-3dcf-424f-b6ae-a4fafbe190c8": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "text": "<p>black friday buy when 1 get 1 item free<\/p>",
+              "icon_name": "none",
+              "icon_color": "",
+              "icon_width": 15,
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
           }
         },
         "block_order": [
-          "082097bc-5d06-4cba-9deb-84634e4ed8c5"
+          "082097bc-5d06-4cba-9deb-84634e4ed8c5",
+          "f7a87a46-3dcf-424f-b6ae-a4fafbe190c8"
         ],
         "settings": {
           "bg_color": "#7a7a7a",

@@ -79,7 +79,8 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/MG_2926.jpg",
+            "image": "shopify:\/\/shop_images\/MG_2926_copy1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/MG_2926_copy2.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -110,6 +111,7 @@
             "title": "acne & blemishes",
             "heading_font_size_desktop": 42,
             "heading_font_size_mobile": 30,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "acne and blemishes are often caused by clogged or unhealthy pores, over stripping, irritated skin or non-skin-compatible synthetic ingredients. Facewater is the best product for your pores and contains no petroleum derived ingredients, glycols, silicones or similar ingredients. Facewater is 100% plant based and skin compatible. Extensive consumer testing of Facewater shows that 87% of consumers see noticeable skin clearing during the first two weeks of use.",
             "text_font_size_desktop": 20,
