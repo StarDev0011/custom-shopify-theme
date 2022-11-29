@@ -174,7 +174,7 @@
         "1658236006ed6113d2-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_2926.jpg",
+            "image": "shopify:\/\/shop_images\/MG_2926_copy1.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "ACNE & BLEMISHES",
@@ -190,7 +190,7 @@
         "1658236006ed6113d2-1": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_9918.jpg",
+            "image": "shopify:\/\/shop_images\/darkspotsSERUMATO.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "DARK SPOTS",
@@ -286,7 +286,7 @@
         "remove_text_spacing": false,
         "text_width": 100,
         "equalize_height": true,
-        "image_aspect_ratio": 0.9,
+        "image_aspect_ratio": 1,
         "show_images": true,
         "disable_slider": true,
         "remove_margin_bottom": false
@@ -359,7 +359,7 @@
         "remove_text_spacing": false,
         "text_width": 100,
         "equalize_height": true,
-        "image_aspect_ratio": 0.9,
+        "image_aspect_ratio": 1,
         "show_images": true,
         "disable_slider": true,
         "remove_margin_bottom": false
@@ -371,7 +371,7 @@
         "1663163385e91d05be-0": {
           "type": "text_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0515v4.jpg",
+            "image": "shopify:\/\/shop_images\/pore_vanish.jpg",
             "image_link": "",
             "bg_position": "center-center",
             "title": "PORES",
@@ -415,7 +415,7 @@
         "remove_text_spacing": false,
         "text_width": 100,
         "equalize_height": true,
-        "image_aspect_ratio": 0.9,
+        "image_aspect_ratio": 1,
         "show_images": true,
         "disable_slider": true,
         "remove_margin_bottom": false

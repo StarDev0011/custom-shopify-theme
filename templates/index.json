@@ -2,6 +2,7 @@
   "sections": {
     "565687da-3b12-4146-a6ef-a3bab262ce6b": {
       "type": "section-marquee",
+      "disabled": true,
       "blocks": {
         "template--15879764869309__565687da-3b12-4146-a6ef-a3bab262ce6b-166914523491f3e86d-1": {
           "type": "text",
@@ -131,7 +132,7 @@
             "override_title_font_weight": false,
             "override_text_number": 1,
             "override_font_weight": "700",
-            "text": "pore-liberating<span><sup>™<\/sup><\/span> water-form serums, cleansers, toners, moisturizers and more...",
+            "text": "skin clearing water-form serums, cleansers, toners, moisturizers and more...",
             "slide_btn_text": "shop facewater",
             "slide_btn_link": "shopify:\/\/collections\/all",
             "slide_btn_style": "text",
@@ -313,7 +314,7 @@
         "8b467ef2-624c-4d5d-a336-d5c951335093": {
           "type": "heading",
           "settings": {
-            "text": "<p>a patent-pending breakthrough - <\/p><p>FOR VISIBLY CLEARER & HEALTHIER SKIN*<\/p>",
+            "text": "<p>a patent-pending pore liberating<span><sup>™<\/sup><\/span> breakthrough - <\/p><p>FOR VISIBLY CLEARER & HEALTHIER SKIN*<\/p>",
             "desk_size": 42,
             "mobile_size": 24,
             "font_weight": "400",
@@ -498,6 +499,34 @@
         "enable_slider_mobile": false
       }
     },
+    "1658853987e12cad3f": {
+      "type": "section-text",
+      "blocks": {
+        "d56d390e-4748-4e4d-a124-45d378181b58": {
+          "type": "heading",
+          "settings": {
+            "text": "100% PLANT BASED... way beyond clean<span><sup>™️<\/sup><\/span>",
+            "desk_size": 42,
+            "mobile_size": 30,
+            "font_weight": "400",
+            "letter_spacing": -1
+          }
+        }
+      },
+      "block_order": [
+        "d56d390e-4748-4e4d-a124-45d378181b58"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "full",
+        "padding": "standard-padding",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "text-dark",
+        "remove_margin_bottom": true
+      }
+    },
     "b6f5bf47-69a1-4992-8c11-554ebaeaa86d": {
       "type": "section-custom-content",
       "blocks": {
@@ -523,29 +552,32 @@
             "button_style": "text"
           }
         },
-        "523e98e4-07db-46c4-9a20-b27fc6cb0b66": {
-          "type": "video",
+        "0024d40d-18a3-437d-be88-630a99b7d397": {
+          "type": "image",
           "settings": {
             "text_position": "bottom-left",
-            "hero_video_link": "https:\/\/youtu.be\/fzaTx3ziSb8",
-            "video_enable_sound": false,
-            "overlay_opacity": 0,
+            "image": "shopify:\/\/shop_images\/Apple_Trees.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 10,
             "text_color": "text-light",
             "title": "",
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
             "text": "WE GROW BEAUTY",
-            "video_heading_size_desktop": 24,
-            "video_heading_size_mobile": 14,
-            "video_text_size_desktop": 16,
-            "video_text_size_mobile": 12,
-            "button_text": "cosmetic farm",
-            "button_link": "",
+            "text_size_img": 16,
+            "text_size_mobile_img": 12,
+            "button_text": "COSMETIC FARM",
+            "button_link": "shopify:\/\/pages\/cosmetic-farm",
             "button_style": "text"
           }
         }
       },
       "block_order": [
         "template--15879764869309__b6f5bf47-69a1-4992-8c11-554ebaeaa86d-1667572821f3804255-0",
-        "523e98e4-07db-46c4-9a20-b27fc6cb0b66"
+        "0024d40d-18a3-437d-be88-630a99b7d397"
       ],
       "settings": {
         "height": "four-fifty-height",
@@ -557,32 +589,21 @@
         "custom_css": ""
       }
     },
-    "1658853987e12cad3f": {
-      "type": "section-text",
+    "1669671541b0ae7db4": {
+      "type": "apps",
       "blocks": {
-        "d56d390e-4748-4e4d-a124-45d378181b58": {
-          "type": "heading",
+        "21acc0ed-2b98-4556-8d7c-392aca8477cb": {
+          "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
-            "text": "100% PLANT BASED... way beyond clean<span><sup>™️<\/sup><\/span>",
-            "desk_size": 42,
-            "mobile_size": 24,
-            "font_weight": "400",
-            "letter_spacing": -1
+            "publishId": "q4k3ls12355dd"
           }
         }
       },
       "block_order": [
-        "d56d390e-4748-4e4d-a124-45d378181b58"
+        "21acc0ed-2b98-4556-8d7c-392aca8477cb"
       ],
       "settings": {
-        "image_link": "",
-        "text_position": "left",
-        "img_position": "right",
-        "wrapper": "full",
-        "padding": "standard-padding",
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "text-dark",
-        "remove_margin_bottom": false
+        "include_margins": false
       }
     },
     "c7296a52-09c6-42b2-9668-e3af348a1742": {
@@ -861,7 +882,7 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>my pores looked good, the redness has calmed down<\/p>",
-            "customer_name": "Virginia V.",
+            "customer_name": "Tester Virginia V.",
             "subheading": "",
             "override_border": false,
             "border_color": "#000000",
@@ -873,7 +894,7 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>gives me a healthy glow<\/p>",
-            "customer_name": "Britany M.",
+            "customer_name": "Tester Britany M.",
             "subheading": "",
             "override_border": false,
             "border_color": "#000000",
@@ -885,7 +906,7 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>makes me feel like a million bucks<\/p>",
-            "customer_name": "Lisa S.",
+            "customer_name": "Tester Lisa S.",
             "subheading": "",
             "override_border": false,
             "border_color": "#000000",
@@ -897,7 +918,7 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>my face felt immediately refreshed<\/p>",
-            "customer_name": "Gianna S.",
+            "customer_name": "Tester Gianna S.",
             "subheading": "",
             "override_border": false,
             "border_color": "#000000",
@@ -909,7 +930,7 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>my skin looks much better<\/p>",
-            "customer_name": "LuAnne T.",
+            "customer_name": "Tester LuAnne T.",
             "subheading": "",
             "override_border": false,
             "border_color": "#000000",
@@ -921,7 +942,7 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>first time in a long time I havent had any breakouts<\/p>",
-            "customer_name": "Lauren W.",
+            "customer_name": "Tester Lauren W.",
             "subheading": "",
             "override_border": false,
             "border_color": "#000000",
@@ -982,8 +1003,9 @@
     "27bf8fca-3420-413e-8c59-aee945aab2bf",
     "16638774042f6239ae",
     "grid-0",
-    "b6f5bf47-69a1-4992-8c11-554ebaeaa86d",
     "1658853987e12cad3f",
+    "b6f5bf47-69a1-4992-8c11-554ebaeaa86d",
+    "1669671541b0ae7db4",
     "c7296a52-09c6-42b2-9668-e3af348a1742",
     "1663268646cef71652",
     "166005705070be2216",

@@ -27,7 +27,7 @@
           "settings": {
             "info_page": "",
             "info_page_title_override": "",
-            "show_labels": false,
+            "show_labels": true,
             "show_quantity": true,
             "show_payment_button": true,
             "enable_subscriptions_selectors": true
@@ -245,7 +245,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/9962v4_2.jpg",
+            "image": "shopify:\/\/shop_images\/Plant_Veenum_Niac.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,

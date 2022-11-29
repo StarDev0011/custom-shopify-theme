@@ -8,4 +8,4 @@
 # misc
 .env.local
 config.yml
-
+*.mp4
