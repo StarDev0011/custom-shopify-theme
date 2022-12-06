@@ -324,7 +324,7 @@
         "bcb127bc-e350-4645-80ed-eb1872267a73": {
           "type": "text",
           "settings": {
-            "text": "<p>*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater<\/p><p>*92% of consumer testers would purchase Facewater after trying it for 2 weeks or less<\/p>",
+            "text": "<p>*88% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater<\/p><p>*92% of consumer testers would purchase Facewater after trying it for 2 weeks or less<\/p>",
             "text_desk_size": 18,
             "text_mobile_size": 16,
             "font_weight": "400",
@@ -615,7 +615,7 @@
             "image": "shopify:\/\/shop_images\/MG_0732_1_copy.jpg",
             "image_link": "",
             "bg_position": "center-center",
-            "title": "THE POWER OF WATER",
+            "title": "WHY WATER-FORM IS BETTER",
             "text": "<p>Water is called the ‘elixir of life’ because all life forms depend on the miracle of water. It only makes sense that the most effective skincare be water based. Skin moisturization is a measure of water retention because water is moisture. <\/p><p><\/p><p>Facewater is extremely absorbing and skin compatible – and because Facewater is distilled - the purest form of water – it attracts toxins from your skin FREEING your pores and allowing beautiful clear skin to flourish.<\/p>",
             "button_text": "",
             "button_link": "",
@@ -665,8 +665,8 @@
     "1663268646cef71652": {
       "type": "section-collection",
       "settings": {
-        "collection": "bubble-rinse-cleansers",
-        "title": "bubble rinse cleansers",
+        "collection": "serum-waters",
+        "title": "serum waters",
         "description": "",
         "spacing_range": -1,
         "heading_alignment": true,
@@ -973,7 +973,7 @@
       "type": "section-collection",
       "settings": {
         "collection": "toners",
-        "title": "toners",
+        "title": "moisture waters",
         "description": "",
         "spacing_range": -1,
         "heading_alignment": true,
