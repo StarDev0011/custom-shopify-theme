@@ -666,7 +666,7 @@
       "type": "section-collection",
       "settings": {
         "collection": "serum-waters",
-        "title": "serum waters",
+        "title": "serum waters™",
         "description": "",
         "spacing_range": -1,
         "heading_alignment": true,
@@ -766,7 +766,7 @@
       "settings": {
         "collection": "oilwaters",
         "title": "oilwaters",
-        "description": "",
+        "description": "<p><\/p>",
         "spacing_range": -1,
         "heading_alignment": true,
         "show_description": false,
@@ -883,7 +883,7 @@
             "star_rating": 5,
             "text": "<p>my pores looked good, the redness has calmed down<\/p>",
             "customer_name": "Tester Virginia V.",
-            "subheading": "",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -895,7 +895,7 @@
             "star_rating": 5,
             "text": "<p>gives me a healthy glow<\/p>",
             "customer_name": "Tester Britany M.",
-            "subheading": "",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -907,7 +907,7 @@
             "star_rating": 5,
             "text": "<p>makes me feel like a million bucks<\/p>",
             "customer_name": "Tester Lisa S.",
-            "subheading": "",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -919,7 +919,7 @@
             "star_rating": 5,
             "text": "<p>my face felt immediately refreshed<\/p>",
             "customer_name": "Tester Gianna S.",
-            "subheading": "",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -931,7 +931,7 @@
             "star_rating": 5,
             "text": "<p>my skin looks much better<\/p>",
             "customer_name": "Tester LuAnne T.",
-            "subheading": "",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -943,7 +943,7 @@
             "star_rating": 5,
             "text": "<p>first time in a long time I havent had any breakouts<\/p>",
             "customer_name": "Tester Lauren W.",
-            "subheading": "",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -974,7 +974,7 @@
       "settings": {
         "collection": "toners",
         "title": "moisture waters",
-        "description": "",
+        "description": "<p><\/p>",
         "spacing_range": -1,
         "heading_alignment": true,
         "show_description": false,
@@ -994,6 +994,61 @@
         "color_4_bg": "",
         "color_5_bg": ""
       }
+    },
+    "a8ba10de-7b75-4c3a-a951-c33e718d4d69": {
+      "type": "section-columns",
+      "disabled": true,
+      "blocks": {
+        "template--15879764869309__a8ba10de-7b75-4c3a-a951-c33e718d4d69-1670426111f03c6aca-2": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "Add a title or tagline",
+            "text": "<p>Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879764869309__a8ba10de-7b75-4c3a-a951-c33e718d4d69-1670426111f03c6aca-3": {
+          "type": "text_block",
+          "settings": {
+            "image_link": "",
+            "bg_position": "center-center",
+            "title": "Add a title or tagline",
+            "text": "<p>Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__a8ba10de-7b75-4c3a-a951-c33e718d4d69-1670426111f03c6aca-2",
+        "template--15879764869309__a8ba10de-7b75-4c3a-a951-c33e718d4d69-1670426111f03c6aca-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 2,
+        "heading_font_size": 20,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 100,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.5,
+        "show_images": true,
+        "disable_slider": false,
+        "remove_margin_bottom": false
+      }
     }
   },
   "order": [
@@ -1012,6 +1067,7 @@
     "16632641343e60bbea",
     "1660056626d521ddbc",
     "testimonials",
-    "166326884264b65728"
+    "166326884264b65728",
+    "a8ba10de-7b75-4c3a-a951-c33e718d4d69"
   ]
 }
