@@ -22,7 +22,6 @@ function splide_slider () {
 }
 
 jQuery(document).ready(function($) {
-    console.log("Multi Brand")
     splide_slider();
     $(window).resize(function(){
         splide_slider();
@@ -99,5 +98,8 @@ jQuery(document).ready(function($) {
             }
         });
     }, 500);
+
+    console.log($(".popup__form form").attr("action"))
+    $(".popup__form form").attr("action","https://manage.kmail-lists.com/subscriptions/subscribe?a=VbAakZ&g=VgNEJK")
 })
 

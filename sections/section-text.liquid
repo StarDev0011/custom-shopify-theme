@@ -42,6 +42,7 @@
           {%- liquid
             assign text = block.settings.text
             assign subheading_size = block.settings.subheading_size
+            assign subheading_mobile_size = block.settings.subheading_mobile_size
             assign text_size = block.settings.size | times: 0.01
             assign mobile_size = block.settings.mobile_size
             assign heading_size = block.settings.desk_size
@@ -63,6 +64,11 @@
                 @media screen and (min-width: 1024px) {
                   #Text--{{ unique }} .text__subheading {
                     font-size: {{subheading_size}}px; 
+                  }
+                }
+                @media screen and (max-width: 465px) {
+                  #Text--{{ unique }} .text__subheading {
+                    font-size: {{subheading_mobile_size}}px; 
                   }
                 }
               {%- endstyle -%}
@@ -423,10 +429,20 @@
         {
           "type": "range",
           "id": "subheading_size",
-          "label": "Size",
+          "label": "Desktop Size",
           "min": 20,
           "max": 40,
           "default": 26,
+          "step": 2,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "subheading_mobile_size",
+          "label": "Mobile Size",
+          "min": 14,
+          "max": 30,
+          "default": 20,
           "step": 2,
           "unit": "px"
         },

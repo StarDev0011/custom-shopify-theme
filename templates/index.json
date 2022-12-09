@@ -666,7 +666,7 @@
       "type": "section-collection",
       "settings": {
         "collection": "serum-waters",
-        "title": "serum waters™",
+        "title": "serum waters<span><sup>™️<\/sup><\/span>",
         "description": "",
         "spacing_range": -1,
         "heading_alignment": true,

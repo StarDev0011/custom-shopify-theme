@@ -43,13 +43,13 @@
             "accordion_text_2": "<p>{{ product.metafields.my_fields.how_to_use | metafield_tag }}<\/p>",
             "accordion_page_2": "",
             "accordion_heading_3": "",
-            "accordion_text_3": "",
+            "accordion_text_3": "<p><\/p>",
             "accordion_page_3": "",
             "accordion_heading_4": "",
-            "accordion_text_4": "",
+            "accordion_text_4": "<p><\/p>",
             "accordion_page_4": "",
             "accordion_heading_5": "",
-            "accordion_text_5": "",
+            "accordion_text_5": "<p><\/p>",
             "accordion_page_5": ""
           }
         },
@@ -280,12 +280,11 @@
     },
     "1668012544949ba79a": {
       "type": "apps",
-      "disabled": true,
       "blocks": {
         "8ada5969-a04f-4fec-b0ee-7537e0a20313": {
           "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
-            "publishId": "bb1frmqrctmwf"
+            "publishId": "ryl74f7dwwfgs"
           }
         }
       },
