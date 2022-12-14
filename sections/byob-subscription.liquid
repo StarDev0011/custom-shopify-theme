@@ -394,6 +394,8 @@ input[type="radio"] {
         let link = 'https://' + window.location.hostname + (byob_subscription_to_checkout? cart_url + '/checkout' : cart_url)
         link += `/?ref=BYOB${bundleID}&attributes[where-from]=BYOB-${byob_handle}&utm_source=BYOB` // order tracking
         window.location.href = link
+        if (discount.code !== '')
+          link += `&discount=${discount.code}`
       },
       aggregateByID(data) {  // aggregate variants quantity by id, return dict
         let dictionary = data.reduce((dic, value)=> {

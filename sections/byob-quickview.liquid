@@ -85,7 +85,7 @@
   grid-template-columns: 75px 18% 45%; 
 }
 #btn-quickview-add {
-  border: solid 1px #000;
+  border: none;
   font-weight: 700;
   font-size: 12px;
   box-shadow: none;
@@ -218,11 +218,11 @@
                   <div class="byob-quickview-title">[[ product.title ]]</div>
                   <!-- <div class="byob-quickview-price">[[ currencySymbol ]][[ price ]]</div>
                   <div class="byob-quickview-price">[[ priceWithCurrency(price) ]]</div> -->
-                  <!-- <div class="byob-quickview-price">[[ displayPrice(price) ]]</div> -->
+                  <div class="byob-quickview-price">[[ displayPrice(price) ]]</div>
 
                   <div class="byob-product-options" id="byob-product-options1">
                   <!-- product options -->
-                    <template v-if="!product.has_only_default_variant">
+                    <template v-if="product.options[0].name !== 'Title' && product.variants[0].option1 !== 'Default Title'">
                       <div class="byob-product-option" v-for="(option, index) in product.options">
                         <label class="byob-product-option-label">
                             [[ option.name ]]:
@@ -260,7 +260,7 @@
 
                 <div class="byob-product-options" id="byob-product-options2">
                   <!-- product options -->
-                  <template v-if="!product.has_only_default_variant">
+                  <template v-if="product.options[0].name !== 'Title' && product.variants[0].option1 !== 'Default Title'">
                     <div class="byob-product-option" v-for="(option, index) in product.options">
                       <label class="byob-product-option-label">
                           [[ option.name ]]:
