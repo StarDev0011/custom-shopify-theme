@@ -27,10 +27,16 @@
           "settings": {
             "info_page": "",
             "info_page_title_override": "",
-            "show_labels": false,
+            "show_labels": true,
             "show_quantity": true,
             "show_payment_button": true,
             "enable_subscriptions_selectors": true
+          }
+        },
+        "share-button": {
+          "type": "share-button",
+          "settings": {
+            "text": "Share"
           }
         },
         "product_accordions": {
@@ -52,12 +58,6 @@
             "accordion_text_5": "",
             "accordion_page_5": ""
           }
-        },
-        "share-button": {
-          "type": "share-button",
-          "settings": {
-            "text": "Share"
-          }
         }
       },
       "block_order": [
@@ -65,8 +65,8 @@
         "cdea67ff-1bba-4925-a035-5ab949a46afc",
         "description",
         "1630242e-abee-42f7-b45e-9410804cec2e",
-        "product_accordions",
-        "share-button"
+        "share-button",
+        "product_accordions"
       ],
       "settings": {
         "wrapper": "full",
@@ -146,7 +146,6 @@
     },
     "1667941220fca5c0a3": {
       "type": "apps",
-      "disabled": true,
       "blocks": {
         "a8340a73-9c58-49ed-8fd3-45ac99bb373b": {
           "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",

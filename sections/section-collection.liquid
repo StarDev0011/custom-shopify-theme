@@ -86,7 +86,7 @@
   {%- if heading != blank and collection.handle != 'all' -%}
     <div class="featured-collection__title">
       <div class="{% if section.settings.heading_alignment %}wrapper wrapper--narrow{% else %}wrapper wrapper--full{% endif %}" {% if section.settings.heading_alignment %}style="margin:0;"{% endif %}>
-        <h2 class="section__heading" {% if section.settings.heading_alignment or section.settings.show_description %}style="{{ inline_styles }}"{% endif %}><div style="letter-spacing: {{spacing_range}}px">{{ heading | escape }}</div></h2>
+        <h2 class="section__heading" {% if section.settings.heading_alignment or section.settings.show_description %}style="{{ inline_styles }}"{% endif %}><div style="letter-spacing: {{spacing_range}}px">{{ heading }}</div></h2>
         <div class="section_desc" style="{{ inline_styles }}"> {{description }}</div>
         {%- if section.settings.show_collection_button -%}
         <div{% if settings.animations_enabled %} data-aos="fade-up" data-aos-delay="{{ columns | plus: 1 | times: 150 }}" data-aos-anchor="#FeaturedCollection--{{ section.id }}"{% endif %} style="{{ inline_styles }}">
@@ -415,10 +415,10 @@
       "label": "Collection"
     },
     {
-      "type": "text",
+      "type": "textarea",
       "id": "title",
       "label": "Heading",
-      "default": "Best Sellers"
+      "default": "<p>Best Sellers</p>"
     },
     {
       "type": "richtext",

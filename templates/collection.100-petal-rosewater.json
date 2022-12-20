@@ -21,6 +21,7 @@
           "settings": {
             "text_position": "middle-center",
             "image": "shopify:\/\/shop_images\/MG_4317-2_1_6be767fc-443b-4bd8-bf97-3321ceb98171.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/MG_4724_d2c9514a-7cde-47cf-bec3-b4cd0a1c62f3.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -72,10 +73,10 @@
         "cfed3373-de6c-45e8-a47f-f0b7cb6d9481"
       ],
       "settings": {
-        "height": "default-height",
+        "height": "four-fifty-height",
         "add_spacing": true,
         "in_collection": true,
-        "mobile_height": 250,
+        "mobile_height": 350,
         "wrapper": "full",
         "bg_color": "#fafafa",
         "custom_css": ""

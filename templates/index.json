@@ -1,5 +1,72 @@
 {
   "sections": {
+    "565687da-3b12-4146-a6ef-a3bab262ce6b": {
+      "type": "section-marquee",
+      "disabled": true,
+      "blocks": {
+        "template--15879764869309__565687da-3b12-4146-a6ef-a3bab262ce6b-166914523491f3e86d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>CYBER MONDAY<\/p>",
+            "icon_name": "none",
+            "icon_color": "",
+            "icon_width": 20,
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "153c7600-3838-453f-be7a-54244fd11c26": {
+          "type": "text",
+          "settings": {
+            "text": "<p>BUY 1 FULL SIZE ITEM & GET 1 FULL SIZE FOR FREE<\/p>",
+            "icon_name": "none",
+            "icon_color": "",
+            "icon_width": 20,
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "template--15879764869309__565687da-3b12-4146-a6ef-a3bab262ce6b-166914523491f3e86d-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>use code BOGO4U at checkout - limit 1 use per order<\/p>",
+            "icon_name": "none",
+            "icon_color": "",
+            "icon_width": 20,
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "527b3959-774a-4995-8794-652b6afb459c": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>limit 1 use per order<\/p>",
+            "icon_name": "none",
+            "icon_color": "",
+            "icon_width": 20,
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__565687da-3b12-4146-a6ef-a3bab262ce6b-166914523491f3e86d-1",
+        "153c7600-3838-453f-be7a-54244fd11c26",
+        "template--15879764869309__565687da-3b12-4146-a6ef-a3bab262ce6b-166914523491f3e86d-2",
+        "527b3959-774a-4995-8794-652b6afb459c"
+      ],
+      "settings": {
+        "bg_color": "#000000",
+        "color": "#ffffff",
+        "layout": "marquee",
+        "padding": 20,
+        "slider_speed": 7,
+        "marquee_speed": 100,
+        "text_size": 150,
+        "message_spacing": 25
+      }
+    },
     "166326827019c9f3af": {
       "type": "section-collection",
       "disabled": true,
@@ -65,7 +132,7 @@
             "override_title_font_weight": false,
             "override_text_number": 1,
             "override_font_weight": "700",
-            "text": "pore-liberating<span><sup>™<\/sup><\/span> water-form serums, cleansers, toners, moisturizers and more...",
+            "text": "100% plant based SKIN CLEARING water-form serums, cleansers, toners, moisturizers and more...",
             "slide_btn_text": "shop facewater",
             "slide_btn_link": "shopify:\/\/collections\/all",
             "slide_btn_style": "text",
@@ -195,7 +262,7 @@
         "enable_zoom_animation": false,
         "heading_size": 100,
         "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}",
-        "text_overlay_on_mobile": true
+        "text_overlay_on_mobile": false
       }
     },
     "27bf8fca-3420-413e-8c59-aee945aab2bf": {
@@ -204,7 +271,7 @@
         "template--15879764869309__27bf8fca-3420-413e-8c59-aee945aab2bf-166784512252d52759-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_0113_2.jpg",
+            "image": "shopify:\/\/shop_images\/darkspotsSERUMATO.jpg",
             "bg_position": "center-center",
             "overlay_opacity": 0,
             "text_position": "top-left",
@@ -230,7 +297,7 @@
       ],
       "settings": {
         "height": "auto",
-        "min_mobile_height": 300,
+        "min_mobile_height": 350,
         "wrapper": "full",
         "add_spacing": true,
         "show_only_mobile": true,
@@ -247,7 +314,7 @@
         "8b467ef2-624c-4d5d-a336-d5c951335093": {
           "type": "heading",
           "settings": {
-            "text": "<p>a patent-pending breakthrough - <\/p><p>FOR VISIBLY CLEARER & HEALTHIER SKIN*<\/p>",
+            "text": "<p>a patent-pending pore liberating<span><sup>™<\/sup><\/span> breakthrough - <\/p><p>FOR VISIBLY CLEARER & HEALTHIER SKIN*<\/p>",
             "desk_size": 42,
             "mobile_size": 24,
             "font_weight": "400",
@@ -257,7 +324,7 @@
         "bcb127bc-e350-4645-80ed-eb1872267a73": {
           "type": "text",
           "settings": {
-            "text": "<p>*87% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater<\/p><p>*92% of consumer testers would purchase Facewater after trying it for 2 weeks or less<\/p>",
+            "text": "<p>*88% of consumer testers report noticeable skin clearing within 2 weeks of using Facewater<\/p><p>*92% of consumer testers would purchase Facewater after trying it for 2 weeks or less<\/p>",
             "text_desk_size": 18,
             "text_mobile_size": 16,
             "font_weight": "400",
@@ -270,7 +337,6 @@
         "bcb127bc-e350-4645-80ed-eb1872267a73"
       ],
       "settings": {
-        "mobile_image": "shopify:\/\/shop_images\/MG_5352_2_c34af234-e733-4541-a487-e0df97766f90.jpg",
         "image_link": "",
         "text_position": "left",
         "img_position": "right",
@@ -281,8 +347,138 @@
         "remove_margin_bottom": true
       }
     },
+    "a8ba10de-7b75-4c3a-a951-c33e718d4d69": {
+      "type": "section-columns",
+      "blocks": {
+        "template--15879764869309__a8ba10de-7b75-4c3a-a951-c33e718d4d69-1670426111f03c6aca-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_5644.jpg",
+            "image_link": "shopify:\/\/collections\/serum-waters",
+            "bg_position": "center-center",
+            "title": "SERUM WATERS",
+            "text": "",
+            "button_text": "SHOP ALL",
+            "button_link": "shopify:\/\/collections\/serum-waters",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879764869309__a8ba10de-7b75-4c3a-a951-c33e718d4d69-1670426111f03c6aca-3": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_9567_6226ed9f-24e7-46c6-b5da-0a42b786416b.jpg",
+            "image_link": "shopify:\/\/collections\/oilwaters",
+            "bg_position": "center-center",
+            "title": "OILWATERS",
+            "text": "",
+            "button_text": "SHOP ALL",
+            "button_link": "shopify:\/\/collections\/oilwaters",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__a8ba10de-7b75-4c3a-a951-c33e718d4d69-1670426111f03c6aca-2",
+        "template--15879764869309__a8ba10de-7b75-4c3a-a951-c33e718d4d69-1670426111f03c6aca-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 2,
+        "heading_font_size": 24,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 100,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.9,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": false
+      }
+    },
+    "166005705070be2216": {
+      "type": "section-slideshow",
+      "blocks": {
+        "1660057049116dc22f-0": {
+          "type": "image",
+          "settings": {
+            "wrapper": "full",
+            "slide_bg_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/MG_9930-3.jpg",
+            "image_vertical": 100,
+            "image_horizontal": 50,
+            "image_contain": true,
+            "image_mobile": "shopify:\/\/shop_images\/MG_9851.jpg",
+            "mobile_image_vertical": 100,
+            "mobile_image_horizontal": 50,
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "heading_font_size": 42,
+            "heading_mobile_font_size": 22,
+            "heading_font_weight": "400",
+            "heading_letter_spacing": 0,
+            "heading_color": "#ffffff",
+            "mobile_heading_color": "#000000",
+            "text_font_size": 20,
+            "text_mobile_font_size": 20,
+            "text_font_weight": "400",
+            "text_letter_spacing": 0,
+            "text_color": "#ffffff",
+            "mobile_text_color": "#000000",
+            "text_width": "narrow",
+            "text_position": "right",
+            "override_mobile_text_position": true,
+            "mobile_text_position_y": 20,
+            "mobile_text_position_x": "left",
+            "title": "",
+            "override_title_font_weight": false,
+            "override_text_number": 1,
+            "override_font_weight": "200",
+            "text": "",
+            "slide_btn_text": "Shop PLANT VENOM",
+            "slide_btn_link": "shopify:\/\/collections\/plant-venom",
+            "slide_btn_style": "text",
+            "button_color": "#ffffff",
+            "mobile_button_color": "#000000",
+            "slide_btn_text_2": "",
+            "slide_btn_link_2": "",
+            "slide_btn_style_2": "secondary",
+            "video_btn_text": "",
+            "video_btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1660057049116dc22f-0"
+      ],
+      "settings": {
+        "wrapper": "wide",
+        "slide_height": "original-height",
+        "show_nav_dots": false,
+        "show_nav_arrows": false,
+        "show_arrow_down": false,
+        "dot_color": "",
+        "next_prev_color": "",
+        "down_color": "",
+        "autoplay": false,
+        "duration": 4,
+        "transition": "slide",
+        "enable_zoom_animation": false,
+        "heading_size": 120,
+        "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}",
+        "text_overlay_on_mobile": false
+      }
+    },
     "grid-0": {
       "type": "section-grid",
+      "disabled": true,
       "blocks": {
         "15fe64b9-def1-4d08-b609-c36e6c73e920": {
           "type": "text",
@@ -432,6 +628,35 @@
         "enable_slider_mobile": false
       }
     },
+    "1658853987e12cad3f": {
+      "type": "section-text",
+      "disabled": true,
+      "blocks": {
+        "d56d390e-4748-4e4d-a124-45d378181b58": {
+          "type": "heading",
+          "settings": {
+            "text": "100% PLANT BASED... way beyond clean<span><sup>™️<\/sup><\/span>",
+            "desk_size": 42,
+            "mobile_size": 30,
+            "font_weight": "400",
+            "letter_spacing": -1
+          }
+        }
+      },
+      "block_order": [
+        "d56d390e-4748-4e4d-a124-45d378181b58"
+      ],
+      "settings": {
+        "image_link": "",
+        "text_position": "left",
+        "img_position": "right",
+        "wrapper": "full",
+        "padding": "standard-padding",
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "text-dark",
+        "remove_margin_bottom": true
+      }
+    },
     "b6f5bf47-69a1-4992-8c11-554ebaeaa86d": {
       "type": "section-custom-content",
       "blocks": {
@@ -457,29 +682,32 @@
             "button_style": "text"
           }
         },
-        "523e98e4-07db-46c4-9a20-b27fc6cb0b66": {
-          "type": "video",
+        "0024d40d-18a3-437d-be88-630a99b7d397": {
+          "type": "image",
           "settings": {
             "text_position": "bottom-left",
-            "hero_video_link": "https:\/\/youtu.be\/fzaTx3ziSb8",
-            "video_enable_sound": false,
-            "overlay_opacity": 0,
+            "image": "shopify:\/\/shop_images\/Apple_Trees.jpg",
+            "image_position": "center-center",
+            "change_tablet_position": false,
+            "tablet_background_y_position": 50,
+            "tablet_background_x_position": 50,
+            "overlay_opacity": 10,
             "text_color": "text-light",
             "title": "",
+            "heading_size_img": 24,
+            "heading_size_mobile_img": 14,
             "text": "WE GROW BEAUTY",
-            "video_heading_size_desktop": 24,
-            "video_heading_size_mobile": 14,
-            "video_text_size_desktop": 16,
-            "video_text_size_mobile": 12,
-            "button_text": "cosmetic farm",
-            "button_link": "",
+            "text_size_img": 16,
+            "text_size_mobile_img": 12,
+            "button_text": "COSMETIC FARM",
+            "button_link": "shopify:\/\/pages\/cosmetic-farm",
             "button_style": "text"
           }
         }
       },
       "block_order": [
         "template--15879764869309__b6f5bf47-69a1-4992-8c11-554ebaeaa86d-1667572821f3804255-0",
-        "523e98e4-07db-46c4-9a20-b27fc6cb0b66"
+        "0024d40d-18a3-437d-be88-630a99b7d397"
       ],
       "settings": {
         "height": "four-fifty-height",
@@ -491,32 +719,104 @@
         "custom_css": ""
       }
     },
-    "1658853987e12cad3f": {
-      "type": "section-text",
+    "1669671541b0ae7db4": {
+      "type": "apps",
       "blocks": {
-        "d56d390e-4748-4e4d-a124-45d378181b58": {
-          "type": "heading",
+        "21acc0ed-2b98-4556-8d7c-392aca8477cb": {
+          "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
-            "text": "100% PLANT BASED... way beyond clean<span><sup>™️<\/sup><\/span>",
-            "desk_size": 42,
-            "mobile_size": 24,
-            "font_weight": "400",
-            "letter_spacing": -1
+            "publishId": "q4k3ls12355dd"
           }
         }
       },
       "block_order": [
-        "d56d390e-4748-4e4d-a124-45d378181b58"
+        "21acc0ed-2b98-4556-8d7c-392aca8477cb"
       ],
       "settings": {
-        "image_link": "",
-        "text_position": "left",
-        "img_position": "right",
+        "include_margins": false
+      }
+    },
+    "5823ce44-392a-47f7-aaab-d25025fe69af": {
+      "type": "section-columns",
+      "blocks": {
+        "template--15879764869309__5823ce44-392a-47f7-aaab-d25025fe69af-1670613768c15e59e8-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_2315_copy1.jpg",
+            "image_link": "shopify:\/\/collections\/bubble-rinse-cleansers",
+            "bg_position": "center-center",
+            "title": "BUBBLE RINSE CLEANSERS",
+            "text": "",
+            "button_text": "SHOP ALL",
+            "button_link": "shopify:\/\/collections\/bubble-rinse-cleansers",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879764869309__5823ce44-392a-47f7-aaab-d25025fe69af-1670613768c15e59e8-3": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_0113_2_fb8826eb-ab9c-47ab-9111-697db71b0ab0.jpg",
+            "image_link": "shopify:\/\/collections\/make-up-removers",
+            "bg_position": "center-center",
+            "title": "MAKEUP REMOVERS",
+            "text": "",
+            "button_text": "SHOP ALL",
+            "button_link": "shopify:\/\/collections\/make-up-removers",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__5823ce44-392a-47f7-aaab-d25025fe69af-1670613768c15e59e8-2",
+        "template--15879764869309__5823ce44-392a-47f7-aaab-d25025fe69af-1670613768c15e59e8-3"
+      ],
+      "settings": {
+        "title": "",
         "wrapper": "full",
-        "padding": "standard-padding",
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "text-dark",
+        "columns": 2,
+        "heading_font_size": 24,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 100,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.9,
+        "show_images": true,
+        "disable_slider": true,
         "remove_margin_bottom": false
+      }
+    },
+    "166326884264b65728": {
+      "type": "section-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "new-arrivals",
+        "title": "NEW ARRIVALS",
+        "description": "",
+        "spacing_range": -1,
+        "heading_alignment": true,
+        "show_description": false,
+        "products_rows": 2,
+        "products_layout": "carousel",
+        "show_collection_button": false,
+        "show_collection": "",
+        "button_style": "text",
+        "bg_color": "",
+        "enable_slider_mobile": true,
+        "remove_top_padding": false,
+        "remove_margin_bottom": false,
+        "enable_color_change": false,
+        "color_1_bg": "",
+        "color_2_bg": "",
+        "color_3_bg": "",
+        "color_4_bg": "",
+        "color_5_bg": ""
       }
     },
     "c7296a52-09c6-42b2-9668-e3af348a1742": {
@@ -526,9 +826,9 @@
           "type": "text_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/MG_0732_1_copy.jpg",
-            "image_link": "",
+            "image_link": "shopify:\/\/pages\/what-is-facewater",
             "bg_position": "center-center",
-            "title": "THE POWER OF WATER",
+            "title": "WHY WATER-FORM IS BETTER",
             "text": "<p>Water is called the ‘elixir of life’ because all life forms depend on the miracle of water. It only makes sense that the most effective skincare be water based. Skin moisturization is a measure of water retention because water is moisture. <\/p><p><\/p><p>Facewater is extremely absorbing and skin compatible – and because Facewater is distilled - the purest form of water – it attracts toxins from your skin FREEING your pores and allowing beautiful clear skin to flourish.<\/p>",
             "button_text": "",
             "button_link": "",
@@ -542,7 +842,7 @@
           "type": "text_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/1475.jpg",
-            "image_link": "",
+            "image_link": "shopify:\/\/pages\/what-is-facewater",
             "bg_position": "center-center",
             "title": "PATENT-PENDING DISTILLATION PROCESS",
             "text": "<p>our patent-pending distillation method captures whole, undamaged plant actives, resulting in a hydrosol – a water saturated with plant actives at peak potency and effectiveness.<\/p>",
@@ -577,9 +877,10 @@
     },
     "1663268646cef71652": {
       "type": "section-collection",
+      "disabled": true,
       "settings": {
-        "collection": "bubble-rinse-cleansers",
-        "title": "bubble rinse cleansers",
+        "collection": "serum-waters",
+        "title": "serum waters<span><sup>™️<\/sup><\/span>",
         "description": "",
         "spacing_range": -1,
         "heading_alignment": true,
@@ -601,85 +902,13 @@
         "color_5_bg": ""
       }
     },
-    "166005705070be2216": {
-      "type": "section-slideshow",
-      "blocks": {
-        "1660057049116dc22f-0": {
-          "type": "image",
-          "settings": {
-            "wrapper": "full",
-            "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/MG_9930-3.jpg",
-            "image_vertical": 100,
-            "image_horizontal": 50,
-            "image_contain": true,
-            "image_mobile": "shopify:\/\/shop_images\/MG_9851.jpg",
-            "mobile_image_vertical": 100,
-            "mobile_image_horizontal": 50,
-            "bg_position": "center-center",
-            "overlay_opacity": 0,
-            "heading_font_size": 42,
-            "heading_mobile_font_size": 22,
-            "heading_font_weight": "400",
-            "heading_letter_spacing": 0,
-            "heading_color": "#ffffff",
-            "mobile_heading_color": "#000000",
-            "text_font_size": 20,
-            "text_mobile_font_size": 20,
-            "text_font_weight": "400",
-            "text_letter_spacing": 0,
-            "text_color": "#ffffff",
-            "mobile_text_color": "#000000",
-            "text_width": "narrow",
-            "text_position": "right",
-            "override_mobile_text_position": true,
-            "mobile_text_position_y": 30,
-            "mobile_text_position_x": "left",
-            "title": "",
-            "override_title_font_weight": false,
-            "override_text_number": 1,
-            "override_font_weight": "200",
-            "text": "",
-            "slide_btn_text": "Shop PLANT VENOM",
-            "slide_btn_link": "shopify:\/\/collections\/plant-venom",
-            "slide_btn_style": "text",
-            "button_color": "#ffffff",
-            "mobile_button_color": "#000000",
-            "slide_btn_text_2": "",
-            "slide_btn_link_2": "",
-            "slide_btn_style_2": "secondary",
-            "video_btn_text": "",
-            "video_btn_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1660057049116dc22f-0"
-      ],
-      "settings": {
-        "wrapper": "wide",
-        "slide_height": "original-height",
-        "show_nav_dots": false,
-        "show_nav_arrows": false,
-        "show_arrow_down": false,
-        "dot_color": "",
-        "next_prev_color": "",
-        "down_color": "",
-        "autoplay": false,
-        "duration": 4,
-        "transition": "slide",
-        "enable_zoom_animation": false,
-        "heading_size": 120,
-        "custom_css": ".slide__text__wrapper {\ndisplay: flex;\nflex-flow: column;\n}",
-        "text_overlay_on_mobile": true
-      }
-    },
     "16632641343e60bbea": {
       "type": "section-collection",
+      "disabled": true,
       "settings": {
         "collection": "oilwaters",
         "title": "oilwaters",
-        "description": "",
+        "description": "<p><\/p>",
         "spacing_range": -1,
         "heading_alignment": true,
         "show_description": false,
@@ -702,6 +931,7 @@
     },
     "1660056626d521ddbc": {
       "type": "section-slideshow",
+      "disabled": true,
       "blocks": {
         "16600566253ed9345b-0": {
           "type": "image",
@@ -770,7 +1000,63 @@
         "enable_zoom_animation": false,
         "heading_size": 120,
         "custom_css": "",
-        "text_overlay_on_mobile": true
+        "text_overlay_on_mobile": false
+      }
+    },
+    "e44a21c9-ba39-4339-a80c-738a49282b9a": {
+      "type": "section-columns",
+      "blocks": {
+        "template--15879764869309__e44a21c9-ba39-4339-a80c-738a49282b9a-1670613768c15e59e8-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_9577_3.jpg",
+            "image_link": "shopify:\/\/collections\/witch-hazels",
+            "bg_position": "center-center",
+            "title": "WITCH HAZELS",
+            "text": "",
+            "button_text": "SHOP ALL",
+            "button_link": "shopify:\/\/collections\/witch-hazels",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879764869309__e44a21c9-ba39-4339-a80c-738a49282b9a-1670613768c15e59e8-3": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_0425_1_3b6e97d8-7abc-4a64-ab4d-45bdc4845507.jpg",
+            "image_link": "shopify:\/\/collections\/moisture-waters",
+            "bg_position": "center-center",
+            "title": "MOISTURE WATERS",
+            "text": "",
+            "button_text": "SHOP ALL",
+            "button_link": "shopify:\/\/collections\/moisture-waters",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__e44a21c9-ba39-4339-a80c-738a49282b9a-1670613768c15e59e8-2",
+        "template--15879764869309__e44a21c9-ba39-4339-a80c-738a49282b9a-1670613768c15e59e8-3"
+      ],
+      "settings": {
+        "title": "",
+        "wrapper": "full",
+        "columns": 2,
+        "heading_font_size": 24,
+        "bg_color": "",
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 100,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.9,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": false
       }
     },
     "testimonials": {
@@ -795,8 +1081,8 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>my pores looked good, the redness has calmed down<\/p>",
-            "customer_name": "Virginia V.",
-            "subheading": "",
+            "customer_name": "Tester Virginia V.",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -807,8 +1093,8 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>gives me a healthy glow<\/p>",
-            "customer_name": "Britany M.",
-            "subheading": "",
+            "customer_name": "Tester Britany M.",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -819,8 +1105,8 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>makes me feel like a million bucks<\/p>",
-            "customer_name": "Lisa S.",
-            "subheading": "",
+            "customer_name": "Tester Lisa S.",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -831,8 +1117,8 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>my face felt immediately refreshed<\/p>",
-            "customer_name": "Gianna S.",
-            "subheading": "",
+            "customer_name": "Tester Gianna S.",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -843,8 +1129,8 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>my skin looks much better<\/p>",
-            "customer_name": "LuAnne T.",
-            "subheading": "",
+            "customer_name": "Tester LuAnne T.",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -855,8 +1141,8 @@
           "settings": {
             "star_rating": 5,
             "text": "<p>first time in a long time I havent had any breakouts<\/p>",
-            "customer_name": "Lauren W.",
-            "subheading": "",
+            "customer_name": "Tester Lauren W.",
+            "subheading": "<p><\/p>",
             "override_border": false,
             "border_color": "#000000",
             "border_width": 2
@@ -882,47 +1168,83 @@
         "border_width": 2
       }
     },
-    "166326884264b65728": {
-      "type": "section-collection",
+    "c51e25e5-f67a-4692-b2f3-c354b6186cc5": {
+      "type": "section-columns",
+      "blocks": {
+        "template--15879764869309__c51e25e5-f67a-4692-b2f3-c354b6186cc5-1670613768c15e59e8-2": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_3289_copy1.jpg",
+            "image_link": "shopify:\/\/collections\/micellar-waters",
+            "bg_position": "center-center",
+            "title": "MICELLAR WATERS",
+            "text": "",
+            "button_text": "SHOP ALL",
+            "button_link": "shopify:\/\/collections\/micellar-waters",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "template--15879764869309__c51e25e5-f67a-4692-b2f3-c354b6186cc5-1670613768c15e59e8-3": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_5797_7_84273d33-607b-4cf3-9f2f-a26bad6e41eb.jpg",
+            "image_link": "shopify:\/\/collections\/toners",
+            "bg_position": "center-center",
+            "title": "TONERS",
+            "text": "",
+            "button_text": "SHOP ALL",
+            "button_link": "shopify:\/\/collections\/toners",
+            "button_style": "text",
+            "show_video": false,
+            "play_btn_color": "#000000",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "template--15879764869309__c51e25e5-f67a-4692-b2f3-c354b6186cc5-1670613768c15e59e8-2",
+        "template--15879764869309__c51e25e5-f67a-4692-b2f3-c354b6186cc5-1670613768c15e59e8-3"
+      ],
       "settings": {
-        "collection": "toners",
-        "title": "toners",
-        "description": "",
-        "spacing_range": -1,
-        "heading_alignment": true,
-        "show_description": false,
-        "products_rows": 2,
-        "products_layout": "carousel",
-        "show_collection_button": false,
-        "show_collection": "",
-        "button_style": "text",
+        "title": "",
+        "wrapper": "full",
+        "columns": 2,
+        "heading_font_size": 24,
         "bg_color": "",
-        "enable_slider_mobile": true,
-        "remove_top_padding": false,
-        "remove_margin_bottom": false,
-        "enable_color_change": false,
-        "color_1_bg": "",
-        "color_2_bg": "",
-        "color_3_bg": "",
-        "color_4_bg": "",
-        "color_5_bg": ""
+        "align_text": "text-left",
+        "remove_text_spacing": false,
+        "text_width": 100,
+        "equalize_height": true,
+        "image_aspect_ratio": 0.9,
+        "show_images": true,
+        "disable_slider": true,
+        "remove_margin_bottom": false
       }
     }
   },
   "order": [
+    "565687da-3b12-4146-a6ef-a3bab262ce6b",
     "166326827019c9f3af",
     "1655905158580e2c4f",
     "27bf8fca-3420-413e-8c59-aee945aab2bf",
     "16638774042f6239ae",
+    "a8ba10de-7b75-4c3a-a951-c33e718d4d69",
+    "166005705070be2216",
     "grid-0",
-    "b6f5bf47-69a1-4992-8c11-554ebaeaa86d",
     "1658853987e12cad3f",
+    "b6f5bf47-69a1-4992-8c11-554ebaeaa86d",
+    "1669671541b0ae7db4",
+    "5823ce44-392a-47f7-aaab-d25025fe69af",
+    "166326884264b65728",
     "c7296a52-09c6-42b2-9668-e3af348a1742",
     "1663268646cef71652",
-    "166005705070be2216",
     "16632641343e60bbea",
     "1660056626d521ddbc",
+    "e44a21c9-ba39-4339-a80c-738a49282b9a",
     "testimonials",
-    "166326884264b65728"
+    "c51e25e5-f67a-4692-b2f3-c354b6186cc5"
   ]
 }

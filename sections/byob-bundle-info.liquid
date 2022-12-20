@@ -46,6 +46,8 @@ img {
   {% endcase %}
 
   {% case section.settings.media_size %}
+    {% when 'small' %}
+      {%- assign product_media_width = 'medium-up--one-third' -%}
     {% when 'medium' %}
       {%- assign product_media_width = 'medium-up--one-half' -%}
     {% when 'large' %}
@@ -87,6 +89,10 @@ img {
         "label": "Bundle image size",
         "default": "full",
         "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
           {
             "value": "medium",
             "label": "Medium"

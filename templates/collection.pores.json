@@ -79,7 +79,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/0515v4_db854bc4-d996-4d13-bc26-8b04525575e1.jpg",
+            "image": "shopify:\/\/shop_images\/pore_vanish.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -110,6 +110,7 @@
             "title": "pores",
             "heading_font_size_desktop": 42,
             "heading_font_size_mobile": 30,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "enlarged pores don’t look great, clogged pores cause skin havoc, and even seemingly healthy pores may be the cause of many a skin woe.\n\nFacewater is the best thing you can do for your pores. All Facewater products are distilled using our patent pending process. Distilled water effectively absorbs and removes toxins from your skin and contains no drying mineral residue.",
             "text_font_size_desktop": 20,

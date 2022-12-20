@@ -414,8 +414,8 @@
             "image": "shopify:\/\/shop_images\/0738v2.jpg",
             "image_link": "",
             "bg_position": "center-center",
-            "title": "THE POWER OF WATER",
-            "text": "<p>Water is called the ‘elixir of life’ because all life forms depend on the miracle of water. It only makes sense that the most effective skin care be water based. Skin moisturization is a measure of water retention because water IS moisture. <\/p><p><\/p><p>Facewater is extremely absorbing and skin compatible – and because Facewater is distilled - the purest form of water – it attracts toxins from your skin FREEING your pores and allowing beautiful clear skin to<br\/>flourish.<\/p>",
+            "title": "WHY WATER-FORM IS BETTER",
+            "text": "<p>Water is called the ‘elixir of life’ because all life forms depend on the miracle of water. It only makes sense that the most effective skin care be water based. Skin moisturization is a measure of water retention because water is moisture. <\/p><p>Facewater is extremely absorbing and skin compatible – and because Facewater is distilled - the purest form of water – it attracts toxins from your skin FREEING your pores and allowing beautiful clear skin to<br\/>flourish.<\/p>",
             "button_text": "",
             "button_link": "",
             "button_style": "text",
@@ -661,11 +661,11 @@
           "settings": {
             "wrapper": "full",
             "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/2048px-20fps.gif",
+            "image": "shopify:\/\/shop_images\/2048_750_banner_2-01.png",
             "image_vertical": 50,
             "image_horizontal": 50,
             "image_contain": true,
-            "image_mobile": "shopify:\/\/shop_images\/800px.gif",
+            "image_mobile": "shopify:\/\/shop_images\/2048_750_banner-01_19_copy.png",
             "mobile_image_vertical": 50,
             "mobile_image_horizontal": 50,
             "bg_position": "center-center",
@@ -723,7 +723,7 @@
         "enable_zoom_animation": false,
         "heading_size": 120,
         "custom_css": "",
-        "text_overlay_on_mobile": true
+        "text_overlay_on_mobile": false
       }
     },
     "166394226152d30617": {

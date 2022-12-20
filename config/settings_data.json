@@ -221,10 +221,27 @@
               "target_device_enabled": false,
               "target_device": "mobile"
             }
+          },
+          "f7a87a46-3dcf-424f-b6ae-a4fafbe190c8": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "text": "<p>black friday buy when 1 get 1 item free<\/p>",
+              "icon_name": "none",
+              "icon_color": "",
+              "icon_width": 15,
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
           }
         },
         "block_order": [
-          "082097bc-5d06-4cba-9deb-84634e4ed8c5"
+          "082097bc-5d06-4cba-9deb-84634e4ed8c5",
+          "f7a87a46-3dcf-424f-b6ae-a4fafbe190c8"
         ],
         "settings": {
           "bg_color": "#7a7a7a",
@@ -259,6 +276,11 @@
       },
       "672c476f-6ab7-42d1-b871-82fae11cec8f": {
         "type": "shopify:\/\/apps\/instagram-feed-story-tiktok\/blocks\/social-widget\/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
       }

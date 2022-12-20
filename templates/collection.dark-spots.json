@@ -79,7 +79,7 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/MG_9918.jpg",
+            "image": "shopify:\/\/shop_images\/darkspotsSERUMATO.jpg",
             "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
@@ -110,6 +110,7 @@
             "title": "dark spots",
             "heading_font_size_desktop": 42,
             "heading_font_size_mobile": 30,
+            "heading_letter_spacing": 0,
             "heading_weight": "heading-normal",
             "text": "Lack of moisture and irritated skin can make dark spots appear worse. The best solution is a skin care regimen that addresses these two factors - along with specialized ingredients like vitamin C, alpha arbutin and niacinamide. Facewater is an excellent choice if dark spots are your concern.",
             "text_font_size_desktop": 20,

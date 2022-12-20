@@ -27,7 +27,7 @@
           "settings": {
             "info_page": "",
             "info_page_title_override": "",
-            "show_labels": false,
+            "show_labels": true,
             "show_quantity": true,
             "show_payment_button": true,
             "enable_subscriptions_selectors": true
@@ -82,7 +82,7 @@
         "165885565296ef9884-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MG_0732_1_copy.jpg",
+            "image": "shopify:\/\/shop_images\/MG_3289_copy1.jpg",
             "bg_position": "center-center",
             "overlay_opacity": 0,
             "text_position": "top-left",
@@ -327,8 +327,8 @@
           "type": "image",
           "settings": {
             "text_position": "middle-center",
-            "image": "shopify:\/\/shop_images\/MG_3294.jpg",
-            "image_position": "left-center",
+            "image": "shopify:\/\/shop_images\/MG_0732_1_copy.jpg",
+            "image_position": "center-center",
             "change_tablet_position": false,
             "tablet_background_y_position": 50,
             "tablet_background_x_position": 50,
