@@ -269,18 +269,13 @@
           "position": "right"
         }
       },
-      "4551646370426404704": {
-        "type": "shopify:\/\/apps\/pasilobus-turbo\/blocks\/turbo\/b60f64a7-2618-4d56-876c-fcf619939a47",
-        "disabled": false,
-        "settings": {}
-      },
-      "672c476f-6ab7-42d1-b871-82fae11cec8f": {
-        "type": "shopify:\/\/apps\/instagram-feed-story-tiktok\/blocks\/social-widget\/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
-        "disabled": false,
-        "settings": {}
-      },
       "855628211100114053": {
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "10ca4f01-8965-4434-a082-4b133b64f010": {
+        "type": "shopify:\/\/apps\/instagram-feed-story-tiktok\/blocks\/social-widget\/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
         "disabled": false,
         "settings": {}
       }

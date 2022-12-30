@@ -5,6 +5,13 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name="facebook-domain-verification" content="xj1njcw6c8tcunewrkh813zfipkhmt" />
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1, initial-scale=1.0, user-scalable=no">
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WDSQW9T');</script>
+<!-- End Google Tag Manager -->
   <link rel="canonical" href="{{ canonical_url }}" />
 
   <link rel="preload" as="style" href="{{ 'theme.css' | asset_url }}">
@@ -295,7 +302,7 @@
   <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'splide.min.js' | asset_url }}"></script>
 
-  {{ content_for_header }}
+  {%- if tinyscript -%}{{ content_for_header }}{%- else -%}{% render 'tiny-script-control' %}{%- endif -%}
 
   {% render 'shogun-head' %}
 
@@ -313,7 +320,8 @@
     {% render 'fast_bundle_service' %}
 {% endif %}
 
-</head>
+{% include 'swift_core' %} 
+ </head>
 
 {%- capture body_class -%}
 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
@@ -337,6 +345,10 @@ template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
 -%}
 
 <body id="{{ page_title | handle }}" class="{{ body_class | strip_newlines | strip }}" data-animations="{{ settings.animations_enabled }}">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDSQW9T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   {%- render 'loading' -%}
 
   <a class="in-page-link skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
@@ -388,5 +400,7 @@ template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
     <script defer src="https://cdn.pickystory.com/widget/dist/latest/pickystory-widget.min.js"></script>
   {% endif %}
   <!-- PickyStory end snippet "main_widget_script" -->
+{{'tiny-img-link-preloader.js' | asset_url | script_tag }}
+{{ '//cdn.shopify.com/s/files/1/0194/1736/6592/t/1/assets/booster-page-speed-optimizer.js?23' | script_tag }}
 </body>
 </html>

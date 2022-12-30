@@ -67,33 +67,6 @@
         "message_spacing": 25
       }
     },
-    "166326827019c9f3af": {
-      "type": "section-collection",
-      "disabled": true,
-      "settings": {
-        "collection": "water-form-serums-cleansers-moisturizers-and-more",
-        "title": "water-form is better than",
-        "description": "<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqualorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lorem ipsum dolor sit amet, consectetur adipiscing elit<\/p>",
-        "spacing_range": -0.5,
-        "heading_alignment": true,
-        "show_description": true,
-        "products_rows": 2,
-        "products_layout": "carousel",
-        "show_collection_button": true,
-        "show_collection": "View Collection",
-        "button_style": "text",
-        "bg_color": "rgba(0,0,0,0)",
-        "enable_slider_mobile": true,
-        "remove_top_padding": true,
-        "remove_margin_bottom": false,
-        "enable_color_change": true,
-        "color_1_bg": "#e2b2cc",
-        "color_2_bg": "#9ad795",
-        "color_3_bg": "#adadad",
-        "color_4_bg": "#d7c3a8",
-        "color_5_bg": "#e6da1e"
-      }
-    },
     "1655905158580e2c4f": {
       "type": "section-slideshow",
       "blocks": {
@@ -144,108 +117,10 @@
             "video_btn_text": "",
             "video_btn_link": ""
           }
-        },
-        "1fbaed76-3b86-4711-bf8a-5b6bd8b24889": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "wrapper": "full",
-            "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/MG_9624_82ba74c3-6ed1-4d2c-8b01-86cdde7c4bed.jpg",
-            "image_vertical": 50,
-            "image_horizontal": 50,
-            "image_contain": true,
-            "mobile_image_vertical": 50,
-            "mobile_image_horizontal": 50,
-            "bg_position": "center-center",
-            "overlay_opacity": 0,
-            "heading_font_size": 32,
-            "heading_mobile_font_size": 32,
-            "heading_font_weight": "700",
-            "heading_letter_spacing": 0,
-            "heading_color": "#ffffff",
-            "mobile_heading_color": "#000000",
-            "text_font_size": 32,
-            "text_mobile_font_size": 32,
-            "text_font_weight": "200",
-            "text_letter_spacing": 0,
-            "text_color": "#ffffff",
-            "mobile_text_color": "#000000",
-            "text_width": "normal",
-            "text_position": "center",
-            "override_mobile_text_position": false,
-            "mobile_text_position_y": 50,
-            "mobile_text_position_x": "center",
-            "title": "",
-            "override_title_font_weight": false,
-            "override_text_number": 1,
-            "override_font_weight": "200",
-            "text": "",
-            "slide_btn_text": "",
-            "slide_btn_link": "",
-            "slide_btn_style": "primary",
-            "button_color": "#ffffff",
-            "mobile_button_color": "#ffffff",
-            "slide_btn_text_2": "",
-            "slide_btn_link_2": "",
-            "slide_btn_style_2": "secondary",
-            "video_btn_text": "",
-            "video_btn_link": ""
-          }
-        },
-        "92513021-e956-4b7e-9a2a-a76e45c096f2": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "wrapper": "full",
-            "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/MG_9636_1.jpg",
-            "image_vertical": 50,
-            "image_horizontal": 50,
-            "image_contain": false,
-            "mobile_image_vertical": 50,
-            "mobile_image_horizontal": 50,
-            "bg_position": "center-center",
-            "overlay_opacity": 0,
-            "heading_font_size": 32,
-            "heading_mobile_font_size": 32,
-            "heading_font_weight": "700",
-            "heading_letter_spacing": 0,
-            "heading_color": "#ffffff",
-            "mobile_heading_color": "#000000",
-            "text_font_size": 32,
-            "text_mobile_font_size": 32,
-            "text_font_weight": "200",
-            "text_letter_spacing": 0,
-            "text_color": "#ffffff",
-            "mobile_text_color": "#000000",
-            "text_width": "normal",
-            "text_position": "center",
-            "override_mobile_text_position": false,
-            "mobile_text_position_y": 50,
-            "mobile_text_position_x": "center",
-            "title": "",
-            "override_title_font_weight": false,
-            "override_text_number": 1,
-            "override_font_weight": "200",
-            "text": "",
-            "slide_btn_text": "",
-            "slide_btn_link": "",
-            "slide_btn_style": "primary",
-            "button_color": "#ffffff",
-            "mobile_button_color": "#ffffff",
-            "slide_btn_text_2": "",
-            "slide_btn_link_2": "",
-            "slide_btn_style_2": "secondary",
-            "video_btn_text": "",
-            "video_btn_link": ""
-          }
         }
       },
       "block_order": [
-        "7c2ff6ca-5e63-4c92-a93c-f5d79a69c28e",
-        "1fbaed76-3b86-4711-bf8a-5b6bd8b24889",
-        "92513021-e956-4b7e-9a2a-a76e45c096f2"
+        "7c2ff6ca-5e63-4c92-a93c-f5d79a69c28e"
       ],
       "settings": {
         "wrapper": "wide",
@@ -476,187 +351,6 @@
         "text_overlay_on_mobile": false
       }
     },
-    "grid-0": {
-      "type": "section-grid",
-      "disabled": true,
-      "blocks": {
-        "15fe64b9-def1-4d08-b609-c36e6c73e920": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text_position": "left",
-            "subheading": "",
-            "title": "immediately visible radiance <br> <br>noticeable skin clearing <br> <br> long-term youth preserving effects",
-            "text": "",
-            "button_text": "",
-            "link": "shopify:\/\/pages\/results",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "text_color": "text-light",
-            "bg_color": "#656765",
-            "mobile_order": "default"
-          }
-        },
-        "image-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/MG_5644.jpg",
-            "bg_position": "center-center",
-            "mobile_image_position": "left",
-            "contain_image": false,
-            "overlay_opacity": 0,
-            "text_position": "top-left",
-            "mobile_text_position": "top-left",
-            "subheading": "",
-            "title": "",
-            "text": "SKIN FIRMING SERUM WATER",
-            "button_text": "PLANTONIC HYALURONIC",
-            "link": "shopify:\/\/products\/plantonic-hyaluronic",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "text_color": "text-light",
-            "mobile_order": "default"
-          }
-        },
-        "ad02ba3d-7df8-484c-b3cf-e693631890d9": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/oilwater_f2.jpg",
-            "bg_position": "center-center",
-            "mobile_image_position": "top",
-            "contain_image": false,
-            "overlay_opacity": 0,
-            "text_position": "top-left",
-            "mobile_text_position": "top-left",
-            "subheading": "",
-            "title": "",
-            "text": "PORE HEALTHY OILWATER",
-            "button_text": "REPLENISH NOURISH ROSEHIP",
-            "link": "shopify:\/\/products\/oilwater-replenish-nourish-rosehip",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "text_color": "text-light",
-            "mobile_order": "default"
-          }
-        },
-        "f392cba7-e83b-4a50-8def-5fbda75c7372": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/MG_0312_1_6ad5d5e7-dee2-456b-aacc-f5d2513cde8d.jpg",
-            "bg_position": "center-center",
-            "mobile_image_position": "center",
-            "contain_image": false,
-            "overlay_opacity": 0,
-            "text_position": "top-left",
-            "mobile_text_position": "top-left",
-            "subheading": "",
-            "title": "",
-            "text": "POWERFUL MOISTURE MAGNET",
-            "button_text": "SHROOM MOIsTURE BOOM",
-            "link": "shopify:\/\/products\/shroom-moisture-boom",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "text_color": "text-light",
-            "mobile_order": "default"
-          }
-        },
-        "df75b0f3-4fa2-4de0-bae9-357268f8dfd2": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text_position": "left",
-            "subheading": "",
-            "title": "visibly clearer and <br> healthier skin",
-            "text": "from day one or your money back*",
-            "button_text": "",
-            "link": "shopify:\/\/pages\/visibly-clearer-skin",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "text_color": "text-light",
-            "bg_color": "#515f54",
-            "mobile_order": "default"
-          }
-        },
-        "image-1": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/PBD_sign.png",
-            "bg_position": "center-center",
-            "mobile_image_position": "center",
-            "contain_image": false,
-            "overlay_opacity": 0,
-            "text_position": "top-right",
-            "mobile_text_position": "center",
-            "subheading": "",
-            "title": "",
-            "text": "",
-            "button_text": "",
-            "link": "shopify:\/\/pages\/cosmetic-farm",
-            "secondary_button_text": "",
-            "secondary_button_link": "",
-            "text_color": "text-dark",
-            "mobile_order": "default"
-          }
-        }
-      },
-      "block_order": [
-        "15fe64b9-def1-4d08-b609-c36e6c73e920",
-        "image-0",
-        "ad02ba3d-7df8-484c-b3cf-e693631890d9",
-        "f392cba7-e83b-4a50-8def-5fbda75c7372",
-        "df75b0f3-4fa2-4de0-bae9-357268f8dfd2",
-        "image-1"
-      ],
-      "settings": {
-        "height": "550",
-        "min_tablet_height": 370,
-        "min_mobile_height": 350,
-        "wrapper": "full",
-        "add_spacing": true,
-        "heading_font_size": 18,
-        "heading_mobile_font_size": 16,
-        "heading_font_weight": "400",
-        "heading_color": "#ffffff",
-        "text_font_size": 12,
-        "text_mobile_font_size": 12,
-        "text_font_weight": "400",
-        "text_color": "#ffffff",
-        "button_style": "text",
-        "secondary_button_style": "secondary btn--small",
-        "bg_color": "",
-        "enable_slider_mobile": false
-      }
-    },
-    "1658853987e12cad3f": {
-      "type": "section-text",
-      "disabled": true,
-      "blocks": {
-        "d56d390e-4748-4e4d-a124-45d378181b58": {
-          "type": "heading",
-          "settings": {
-            "text": "100% PLANT BASED... way beyond clean<span><sup>™️<\/sup><\/span>",
-            "desk_size": 42,
-            "mobile_size": 30,
-            "font_weight": "400",
-            "letter_spacing": -1
-          }
-        }
-      },
-      "block_order": [
-        "d56d390e-4748-4e4d-a124-45d378181b58"
-      ],
-      "settings": {
-        "image_link": "",
-        "text_position": "left",
-        "img_position": "right",
-        "wrapper": "full",
-        "padding": "standard-padding",
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "text-dark",
-        "remove_margin_bottom": true
-      }
-    },
     "b6f5bf47-69a1-4992-8c11-554ebaeaa86d": {
       "type": "section-custom-content",
       "blocks": {
@@ -792,33 +486,6 @@
         "remove_margin_bottom": false
       }
     },
-    "166326884264b65728": {
-      "type": "section-collection",
-      "disabled": true,
-      "settings": {
-        "collection": "new-arrivals",
-        "title": "NEW ARRIVALS",
-        "description": "",
-        "spacing_range": -1,
-        "heading_alignment": true,
-        "show_description": false,
-        "products_rows": 2,
-        "products_layout": "carousel",
-        "show_collection_button": false,
-        "show_collection": "",
-        "button_style": "text",
-        "bg_color": "",
-        "enable_slider_mobile": true,
-        "remove_top_padding": false,
-        "remove_margin_bottom": false,
-        "enable_color_change": false,
-        "color_1_bg": "",
-        "color_2_bg": "",
-        "color_3_bg": "",
-        "color_4_bg": "",
-        "color_5_bg": ""
-      }
-    },
     "c7296a52-09c6-42b2-9668-e3af348a1742": {
       "type": "section-columns",
       "blocks": {
@@ -873,134 +540,6 @@
         "show_images": true,
         "disable_slider": true,
         "remove_margin_bottom": false
-      }
-    },
-    "1663268646cef71652": {
-      "type": "section-collection",
-      "disabled": true,
-      "settings": {
-        "collection": "serum-waters",
-        "title": "serum waters<span><sup>™️<\/sup><\/span>",
-        "description": "",
-        "spacing_range": -1,
-        "heading_alignment": true,
-        "show_description": false,
-        "products_rows": 2,
-        "products_layout": "carousel",
-        "show_collection_button": false,
-        "show_collection": "",
-        "button_style": "text",
-        "bg_color": "#fafafa",
-        "enable_slider_mobile": true,
-        "remove_top_padding": false,
-        "remove_margin_bottom": false,
-        "enable_color_change": false,
-        "color_1_bg": "",
-        "color_2_bg": "",
-        "color_3_bg": "",
-        "color_4_bg": "",
-        "color_5_bg": ""
-      }
-    },
-    "16632641343e60bbea": {
-      "type": "section-collection",
-      "disabled": true,
-      "settings": {
-        "collection": "oilwaters",
-        "title": "oilwaters",
-        "description": "<p><\/p>",
-        "spacing_range": -1,
-        "heading_alignment": true,
-        "show_description": false,
-        "products_rows": 2,
-        "products_layout": "carousel",
-        "show_collection_button": false,
-        "show_collection": "",
-        "button_style": "text",
-        "bg_color": "",
-        "enable_slider_mobile": true,
-        "remove_top_padding": false,
-        "remove_margin_bottom": false,
-        "enable_color_change": false,
-        "color_1_bg": "",
-        "color_2_bg": "",
-        "color_3_bg": "",
-        "color_4_bg": "",
-        "color_5_bg": ""
-      }
-    },
-    "1660056626d521ddbc": {
-      "type": "section-slideshow",
-      "disabled": true,
-      "blocks": {
-        "16600566253ed9345b-0": {
-          "type": "image",
-          "settings": {
-            "wrapper": "full",
-            "slide_bg_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/MG_4317-3.jpg",
-            "image_vertical": 50,
-            "image_horizontal": 50,
-            "image_contain": false,
-            "image_mobile": "shopify:\/\/shop_images\/MG_4724_dfaea2c1-c5a1-4c0f-8c19-e5726d6bd912.jpg",
-            "mobile_image_vertical": 50,
-            "mobile_image_horizontal": 50,
-            "bg_position": "center-center",
-            "overlay_opacity": 0,
-            "heading_font_size": 42,
-            "heading_mobile_font_size": 22,
-            "heading_font_weight": "400",
-            "heading_letter_spacing": 0,
-            "heading_color": "#fafafa",
-            "mobile_heading_color": "#000000",
-            "text_font_size": 20,
-            "text_mobile_font_size": 22,
-            "text_font_weight": "200",
-            "text_letter_spacing": 0,
-            "text_color": "#ffffff",
-            "mobile_text_color": "#000000",
-            "text_width": "narrow",
-            "text_position": "left",
-            "override_mobile_text_position": true,
-            "mobile_text_position_y": 0,
-            "mobile_text_position_x": "left",
-            "title": "",
-            "override_title_font_weight": false,
-            "override_text_number": 1,
-            "override_font_weight": "200",
-            "text": "",
-            "slide_btn_text": "SHOP 100 Petal rosewater",
-            "slide_btn_link": "shopify:\/\/collections\/100-petal-rosewater",
-            "slide_btn_style": "text",
-            "button_color": "#000000",
-            "mobile_button_color": "#000000",
-            "slide_btn_text_2": "",
-            "slide_btn_link_2": "",
-            "slide_btn_style_2": "secondary",
-            "video_btn_text": "",
-            "video_btn_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "16600566253ed9345b-0"
-      ],
-      "settings": {
-        "wrapper": "wide",
-        "slide_height": "original-height",
-        "show_nav_dots": false,
-        "show_nav_arrows": false,
-        "show_arrow_down": false,
-        "dot_color": "",
-        "next_prev_color": "",
-        "down_color": "",
-        "autoplay": false,
-        "duration": 4,
-        "transition": "slide",
-        "enable_zoom_animation": false,
-        "heading_size": 120,
-        "custom_css": "",
-        "text_overlay_on_mobile": false
       }
     },
     "e44a21c9-ba39-4339-a80c-738a49282b9a": {
@@ -1227,22 +766,15 @@
   },
   "order": [
     "565687da-3b12-4146-a6ef-a3bab262ce6b",
-    "166326827019c9f3af",
     "1655905158580e2c4f",
     "27bf8fca-3420-413e-8c59-aee945aab2bf",
     "16638774042f6239ae",
     "a8ba10de-7b75-4c3a-a951-c33e718d4d69",
     "166005705070be2216",
-    "grid-0",
-    "1658853987e12cad3f",
     "b6f5bf47-69a1-4992-8c11-554ebaeaa86d",
     "1669671541b0ae7db4",
     "5823ce44-392a-47f7-aaab-d25025fe69af",
-    "166326884264b65728",
     "c7296a52-09c6-42b2-9668-e3af348a1742",
-    "1663268646cef71652",
-    "16632641343e60bbea",
-    "1660056626d521ddbc",
     "e44a21c9-ba39-4339-a80c-738a49282b9a",
     "testimonials",
     "c51e25e5-f67a-4692-b2f3-c354b6186cc5"
